@@ -1,0 +1,33 @@
+{
+  "company": {
+    "name": "陕西知途科技互联网有限责任公司",
+    "aliases": ["知途科技", "陕西知途", "知途"],
+    "creditCode": "91610112MAB127NR5K",
+    "city": "西安市",
+    "industry": "互联网",
+    "depth": 1
+  },
+  "signals": [
+    {
+      "type": "labor_violation",
+      "period": "2026",
+      "severity": "high",
+      "value": {
+        "count": 1,
+        "subtype": "wage_arrears",
+        "workerCount": 19,
+        "amountYuan": 239771,
+        "stage": "移送公安机关立案查处",
+        "stageLabel": "移送公安",
+        "stageDate": "2026-06-30",
+        "complaintPeriod": "2025-12",
+        "violation": "拖欠劳动报酬",
+        "authority": "西安市碑林区人力资源和社会保障局"
+      },
+      "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202610/t20261015_3703777.html",
+      "sourceTitle": "陕西省人力资源和社会保障厅：关于公布2026年第三批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+      "sourcePublishedAt": "2026-10-15",
+      "snapshotFile": "data/snapshots/shaanxi-2026-third-labor-violations.html"
+    }
+  ]
+}

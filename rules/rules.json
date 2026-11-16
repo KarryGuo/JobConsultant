@@ -1,0 +1,134 @@
+[
+  {
+    "id": "R01",
+    "name": "参保规模收缩记录",
+    "when": {
+      "type": "insured_drop",
+      "aggregate": { "field": "ratio", "op": "gte", "value": 0.3, "mode": "max" },
+      "withinMonths": 36,
+      "minCount": 1
+    },
+    "severity": "high",
+    "benign": ["组织调整", "剥离子公司", "改用劳务外包"],
+    "action": "面试时确认这个岗位是新增编制还是替补，团队目前多少人",
+    "questions": [
+      "这个岗位是新增编制还是替补？",
+      "团队目前多少人，过去一年有变化吗？",
+      "如果业务调整，这个岗位会怎么安排？"
+    ]
+  },
+  {
+    "id": "R02",
+    "name": "被执行记录",
+    "when": {
+      "type": "court_exec",
+      "aggregate": { "field": "count12m", "op": "gte", "value": 1, "mode": "max" },
+      "withinMonths": 24,
+      "minCount": 1
+    },
+    "severity": "high",
+    "benign": ["单笔小额纠纷", "已履行完毕", "案件仍在执行程序中"],
+    "action": "面试时问清楚公司的加班调休和报销流程",
+    "questions": [
+      "报销一般多久到账？",
+      "加班调休怎么计算和申请？",
+      "公司最近的经营状况怎么样？"
+    ]
+  },
+  {
+    "id": "R03",
+    "name": "岗位异常记录",
+    "when": {
+      "type": "hiring_anomaly",
+      "field": "staleMonths",
+      "op": "gte",
+      "value": 6,
+      "withinMonths": 12,
+      "minCount": 1
+    },
+    "severity": "medium",
+    "benign": ["岗位长期储备", "业务扩张中", "招聘节奏较慢"],
+    "action": "问：这个岗位招了多久了？上一位是什么时候离职的",
+    "questions": [
+      "这个岗位招了多久了？",
+      "上一位同事是什么时候离职的？",
+      "这个岗位最看重候选人的哪一项能力？"
+    ]
+  },
+  {
+    "id": "R04",
+    "name": "欠薪记录",
+    "when": {
+      "type": "labor_violation",
+      "subtype": "wage_arrears",
+      "aggregate": { "field": "count", "op": "gte", "value": 1 },
+      "withinMonths": 36,
+      "minCount": 1
+    },
+    "severity": "high",
+    "benign": ["已整改", "个案且已解决", "案件仍在行政或司法程序中，最终以主管部门认定为准"],
+    "action": "确认工资发放日、社保缴纳基数与劳动合同签订时间",
+    "questions": [
+      "工资一般在每月几号发放？",
+      "社保和公积金按什么基数缴纳？",
+      "如果出现工资延迟，公司的处理流程是什么？"
+    ]
+  },
+  {
+    "id": "R05",
+    "name": "社保违规记录",
+    "when": {
+      "type": "labor_violation",
+      "subtype": "social_insurance",
+      "aggregate": { "field": "count", "op": "gte", "value": 1 },
+      "withinMonths": 36,
+      "minCount": 1
+    },
+    "severity": "high",
+    "benign": ["已补办社保登记", "案件仍在行政程序中", "已缴纳罚款并整改"],
+    "action": "确认入职当月是否办理社保登记，以及缴费基数是多少",
+    "questions": [
+      "入职当月会办理社保登记吗？",
+      "社保和公积金按什么基数缴纳？",
+      "试用期是否正常缴纳社保？"
+    ]
+  },
+  {
+    "id": "R06",
+    "name": "违规收费记录",
+    "when": {
+      "type": "labor_violation",
+      "subtype": "employment_scam",
+      "aggregate": { "field": "count", "op": "gte", "value": 1 },
+      "withinMonths": 36,
+      "minCount": 1
+    },
+    "severity": "high",
+    "benign": ["费用已退还", "案件仍在调查中", "以主管部门认定为准"],
+    "action": "任何以“编制”“保过”“内推”“岗前培训”为名收取费用的承诺，都不要付款；先核验人力资源服务许可证",
+    "questions": [
+      "招聘过程中是否需要缴纳任何费用？",
+      "公司的人力资源服务许可证编号是多少？",
+      "如果承诺“保过/编制”，能否写进合同？"
+    ]
+  },
+  {
+    "id": "R07",
+    "name": "欠薪记录（已支付）",
+    "when": {
+      "type": "labor_violation",
+      "subtype": "wage_arrears_resolved",
+      "aggregate": { "field": "count", "op": "gte", "value": 1 },
+      "withinMonths": 36,
+      "minCount": 1
+    },
+    "severity": "low",
+    "benign": ["已全部支付", "个案且已解决", "已建立工资支付保障机制"],
+    "action": "确认工资发放日与社保缴纳基数，了解当时的欠薪原因是否已经解决",
+    "questions": [
+      "工资一般在每月几号发放？",
+      "公司现在如何避免工资延迟？",
+      "社保按什么基数缴纳？"
+    ]
+  }
+]

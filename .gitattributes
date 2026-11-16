@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# 快照用于哈希校验，禁止 Git 做换行转换，否则重新检出后 SHA-256 会变化。
+data/snapshots/** -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.woff2 binary

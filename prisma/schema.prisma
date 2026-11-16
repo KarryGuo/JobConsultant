@@ -1,0 +1,233 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 企业主表。depth: 0=仅公开信号，1=深度档案
+model Company {
+  id             String    @id @default(cuid())
+  name           String
+  normalized     String    @unique
+  pinyinInitials String?
+  aliases        String[]  @default([])
+  creditCode     String?   @unique
+  establishedAt  DateTime?
+  capital        String?
+  status         String?
+  province       String?
+  city           String?
+  industry       String?
+  depth          Int       @default(0)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  signals       Signal[]
+  reports       Report[]
+  feedbacks     InterviewFeedback[]
+
+  @@index([name])
+  @@index([pinyinInitials])
+  @@index([province, city])
+  @@index([city])
+}
+
+// 信号表。sourceUrl / fetchedAt / snapshotHash 是信任地基，数据库层禁止为空。
+model Signal {
+  id                String    @id @default(cuid())
+  companyId         String
+  type              String
+  period            String?
+  value             Json
+  severity          String
+  sourceUrl         String
+  sourceTitle       String
+  sourcePublishedAt DateTime?
+  fetchedAt         DateTime
+  snapshotHash      String
+  snapshotPath      String?
+  // 来源注册表 key，用于追溯这条信号由哪个来源产生。
+  sourceKey         String?
+  // 申诉更正：invalidatedAt 非空表示该条记录已撤回，不再参与规则判定与展示。
+  invalidatedAt     DateTime?
+  correctedAt       DateTime?
+  correctionNote    String?
+  // 数据新鲜度：最近一次核验时间、复核周期与下次复核时间。
+  lastVerifiedAt    DateTime?
+  reviewCycleDays   Int       @default(30)
+  nextReviewAt      DateTime?
+  createdAt         DateTime  @default(now())
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, type])
+  @@index([companyId, period])
+  @@index([fetchedAt])
+  @@index([nextReviewAt])
+  @@index([sourceKey])
+}
+
+// 报告表。points 必须是 [{ text, ruleId, signalIds[], benign, action, questions[] }]
+// signalIds 为空、或引用不存在的信号，代码层拒绝入库。
+model Report {
+  id           String    @id @default(cuid())
+  companyId    String
+  cacheKey     String    @unique
+  conclusion   String
+  points       Json
+  status       String    @default("ok") // ok | no_hit
+  dataCutoff   DateTime?
+  generatedAt  DateTime  @default(now())
+  modelVersion String
+
+  company   Company           @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  feedbacks ReportFeedback[]
+
+  @@index([companyId, generatedAt])
+}
+
+// 面试反馈。只允许结构化选项，不允许任何自由文本字段。
+model InterviewFeedback {
+  id                 String   @id @default(cuid())
+  companyId          String
+  roundsBand         String? // "1-3" | "4-6" | "7+"
+  daysToResultBand   String? // "within_1_week" | "2_4_weeks" | "1_2_months" | "longer" | "no_result"
+  askedPrivacy       String? // "yes" | "no" | "decline"
+  testTaskBand       String? // "none" | "within_2h" | "over_2h"
+  rejectionBand      String? // "with_reason" | "without_reason" | "none"
+  anonymousKey       String
+  createdAt          DateTime @default(now())
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, anonymousKey])
+  @@index([companyId, createdAt])
+}
+
+// JD 话术库
+model JdPhrase {
+  id             String  @id @default(cuid())
+  phrase         String  @unique
+  category       String
+  interpretation String
+  confidence     String // high | medium | low
+  sourceNote     String?
+}
+
+// 报告底部决策反馈（投了/放弃 + 固定原因）
+model ReportFeedback {
+  id        String   @id @default(cuid())
+  reportId  String
+  action    String // "applied" | "skipped"
+  reason    String?
+  createdAt DateTime @default(now())
+
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@index([reportId])
+}
+
+// 企业申诉 / 更正申请。允许未收录企业提交，所以不强制关联 Company。
+// companyId / reportId / signalId 只作为上下文，不设外键，避免企业主体变更时无法提交。
+model AppealRequest {
+  id          String   @id @default(cuid())
+  companyId   String?
+  companyName String
+  reportId    String?
+  signalId    String?
+  category    String // fact_error | outdated | missing_context | wrong_company | other
+  details     String
+  evidenceUrl String?
+  contact     String
+  status      String   @default("open") // open | reviewing | resolved | rejected
+  internalNote String?
+  // 对外公示的更正说明，仅在 resolved 且非空时展示在报告页。
+  publicNote   String?
+  handledAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  events AppealEvent[]
+
+  @@index([companyId, createdAt])
+  @@index([status, createdAt])
+  @@index([contact, createdAt])
+}
+
+// 申诉处理流水。每次状态或内部备注变化都追加一条，不覆盖历史。
+model AppealEvent {
+  id           String   @id @default(cuid())
+  appealId     String
+  type         String // created | status_changed | note_updated | status_and_note_changed
+  fromStatus   String?
+  toStatus     String?
+  internalNote String?
+  // 处理人姓名，来自后台登录时填写的会话身份。
+  actor        String?
+  createdAt    DateTime @default(now())
+
+  appeal AppealRequest @relation(fields: [appealId], references: [id], onDelete: Cascade)
+
+  @@index([appealId, createdAt])
+}
+
+// 后台会话。nonce 入库后会话才有效，退出登录即可吊销；
+// 改密码会让签名里的密码指纹失配，所有旧会话自动失效。
+model AdminSession {
+  id        String    @id @default(cuid())
+  nonce     String    @unique
+  actor     String
+  issuedAt  DateTime  @default(now())
+  expiresAt DateTime
+  revokedAt DateTime?
+
+  @@index([expiresAt])
+  @@index([revokedAt])
+}
+
+// 来源健康。按 sourceUrl 去重，记录最近一次抓取结果与内容指纹。
+// status: unknown | ok | changed | blocked | unreachable
+model SourceHealth {
+  id                  String    @id @default(cuid())
+  sourceUrl           String    @unique
+  sourceTitle         String
+  status              String    @default("unknown")
+  lastCheckedAt       DateTime?
+  lastStatusCode      Int?
+  // baselineHash 是人工确认过的内容指纹；lastSeenHash 是最近一次抓取结果。
+  baselineHash        String?
+  lastSeenHash        String?
+  consecutiveFailures Int       @default(0)
+  lastError           String?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  @@index([status])
+  @@index([lastCheckedAt])
+}
+
+// 来源注册表。定义可采集/可核验的数据来源，以及其分类、等级和复核周期。
+// 新公告导入时通过 key 关联，避免每条信号重复描述来源属性。
+model SourceRegistry {
+  id              String    @id @default(cuid())
+  key             String    @unique
+  name            String
+  category        String // labor_violation | court_exec | credit_penalty | tax_arrears | bankruptcy | operating_anomaly | other
+  level           String    @default("A") // A=官方主动公开，B=线索/需人工核验
+  region          String?
+  baseUrl         String?
+  accessType      String    @default("public_web") // public_web | api | manual
+  fetchMode       String    @default("manual") // manual | script
+  reviewCycleDays Int       @default(30)
+  enabled         Boolean   @default(true)
+  notes           String?
+  lastImportedAt  DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([category])
+  @@index([enabled])
+}
