@@ -8,6 +8,7 @@ export const COVERED_REGIONS = [
   "山西省",
   "天津市",
   "四川省",
+  "江苏省",
 ] as const;
 
 /**
@@ -28,7 +29,6 @@ export const PENDING_REGIONS = [
   "吉林省",
   "黑龙江省",
   "上海市",
-  "江苏省",
   "山东省",
   "湖南省",
   "广西壮族自治区",

@@ -51,13 +51,18 @@ export type SourceConfig = {
    */
   documentUrl?: string;
   documentFile?: string;
+  /** 附件类型，默认 docx。 */
+  documentType?: "docx" | "xlsx";
+  /** 表格类附件的阶段文案。 */
+  stage?: string;
+  stageLabel?: string;
 };
 
 /**
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-23.3";
+export const PARSER_VERSION = "2026-11-23.4";
 
 type IngestRunMeta = {
   id: string;
@@ -292,6 +297,38 @@ export const SOURCES: SourceConfig[] = [
     ),
     outputFile: "data/companies/sichuan-2026-third-list.json",
     parser: parseTextTableCases,
+  },
+  {
+    key: "jiangsu-2026-third-cases",
+    name: "江苏省人社厅公布2026年三季度重大劳动保障违法行为",
+    region: "江苏省",
+    url: "https://jshrss.jiangsu.gov.cn/art/2026/10/9/art_78504_11839288.html",
+    publishedAt: "2026-10-09",
+    snapshotFile: "data/snapshots/jiangsu-2026-third-cases.xlsx",
+    documentFile: "data/snapshots/jiangsu-2026-third-cases.xlsx",
+    documentType: "xlsx",
+    stage: "列入重大劳动保障违法行为社会公布",
+    stageLabel: "社会公布",
+    documentUrl:
+      "https://jshrss.jiangsu.gov.cn/module/download/downfile.jsp?classid=0&filename=08e8b15693e84458b0ed5c4ce6cf1a03.xlsx",
+    outputFile: "data/companies/jiangsu-2026-third-cases.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "jiangsu-2026-third-list",
+    name: "江苏省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    region: "江苏省",
+    url: "https://jshrss.jiangsu.gov.cn/art/2026/10/9/art_78504_11839288.html",
+    publishedAt: "2026-10-09",
+    snapshotFile: "data/snapshots/jiangsu-2026-third-list.xlsx",
+    documentFile: "data/snapshots/jiangsu-2026-third-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://jshrss.jiangsu.gov.cn/module/download/downfile.jsp?classid=0&filename=20dba4be51984f4dac42c455121e5e71.xlsx",
+    outputFile: "data/companies/jiangsu-2026-third-list.json",
+    parser: parseParagraphCases,
   },
 ];
 
@@ -1161,6 +1198,174 @@ export function docxToText(buffer: Buffer): string {
     .replace(/&nbsp;/g, " ");
 }
 
+function decodeXmlEntities(value: string): string {
+  return value
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+}
+
+function columnIndex(ref: string): number {
+  const letters = /^([A-Z]+)/.exec(ref)?.[1] ?? "";
+  let index = 0;
+  for (const letter of letters) {
+    index = index * 26 + (letter.charCodeAt(0) - 64);
+  }
+  return index - 1;
+}
+
+/** 读取 xlsx 首个工作表为二维文本数组。 */
+export function xlsxToRows(buffer: Buffer): string[][] {
+  const sharedXml =
+    readZipEntry(buffer, "xl/sharedStrings.xml")?.toString("utf8") ?? "";
+  const shared: string[] = [];
+
+  for (const item of sharedXml.matchAll(/<si>([\s\S]*?)<\/si>/g)) {
+    const parts = Array.from(
+      item[1].matchAll(/<t[^>]*>([\s\S]*?)<\/t>/g),
+    ).map((match) => decodeXmlEntities(match[1]));
+    shared.push(parts.join(""));
+  }
+
+  const sheetXml =
+    readZipEntry(buffer, "xl/worksheets/sheet1.xml")?.toString("utf8") ?? "";
+  const rows: string[][] = [];
+
+  for (const row of sheetXml.matchAll(/<row[^>]*>([\s\S]*?)<\/row>/g)) {
+    const cells: string[] = [];
+
+    for (const cell of row[1].matchAll(/<c([^>]*)>([\s\S]*?)<\/c>/g)) {
+      const attributes = cell[1];
+      const ref = /r="([A-Z]+\d+)"/.exec(attributes)?.[1] ?? "";
+      const type = /t="([^"]+)"/.exec(attributes)?.[1];
+      let value = "";
+
+      if (type === "s") {
+        const index = Number(/<v>([\s\S]*?)<\/v>/.exec(cell[2])?.[1] ?? "");
+        value = shared[index] ?? "";
+      } else if (type === "inlineStr") {
+        value = Array.from(
+          cell[2].matchAll(/<t[^>]*>([\s\S]*?)<\/t>/g),
+        )
+          .map((match) => decodeXmlEntities(match[1]))
+          .join("");
+      } else {
+        value = decodeXmlEntities(
+          /<v>([\s\S]*?)<\/v>/.exec(cell[2])?.[1] ?? "",
+        );
+      }
+
+      const index = columnIndex(ref);
+      while (cells.length < index) cells.push("");
+      cells[index] = value.replace(/\s+/g, " ").trim();
+    }
+
+    if (cells.some((cell) => cell !== "")) rows.push(cells);
+  }
+
+  return rows;
+}
+
+/** Excel 日期序列号转 ISO 日期。 */
+function excelDateToIso(value: string): string | undefined {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric) || numeric < 20000 || numeric > 80000) {
+    return undefined;
+  }
+  const timestamp = Date.UTC(1899, 11, 30) + numeric * 86400000;
+  return new Date(timestamp).toISOString().slice(0, 10);
+}
+
+/** 解析 xlsx 名单：按表头定位列，不依赖固定列序。 */
+export function parseXlsxCases(
+  buffer: Buffer,
+  stage = "列入重大劳动保障违法行为社会公布",
+  stageLabel = "社会公布",
+): ParseResult {
+  const rows = xlsxToRows(buffer);
+  const headerIndex = rows.findIndex(
+    (row) =>
+      row.some((cell) => /单位名称/.test(cell)) &&
+      row.some((cell) => /统一社会信用代码|信用代码|工商注册号/.test(cell)),
+  );
+
+  if (headerIndex < 0) {
+    throw new Error("xlsx 中未找到表头（需要包含单位名称与统一社会信用代码）");
+  }
+
+  const header = rows[headerIndex];
+  const findColumn = (pattern: RegExp) =>
+    header.findIndex((cell) => pattern.test(cell));
+
+  const nameIndex = findColumn(/单位名称/);
+  const codeIndex = findColumn(/统一社会信用代码|信用代码|工商注册号/);
+  const violationIndex = findColumn(/违法事实/);
+  const authorityIndex = findColumn(/公布机构|作出列入决定部门|决定部门/);
+  const decisionIndex = findColumn(/文书号/);
+  const listedIndex = findColumn(/列入日期/);
+  const expiresIndex = findColumn(/到期日期|退出日期/);
+  const legalRepIndex = findColumn(/法定代表人/);
+
+  const cases: ParsedCase[] = [];
+  const warnings: string[] = [];
+
+  for (const row of rows.slice(headerIndex + 1)) {
+    const creditCode = CODE_RE.exec(row[codeIndex] ?? "")?.[0];
+    const name = normalizeCompanyName(row[nameIndex] ?? "");
+
+    if (!creditCode || name.length < 4) continue;
+
+    const violation = row[violationIndex] ?? "";
+    const authority = row[authorityIndex] || undefined;
+    const caseWarnings: string[] = [];
+
+    const workerCount = parseWorkerCount(violation);
+    const amountYuan = parseAmount(violation);
+    const listedRaw = row[listedIndex] ?? "";
+    const listedAt =
+      excelDateToIso(listedRaw) ?? parseDate(listedRaw) ?? undefined;
+    const expiresAt =
+      excelDateToIso(row[expiresIndex] ?? "") ??
+      parseDate(row[expiresIndex] ?? "") ??
+      undefined;
+    const legalRepRaw = row[legalRepIndex] ?? "";
+    const legalRep = legalRepRaw
+      ? legalRepRaw
+          .replace(/^法定代表人[：:]\s*/, "")
+          .split(/[；;]/)[0]
+          .slice(0, 20)
+      : undefined;
+
+    if (!violation) caseWarnings.push(`${name}：未解析到违法事实`);
+    if (workerCount === undefined) caseWarnings.push(`${name}：未解析到欠薪人数`);
+    if (amountYuan === undefined) caseWarnings.push(`${name}：未解析到欠薪金额`);
+
+    cases.push({
+      name,
+      creditCode,
+      legalRep,
+      violation: violation || "拖欠劳动者劳动报酬",
+      workerCount,
+      amountYuan,
+      authority,
+      decisionNo: decisionIndex >= 0 ? row[decisionIndex] : undefined,
+      listedAt,
+      expiresAt,
+      stage,
+      stageLabel,
+      stageDate: listedAt,
+      city: cityFromAuthority(authority),
+      warnings: caseWarnings,
+    });
+  }
+
+  warnings.push(...cases.flatMap((item) => item.warnings));
+  return { cases, warnings };
+}
+
 async function readExistingFetchedAt(
   file: string,
 ): Promise<string | null> {
@@ -1234,27 +1439,33 @@ async function main() {
       let httpStatus: number | null = null;
       let contentHash: string;
       const snapshotFile = source.documentFile ?? source.snapshotFile;
+      let documentBuffer: Buffer | null = null;
 
       if (source.documentUrl) {
         if (offline) {
-          const buffer = await readFile(
+          documentBuffer = await readFile(
             path.resolve(process.cwd(), snapshotFile),
           );
-          contentHash = createHash("sha256").update(buffer).digest("hex");
-          html = docxToText(buffer);
+          contentHash = createHash("sha256")
+            .update(documentBuffer)
+            .digest("hex");
         } else {
           const fetched = await fetchBytes(source.documentUrl);
           httpStatus = fetched.status;
+          documentBuffer = fetched.buffer;
           contentHash = createHash("sha256")
-            .update(fetched.buffer)
+            .update(documentBuffer)
             .digest("hex");
-          html = docxToText(fetched.buffer);
           if (!dryRun) {
             const absolute = path.resolve(process.cwd(), snapshotFile);
             await mkdir(path.dirname(absolute), { recursive: true });
-            await writeFile(absolute, fetched.buffer);
+            await writeFile(absolute, documentBuffer);
           }
         }
+        html =
+          source.documentType === "xlsx"
+            ? ""
+            : docxToText(documentBuffer);
       } else if (offline) {
         html = await readFile(
           path.resolve(process.cwd(), source.snapshotFile),
@@ -1277,7 +1488,10 @@ async function main() {
       }
 
       const publishedAt = parsePublishedAt(html, source.publishedAt);
-      const parsed = source.parser(html);
+      const parsed =
+        source.documentType === "xlsx" && documentBuffer
+          ? parseXlsxCases(documentBuffer, source.stage, source.stageLabel)
+          : source.parser(html);
       const { cases, duplicates } = dedupeCases(parsed.cases);
 
       if (cases.length === 0) {
