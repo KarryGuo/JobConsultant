@@ -2,6 +2,7 @@ import { createHash, randomUUID } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { inflateRawSync } from "node:zlib";
 
 /**
  * 官方公开公告采集脚本。
@@ -44,13 +45,19 @@ export type SourceConfig = {
   snapshotFile: string;
   outputFile: string;
   parser: (html: string) => ParseResult;
+  /**
+   * 公告正文只提供附件时的下载地址。设置后抓取二进制文件，
+   * 保存为快照并抽取 docx 文本再交给解析器。
+   */
+  documentUrl?: string;
+  documentFile?: string;
 };
 
 /**
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-23.2";
+export const PARSER_VERSION = "2026-11-23.3";
 
 type IngestRunMeta = {
   id: string;
@@ -257,6 +264,34 @@ export const SOURCES: SourceConfig[] = [
     snapshotFile: "data/snapshots/tianjin-baodi-2026-second-labor-violations.html",
     outputFile: "data/companies/tianjin-baodi-2026-second.json",
     parser: parseParagraphCases,
+  },
+  {
+    key: "sichuan-2026-third-cases",
+    name: "四川省2026年第三季度重大劳动保障违法行为",
+    region: "四川省",
+    url: "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+    publishedAt: "2026-10-08",
+    snapshotFile: "data/snapshots/sichuan-2026-third-cases.docx",
+    documentFile: "data/snapshots/sichuan-2026-third-cases.docx",
+    documentUrl: encodeURI(
+      "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e/files/1.四川省2026年第三季度重大劳动保障违法行为.docx",
+    ),
+    outputFile: "data/companies/sichuan-2026-third-cases.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "sichuan-2026-third-list",
+    name: "四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单",
+    region: "四川省",
+    url: "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+    publishedAt: "2026-10-08",
+    snapshotFile: "data/snapshots/sichuan-2026-third-list.docx",
+    documentFile: "data/snapshots/sichuan-2026-third-list.docx",
+    documentUrl: encodeURI(
+      "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e/files/2.四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单.docx",
+    ),
+    outputFile: "data/companies/sichuan-2026-third-list.json",
+    parser: parseTextTableCases,
   },
 ];
 
@@ -570,9 +605,82 @@ function stripCellTags(input: string): string {
 }
 
 /**
- * 表格来源（河南、安徽）：不依赖固定列下标，按语义锚点定位。
- * 统一社会信用代码是稳定锚点：公司名在它前一格，法人后一格。
+ * 附件型名单（docx 表格）：单元格按制表符展开，信用代码是稳定锚点。
+ * 适用于人社部统一模板的“失信联合惩戒对象名单”表格。
  */
+export function parseTextTableCases(text: string): ParseResult {
+  const tokens = text
+    .split(/[\t\n\r]+/)
+    .map((token) => token.trim())
+    .filter(Boolean);
+
+  const cases: ParsedCase[] = [];
+  const warnings: string[] = [];
+
+  for (let index = 0; index < tokens.length; index += 1) {
+    if (!CODE_RE.test(tokens[index])) continue;
+    const creditCode = CODE_RE.exec(tokens[index])?.[0];
+    if (!creditCode) continue;
+
+    let name = "";
+    for (let offset = 1; offset <= 4; offset += 1) {
+      const candidate = tokens[index - offset] ?? "";
+      if (
+        candidate.length >= 4 &&
+        COMPANY_HINT_RE.test(candidate) &&
+        !CODE_RE.test(candidate) &&
+        !/(法人及非法人组织|非法人组织|自然人)/.test(candidate)
+      ) {
+        name = normalizeCompanyName(candidate);
+        break;
+      }
+    }
+
+    if (!name) {
+      warnings.push(`第 ${index + 1} 个单元格：无法识别公司名，已跳过`);
+      continue;
+    }
+
+    const violation = tokens[index + 3] ?? "";
+    const blockText = tokens.slice(index, index + 9).join(" ");
+    const caseWarnings: string[] = [];
+
+    const amountYuan =
+      parseAmount(violation) ?? parseAmount(tokens[index + 4] ?? "");
+    const workerCount =
+      parseWorkerCount(violation) ?? parseWorkerCount(tokens[index + 5] ?? "");
+    const listedAt = parseDate(tokens[index + 6] ?? "");
+    const authority = lastAuthority(blockText);
+
+    if (!violation) caseWarnings.push(`${name}：未解析到违法事实`);
+    if (amountYuan === undefined) caseWarnings.push(`${name}：未解析到欠薪金额`);
+    if (workerCount === undefined) caseWarnings.push(`${name}：未解析到欠薪人数`);
+    if (!authority) caseWarnings.push(`${name}：未解析到决定机关`);
+
+    cases.push({
+      name,
+      creditCode,
+      legalRep: tokens[index + 1],
+      violation: violation || "拖欠劳动者劳动报酬",
+      workerCount,
+      amountYuan,
+      authority,
+      decisionNo: tokens[index + 2],
+      listedAt: listedAt ?? undefined,
+      expiresAt: parseDate(tokens[index + 8] ?? "") ?? undefined,
+      stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+      stageLabel: "列入失信名单",
+      stageDate: listedAt ?? undefined,
+      city: cityFromAuthority(authority),
+      warnings: caseWarnings,
+    });
+  }
+
+  warnings.push(...cases.flatMap((item) => item.warnings));
+  return { cases, warnings };
+}
+
+
 export function parseTableCases(html: string): ParseResult {
   const cases: ParsedCase[] = [];
   const warnings: string[] = [];
@@ -969,6 +1077,90 @@ async function fetchHtml(
   throw lastError;
 }
 
+async function fetchBytes(
+  url: string,
+): Promise<{ buffer: Buffer; status: number }> {
+  let lastError: unknown;
+
+  for (const userAgent of USER_AGENTS) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal,
+        headers: { "user-agent": userAgent },
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+      return {
+        buffer: Buffer.from(await response.arrayBuffer()),
+        status: response.status,
+      };
+    } catch (error) {
+      lastError = error;
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  throw lastError;
+}
+
+/** 读取 ZIP 中的单个文件（docx 本质是 zip）。 */
+function readZipEntry(buffer: Buffer, entryName: string): Buffer | null {
+  const eocd = buffer.lastIndexOf(Buffer.from([0x50, 0x4b, 0x05, 0x06]));
+  if (eocd < 0) return null;
+
+  const count = buffer.readUInt16LE(eocd + 10);
+  const cdOffset = buffer.readUInt32LE(eocd + 16);
+  let cursor = cdOffset;
+
+  for (let index = 0; index < count; index += 1) {
+    if (buffer.readUInt32LE(cursor) !== 0x02014b50) return null;
+    const method = buffer.readUInt16LE(cursor + 10);
+    const compressedSize = buffer.readUInt32LE(cursor + 20);
+    const nameLength = buffer.readUInt16LE(cursor + 28);
+    const extraLength = buffer.readUInt16LE(cursor + 30);
+    const commentLength = buffer.readUInt16LE(cursor + 32);
+    const localOffset = buffer.readUInt32LE(cursor + 42);
+    const name = buffer.toString("utf8", cursor + 46, cursor + 46 + nameLength);
+
+    if (name === entryName) {
+      const localNameLength = buffer.readUInt16LE(localOffset + 26);
+      const localExtraLength = buffer.readUInt16LE(localOffset + 28);
+      const start = localOffset + 30 + localNameLength + localExtraLength;
+      const data = buffer.subarray(start, start + compressedSize);
+      return method === 0 ? data : inflateRawSync(data);
+    }
+
+    cursor += 46 + nameLength + extraLength + commentLength;
+  }
+
+  return null;
+}
+
+/** 从 docx 提取正文纯文本，保留段落与表格单元格换行。 */
+export function docxToText(buffer: Buffer): string {
+  const xml = readZipEntry(buffer, "word/document.xml")?.toString("utf8") ?? "";
+  if (!xml) throw new Error("docx 中未找到 word/document.xml");
+
+  return xml
+    .replace(/<w:tab[^>]*\/>/g, "\t")
+    .replace(/<w:br[^>]*\/>/g, "\n")
+    .replace(/<\/w:p>/g, "\n")
+    .replace(/<\/w:tc>/g, "\t")
+    .replace(/<\/w:tr>/g, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/HYPERLINK\s+"[^"]*"\s*\\t\s*"[^"]*"/g, "")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ");
+}
+
 async function readExistingFetchedAt(
   file: string,
 ): Promise<string | null> {
@@ -1040,16 +1232,40 @@ async function main() {
     try {
       let html: string;
       let httpStatus: number | null = null;
+      let contentHash: string;
+      const snapshotFile = source.documentFile ?? source.snapshotFile;
 
-      if (offline) {
+      if (source.documentUrl) {
+        if (offline) {
+          const buffer = await readFile(
+            path.resolve(process.cwd(), snapshotFile),
+          );
+          contentHash = createHash("sha256").update(buffer).digest("hex");
+          html = docxToText(buffer);
+        } else {
+          const fetched = await fetchBytes(source.documentUrl);
+          httpStatus = fetched.status;
+          contentHash = createHash("sha256")
+            .update(fetched.buffer)
+            .digest("hex");
+          html = docxToText(fetched.buffer);
+          if (!dryRun) {
+            const absolute = path.resolve(process.cwd(), snapshotFile);
+            await mkdir(path.dirname(absolute), { recursive: true });
+            await writeFile(absolute, fetched.buffer);
+          }
+        }
+      } else if (offline) {
         html = await readFile(
           path.resolve(process.cwd(), source.snapshotFile),
           "utf8",
         );
+        contentHash = createHash("sha256").update(html).digest("hex");
       } else {
         const fetched = await fetchHtml(source.url);
         html = fetched.html;
         httpStatus = fetched.status;
+        contentHash = createHash("sha256").update(html).digest("hex");
         if (!dryRun) {
           const snapshotPath = path.resolve(
             process.cwd(),
@@ -1060,7 +1276,6 @@ async function main() {
         }
       }
 
-      const contentHash = createHash("sha256").update(html).digest("hex");
       const publishedAt = parsePublishedAt(html, source.publishedAt);
       const parsed = source.parser(html);
       const { cases, duplicates } = dedupeCases(parsed.cases);
@@ -1093,7 +1308,7 @@ async function main() {
               finishedAt: new Date().toISOString(),
               httpStatus,
               contentHash,
-              snapshotPath: source.snapshotFile,
+              snapshotPath: snapshotFile,
               warnings: parsed.warnings.length,
               errors: 0,
               actor: "scripts/ingest-announcements.ts",

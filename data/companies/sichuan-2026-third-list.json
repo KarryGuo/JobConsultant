@@ -1,0 +1,159 @@
+{
+  "source": {
+    "key": "sichuan-2026-third-list",
+    "name": "四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "四川省",
+    "baseUrl": "http://rst.sc.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单",
+    "url": "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+    "publishedAt": "2026-10-08",
+    "fetchedAt": "2026-11-23T13:21:21.769Z",
+    "snapshotFile": "data/snapshots/sichuan-2026-third-list.docx"
+  },
+  "ingestRun": {
+    "id": "f25c951d-0d44-4809-907b-8947e57e3e45",
+    "sourceKey": "sichuan-2026-third-list",
+    "sourceUrl": "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+    "parserVersion": "2026-11-23.3",
+    "status": "success",
+    "startedAt": "2026-11-23T13:21:21.714Z",
+    "finishedAt": "2026-11-23T13:21:21.769Z",
+    "httpStatus": 200,
+    "contentHash": "d50b2f7d8ffeec59e1fe5529471e83fb30132cac7fb7c75a8756fdf09e5e6c63",
+    "snapshotPath": "data/snapshots/sichuan-2026-third-list.docx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "四川鼎仁建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "915100000833559305",
+        "province": "四川省",
+        "city": "广安市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠324名劳动者劳动报酬共计4105373元，经人力资源和社会保障行政部门责令改正仍拒不改正。",
+            "workerCount": 324,
+            "amountYuan": 4105373,
+            "authority": "广安市广安区人力资源和社会保障局",
+            "decisionNo": "广区人社监列决字〔2026〕1号",
+            "legalRep": "刘小兵",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-07-31",
+            "listedAt": "2026-07-31",
+            "expiresAt": "2029-07-30"
+          },
+          "sourceUrl": "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+          "sourceTitle": "四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:21:21.769Z",
+          "snapshotFile": "data/snapshots/sichuan-2026-third-list.docx",
+          "ingestRunId": "f25c951d-0d44-4809-907b-8947e57e3e45",
+          "parserVersion": "2026-11-23.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "华蓥市金丰农贸市场管理有限责任公司",
+        "aliases": [],
+        "creditCode": "91511681MAK5TFAF3U",
+        "province": "四川省",
+        "city": "广安市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠15名劳动者劳动报酬共计74828.6元，经人力资源和社会保障行政部门责令改正仍拒不改正。",
+            "workerCount": 15,
+            "amountYuan": 74829,
+            "authority": "广安市华蓥市人力资源和社会保障局",
+            "decisionNo": "华人社监列决字〔2026〕2号",
+            "legalRep": "董娇娇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-03",
+            "listedAt": "2026-08-03",
+            "expiresAt": "2029-08-02"
+          },
+          "sourceUrl": "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+          "sourceTitle": "四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:21:21.769Z",
+          "snapshotFile": "data/snapshots/sichuan-2026-third-list.docx",
+          "ingestRunId": "f25c951d-0d44-4809-907b-8947e57e3e45",
+          "parserVersion": "2026-11-23.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "广安嘉领智能科技有限公司",
+        "aliases": [],
+        "creditCode": "91511602MAEC7G1G2G",
+        "province": "四川省",
+        "city": "广安市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠49名劳动者劳动报酬共计204683元，经人力资源和社会保障行政部门责令改正仍拒不改正。",
+            "workerCount": 49,
+            "amountYuan": 204683,
+            "authority": "广安市广安区人力资源和社会保障局",
+            "decisionNo": "广区人社监列决字〔2026〕2号",
+            "legalRep": "李建成",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-18",
+            "listedAt": "2026-08-18",
+            "expiresAt": "2029-08-17"
+          },
+          "sourceUrl": "http://rst.sc.gov.cn/rst/gsgg/2026/10/8/50cd9ec2d23141b49ad9376a10f2697e.shtml",
+          "sourceTitle": "四川省2026年第三季度拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:21:21.769Z",
+          "snapshotFile": "data/snapshots/sichuan-2026-third-list.docx",
+          "ingestRunId": "f25c951d-0d44-4809-907b-8947e57e3e45",
+          "parserVersion": "2026-11-23.3"
+        }
+      ]
+    }
+  ]
+}
