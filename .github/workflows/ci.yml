@@ -69,17 +69,14 @@ jobs:
       - name: Import sample data
         run: pnpm exec tsx scripts/import-company.ts
 
+      - name: Backfill legacy lineage
+        run: pnpm exec tsx scripts/backfill-lineage.ts
+
       - name: Type check
         run: pnpm exec tsc --noEmit
 
       - name: Lint
         run: pnpm lint
-
-      - name: Rule checks
-        run: pnpm check:rules
-
-      - name: Feedback checks
-        run: pnpm check:feedback
 
       - name: Production build
         run: pnpm build

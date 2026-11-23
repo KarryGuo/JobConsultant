@@ -35,7 +35,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+# env files (keep examples)
 .env*
+!.env.example
+!.env.production.example
 !.env.example
 
 # vercel
@@ -44,3 +47,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 创作笔记、路演材料与本地规格（不发布到公开仓库）
+/0*.md
+/.trae/
+/.screenshots/
+
+# 本地回归与冒烟脚本（不发布）
+/scripts/check-announcements.ts
+/scripts/check-evidence.ts
+/scripts/check-rules.ts
+/scripts/check-feedback.ts
+/scripts/qa-smoke.ts
+/.github/workflows/source-check.yml
