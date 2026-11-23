@@ -330,6 +330,26 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/jiangsu-2026-third-list.json",
     parser: parseParagraphCases,
   },
+  {
+    key: "hebei-luquan-2026-10",
+    name: "石家庄市鹿泉区人社局关于公布重大劳动保障违法行为的公告",
+    region: "河北省",
+    url: "https://www.sjzlq.gov.cn/columns/757a5248-a337-4f80-8267-974d8af52611/202610/12/e1de1b1d-68be-49bd-9900-dea9ce77bc46.html",
+    publishedAt: "2026-10-12",
+    snapshotFile: "data/snapshots/hebei-luquan-2026-10.html",
+    outputFile: "data/companies/hebei-luquan-2026-10.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "hebei-zhengding-2026-10",
+    name: "正定县人社局关于公布重大劳动保障违法行为的公告",
+    region: "河北省",
+    url: "http://www.zd.gov.cn/columns/4a0cdd91-94c4-420c-b998-ce261ceafe25/202610/15/2f98522b-97db-4139-bc4b-d9c02faa29a7.html",
+    publishedAt: "2026-10-15",
+    snapshotFile: "data/snapshots/hebei-zhengding-2026-10.html",
+    outputFile: "data/companies/hebei-zhengding-2026-10.json",
+    parser: parseTableCases,
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -606,6 +626,21 @@ function normalizeCompanyName(raw: string): string {
 }
 
 /**
+ * 是否为“像企业名”的单元格。地址里常出现“园/中心”等词，
+ * 因此要求名称以主体类型词结尾，避免把注册地址当成企业名。
+ */
+function looksLikeCompany(value: string): boolean {
+  const trimmed = value.replace(/[（(][^）)]*[）)]\s*$/, "");
+  return (
+    trimmed.length >= 4 &&
+    COMPANY_HINT_RE.test(trimmed) &&
+    /(公司|厂|店|中心|超市|幼儿园|服务部|工作室|合作社|集团|商行|馆|站|企业)$/.test(
+      trimmed,
+    )
+  );
+}
+
+/**
  * Word 导出的页面常出现嵌套 `<table>`，按 `<table>...</table>` 匹配会
  * 在外层表格的第一个内层结束标签处截断。这里直接扫描所有 `<tr>`，
  * 只保留真正含企业信用代码的数据行，避免依赖表格层级。
@@ -744,7 +779,21 @@ export function parseTableCases(html: string): ParseResult {
 
     const codeMatch = CODE_RE.exec(cells[codeIndex]);
     const creditCode = codeMatch?.[0];
-    const name = normalizeCompanyName((cells[codeIndex - 1] ?? "").trim());
+    let name = normalizeCompanyName((cells[codeIndex - 1] ?? "").trim());
+
+    // 有些表格把“注册地址”排在信用代码前一格（如河北区县公告），
+    // 此时需要向前多找一格才能拿到违法主体名称。
+    if (!looksLikeCompany(name)) {
+      for (let offset = 2; offset <= 3; offset += 1) {
+        const candidate = normalizeCompanyName(
+          (cells[codeIndex - offset] ?? "").trim(),
+        );
+        if (looksLikeCompany(candidate)) {
+          name = candidate;
+          break;
+        }
+      }
+    }
 
     if (!creditCode || name.length < 4 || !COMPANY_HINT_RE.test(name)) {
       continue;
@@ -767,7 +816,9 @@ export function parseTableCases(html: string): ParseResult {
         !/决字|号$/.test(compact(cell)),
     );
     const authority =
-      authorityIndex >= 0 ? cells[authorityIndex] : undefined;
+      authorityIndex >= 0
+        ? cells[authorityIndex]
+        : lastAuthority(cells.join(" "));
     if (!authority) caseWarnings.push(`${name}：未解析到决定机关`);
 
     const decisionIndex = cells.findIndex(

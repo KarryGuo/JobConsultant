@@ -1,0 +1,77 @@
+{
+  "source": {
+    "key": "hebei-zhengding-2026-10",
+    "name": "正定县人社局关于公布重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "河北省",
+    "baseUrl": "http://www.zd.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "正定县人社局关于公布重大劳动保障违法行为的公告",
+    "url": "http://www.zd.gov.cn/columns/4a0cdd91-94c4-420c-b998-ce261ceafe25/202610/15/2f98522b-97db-4139-bc4b-d9c02faa29a7.html",
+    "publishedAt": "2026-10-15",
+    "fetchedAt": "2026-11-23T13:42:51.686Z",
+    "snapshotFile": "data/snapshots/hebei-zhengding-2026-10.html"
+  },
+  "ingestRun": {
+    "id": "19da4087-c8aa-4599-a1c4-af84d87988a4",
+    "sourceKey": "hebei-zhengding-2026-10",
+    "sourceUrl": "http://www.zd.gov.cn/columns/4a0cdd91-94c4-420c-b998-ce261ceafe25/202610/15/2f98522b-97db-4139-bc4b-d9c02faa29a7.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "success",
+    "startedAt": "2026-11-23T13:42:51.555Z",
+    "finishedAt": "2026-11-23T13:42:51.686Z",
+    "httpStatus": 200,
+    "contentHash": "42f8d1bd10c6c62729886fc505ea577d120369dbec6ec3a9767ec873fb24d0b6",
+    "snapshotPath": "data/snapshots/hebei-zhengding-2026-10.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "河北福榕筑建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91130101MA08ALFH0N",
+        "province": "河北省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠90名农民工工资210万元，经劳动保障行政部门责令改正，拒不改正。",
+            "workerCount": 90,
+            "amountYuan": 2100000,
+            "authority": "2026年9月14日下达《劳动保障监察责令限期改正通知书》，该公司逾期未改正。2026年10月10日依法作出《劳动保障监察行政处罚决定书》、《劳动保障监察行政处理决定书》，处以罚款贰万元。",
+            "legalRep": "许龙发",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-09-14",
+            "listedAt": "2026-09-14"
+          },
+          "sourceUrl": "http://www.zd.gov.cn/columns/4a0cdd91-94c4-420c-b998-ce261ceafe25/202610/15/2f98522b-97db-4139-bc4b-d9c02faa29a7.html",
+          "sourceTitle": "正定县人社局关于公布重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-23T13:42:51.686Z",
+          "snapshotFile": "data/snapshots/hebei-zhengding-2026-10.html",
+          "ingestRunId": "19da4087-c8aa-4599-a1c4-af84d87988a4",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}
