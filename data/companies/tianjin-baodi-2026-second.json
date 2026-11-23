@@ -1,0 +1,105 @@
+{
+  "source": {
+    "key": "tianjin-baodi-2026-second",
+    "name": "天津市宝坻区人社局关于公布2026年第二季度重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "天津市",
+    "baseUrl": "https://www.tjbd.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "天津市宝坻区人社局关于公布2026年第二季度重大劳动保障违法行为的公告",
+    "url": "https://www.tjbd.gov.cn/zwgk/zfxxgkqjjg/rlsbj/fdzdgknr16/xzcfqz16/202606/t20260623_7322327.html",
+    "publishedAt": "2026-06-23",
+    "fetchedAt": "2026-11-23T13:08:10.398Z",
+    "snapshotFile": "data/snapshots/tianjin-baodi-2026-second-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "178e1d1a-cee7-46ed-82d2-3b8fe108b0ff",
+    "sourceKey": "tianjin-baodi-2026-second",
+    "sourceUrl": "https://www.tjbd.gov.cn/zwgk/zfxxgkqjjg/rlsbj/fdzdgknr16/xzcfqz16/202606/t20260623_7322327.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:08:10.069Z",
+    "finishedAt": "2026-11-23T13:08:10.398Z",
+    "httpStatus": 200,
+    "contentHash": "9277c95fc41b5d5eab7fbd49c4a6f73b1a27d1a1d7f5e4257d024e7d5f3fa840",
+    "snapshotPath": "data/snapshots/tianjin-baodi-2026-second-labor-violations.html",
+    "warnings": 5,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "天津市宝坻区泓顺凯泰服装加工厂",
+        "aliases": [],
+        "creditCode": "92120224MA06J5KE12",
+        "province": "天津市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92120224MA06J5KE12 天津市宝坻区林亭口镇东王庄村新街30号 孙克顺 拖欠宋海霞等6名劳动者2024年1月至3月、2024年5月至2025年3月工资共计133582元（人民币壹拾叁万叁仟伍佰捌拾贰整） 向该单位下达行政处理决定书、宝坻区人民法院以拒不执法劳动报酬罪判处孙克顺有期徒刑一年，并处罚金一万元，责令孙克顺支付拖欠的劳动报酬",
+            "workerCount": 6,
+            "amountYuan": 133582,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://www.tjbd.gov.cn/zwgk/zfxxgkqjjg/rlsbj/fdzdgknr16/xzcfqz16/202606/t20260623_7322327.html",
+          "sourceTitle": "天津市宝坻区人社局关于公布2026年第二季度重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-06-23",
+          "fetchedAt": "2026-11-23T13:08:10.398Z",
+          "snapshotFile": "data/snapshots/tianjin-baodi-2026-second-labor-violations.html",
+          "ingestRunId": "178e1d1a-cee7-46ed-82d2-3b8fe108b0ff",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天津市金龙宝汽车美容服务有限公司",
+        "aliases": [],
+        "creditCode": "91120224MAEAA4PB64",
+        "province": "天津市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://www.tjbd.gov.cn/zwgk/zfxxgkqjjg/rlsbj/fdzdgknr16/xzcfqz16/202606/t20260623_7322327.html",
+          "sourceTitle": "天津市宝坻区人社局关于公布2026年第二季度重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-06-23",
+          "fetchedAt": "2026-11-23T13:08:10.398Z",
+          "snapshotFile": "data/snapshots/tianjin-baodi-2026-second-labor-violations.html",
+          "ingestRunId": "178e1d1a-cee7-46ed-82d2-3b8fe108b0ff",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

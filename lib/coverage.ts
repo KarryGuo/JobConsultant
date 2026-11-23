@@ -5,6 +5,8 @@ export const COVERED_REGIONS = [
   "湖北省",
   "福建省",
   "北京市",
+  "山西省",
+  "天津市",
 ] as const;
 
 /**
@@ -19,9 +21,7 @@ export const DIRECT_LOOKUP_ONLY_REGIONS = [
 
 /** 尚未接入自动采集的其余省级行政区，按批次推进。 */
 export const PENDING_REGIONS = [
-  "天津市",
   "河北省",
-  "山西省",
   "内蒙古自治区",
   "辽宁省",
   "吉林省",

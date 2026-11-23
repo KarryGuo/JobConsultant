@@ -1,0 +1,133 @@
+{
+  "source": {
+    "key": "shanxi-2026-first-batch",
+    "name": "山西省人社厅发布2026年度第一批重大劳动保障违法行为典型案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山西省",
+    "baseUrl": "https://rst.shanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山西省人社厅发布2026年度第一批重大劳动保障违法行为典型案件",
+    "url": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202604/t20260407_10094004.html",
+    "publishedAt": "2026-04-07",
+    "fetchedAt": "2026-11-23T13:08:09.963Z",
+    "snapshotFile": "data/snapshots/shanxi-2026-first-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "4c36320b-0596-45ad-9f99-398791efdfc4",
+    "sourceKey": "shanxi-2026-first-batch",
+    "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202604/t20260407_10094004.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:08:09.703Z",
+    "finishedAt": "2026-11-23T13:08:09.963Z",
+    "httpStatus": 200,
+    "contentHash": "306e23c141ff170b908b25ca9401db0428586ce5d194d38ee9a48ccce9c0e16e",
+    "snapshotPath": "data/snapshots/shanxi-2026-first-labor-violations.html",
+    "warnings": 6,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "山西德益创新科技有限公司",
+        "aliases": [],
+        "creditCode": "91140403MA7YMEDJ7G",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140403MA7YMEDJ7G 杨 林 山西荣鑫溶剂有限公司 2500KW 分布式光伏电站项目 拖欠 18人工资17.67万元 2 时众然（天津）建筑工程有限公司北京第一分公司",
+            "amountYuan": 176700
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202604/t20260407_10094004.html",
+          "sourceTitle": "山西省人社厅发布2026年度第一批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-07",
+          "fetchedAt": "2026-11-23T13:08:09.963Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-first-labor-violations.html",
+          "ingestRunId": "4c36320b-0596-45ad-9f99-398791efdfc4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "时众然建筑工程有限公司北京第一分公司",
+        "aliases": [],
+        "creditCode": "91110115MABWXA8N2X",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91110115MABWXA8N2X 赵地荣 山西宁武县恢河特大桥打桩工程项目 拖欠 6人工资17.35万元 3 四川伟懋聚源建筑劳务有限公司",
+            "amountYuan": 173500
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202604/t20260407_10094004.html",
+          "sourceTitle": "山西省人社厅发布2026年度第一批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-07",
+          "fetchedAt": "2026-11-23T13:08:09.963Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-first-labor-violations.html",
+          "ingestRunId": "4c36320b-0596-45ad-9f99-398791efdfc4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川伟懋聚源建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91511321MA63004L8N",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91511321MA63004L8N 黄大伟 太原市尖草坪区富力天禧城项目 拖欠 46人工资127.99万元 山西省人力资源和社会保障厅 2026年3月31日 返回根治欠薪专栏 返回网站首页 主办单位：山西省人力资源和社会保障厅 晋ICP07000928号 |版权所有：山西省人力资源和社会保障厅 地址：太原市万柏林区滨河西路南段129号山西焦煤双创基地B座14-18层 网站标识码1400000038",
+            "amountYuan": 1279900,
+            "stageDate": "2026-03-31"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202604/t20260407_10094004.html",
+          "sourceTitle": "山西省人社厅发布2026年度第一批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-07",
+          "fetchedAt": "2026-11-23T13:08:09.963Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-first-labor-violations.html",
+          "ingestRunId": "4c36320b-0596-45ad-9f99-398791efdfc4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

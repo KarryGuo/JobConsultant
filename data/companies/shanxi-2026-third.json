@@ -1,0 +1,413 @@
+{
+  "source": {
+    "key": "shanxi-2026-third-batch",
+    "name": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山西省",
+    "baseUrl": "https://rst.shanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+    "url": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+    "publishedAt": "2026-10-08",
+    "fetchedAt": "2026-11-23T13:08:10.067Z",
+    "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+    "sourceKey": "shanxi-2026-third-batch",
+    "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:08:10.021Z",
+    "finishedAt": "2026-11-23T13:08:10.067Z",
+    "httpStatus": 200,
+    "contentHash": "06bb1c5ec5dae7303f64690b1848b7d813abcce406c77ca95589d5bd7b69ebca",
+    "snapshotPath": "data/snapshots/shanxi-2026-third-labor-violations.html",
+    "warnings": 24,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "吕梁市离石区天硕幼儿园",
+        "aliases": [],
+        "creditCode": "5214110009819704XA",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "5214110009819704XA 卢彦元 吕梁市离石区天硕幼儿园 拖欠 62人工资99.36万元 2 晋城市艺博闻装饰工程有限公司",
+            "amountYuan": 993600
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "晋城市艺博闻装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91140525MA0KMHUB28",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140525MA0KMHUB28 张 华 泽州县金村镇青山街村村级公益性公墓建设项目 拖欠 4人工资2.80万元 3 广州天力建筑工程有限公司山西分公司",
+            "amountYuan": 28000
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "广州天力建筑工程有限公司山西分公司",
+        "aliases": [],
+        "creditCode": "91140107MA0KXUCG4X",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140107MA0KXUCG4X 贾远均 太原市尖草坪区富力天禧城 C区项目 拖欠 70人工资150.51万元 4 河南恒毅坚建设有限公司",
+            "amountYuan": 1505100
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南恒毅坚建设有限公司",
+        "aliases": [],
+        "creditCode": "91410225MA9LR21U7R",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91410225MA9LR21U7R 郭庆昌 太原市尖草坪区融创外滩壹号项目 拖欠 42人工资47.26万元 5 太原市迎泽区剔尖功夫菜馆（个体工商户）",
+            "amountYuan": 472600
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "太原市迎泽区剔尖功夫菜馆",
+        "aliases": [],
+        "creditCode": "92140108MA0LNXYP2B",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92140108MA0LNXYP2B 高 凯 太原市迎泽区剔尖功夫菜馆（个体工商户） 拖欠 31人工资13.7万元 6 太原源瀚科技有限责任公司",
+            "amountYuan": 137000
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "太原源瀚科技有限责任公司",
+        "aliases": [],
+        "creditCode": "91140100MA0LJE1E97",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140100MA0LJE1E97 赵长明 太原源瀚科技有限责任公司 拖欠 21人工资18.38万元 7 长治嘉悦岚寓商业管理有限公司",
+            "amountYuan": 183800
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "长治嘉悦岚寓商业管理有限公司",
+        "aliases": [],
+        "creditCode": "91140403MAK0WB5E43",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140403MAK0WB5E43 刘志杰 长治嘉悦岚寓商业管理有限公司 拖欠 13人工资6.06万元 8 山西兴盛混凝土股份有限公司",
+            "amountYuan": 60600
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西兴盛混凝土股份有限公司",
+        "aliases": [],
+        "creditCode": "911410237963618633",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "911410237963618633 高星星 山西兴盛混凝土股份有限公司 拖欠 19人工资25.96万元 9 临汾经济开发区一头牛鲜切牛肉火锅自助店（个体工商户）",
+            "amountYuan": 259600
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "临汾经济开发区一头牛鲜切牛肉火锅自助店",
+        "aliases": [],
+        "creditCode": "92141091MADY20GD0N",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92141091MADY20GD0N 陈馨婵 临汾经济开发区一头牛鲜切牛肉火锅自助店 拖欠 5人工资2.80万元 10 四川丽骁盛合建筑有限公司",
+            "amountYuan": 28000
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川丽骁盛合建筑有限公司",
+        "aliases": [],
+        "creditCode": "91510824MAEXY0HP0G",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91510824MAEXY0HP0G 法定代表人：刘丽风，项目负责人：王骁 临汾市尧都区蓝山府项目 拖欠 20人工资7.80万元 11 临汾思麦尔新天地商贸有限公司",
+            "amountYuan": 78000,
+            "legalRep": "刘丽风"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "临汾思麦尔新天地商贸有限公司",
+        "aliases": [],
+        "creditCode": "9114100206340474X0",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "9114100206340474X0 王佐军 临汾思麦尔新天地商贸有限公司 拖欠 2人工资10.35万元 12 长治市潞城区益兴建材有限公司",
+            "amountYuan": 103500
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "长治市潞城区益兴建材有限公司",
+        "aliases": [],
+        "creditCode": "91140481MA7XBTTE8Y",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140481MA7XBTTE8Y 于锡元 山西省晋中市寿阳县解愁乡陈家河村 拖欠 37人工资39.89万元 山西省人力资源和社会保障厅 2026年10月4日 返回根治欠薪专栏 返回网站首页 主办单位：山西省人力资源和社会保障厅 晋ICP07000928号 |版权所有：山西省人力资源和社会保障厅 地址：太原市万柏林区滨河西路南段129号山西焦煤双创基地B座14-18层 网站标识码1400000038",
+            "amountYuan": 398900,
+            "stageDate": "2026-10-04"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202610/t20261008_10231166.html",
+          "sourceTitle": "山西省人社厅公布2026年度第三批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-10-08",
+          "fetchedAt": "2026-11-23T13:08:10.067Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-third-labor-violations.html",
+          "ingestRunId": "466f68e0-701c-4d6e-9e2b-6f9eb1151cbd",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

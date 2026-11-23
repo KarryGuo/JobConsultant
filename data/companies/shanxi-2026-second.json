@@ -1,0 +1,288 @@
+{
+  "source": {
+    "key": "shanxi-2026-second-batch",
+    "name": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山西省",
+    "baseUrl": "https://rst.shanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+    "url": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+    "publishedAt": "2026-07-07",
+    "fetchedAt": "2026-11-23T13:08:10.018Z",
+    "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+    "sourceKey": "shanxi-2026-second-batch",
+    "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:08:09.970Z",
+    "finishedAt": "2026-11-23T13:08:10.018Z",
+    "httpStatus": 200,
+    "contentHash": "dbcdc6a723f8ddde44e630b4cd6b14be2e24cc0529dda2d089cd2b0ef94c172d",
+    "snapshotPath": "data/snapshots/shanxi-2026-second-labor-violations.html",
+    "warnings": 16,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "深华建设股份有限公司",
+        "aliases": [],
+        "creditCode": "91440300192190813Q",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91440300192190813Q 周 锐 大同市平城区碧桂园凤栖台项目园凤栖台项目 拖欠 34人工资82.84万元 2 洪洞县熊猫冲浪餐饮店（个体工商户）",
+            "amountYuan": 828400
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "洪洞县熊猫冲浪餐饮店",
+        "aliases": [],
+        "creditCode": "92141024MAEL7EWE6M",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92141024MAEL7EWE6M 许芳芳 洪洞县熊猫冲浪餐饮店 拖欠 3人工资1.44万元 3 侯马市臻选劳务服务部（个体工商户）",
+            "amountYuan": 14400
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "侯马市臻选劳务服务部",
+        "aliases": [],
+        "creditCode": "92141081MA0LE3FE0T",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92141081MA0LE3FE0T 周长军 侯马市凤城加油站项目 拖欠 11人工资14.69万元 4 滨海创鸿建设工程有限公司",
+            "amountYuan": 146900
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "滨海创鸿建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91320922MABP2W331X",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91320922MABP2W331X 耿松松 侯马市 L15401-2项目 拖欠 12人工资11.12万元 5 天津吉喆建筑安装有限责任公司",
+            "amountYuan": 111200
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天津吉喆建筑安装有限责任公司",
+        "aliases": [],
+        "creditCode": "91120112MAEA37AL25",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91120112MAEA37AL25 李朋飞 沁县瑞隆能源原煤棚安装项目 拖欠 11人工资27.31万元 6 河南中明建设发展有限公司",
+            "amountYuan": 273100
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南中明建设发展有限公司",
+        "aliases": [],
+        "creditCode": "91411628MA9FBQLR26",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91411628MA9FBQLR26 赵明 沁县 110千伏线改迁项目 拖欠 7人工资15.28万元 7 贵州炬烽建设工程有限公司",
+            "amountYuan": 152800
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州炬烽建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91520502MACLJNG49A",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91520502MACLJNG49A 佘树林 太原中北高新区太钢产业园区综合能源项目 拖欠 31人工资77万元 8 聊城吉成星建筑工程有限公司",
+            "amountYuan": 770000
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "聊城吉成星建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91371522MAC5G4XL3C",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91371522MAC5G4XL3C 邵宪琴（ 6月12日更换法人为程明朝） 太原中北高新区山西省太原高性能制造技术与智能应用升级中试基地建设项目 拖欠 7人工资16.1万元 山西省人力资源和社会保障厅 2026年7月6日 返回根治欠薪专栏 返回网站首页 主办单位：山西省人力资源和社会保障厅 晋ICP07000928号 |版权所有：山西省人力资源和社会保障厅 地址：太原市万柏林区滨河西路南段129号山西焦煤双创基地B座14-18层 网站标识码1400000038",
+            "amountYuan": 161000,
+            "stageDate": "2026-07-06"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202607/t20260707_10172112.html",
+          "sourceTitle": "山西省人社厅发布2026年度第二批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-07",
+          "fetchedAt": "2026-11-23T13:08:10.018Z",
+          "snapshotFile": "data/snapshots/shanxi-2026-second-labor-violations.html",
+          "ingestRunId": "98bb7f73-49b3-44a4-b7d8-df76c3f50024",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}
