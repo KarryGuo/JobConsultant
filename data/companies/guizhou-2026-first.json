@@ -1,0 +1,284 @@
+{
+  "source": {
+    "key": "guizhou-2026-first",
+    "name": "贵州省2026年第一批重大劳动保障违法案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "贵州省",
+    "baseUrl": "https://rst.guizhou.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "贵州省2026年第一批重大劳动保障违法案件",
+    "url": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+    "publishedAt": "2026-03-24",
+    "fetchedAt": "2026-11-23T14:09:05.360Z",
+    "snapshotFile": "data/snapshots/guizhou-2026-first.html"
+  },
+  "ingestRun": {
+    "id": "9c57b043-f765-431a-af35-fe824b16ae1c",
+    "sourceKey": "guizhou-2026-first",
+    "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.204Z",
+    "finishedAt": "2026-11-23T14:09:05.360Z",
+    "httpStatus": 200,
+    "contentHash": "346a1f0247c835f9403508ea6a2012c4b28aa0ac96bb0c720646dd4ee7ae5998",
+    "snapshotPath": "data/snapshots/guizhou-2026-first.html",
+    "warnings": 12,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "山东富德成建设劳务有限公司",
+        "aliases": [],
+        "creditCode": "91370112MAD5URCU4Q",
+        "province": "贵州省",
+        "city": "天柱县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、山东富德成建设劳务有限公司拖欠工资案 山东富德成建设劳务有限公司，统一社会信用代码：91370112MAD5URCU4Q，地址：中国（山东）自由贸易试验区济南片区唐冶街道唐冶西路868号山东创意产业园33号楼205室，法定代表人：郭斌斌",
+            "authority": "天柱县人力资源和社会保障局",
+            "legalRep": "郭斌斌",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-02-12"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天柱县铭星劳务服务中心（个体工商户）",
+        "aliases": [],
+        "creditCode": "92522627MADFYCA14M",
+        "province": "贵州省",
+        "city": "天柱县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、天柱县铭星劳务服务中心（个体工商户）拖欠工资案 天柱县铭星劳务服务中心（个体工商户），统一社会信用代码：92522627MADFYCA14M,地址：天柱县渡马镇杨柳村老街组，法定代表人：杨仪铭",
+            "authority": "天柱县人力资源和社会保障局",
+            "legalRep": "杨仪铭",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-11-20"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州中安建建筑工程有限公司六盘水分公司",
+        "aliases": [],
+        "creditCode": "91520201MABW7E0M2W",
+        "province": "贵州省",
+        "city": "安顺市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，贵州中安建建筑工程有限公司六盘水分公司拖欠29名劳动者工资",
+            "workerCount": 29,
+            "authority": "安顺市人力资源和社会保障局",
+            "legalRep": "刘志发",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2025-12-31"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州玉锋装饰有限公司",
+        "aliases": [],
+        "creditCode": "91520522MA6H3Q0J61",
+        "province": "贵州省",
+        "city": "西秀区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，贵州玉锋装饰有限公司拖欠10名劳动者工资",
+            "workerCount": 10,
+            "authority": "西秀区人力资源和社会保障局",
+            "legalRep": "李玉峰",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-01-31"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州星泓商业管理有限公司",
+        "aliases": [],
+        "creditCode": "91520115MAAJY1HX9K",
+        "province": "贵州省",
+        "city": "观山湖区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "五 、贵州星泓商业管理有限公司拖欠工资案 贵州星泓商业管理有限公司，统一社会信用代码：91520115MAAJY1HX9K，注册地址：贵州省贵阳市观山湖区观山街道黔灵山路266号江华·国际旅游中心（江华·荔星广场）一层至六层，法定代表人：陈兰",
+            "authority": "观山湖区人力资源和社会保障局",
+            "legalRep": "陈兰",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-02-09"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州省修文县长泰矿业有限公司",
+        "aliases": [],
+        "creditCode": "91520123MAALX3RQ74",
+        "province": "贵州省",
+        "city": "修文县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "六、贵州省修文县长泰矿业有限公司拖欠工资案 贵州省修文县长泰矿业有限公司，统一社会信用代码：91520123MAALX3RQ74，注册地址：贵州省贵阳市修文县谷堡镇索桥村，法定代表人：吴孔辉",
+            "authority": "修文县人力资源和社会保障局",
+            "legalRep": "吴孔辉",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "六枝特区宏顺发煤矿有限公司",
+        "aliases": [],
+        "creditCode": "915200002147215670",
+        "province": "贵州省",
+        "city": "六枝特区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "七、六枝特区宏顺发煤矿有限公司拖欠工资案 六枝特区宏顺发煤矿有限公司，统一社会信用代码：915200002147215670，地址：贵州省六盘水市六枝特区中寨乡箐脚村，法定代表人：邓少芬",
+            "authority": "六枝特区人力资源和社会保障局",
+            "legalRep": "邓少芬",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+          "sourceTitle": "贵州省2026年第一批重大劳动保障违法案件",
+          "sourcePublishedAt": "2026-03-24",
+          "fetchedAt": "2026-11-23T14:09:05.360Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-first.html",
+          "ingestRunId": "9c57b043-f765-431a-af35-fe824b16ae1c",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

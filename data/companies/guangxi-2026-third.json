@@ -1,0 +1,111 @@
+{
+  "source": {
+    "key": "guangxi-2026-third",
+    "name": "广西2026年第三批重大劳动保障违法案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "广西壮族自治区",
+    "baseUrl": "http://rst.gxzf.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "广西2026年第三批重大劳动保障违法案例",
+    "url": "http://rst.gxzf.gov.cn/zwgk/xxgk/xzxksp/t28272827.shtml",
+    "publishedAt": "2026-10-26",
+    "fetchedAt": "2026-11-23T14:09:05.942Z",
+    "snapshotFile": "data/snapshots/guangxi-2026-third.html"
+  },
+  "ingestRun": {
+    "id": "fa4e7206-44fa-40bb-865e-a04493cda7a9",
+    "sourceKey": "guangxi-2026-third",
+    "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/xxgk/xzxksp/t28272827.shtml",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.754Z",
+    "finishedAt": "2026-11-23T14:09:05.942Z",
+    "httpStatus": 200,
+    "contentHash": "4e2ec5a1c6260e913e6bed66094c36cba44254abd366c1211f7d74efea3ff37d",
+    "snapshotPath": "data/snapshots/guangxi-2026-third.html",
+    "warnings": 3,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "柳州市优迷健身服务有限公司",
+        "aliases": [],
+        "creditCode": "91450205MA5N4KH36Y",
+        "province": "广西壮族自治区",
+        "city": "柳州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "柳州市柳北区人力资源和社会保障局",
+            "legalRep": "潘小波",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-08-05"
+          },
+          "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/xxgk/xzxksp/t28272827.shtml",
+          "sourceTitle": "广西2026年第三批重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-10-26",
+          "fetchedAt": "2026-11-23T14:09:05.942Z",
+          "snapshotFile": "data/snapshots/guangxi-2026-third.html",
+          "ingestRunId": "fa4e7206-44fa-40bb-865e-a04493cda7a9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川安久建设工程有限公司湖南衡阳分公司",
+        "aliases": [],
+        "creditCode": "91430421MA4TH0A586",
+        "province": "广西壮族自治区",
+        "city": "柳州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经核实， 该单位 拖欠王 某某 等 10名劳动者2025年5月至2026年1月的劳动报酬共计484588元",
+            "workerCount": 10,
+            "amountYuan": 484588,
+            "authority": "柳州市柳北区人力资源和社会保障局",
+            "legalRep": "魏国生",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-07-02"
+          },
+          "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/xxgk/xzxksp/t28272827.shtml",
+          "sourceTitle": "广西2026年第三批重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-10-26",
+          "fetchedAt": "2026-11-23T14:09:05.942Z",
+          "snapshotFile": "data/snapshots/guangxi-2026-third.html",
+          "ingestRunId": "fa4e7206-44fa-40bb-865e-a04493cda7a9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "source": {
+    "key": "chongqing-2026-q3-second",
+    "name": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "重庆市",
+    "baseUrl": "https://rlsbj.cq.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+    "url": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+    "publishedAt": "2026-11-19",
+    "fetchedAt": "2026-11-23T14:09:05.126Z",
+    "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html"
+  },
+  "ingestRun": {
+    "id": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+    "sourceKey": "chongqing-2026-q3-second",
+    "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.056Z",
+    "finishedAt": "2026-11-23T14:09:05.126Z",
+    "httpStatus": 200,
+    "contentHash": "ed7903629663f749b9770018fec72d954476e595dab6c90dc62b7224136bb49d",
+    "snapshotPath": "data/snapshots/chongqing-2026-q3-second.html",
+    "warnings": 15,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "重庆谷薪人力资源有限公司",
+        "aliases": [],
+        "creditCode": "91500113MAELA3AT5Q",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆嘉利建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91500105MABTQQ0D2P",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆至恒新材料有限公司",
+        "aliases": [],
+        "creditCode": "91500153MAK6N2PX9G",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆至恒新材料有限公司（统一社会信用代码： 91500153MAK6N2PX9G ）法定代表人为张航，公司地址为重庆市荣昌区昌元街道许溪社区 13 组，共拖欠 27 名劳动者的劳动报酬 27.48 万元",
+            "workerCount": 27,
+            "amountYuan": 274800,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆广尚装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91500103787450290N",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆广尚装饰工程有限公司（统一社会信用代码： 91500103787450290N ）法定代表人为甘晓奇 ，公司地址为重庆市渝中区石油路街道虎踞路 68 号 13-4 # 附 0301004 号 （集群注册） ，共拖欠张某 2023 年 1 月至 2024 年 1 月的劳动报酬 3.8 万元",
+            "amountYuan": 38000,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "旭垚（重庆）工程管理有限公司",
+        "aliases": [],
+        "creditCode": "915000005951622272",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "五 、 旭垚（重庆）工程管理有限公司拖欠劳动报酬案 2026 年 6 月 9 日，沙坪坝区人力社保局接到劳动者现场投诉，反映旭垚（重庆）工程管理有限公司拖欠郭某等 5 名劳动者劳动报酬 2.79 万元",
+            "workerCount": 5,
+            "amountYuan": 27900,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆龙驹汽车配件有限公司",
+        "aliases": [],
+        "creditCode": "91500102622100460B",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆龙驹汽车配件有限公司（统一社会信用代码： 91500102622100460B ）法定代表人为陈刚，公司地址为重庆市涪陵区新妙镇白鹤路 8 号，经涪陵区人力社保局核实，该公司拖欠 112 名劳动者 2023 年至 2026 年 7 月的劳动报酬共计 557.2 万元",
+            "workerCount": 112,
+            "amountYuan": 5572000,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "刘小红挂靠贵州瑾阳安装工程有限公司",
+        "aliases": [],
+        "creditCode": "91520102MAC4T3JMXU",
+        "province": "重庆市",
+        "city": "重庆市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆龙驹汽车配件有限公司（统一社会信用代码： 91500102622100460B ）法定代表人为陈刚，公司地址为重庆市涪陵区新妙镇白鹤路 8 号，经涪陵区人力社保局核实，该公司拖欠 112 名劳动者 2023 年至 2026 年 7 月的劳动报酬共计 557.2 万元",
+            "workerCount": 112,
+            "amountYuan": 5572000,
+            "authority": "重庆市人力资源和社会保障局",
+            "legalRep": "吴红",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+          "sourceTitle": "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+          "sourcePublishedAt": "2026-11-19",
+          "fetchedAt": "2026-11-23T14:09:05.126Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q3-second.html",
+          "ingestRunId": "b43c2aa1-2db9-49f9-862f-2607bf4a0b27",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

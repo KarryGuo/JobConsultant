@@ -1,0 +1,219 @@
+{
+  "source": {
+    "key": "guizhou-2026-second-list",
+    "name": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "贵州省",
+    "baseUrl": "https://rst.guizhou.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+    "publishedAt": "2026-06-29",
+    "fetchedAt": "2026-11-23T14:09:05.589Z",
+    "snapshotFile": "data/snapshots/guizhou-2026-second-list.html"
+  },
+  "ingestRun": {
+    "id": "74ae9ec9-90a9-47f0-b980-39f39d081a85",
+    "sourceKey": "guizhou-2026-second-list",
+    "sourceUrl": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.517Z",
+    "finishedAt": "2026-11-23T14:09:05.589Z",
+    "httpStatus": 200,
+    "contentHash": "b424f8822543a8d193ce408fdb37ffdc0f44ec0a328b0411bf4b16e8082df122",
+    "snapshotPath": "data/snapshots/guizhou-2026-second-list.html",
+    "warnings": 10,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "贵州鸿纳建设集团有限公司遵义第二分公司",
+        "aliases": [],
+        "creditCode": "91520303MAE5CNWB91",
+        "province": "贵州省",
+        "city": "贵定县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "authority": "贵定县人力资源和社会保障局",
+            "legalRep": "唐礼华",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-03-31",
+            "listedAt": "2026-03-31"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+          "sourceTitle": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T14:09:05.589Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-second-list.html",
+          "ingestRunId": "74ae9ec9-90a9-47f0-b980-39f39d081a85",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州中安建建筑工程有限公司六盘水分公司",
+        "aliases": [],
+        "creditCode": "91520201MABW7E0M2W",
+        "province": "贵州省",
+        "city": "安顺市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "authority": "安顺市人力资源和社会保障局",
+            "legalRep": "刘志法",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-01-16",
+            "listedAt": "2026-01-16"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+          "sourceTitle": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T14:09:05.589Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-second-list.html",
+          "ingestRunId": "74ae9ec9-90a9-47f0-b980-39f39d081a85",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州华源卓越劳务有限公司",
+        "aliases": [],
+        "creditCode": "91520900MA6HFNN63F",
+        "province": "贵州省",
+        "city": "都匀市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "authority": "都匀市人力资源和社会保障局",
+            "legalRep": "郑义",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-03-31",
+            "listedAt": "2026-03-31"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+          "sourceTitle": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T14:09:05.589Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-second-list.html",
+          "ingestRunId": "74ae9ec9-90a9-47f0-b980-39f39d081a85",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "大方县富鑫祥工程劳务有限公司",
+        "aliases": [],
+        "creditCode": "91520521MAAKG0K830",
+        "province": "贵州省",
+        "city": "大方县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "authority": "大方县人力资源和社会保障局",
+            "legalRep": "詹鑫",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-04-20",
+            "listedAt": "2026-04-20"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+          "sourceTitle": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T14:09:05.589Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-second-list.html",
+          "ingestRunId": "74ae9ec9-90a9-47f0-b980-39f39d081a85",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州魔之源食品开发集团有限公司",
+        "aliases": [],
+        "creditCode": "91520521MABNK2FF0T",
+        "province": "贵州省",
+        "city": "大方县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "authority": "大方县人力资源和社会保障局",
+            "legalRep": "郑毅",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-26",
+            "listedAt": "2026-05-26"
+          },
+          "sourceUrl": "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+          "sourceTitle": "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T14:09:05.589Z",
+          "snapshotFile": "data/snapshots/guizhou-2026-second-list.html",
+          "ingestRunId": "74ae9ec9-90a9-47f0-b980-39f39d081a85",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

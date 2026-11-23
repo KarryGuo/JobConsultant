@@ -1,0 +1,112 @@
+{
+  "source": {
+    "key": "yunnan-2026-third",
+    "name": "云南省2026年第三批重大劳动保障违法案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "云南省",
+    "baseUrl": "http://zwfw.hrss.yn.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "云南省2026年第三批重大劳动保障违法案例",
+    "url": "http://zwfw.hrss.yn.gov.cn/NewsView.aspx?cid=558&isZt=7&nid=66226&pid=971",
+    "publishedAt": "2026-10-27",
+    "fetchedAt": "2026-11-23T14:09:05.750Z",
+    "snapshotFile": "data/snapshots/yunnan-2026-third.html"
+  },
+  "ingestRun": {
+    "id": "717e5818-684f-4913-8b0d-fdee384a3469",
+    "sourceKey": "yunnan-2026-third",
+    "sourceUrl": "http://zwfw.hrss.yn.gov.cn/NewsView.aspx?cid=558&isZt=7&nid=66226&pid=971",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.592Z",
+    "finishedAt": "2026-11-23T14:09:05.750Z",
+    "httpStatus": 200,
+    "contentHash": "b45756edb3070ed827eed1402b3de16b9665d5314559e409c66359bf707affed",
+    "snapshotPath": "data/snapshots/yunnan-2026-third.html",
+    "warnings": 2,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "富源老牛坡煤业有限公司",
+        "aliases": [],
+        "creditCode": "915303255993052052",
+        "province": "云南省",
+        "city": "富源县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "workerCount": 2,
+            "authority": "富源县人力资源和社会保障局",
+            "legalRep": "伍永坤",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-07-01"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/NewsView.aspx?cid=558&isZt=7&nid=66226&pid=971",
+          "sourceTitle": "云南省2026年第三批重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-10-27",
+          "fetchedAt": "2026-11-23T14:09:05.750Z",
+          "snapshotFile": "data/snapshots/yunnan-2026-third.html",
+          "ingestRunId": "717e5818-684f-4913-8b0d-fdee384a3469",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "昆明市昆都建筑安装工程有限公司",
+        "aliases": [],
+        "creditCode": "91530102216646388D",
+        "province": "云南省",
+        "city": "西畴县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，昆明市昆都建筑安装工程有限公司拖欠29名劳动者劳动报酬620007元",
+            "workerCount": 29,
+            "amountYuan": 620007,
+            "authority": "西畴县人力资源和社会保障局",
+            "legalRep": "胡兴宇",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-10-12"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/NewsView.aspx?cid=558&isZt=7&nid=66226&pid=971",
+          "sourceTitle": "云南省2026年第三批重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-10-27",
+          "fetchedAt": "2026-11-23T14:09:05.750Z",
+          "snapshotFile": "data/snapshots/yunnan-2026-third.html",
+          "ingestRunId": "717e5818-684f-4913-8b0d-fdee384a3469",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

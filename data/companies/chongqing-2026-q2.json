@@ -1,0 +1,346 @@
+{
+  "source": {
+    "key": "chongqing-2026-q2",
+    "name": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "重庆市",
+    "baseUrl": "https://rlsbj.cq.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+    "url": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+    "publishedAt": "2026-07-20",
+    "fetchedAt": "2026-11-23T14:09:05.198Z",
+    "snapshotFile": "data/snapshots/chongqing-2026-q2.html"
+  },
+  "ingestRun": {
+    "id": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+    "sourceKey": "chongqing-2026-q2",
+    "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.130Z",
+    "finishedAt": "2026-11-23T14:09:05.199Z",
+    "httpStatus": 200,
+    "contentHash": "08d92089fde7e7a16e40f426377c29192eefd1a2231ba578f1e711f9ca48a561",
+    "snapshotPath": "data/snapshots/chongqing-2026-q2.html",
+    "warnings": 11,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "四川中尺建设集团有限公司",
+        "aliases": [],
+        "creditCode": "91510185MA6CEY1UXA",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该工程总承包单位为四川中尺建设集团有限公司（统一社会信用代码： 91510185MA6CEY1UXA ），公司法人为王军，公司地址为四川省成都市锦江区牡丹街 595 号 1 栋 22 层 2236 号，劳务分包单位为成都星羽航建筑劳务有限公司（统一社会信用代码： 91510184MADT931Q3X ），公司法人为周顺明，公司地址为成都市崇州市三江街道东篱路 1 号 14 栋 1 层 7 号，该项目共拖欠 18 名劳动者的劳动报酬 14.69 万元",
+            "workerCount": 18,
+            "amountYuan": 146900,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安徽三三建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91340100066546970G",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司法定代表人为张利伟，公司地址为合肥市高新区天达路 71 号华亿科技公司科研产业楼 B# 楼 13 层，共拖欠 28 名劳动者 2025 年 7 月至 2025 年 12 月期间劳动报酬 63.74 万元",
+            "workerCount": 28,
+            "amountYuan": 637400,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆牧轩装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91500110MA5UM1MN4M",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司法定代表人为张利伟，公司地址为合肥市高新区天达路 71 号华亿科技公司科研产业楼 B# 楼 13 层，共拖欠 28 名劳动者 2025 年 7 月至 2025 年 12 月期间劳动报酬 63.74 万元",
+            "workerCount": 28,
+            "amountYuan": 637400,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "反映重庆人好医院有限公司",
+        "aliases": [],
+        "creditCode": "91500106MA6024Q806",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四、重庆人好医院有限公司拖欠工资案 2026 年 3 月 30 日，沙坪坝区人力社保局接到辖区街道报送的欠薪线索，反映重庆人好医院有限公司（统一社会信用代码： 91500106MA6024Q806 ）拖欠 72 名职工 2025 年 12 月至 2026 年 2 月份工资共计 70 余万元",
+            "workerCount": 72,
+            "amountYuan": 536432,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "发现贵州北标建设有限公司",
+        "aliases": [],
+        "creditCode": "91520325MACCRKY32Y",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四、重庆人好医院有限公司拖欠工资案 2026 年 3 月 30 日，沙坪坝区人力社保局接到辖区街道报送的欠薪线索，反映重庆人好医院有限公司（统一社会信用代码： 91500106MA6024Q806 ）拖欠 72 名职工 2025 年 12 月至 2026 年 2 月份工资共计 70 余万元",
+            "workerCount": 72,
+            "amountYuan": 536432,
+            "legalRep": "罗安祥",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆龙乡金弹子盆景有限公司",
+        "aliases": [],
+        "creditCode": "91500151MABWOLHF4J",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆龙乡金弹子盆景有限公司法定代表人为刘龙，公司地址为重庆市铜梁区塔山东街 360 号，共拖欠 1 名劳动者 2024 年 4 月至 2025 年 1 月的劳动报酬 24000 元",
+            "workerCount": 1,
+            "amountYuan": 24000,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆卓玛矿业有限公司",
+        "aliases": [],
+        "creditCode": "915001013049708667",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆卓玛矿业有限公司法定代表人为谭登奎，公司地址为重庆市万州区走马镇龙嘴村四组 22 号，共拖欠 1 名劳动者 2025 年 2 月至 2025 年 9 月的劳动报酬 1.15 万元",
+            "workerCount": 1,
+            "amountYuan": 11500,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆凤梧商贸有限公司",
+        "aliases": [],
+        "creditCode": "91500113747468234M",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆卓玛矿业有限公司法定代表人为谭登奎，公司地址为重庆市万州区走马镇龙嘴村四组 22 号，共拖欠 1 名劳动者 2025 年 2 月至 2025 年 9 月的劳动报酬 1.15 万元",
+            "workerCount": 1,
+            "amountYuan": 11500,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆德坤建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91500226MA60070R8J",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆德坤建筑工程有限公司法定代表人为郑静，公司地址为重庆市荣昌区昌元街道滨河西路 335 号 2 幢 2-1 号，共拖欠 16 名劳动者 2021 年 10 月至 2025 年 4 月的劳动报酬 15 万元",
+            "workerCount": 16,
+            "amountYuan": 150000,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+          "sourceTitle": "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-07-20",
+          "fetchedAt": "2026-11-23T14:09:05.198Z",
+          "snapshotFile": "data/snapshots/chongqing-2026-q2.html",
+          "ingestRunId": "aa641e4f-48fa-46ae-b0b6-3ae6a6ad1481",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

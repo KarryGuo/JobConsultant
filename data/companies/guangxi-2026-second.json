@@ -1,0 +1,180 @@
+{
+  "source": {
+    "key": "guangxi-2026-second",
+    "name": "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "广西壮族自治区",
+    "baseUrl": "http://rst.gxzf.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+    "url": "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+    "publishedAt": "2026-07-23",
+    "fetchedAt": "2026-11-23T14:09:06.020Z",
+    "snapshotFile": "data/snapshots/guangxi-2026-second.html"
+  },
+  "ingestRun": {
+    "id": "aff29984-ba0e-4db9-a937-a35dc07e063b",
+    "sourceKey": "guangxi-2026-second",
+    "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T14:09:05.945Z",
+    "finishedAt": "2026-11-23T14:09:06.020Z",
+    "httpStatus": 200,
+    "contentHash": "a7d64536e5dcf62889a1f239cd6fa306c1922a3f84828b86fc8090c077be44ff",
+    "snapshotPath": "data/snapshots/guangxi-2026-second.html",
+    "warnings": 5,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "四川安久建设工程有限公司湖南衡阳分公司",
+        "aliases": [],
+        "creditCode": "91430421MA4TH0A586",
+        "province": "广西壮族自治区",
+        "city": "柳州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91430421MA4TH0A586 魏国生 4304211968 **** 8274 拖欠王某某等10名农民工的劳动报酬共计484588元 柳州市柳北区人力资源和社会保障局 柳北人社监列决字〔2026〕2号 2026年 6 月 15 日 2029年 6 月 1 4日 附件 2 202 6 年 第二批 重大劳动保障违法案例",
+            "workerCount": 10,
+            "amountYuan": 484588,
+            "authority": "柳州市柳北区人力资源和社会保障局",
+            "decisionNo": "柳北人社监列决字〔2026〕2号"
+          },
+          "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+          "sourceTitle": "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-07-23",
+          "fetchedAt": "2026-11-23T14:09:06.020Z",
+          "snapshotFile": "data/snapshots/guangxi-2026-second.html",
+          "ingestRunId": "aff29984-ba0e-4db9-a937-a35dc07e063b",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "柳州市观雀楼餐饮有限公司",
+        "aliases": [],
+        "creditCode": "91450205MA5L19RM7D",
+        "province": "广西壮族自治区",
+        "city": "柳州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "workerCount": 3,
+            "authority": "柳州市柳北区人力资源和社会保障局",
+            "legalRep": "黎明",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+          "sourceTitle": "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-07-23",
+          "fetchedAt": "2026-11-23T14:09:06.020Z",
+          "snapshotFile": "data/snapshots/guangxi-2026-second.html",
+          "ingestRunId": "aff29984-ba0e-4db9-a937-a35dc07e063b",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "广西善荣餐饮管理有限公司",
+        "aliases": [],
+        "creditCode": "91450205MAEWCKWH4T",
+        "province": "广西壮族自治区",
+        "city": "柳州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "workerCount": 12,
+            "authority": "柳州市柳北区人力资源和社会保障局",
+            "legalRep": "李海杰",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-03-13"
+          },
+          "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+          "sourceTitle": "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-07-23",
+          "fetchedAt": "2026-11-23T14:09:06.020Z",
+          "snapshotFile": "data/snapshots/guangxi-2026-second.html",
+          "ingestRunId": "aff29984-ba0e-4db9-a937-a35dc07e063b",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "柳州市力邦运输有限公司",
+        "aliases": [],
+        "creditCode": "91450200MA5KEBNJ22",
+        "province": "广西壮族自治区",
+        "city": "柳州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，柳州 市力邦运输 有限公司 拖欠蓝某某 2025年3月至2025年5月的劳动报酬共计17367.11 元",
+            "amountYuan": 17367,
+            "authority": "柳州市柳北区人力资源和社会保障局",
+            "legalRep": "陆善成",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-03-13"
+          },
+          "sourceUrl": "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+          "sourceTitle": "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-07-23",
+          "fetchedAt": "2026-11-23T14:09:06.020Z",
+          "snapshotFile": "data/snapshots/guangxi-2026-second.html",
+          "ingestRunId": "aff29984-ba0e-4db9-a937-a35dc07e063b",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

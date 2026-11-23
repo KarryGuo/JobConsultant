@@ -431,6 +431,95 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/heilongjiang-heihe-2026.json",
     parser: parseParagraphCases,
   },
+  {
+    key: "chongqing-2026-q3-first",
+    name: "重庆市2026年第三季度重大劳动保障违法行为社会公布（第一批）",
+    region: "重庆市",
+    url: "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202610/t20261010_16211311.html",
+    publishedAt: "2026-10-10",
+    snapshotFile: "data/snapshots/chongqing-2026-q3-first.html",
+    outputFile: "data/companies/chongqing-2026-q3-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "chongqing-2026-q3-second",
+    name: "重庆市2026年第三季度重大劳动保障违法行为社会公布（第二批）",
+    region: "重庆市",
+    url: "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202611/t20261119_16439527.html",
+    publishedAt: "2026-11-19",
+    snapshotFile: "data/snapshots/chongqing-2026-q3-second.html",
+    outputFile: "data/companies/chongqing-2026-q3-second.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "chongqing-2026-q2",
+    name: "重庆市2026年第二季度重大劳动保障违法行为社会公布",
+    region: "重庆市",
+    url: "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202607/t20260720_15832707.html",
+    publishedAt: "2026-07-20",
+    snapshotFile: "data/snapshots/chongqing-2026-q2.html",
+    outputFile: "data/companies/chongqing-2026-q2.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "guizhou-2026-first",
+    name: "贵州省2026年第一批重大劳动保障违法案件",
+    region: "贵州省",
+    url: "https://rst.guizhou.gov.cn/xwzx/gggs/202603/t20260324_89902462.html",
+    publishedAt: "2026-03-24",
+    snapshotFile: "data/snapshots/guizhou-2026-first.html",
+    outputFile: "data/companies/guizhou-2026-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "guizhou-2026-second",
+    name: "贵州省2026年第二批重大劳动保障违法案件",
+    region: "贵州省",
+    url: "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565114.html",
+    publishedAt: "2026-06-29",
+    snapshotFile: "data/snapshots/guizhou-2026-second.html",
+    outputFile: "data/companies/guizhou-2026-second.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "guizhou-2026-second-list",
+    name: "贵州省2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+    region: "贵州省",
+    url: "https://rst.guizhou.gov.cn/zwgk/zdlyxx/ldjc/202606/t20260629_90565139.html",
+    publishedAt: "2026-06-29",
+    snapshotFile: "data/snapshots/guizhou-2026-second-list.html",
+    outputFile: "data/companies/guizhou-2026-second-list.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "yunnan-2026-third",
+    name: "云南省2026年第三批重大劳动保障违法案例",
+    region: "云南省",
+    url: "http://zwfw.hrss.yn.gov.cn/NewsView.aspx?cid=558&isZt=7&nid=66226&pid=971",
+    snapshotFile: "data/snapshots/yunnan-2026-third.html",
+    outputFile: "data/companies/yunnan-2026-third.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "guangxi-2026-third",
+    name: "广西2026年第三批重大劳动保障违法案例",
+    region: "广西壮族自治区",
+    url: "http://rst.gxzf.gov.cn/zwgk/xxgk/xzxksp/t28272827.shtml",
+    publishedAt: "2026-10-26",
+    snapshotFile: "data/snapshots/guangxi-2026-third.html",
+    outputFile: "data/companies/guangxi-2026-third.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "guangxi-2026-second",
+    name: "广西2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法案例",
+    region: "广西壮族自治区",
+    url: "http://rst.gxzf.gov.cn/zwgk/ywfl/zh/xzzfgs/zfjg/t27943636.shtml",
+    publishedAt: "2026-07-23",
+    snapshotFile: "data/snapshots/guangxi-2026-second.html",
+    outputFile: "data/companies/guangxi-2026-second.json",
+    parser: parseParagraphCases,
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -679,14 +768,33 @@ function extractLegalRep(text: string): string | undefined {
 }
 
 function normalizeHeading(line: string): string {
-  return line
+  const cleaned = line
     .replace(/^[一二三四五六七八九十百]+[、.．]\s*/, "")
     .replace(/[（(][^）)]*[）)]/g, "")
+    .replace(/[（(][^）)]*$/, "")
     .replace(/拖欠劳动报酬案.*$/, "")
     .replace(/拖欠工资案.*$/, "")
     .replace(/重大劳动保障违法行为.*$/, "")
     .replace(/[，,；;：:\s]+$/, "")
     .trim();
+
+  // 部分省份的小标题混在叙述句里（如“经查，某某公司”），
+  // 取最后一个分句并去掉常见引导词，再抽取以主体类型词结尾的名称。
+  const tail =
+    cleaned
+      .split(/[，,。；;：:]/)
+      .pop()
+      ?.replace(
+        /^(?:称|系|为|该公司|该单位|该工程总承包单位|该项目建设单位|建设单位|施工总承包单位|总承包单位|用人单位|经查实|经核实|经查)(?:为|系|是)?/,
+        "",
+      )
+      .trim() ?? cleaned;
+  const match =
+    /([\u4e00-\u9fa5A-Za-z0-9（）()·]{4,60}(?:公司|厂|店|中心|超市|幼儿园|服务部|工作室|合作社|集团|商行|馆|站|企业))$/.exec(
+      tail,
+    );
+
+  return (match?.[1] ?? tail).trim();
 }
 
 /**
@@ -696,7 +804,7 @@ function normalizeHeading(line: string): string {
  * 只保留主体名称，避免把“单位名称”“负责人”写进企业名。
  */
 function normalizeCompanyName(raw: string): string {
-  return raw
+  const cleaned = raw
     .replace(
       /^(单位名称|企业名称|公司名称|用人单位|违法主体全称|违法主体|被公布单位)\s*[：:]\s*/,
       "",
@@ -706,8 +814,25 @@ function normalizeCompanyName(raw: string): string {
     .split(/统一(?:社会)?信用代码?/)[0]
     .replace(/[（(](?:分包|建设单位|施工总承包单位|用人单位)[）)]\s*$/, "")
     .replace(/\s+/g, "")
-    .replace(/[，,；;：:]+$/, "")
+    .replace(/[，,；;：:（(]+$/, "")
     .trim();
+
+  // 叙述句里夹带公司名时，取最后一个分句并抽取主体名称。
+  const tail =
+    cleaned
+      .split(/[，,。；;：:]/)
+      .pop()
+      ?.replace(
+        /^(?:称|系|为|该公司|该单位|该工程总承包单位|该项目建设单位|建设单位|施工总承包单位|总承包单位|用人单位|经查实|经核实|经查)(?:为|系|是)?/,
+        "",
+      )
+      .trim() ?? cleaned;
+  const match =
+    /([\u4e00-\u9fa5A-Za-z0-9（）()·]{4,60}(?:公司|厂|店|中心|超市|幼儿园|服务部|工作室|合作社|集团|商行|馆|站|企业))$/.exec(
+      tail,
+    );
+
+  return (match?.[1] ?? cleaned).trim();
 }
 
 /**
