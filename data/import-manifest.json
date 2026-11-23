@@ -1,6 +1,11 @@
 {
   "files": [
     "companies/shaanxi-zhitu.json",
-    "companies/shaanxi-2026-third-batch.json"
+    "companies/shaanxi-2026-third-batch.json",
+    "companies/major-companies-2026.json",
+    "companies/henan-2026-third.json",
+    "companies/anhui-2026-third.json",
+    "companies/hubei-2026-q2.json",
+    "companies/fujian-2026-fourth.json"
   ]
 }

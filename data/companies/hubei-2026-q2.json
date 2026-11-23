@@ -1,0 +1,442 @@
+{
+  "source": {
+    "key": "hubei-hrss-labor-violation",
+    "name": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "湖北省",
+    "baseUrl": "https://rst.hubei.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+    "url": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+    "publishedAt": "2026-07-13",
+    "fetchedAt": "2026-11-19T11:49:05.444Z",
+    "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+    "sourceKey": "hubei-hrss-labor-violation",
+    "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+    "parserVersion": "2026-11-22.1",
+    "status": "success",
+    "startedAt": "2026-11-21T16:47:02.476Z",
+    "finishedAt": "2026-11-21T16:47:02.519Z",
+    "httpStatus": null,
+    "contentHash": "c5e64b34e516eea0606c7494f83b34d0c808bf85c36cbb8aba7b12d4a14e883d",
+    "snapshotPath": "data/snapshots/hubei-2026-q2-labor-violations.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "中国建筑第七工程局有限公司",
+        "aliases": [],
+        "creditCode": "91410000169954619U",
+        "province": "湖北省",
+        "city": "襄阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目拖欠18名农民工劳动报酬共计39.85万元",
+            "workerCount": 18,
+            "amountYuan": 398500,
+            "authority": "襄阳市人力资源和社会保障局",
+            "legalRep": "郭建军",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-04-22"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "襄阳市襄城区盛特幼儿园",
+        "aliases": [],
+        "creditCode": "52420602MJH66654X4",
+        "province": "湖北省",
+        "city": "襄阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司拖欠28名劳动者劳动报酬共计48.12万元",
+            "workerCount": 28,
+            "amountYuan": 481200,
+            "authority": "襄阳市人力资源和社会保障局",
+            "legalRep": "朱文实",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-09"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "枝江百里洲家合润超市有限公司",
+        "aliases": [],
+        "creditCode": "91420583MA495J597Y",
+        "province": "湖北省",
+        "city": "枝江市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该单位拖欠29名劳动者2025年11月至2025年12月劳动报酬共计15.71万元",
+            "workerCount": 29,
+            "amountYuan": 157100,
+            "authority": "枝江市人力资源和社会保障局",
+            "legalRep": "刘志强",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖北牛犇劳务服务有限公司",
+        "aliases": [],
+        "creditCode": "91420222MA49N6QL1M",
+        "province": "湖北省",
+        "city": "阳新县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年2月，阳新县人力资源和社会保障局接到7名劳动者投诉，反映湖北牛犇劳务服务有限公司“阳新县枫林镇坡山村漆家堡废品处理厂生态修复挂网客土喷播工程”项目拖欠劳动报酬",
+            "workerCount": 7,
+            "amountYuan": 142700,
+            "authority": "阳新县人力资源和社会保障局",
+            "legalRep": "倪世伟",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-04-13"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "阳新县倾慕养生保健馆",
+        "aliases": [],
+        "creditCode": "92420222MAG0LHE14J",
+        "province": "湖北省",
+        "city": "阳新县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年2月，阳新县人力资源和社会保障局接到12名劳动者投诉，反映阳新县倾慕养生保健馆拖欠劳动报酬",
+            "workerCount": 12,
+            "amountYuan": 35400,
+            "authority": "阳新县人力资源和社会保障局",
+            "legalRep": "汪林芳",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-05-11"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖北一餐美餐饮有限公司",
+        "aliases": [],
+        "creditCode": "91420302MAECXYAW1X",
+        "province": "湖北省",
+        "city": "茅箭区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，湖北一餐美餐饮有限公司拖欠绳某、柯某等45名劳动者劳动报酬共计19.08万元",
+            "workerCount": 45,
+            "amountYuan": 190800,
+            "authority": "茅箭区人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-06-08"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖北广城建设有限公司",
+        "aliases": [],
+        "creditCode": "91421002MAEDW0519D",
+        "province": "湖北省",
+        "city": "武当山特区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，湖北广城建设有限公司拖欠龚某、姚某等23名劳动者劳动报酬共计27.85万元",
+            "workerCount": 23,
+            "amountYuan": 278500,
+            "authority": "武当山特区人力资源和社会保障局",
+            "legalRep": "叶智敏",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-05-26"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "汉川市莉锦服饰厂",
+        "aliases": [],
+        "creditCode": "92420984MA4C9CUR9X",
+        "province": "湖北省",
+        "city": "汉川市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该单位拖欠23名劳动者劳动报酬共计13.93万元",
+            "workerCount": 23,
+            "amountYuan": 139300,
+            "authority": "汉川市人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-04-10"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川时和新建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91510104MA67GCEG4H",
+        "province": "湖北省",
+        "city": "大悟县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年5月22日，劳动者到大悟县人力资源和社会保障局劳动维权保护中心现场投诉，反映在大悟县京港澳高速公路湖北鄂豫界至军山段改扩建工程做工，其老板吕浩拖欠67名劳动者劳动报酬",
+            "workerCount": 67,
+            "amountYuan": 2212400,
+            "authority": "大悟县人力资源和社会保障局",
+            "legalRep": "吕浩",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-06-17"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "黄冈市炬成装饰有限公司",
+        "aliases": [],
+        "creditCode": "91421100579897004G",
+        "province": "湖北省",
+        "city": "黄冈市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该单位拖欠高某等15名劳动者2024年4月至2025年4月劳动报酬共计27.58万元",
+            "workerCount": 15,
+            "amountYuan": 275800,
+            "authority": "黄冈市人力资源和社会保障局",
+            "legalRep": "孙细华",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川大道致远建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91510100MAD8L49N94",
+        "province": "湖北省",
+        "city": "武穴市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该单位拖欠吴某、乔某等60名农民工劳动报酬共计96.07万元",
+            "workerCount": 60,
+            "amountYuan": 960700,
+            "authority": "武穴市人力资源和社会保障局",
+            "legalRep": "张贵志",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-04-24"
+          },
+          "sourceUrl": "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+          "sourceTitle": "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+          "sourcePublishedAt": "2026-07-13",
+          "fetchedAt": "2026-11-19T11:49:05.444Z",
+          "snapshotFile": "data/snapshots/hubei-2026-q2-labor-violations.html",
+          "ingestRunId": "6d4cd063-d551-4911-83e6-9ddbd45206c7",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    }
+  ]
+}

@@ -19,6 +19,7 @@ export const APPEAL_CATEGORY_LABELS: Record<string, string> = {
   outdated: "记录已过时",
   missing_context: "缺少背景",
   wrong_company: "主体认错",
+  coverage_request: "收录请求",
   other: "其他",
 };
 

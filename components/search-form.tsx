@@ -213,7 +213,7 @@ export function SearchForm({
             aria-activedescendant={
               activeIndex >= 0 ? `${listId}-${activeIndex}` : undefined
             }
-            placeholder="输入公司全称或简称，例如「知途」"
+            placeholder="输入公司全称或简称，例如「腾讯」「字节跳动」"
             autoComplete="off"
             enterKeyHint="search"
             className={

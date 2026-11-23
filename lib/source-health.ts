@@ -14,6 +14,7 @@ export const SOURCE_HEALTH_LABELS: Record<string, string> = {
   blocked: "拒绝访问",
   unreachable: "无法访问",
   unknown: "待检查",
+  stale: "长期未导入",
 };
 
 export const SOURCE_CATEGORY_LABELS: Record<string, string> = {

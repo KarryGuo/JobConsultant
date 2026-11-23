@@ -1,0 +1,76 @@
+{
+  "source": {
+    "key": "fujian-hrss-labor-violation",
+    "name": "福建省人社厅公布2026年第四批重大劳动保障违法行为",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "福建省",
+    "baseUrl": "https://rst.fj.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "福建省人社厅公布2026年第四批重大劳动保障违法行为",
+    "url": "https://rst.fj.gov.cn/zw/ldjy/202610/t20261029_7242088.htm",
+    "publishedAt": "2026-10-29",
+    "fetchedAt": "2026-11-19T11:49:05.651Z",
+    "snapshotFile": "data/snapshots/fujian-2026-fourth-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "e115e043-0288-4340-9a85-74113742b2c6",
+    "sourceKey": "fujian-hrss-labor-violation",
+    "sourceUrl": "https://rst.fj.gov.cn/zw/ldjy/202610/t20261029_7242088.htm",
+    "parserVersion": "2026-11-22.1",
+    "status": "success",
+    "startedAt": "2026-11-21T16:47:02.534Z",
+    "finishedAt": "2026-11-21T16:47:02.553Z",
+    "httpStatus": null,
+    "contentHash": "d652b3a51c693bbb964f88149c268ba3d1a0b81a0de1f0d9bdceea41848e6ea7",
+    "snapshotPath": "data/snapshots/fujian-2026-fourth-labor-violations.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "龙岩市伊人汇保健服务有限公司",
+        "aliases": [],
+        "creditCode": "91350800MA2YQCJJ22",
+        "province": "福建省",
+        "city": "龙岩市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，龙岩市伊人汇保健服务有限公司拖欠21名员工2025年5月至2026年3月工资共计429968元",
+            "workerCount": 21,
+            "amountYuan": 429968,
+            "authority": "龙岩市新罗区人力资源和社会保障局",
+            "legalRep": "林成",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-06-23"
+          },
+          "sourceUrl": "https://rst.fj.gov.cn/zw/ldjy/202610/t20261029_7242088.htm",
+          "sourceTitle": "福建省人社厅公布2026年第四批重大劳动保障违法行为",
+          "sourcePublishedAt": "2026-10-29",
+          "fetchedAt": "2026-11-19T11:49:05.651Z",
+          "snapshotFile": "data/snapshots/fujian-2026-fourth-labor-violations.html",
+          "ingestRunId": "e115e043-0288-4340-9a85-74113742b2c6",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    }
+  ]
+}

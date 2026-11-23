@@ -33,6 +33,11 @@ export default async function AdminSourcesPage() {
 
   const enabledSources = registry.filter((source) => source.enabled).length;
 
+  const ingestRuns = await prisma.ingestRun.findMany({
+    orderBy: { startedAt: "desc" },
+    take: 20,
+  });
+
   const sorted = [...sources].sort((left, right) => {
     const rank =
       sourceHealthRank(left.status) - sourceHealthRank(right.status);
@@ -157,6 +162,89 @@ export default async function AdminSourcesPage() {
         检查脚本返回非零退出码表示存在内容变化或访问失败，可直接接入定时任务告警。
         来源恢复后会保留历史错误直到下一次成功检查。
       </p>
+
+      <div className="mt-10 border-t-2 border-ink pt-5">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="font-mono text-[10px] tracking-[0.2em] text-accent">
+              采集运行 / INGEST RUNS
+            </p>
+            <h2 className="mt-1 font-serif text-xl font-semibold">
+              最近采集运行
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-6 text-muted">
+              每次采集记录解析器版本、内容哈希和告警数。信号通过{" "}
+              <code className="font-mono text-xs">ingestRunId</code>{" "}
+              关联到这里的运行记录。
+            </p>
+          </div>
+          <code className="font-mono text-[10px] text-muted">
+            pnpm ingest:announcements
+          </code>
+        </div>
+
+        {ingestRuns.length === 0 ? (
+          <p className="mt-5 border-y border-line py-8 text-sm text-muted">
+            还没有采集运行记录。运行一次采集并导入后会出现。
+          </p>
+        ) : (
+          <div className="mt-5">
+            <div className="hidden grid-cols-[72px_1fr_120px_140px_90px] border-b border-line pb-2 font-mono text-[9px] tracking-wide text-muted sm:grid">
+              <span>状态</span>
+              <span>来源 / 解析器</span>
+              <span>开始时间</span>
+              <span>内容哈希</span>
+              <span className="text-right">告警</span>
+            </div>
+            <div className="border-b border-line">
+              {ingestRuns.map((run) => (
+                <div
+                  key={run.id}
+                  className="grid gap-2 border-t border-line py-4 sm:grid-cols-[72px_1fr_120px_140px_90px] sm:items-center"
+                >
+                  <span
+                    className={`inline-flex w-fit border px-2 py-0.5 font-mono text-[9px] tracking-wide ${
+                      run.status === "success"
+                        ? "border-ink bg-ink text-paper"
+                        : run.status === "partial"
+                          ? "border-accent text-accent"
+                          : "border-line bg-white text-muted"
+                    }`}
+                  >
+                    {run.status === "success"
+                      ? "成功"
+                      : run.status === "partial"
+                        ? "部分"
+                        : "失败"}
+                  </span>
+
+                  <div className="min-w-0">
+                    <p className="truncate font-mono text-[11px] text-ink">
+                      {run.sourceKey}
+                    </p>
+                    <p className="mt-0.5 truncate font-mono text-[10px] text-muted">
+                      {run.parserVersion}
+                      {run.errorMessage ? ` · ${run.errorMessage}` : ""}
+                    </p>
+                  </div>
+
+                  <span className="font-mono text-[10px] text-muted">
+                    {formatDateTime(run.startedAt)}
+                  </span>
+
+                  <span className="truncate font-mono text-[10px] text-muted">
+                    {run.contentHash ? `${run.contentHash.slice(0, 16)}…` : "—"}
+                  </span>
+
+                  <span className="font-mono text-[10px] text-muted sm:text-right">
+                    {run.warnings} / {run.errors}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
 
       <div className="mt-10 border-t-2 border-ink pt-5">
         <div className="flex flex-wrap items-end justify-between gap-3">

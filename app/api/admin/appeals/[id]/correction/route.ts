@@ -76,6 +76,8 @@ export async function POST(
     return NextResponse.json({ error: "appeal not found" }, { status: 404 });
   }
 
+  let signalSourceKey: string | null = null;
+
   if (signalId) {
     if (!appeal.companyId) {
       return NextResponse.json(
@@ -86,7 +88,12 @@ export async function POST(
 
     const signal = await prisma.signal.findUnique({
       where: { id: signalId },
-      select: { id: true, companyId: true, invalidatedAt: true },
+      select: {
+        id: true,
+        companyId: true,
+        sourceKey: true,
+        invalidatedAt: true,
+      },
     });
 
     if (!signal || signal.companyId !== appeal.companyId) {
@@ -99,6 +106,8 @@ export async function POST(
         { status: 409 },
       );
     }
+
+    signalSourceKey = signal.sourceKey;
   }
 
   const now = new Date();
@@ -118,6 +127,16 @@ export async function POST(
             correctedAt: now,
             correctionNote: note,
             ...(action === "invalidate" ? { invalidatedAt: now } : {}),
+          },
+        });
+
+        await tx.signalAuditEvent.create({
+          data: {
+            signalId,
+            sourceKey: signalSourceKey,
+            action: action === "invalidate" ? "invalidated" : "annotated",
+            actor: session.actor,
+            note,
           },
         });
       }

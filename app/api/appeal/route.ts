@@ -30,6 +30,7 @@ const InputSchema = z.object({
     "outdated",
     "missing_context",
     "wrong_company",
+    "coverage_request",
     "other",
   ]),
   details: z.string().trim().min(20).max(2000),

@@ -38,6 +38,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // 仅部署构建产出 .next/standalone；本地 pnpm build/start 使用标准输出。
+  output: process.env.NEXT_STANDALONE === "1" ? "standalone" : undefined,
   serverExternalPackages: ["@prisma/client", "prisma"],
   turbopack: {
     rules: {

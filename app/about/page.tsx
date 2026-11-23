@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { COVERED_REGIONS } from "@/lib/coverage";
 
 export const metadata = {
   title: "我们查不到什么",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -61,15 +63,71 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12 border-t border-line pt-8">
+        <h2 className="font-serif text-xl font-semibold">
+          官方系统 vs 职顾问
+        </h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          官方系统是权威来源，我们不替代它们。区别在于：官方给你原始记录，
+          我们帮你把记录翻译成求职决策。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-ink text-left">
+                <th className="py-2 pr-4 font-medium">维度</th>
+                <th className="py-2 pr-4 font-medium">官方系统</th>
+                <th className="py-2 font-medium">职顾问</th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              {[
+                ["回答的问题", "有没有这条记录", "这条记录对求职意味着什么"],
+                ["数据形态", "原始文书、单点条目", "跨源时间线 + 面试问题"],
+                ["解读", "自己判断严重性", "规则判定 + 良性解释"],
+                ["更新", "自己反复查", "复核周期、过期警示、来源健康"],
+                ["更正", "走官方渠道", "站内申诉 → 处理流水 → 报告重新生成"],
+                ["覆盖", "全国单点查询", "本期重点覆盖 + 官方直查兜底"],
+              ].map(([dimension, official, ours]) => (
+                <tr key={dimension} className="border-b border-line">
+                  <td className="py-3 pr-4 align-top text-ink">{dimension}</td>
+                  <td className="py-3 pr-4 align-top">{official}</td>
+                  <td className="py-3 align-top text-ink">{ours}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section
+        id="coverage"
+        className="mt-12 border-t border-line pt-8"
+      >
         <h2 className="font-serif text-xl font-semibold">当前数据来源</h2>
         <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
           <p>
-            当前版本只把 A 级官方主动公开来源用于结论：国家企业信用信息公示系统、信用中国、中国执行信息公开网、各地人社局「重大劳动保障违法行为社会公布」。
+            本期覆盖：{COVERED_REGIONS.join("、")}
+            人社部门「劳动保障违法行为社会公布」公告，以及一批一线企业主体。
+            当前收录的企业主体与公开信号数量以首页实时统计为准。
+            <span className="text-ink">这不是全国企业库。</span>
+          </p>
+          <p>
+            当前版本用于结论的 A 级来源是各地人社部门「重大劳动保障违法行为社会公布」公告；国家企业信用信息公示系统、信用中国、中国执行信息公开网作为官方直查入口，不参与自动结论。
           </p>
           <p>
             商业接口与公开新闻只作为线索，不进入结论。用户提交的面试反馈只做结构化聚合，样本少于 5 条不展示。
           </p>
         </div>
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          没有查到想了解的公司？可以{" "}
+          <Link
+            href="/coverage"
+            className="text-accent underline underline-offset-4"
+          >
+            提交收录请求
+          </Link>
+          ，或直接到下方官方系统核验。
+        </p>
         <div className="mt-4 space-y-2 text-sm">
           <a
             href="https://www.gsxt.gov.cn/index.html"

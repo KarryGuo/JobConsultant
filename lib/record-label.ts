@@ -1,7 +1,8 @@
 type SignalShape = { type: string; value: unknown } | null | undefined;
 
 export function recordLabel(signal: SignalShape): string {
-  if (!signal) return "公开记录";
+  // 主体已收录但还没有公开信号时，不能写成“公开记录”，避免误导用户。
+  if (!signal) return "主体已收录";
 
   const value =
     signal.value &&

@@ -1,0 +1,971 @@
+import { createHash, randomUUID } from "node:crypto";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+/**
+ * 官方公开公告采集脚本。
+ *
+ * 只抓取省级人社厅主动公开的公告页，保存原始 HTML 快照，并生成现有
+ * `scripts/import-company.ts` 可以直接消费的 JSON。
+ *
+ * 不登录、不绕过验证码、不调用需要 appKey 的接口。
+ */
+
+export type ParsedCase = {
+  name: string;
+  creditCode?: string;
+  legalRep?: string;
+  violation: string;
+  workerCount?: number;
+  amountYuan?: number;
+  authority?: string;
+  decisionNo?: string;
+  listedAt?: string;
+  expiresAt?: string;
+  stage?: string;
+  stageLabel?: string;
+  stageDate?: string;
+  city?: string;
+  warnings: string[];
+};
+
+export type ParseResult = {
+  cases: ParsedCase[];
+  warnings: string[];
+};
+
+export type SourceConfig = {
+  key: string;
+  name: string;
+  region: string;
+  url: string;
+  publishedAt?: string;
+  snapshotFile: string;
+  outputFile: string;
+  parser: (html: string) => ParseResult;
+};
+
+/**
+ * 解析器版本。每次修改解析规则都递增，
+ * 这样数据库里可以追溯一条信号是由哪个版本产生的。
+ */
+export const PARSER_VERSION = "2026-11-22.1";
+
+type IngestRunMeta = {
+  id: string;
+  sourceKey: string;
+  sourceUrl: string;
+  parserVersion: string;
+  status: "success" | "partial" | "failed";
+  startedAt: string;
+  finishedAt: string;
+  httpStatus: number | null;
+  contentHash: string;
+  snapshotPath: string;
+  warnings: number;
+  errors: number;
+  actor: string;
+};
+
+export const SOURCES: SourceConfig[] = [
+  {
+    key: "henan-hrss-labor-violation",
+    name: "河南省人力资源和社会保障厅关于发布2026年第三批拖欠农民工工资失信联合惩戒对象名单的公告",
+    region: "河南省",
+    url: "https://hrss.henan.gov.cn/2026/10-27/3441361.html",
+    publishedAt: "2026-10-27",
+    snapshotFile: "data/snapshots/henan-2026-third-labor-violations.html",
+    outputFile: "data/companies/henan-2026-third.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "anhui-hrss-labor-violation",
+    name: "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+    region: "安徽省",
+    url: "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+    snapshotFile: "data/snapshots/anhui-2026-third-labor-violations.html",
+    outputFile: "data/companies/anhui-2026-third.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "hubei-hrss-labor-violation",
+    name: "省人社厅公布2026年二季度重大劳动保障违法行为案件",
+    region: "湖北省",
+    url: "https://rst.hubei.gov.cn/bmdt/dtyw/stfb/202607/t20260713_5975547.shtml",
+    publishedAt: "2026-07-13",
+    snapshotFile: "data/snapshots/hubei-2026-q2-labor-violations.html",
+    outputFile: "data/companies/hubei-2026-q2.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "fujian-hrss-labor-violation",
+    name: "福建省人社厅公布2026年第四批重大劳动保障违法行为",
+    region: "福建省",
+    url: "https://rst.fj.gov.cn/zw/ldjy/202610/t20261029_7242088.htm",
+    publishedAt: "2026-10-29",
+    snapshotFile: "data/snapshots/fujian-2026-fourth-labor-violations.html",
+    outputFile: "data/companies/fujian-2026-fourth.json",
+    parser: parseParagraphCases,
+  },
+];
+
+const CODE_RE = /[0-9A-Z]{18}/;
+const DATE_RE = /(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/g;
+const AUTHORITY_RE =
+  /[\u4e00-\u9fa5]{2,24}(?:人力资源和社会保障局|人社局|劳动保障监察大队|综合行政执法局)/g;
+const COMPANY_HINT_RE =
+  /(公司|厂|店|中心|超市|幼儿园|服务部|工作室|合作社|集团|企业|商行|馆|站|园)/;
+
+function pad2(value: number): string {
+  return String(value).padStart(2, "0");
+}
+
+function decodeHtml(input: string): string {
+  return input
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/&emsp;|&#8195;/gi, " ")
+    .replace(/&ensp;|&#8194;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&#(\d+);/g, (_, value: string) =>
+      String.fromCodePoint(Number(value)),
+    )
+    .replace(/&#x([0-9a-f]+);/gi, (_, value: string) =>
+      String.fromCodePoint(parseInt(value, 16)),
+    );
+}
+
+/**
+ * 保留段落边界的纯文本。用于按“一、……”或公司信息段落切块。
+ */
+function htmlToText(html: string): string {
+  return decodeHtml(
+    html
+      .replace(/<script[\s\S]*?<\/script>/gi, "\n")
+      .replace(/<style[\s\S]*?<\/style>/gi, "\n")
+      .replace(/<(?:br|\/p|\/div|\/li|\/tr|\/h[1-6])\s*\/?>/gi, "\n"),
+  )
+    .replace(/<[^>]+>/g, " ")
+    .split("\n")
+    .map((line) => line.replace(/[ \t\u00a0]+/g, " ").trim())
+    .filter((line) => line !== "")
+    .join("\n");
+}
+
+function parseDate(value: string): string | null {
+  const match = /(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/.exec(value);
+  if (!match) return null;
+  return `${match[1]}-${pad2(Number(match[2]))}-${pad2(Number(match[3]))}`;
+}
+
+function parsePublishedAt(html: string, fallback?: string): string {
+  if (fallback) return fallback;
+
+  const text = htmlToText(html);
+  const match =
+    /(?:发布日期|发布时间|时间)[：:]\s*(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/.exec(
+      text,
+    );
+
+  if (!match) {
+    throw new Error("无法从页面提取发布日期，且来源未配置 publishedAt");
+  }
+
+  return `${match[1]}-${pad2(Number(match[2]))}-${pad2(Number(match[3]))}`;
+}
+
+/**
+ * Word 导出的表格常把数字拆成多个 span，去标签后会留下空格：
+ * `19 . 1064 万元`。这里只修补数字与单位之间的空格，不改变语义。
+ */
+function normalizeNumericText(text: string): string {
+  return text
+    .replace(/(\d)\s*\.\s*(\d)/g, "$1.$2")
+    .replace(/(\d)\s+(万元|元)/g, "$1$2")
+    .replace(/(\d)\s+(名)/g, "$1$2");
+}
+
+function parseAmount(text: string): number | undefined {
+  const normalized = normalizeNumericText(text);
+  const match = /拖欠[^。]{0,120}?([\d]+(?:\.[\d]+)?)\s*(万元|元)/.exec(
+    normalized,
+  );
+  if (!match) return undefined;
+
+  const amount = Number(match[1]);
+  if (!Number.isFinite(amount) || amount <= 0) return undefined;
+
+  return Math.round(amount * (match[2] === "万元" ? 10000 : 1));
+}
+
+function parseWorkerCount(text: string): number | undefined {
+  const normalized = normalizeNumericText(text);
+  const match =
+    /拖欠[^。\n]{0,50}?(\d+)\s*名/.exec(normalized) ??
+    /(\d+)\s*名(?:劳动|农民|员工|职工|劳动者|农民工)/.exec(normalized);
+  if (!match) return undefined;
+
+  const count = Number(match[1]);
+  return Number.isInteger(count) && count > 0 ? count : undefined;
+}
+
+function violationSentence(text: string): string {
+  const sentences = text
+    .split("。")
+    .map((sentence) => sentence.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const withNumbers = sentences.find(
+    (sentence) =>
+      /拖欠/.test(sentence) &&
+      /(\d+\s*名|[\d.]+\s*(?:万元|元))/.test(sentence),
+  );
+
+  const violation = withNumbers ?? sentences.find((s) => /拖欠/.test(s));
+  return (violation ?? "").slice(0, 240);
+}
+
+function detectStage(text: string): {
+  stage?: string;
+  stageLabel?: string;
+} {
+  if (
+    /移送[^。]{0,40}公安|涉嫌拒不支付劳动报酬/.test(text)
+  ) {
+    return { stage: "移送公安机关", stageLabel: "移送公安" };
+  }
+  if (/行政处罚决定/.test(text)) {
+    return { stage: "行政处罚", stageLabel: "行政处罚" };
+  }
+  if (/行政处理决定/.test(text)) {
+    return { stage: "行政处理", stageLabel: "行政处理" };
+  }
+  if (/列入拖欠农民工工资失信联合惩戒对象名单/.test(text)) {
+    return {
+      stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+      stageLabel: "列入失信名单",
+    };
+  }
+  if (/责令/.test(text)) {
+    return { stage: "责令改正", stageLabel: "责令改正" };
+  }
+  return {};
+}
+
+function lastAuthority(text: string): string | undefined {
+  const matches = Array.from(text.matchAll(AUTHORITY_RE));
+  return matches.at(-1)?.[0];
+}
+
+function cityFromAuthority(authority: string | undefined): string | undefined {
+  if (!authority) return undefined;
+
+  const match =
+    /^([\u4e00-\u9fa5]{2,12}?(?:市|自治州|地区|盟))/.exec(authority) ??
+    /^([\u4e00-\u9fa5]{2,12}?(?:县|区))/.exec(authority);
+
+  return match?.[1];
+}
+
+function lastDate(text: string): string | undefined {
+  const matches = Array.from(text.matchAll(DATE_RE));
+  const last = matches.at(-1);
+  if (!last) return undefined;
+  return `${last[1]}-${pad2(Number(last[2]))}-${pad2(Number(last[3]))}`;
+}
+
+function dateFromMatch(match: RegExpMatchArray): string {
+  return `${match[1]}-${pad2(Number(match[2]))}-${pad2(Number(match[3]))}`;
+}
+
+/**
+ * 决定日期不是“段落里最后一个日期”。
+ * 例如福建案例里先写 6 月 23 日作出决定，再写 6 月 30 日前支付，
+ * 后者是履行期限，不是决定日期。
+ */
+function decisionDate(text: string, stage?: string): string | undefined {
+  const sentences = text
+    .split("。")
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+
+  const keyword = stage?.includes("移送")
+    ? "移送"
+    : stage?.includes("行政处罚")
+      ? "行政处罚决定"
+      : stage?.includes("行政处理")
+        ? "行政处理决定"
+        : null;
+
+  const preferred = keyword
+    ? sentences.filter((sentence) => sentence.includes(keyword))
+    : [];
+  const fallback = sentences.filter((sentence) =>
+    /(作出|下达|移送|列入)/.test(sentence),
+  );
+
+  // 优先取“关键词之前最近的一个日期”。
+  // 同一句里可能同时出现处理决定日期、处罚决定日期和履行期限。
+  if (keyword && preferred.length > 0) {
+    for (const sentence of preferred) {
+      const keywordIndex = sentence.indexOf(keyword);
+      const dates = Array.from(sentence.matchAll(DATE_RE));
+      const beforeKeyword = dates.filter(
+        (date) => keywordIndex >= 0 && (date.index ?? 0) < keywordIndex,
+      );
+      const chosen = beforeKeyword.at(-1) ?? dates[0];
+      if (chosen) return dateFromMatch(chosen);
+    }
+
+    // 有明确处理阶段但找不到决定日期时，不拿投诉日期冒充决定日期。
+    return undefined;
+  }
+
+  for (const sentence of fallback) {
+    const dates = Array.from(sentence.matchAll(DATE_RE));
+    if (dates[0]) return dateFromMatch(dates[0]);
+  }
+
+  return lastDate(text);
+}
+
+function isCaseHeading(line: string): boolean {
+  return (
+    /^[一二三四五六七八九十百]+[、.．]/.test(line) ||
+    /(拖欠劳动报酬案|拖欠工资案|重大劳动保障违法行为|拒不支付劳动报酬案)\s*$/.test(
+      line,
+    )
+  );
+}
+
+function extractDecisionNo(text: string): string | undefined {
+  const match =
+    /[\u4e00-\u9fa5]{0,12}决字〔20\d{2}〕[^，。；\s]{0,40}?号/.exec(text);
+  return match?.[0];
+}
+
+function extractLegalRep(text: string): string | undefined {
+  const match = /法定代表人[：:]\s*([\u4e00-\u9fa5]{2,4})/.exec(text);
+  return match?.[1];
+}
+
+function normalizeHeading(line: string): string {
+  return line
+    .replace(/^[一二三四五六七八九十百]+[、.．]\s*/, "")
+    .replace(/[（(][^）)]*[）)]/g, "")
+    .replace(/拖欠劳动报酬案.*$/, "")
+    .replace(/拖欠工资案.*$/, "")
+    .replace(/重大劳动保障违法行为.*$/, "")
+    .replace(/[，,；;：:\s]+$/, "")
+    .trim();
+}
+
+/**
+ * Word 导出的页面常出现嵌套 `<table>`，按 `<table>...</table>` 匹配会
+ * 在外层表格的第一个内层结束标签处截断。这里直接扫描所有 `<tr>`，
+ * 只保留真正含企业信用代码的数据行，避免依赖表格层级。
+ */
+function extractTableRows(html: string): string[][] {
+  const rows: string[][] = [];
+
+  for (const row of html.matchAll(/<tr[\s\S]*?<\/tr>/gi)) {
+    const cells = Array.from(
+      row[0].matchAll(/<t[dh][\s\S]*?<\/t[dh]>/gi),
+    ).map((cell) => stripCellTags(cell[0]));
+
+    if (cells.length > 0) rows.push(cells);
+  }
+
+  return rows;
+}
+
+function compact(value: string): string {
+  return value.replace(/\s+/g, "");
+}
+
+/**
+ * 表格单元格专用：Word 会把一个信用代码拆进多个 `<span>`，
+ * 若把标签替换成空格会得到 `91 410800...`。这里只把 `<br>` 视为空格，
+ * 其余标签直接去掉，保证同一单元格内的文本连续。
+ */
+function stripCellTags(input: string): string {
+  return decodeHtml(input)
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/[ \t\u00a0]+/g, " ")
+    .trim();
+}
+
+/**
+ * 表格来源（河南、安徽）：不依赖固定列下标，按语义锚点定位。
+ * 统一社会信用代码是稳定锚点：公司名在它前一格，法人后一格。
+ */
+export function parseTableCases(html: string): ParseResult {
+  const cases: ParsedCase[] = [];
+  const warnings: string[] = [];
+
+  let rowNumber = 0;
+
+  for (const cells of extractTableRows(html)) {
+    rowNumber += 1;
+    const codeIndex = cells.findIndex((cell) => CODE_RE.test(cell));
+
+    // 公告表格偶尔会出现“序号 + 违法事实 + 决定书号，但企业名称/信用代码
+    // 被排版吞掉”的残缺行。不能猜测主体，只能跳过并留下警告。
+    if (
+      codeIndex < 1 &&
+      /^\d+$/.test((cells[0] ?? "").trim()) &&
+      /拖欠/.test(cells.join(" "))
+    ) {
+      warnings.push(
+        `表格第 ${rowNumber} 行：企业名称或信用代码缺失，已跳过，不写入猜测主体`,
+      );
+    }
+
+    if (codeIndex < 1) continue;
+
+    const codeMatch = CODE_RE.exec(cells[codeIndex]);
+    const creditCode = codeMatch?.[0];
+    const name = (cells[codeIndex - 1] ?? "").trim();
+
+    if (!creditCode || name.length < 4 || !COMPANY_HINT_RE.test(name)) {
+      continue;
+    }
+
+    const caseWarnings: string[] = [];
+    const violationIndex = cells.findIndex(
+      (cell, index) =>
+        index > codeIndex &&
+        cell.length > 5 &&
+        /(拖欠|欠薪|未依法|违法)/.test(cell),
+    );
+    const violation = violationIndex >= 0 ? cells[violationIndex] : "";
+    if (!violation) caseWarnings.push(`${name}：未解析到违法事实`);
+
+    const authorityIndex = cells.findIndex(
+      (cell, index) =>
+        index > violationIndex &&
+        /(人力资源|人社局|劳动保障|行政执法)/.test(compact(cell)) &&
+        !/决字|号$/.test(compact(cell)),
+    );
+    const authority =
+      authorityIndex >= 0 ? cells[authorityIndex] : undefined;
+    if (!authority) caseWarnings.push(`${name}：未解析到决定机关`);
+
+    const decisionIndex = cells.findIndex(
+      (cell, index) =>
+        index > authorityIndex && /决字|号/.test(compact(cell)),
+    );
+    const decisionNo =
+      decisionIndex >= 0 ? cells[decisionIndex] : undefined;
+
+    const dates = cells
+      .map((cell) => parseDate(cell))
+      .filter((value): value is string => Boolean(value));
+    const listedAt = dates[0];
+    const expiresAt = dates[1];
+
+    const legalRepCandidate = cells[codeIndex + 1] ?? "";
+    const legalRep =
+      legalRepCandidate && !legalRepCandidate.includes("***")
+        ? legalRepCandidate
+        : undefined;
+
+    const workerCount = parseWorkerCount(violation);
+    const amountYuan = parseAmount(violation);
+    if (workerCount === undefined) {
+      caseWarnings.push(`${name}：未解析到欠薪人数`);
+    }
+    if (amountYuan === undefined) {
+      caseWarnings.push(`${name}：未解析到欠薪金额`);
+    }
+
+    cases.push({
+      name,
+      creditCode,
+      legalRep,
+      violation: violation || "拖欠劳动者劳动报酬",
+      workerCount,
+      amountYuan,
+      authority,
+      decisionNo,
+      listedAt,
+      expiresAt,
+      stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+      stageLabel: "列入失信名单",
+      stageDate: listedAt,
+      city: cityFromAuthority(authority),
+      warnings: caseWarnings,
+    });
+  }
+
+  warnings.push(...cases.flatMap((item) => item.warnings));
+  return { cases, warnings };
+}
+
+/**
+ * 段落来源（湖北、福建）：以“统一社会信用代码”为锚点，
+ * 向上找公司名/小标题，向下取同一案件的事实段落。
+ */
+export function parseParagraphCases(html: string): ParseResult {
+  const lines = htmlToText(html).split("\n");
+  const codeLineIndexes = lines
+    .map((line, index) => (CODE_RE.test(line) ? index : -1))
+    .filter((index) => index >= 0);
+
+  const cases: ParsedCase[] = [];
+  const warnings: string[] = [];
+
+  for (let index = 0; index < codeLineIndexes.length; index += 1) {
+    const lineIndex = codeLineIndexes[index];
+    const nextLineIndex = codeLineIndexes[index + 1] ?? lines.length;
+    const line = lines[lineIndex] ?? "";
+    const codeMatch = CODE_RE.exec(line);
+    const creditCode = codeMatch?.[0];
+    if (!creditCode) continue;
+
+    const beforeCode = line
+      .slice(0, codeMatch.index)
+      .split("统一社会信用代码")[0]
+      .replace(/[，,；;：:\s]+$/, "")
+      .trim();
+
+    const headingLine =
+      lines[lineIndex - 1] && !CODE_RE.test(lines[lineIndex - 1])
+        ? lines[lineIndex - 1]
+        : lines[lineIndex - 2] ?? "";
+    const headingName = normalizeHeading(headingLine);
+
+    const name =
+      beforeCode.length >= 4 && COMPANY_HINT_RE.test(beforeCode)
+        ? beforeCode
+        : headingName;
+
+    if (name.length < 4 || !COMPANY_HINT_RE.test(name)) {
+      warnings.push(`第 ${lineIndex + 1} 行：无法识别公司名，已跳过`);
+      continue;
+    }
+
+    // 从当前案件的小标题开始，到下一个案件小标题之前结束。
+    // 不能把上一条案件的结论段落算进来，否则人数、金额、机关都会错位。
+    let contextStart = lineIndex;
+    for (let cursor = lineIndex; cursor >= Math.max(0, lineIndex - 6); cursor -= 1) {
+      if (isCaseHeading(lines[cursor] ?? "")) {
+        contextStart = cursor;
+        break;
+      }
+    }
+
+    let contextEnd = Math.min(lines.length, lineIndex + 10, nextLineIndex);
+    for (let cursor = lineIndex + 1; cursor < contextEnd; cursor += 1) {
+      if (isCaseHeading(lines[cursor] ?? "")) {
+        contextEnd = cursor;
+        break;
+      }
+    }
+
+    const blockText = lines
+      .slice(contextStart, contextEnd)
+      .join("\n")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const violation = violationSentence(blockText);
+    const workerCount = parseWorkerCount(blockText);
+    const amountYuan = parseAmount(blockText);
+    const authority = lastAuthority(blockText);
+    const stage = detectStage(blockText);
+    const stageDate = decisionDate(blockText, stage.stage);
+    const decisionNo = extractDecisionNo(blockText);
+    const legalRep = extractLegalRep(blockText);
+
+    const caseWarnings: string[] = [];
+    if (!violation) caseWarnings.push(`${name}：未解析到违法事实`);
+    if (workerCount === undefined) {
+      caseWarnings.push(`${name}：未解析到欠薪人数`);
+    }
+    if (amountYuan === undefined) {
+      caseWarnings.push(`${name}：未解析到欠薪金额`);
+    }
+    if (!authority) caseWarnings.push(`${name}：未解析到决定机关`);
+
+    cases.push({
+      name,
+      creditCode,
+      legalRep,
+      violation: violation || "拖欠劳动者劳动报酬",
+      workerCount,
+      amountYuan,
+      authority,
+      decisionNo,
+      stage: stage.stage,
+      stageLabel: stage.stageLabel,
+      stageDate,
+      city: cityFromAuthority(authority),
+      warnings: caseWarnings,
+    });
+  }
+
+  warnings.push(...cases.flatMap((item) => item.warnings));
+  return { cases, warnings };
+}
+
+export function dedupeCases(cases: ParsedCase[]): {
+  cases: ParsedCase[];
+  duplicates: number;
+} {
+  const seen = new Set<string>();
+  const unique: ParsedCase[] = [];
+  let duplicates = 0;
+
+  for (const item of cases) {
+    const key = item.creditCode ?? item.name;
+    if (seen.has(key)) {
+      duplicates += 1;
+      continue;
+    }
+    seen.add(key);
+    unique.push(item);
+  }
+
+  return { cases: unique, duplicates };
+}
+
+function buildCompanyEntry(
+  item: ParsedCase,
+  source: SourceConfig,
+  publishedAt: string,
+  fetchedAt: string,
+  ingestRun: IngestRunMeta,
+) {
+  const period = (
+    item.listedAt ??
+    item.stageDate ??
+    publishedAt
+  ).slice(0, 4);
+
+  const value: Record<string, unknown> = {
+    count: 1,
+    subtype: "wage_arrears",
+    violation: item.violation,
+  };
+
+  if (item.workerCount !== undefined) value.workerCount = item.workerCount;
+  if (item.amountYuan !== undefined) value.amountYuan = item.amountYuan;
+  if (item.authority) value.authority = item.authority;
+  if (item.decisionNo) value.decisionNo = item.decisionNo;
+  if (item.legalRep) value.legalRep = item.legalRep;
+  if (item.stage) value.stage = item.stage;
+  if (item.stageLabel) value.stageLabel = item.stageLabel;
+  if (item.stageDate) value.stageDate = item.stageDate;
+  if (item.listedAt) value.listedAt = item.listedAt;
+  if (item.expiresAt) value.expiresAt = item.expiresAt;
+
+  return {
+    company: {
+      name: item.name,
+      aliases: [] as string[],
+      creditCode: item.creditCode ?? null,
+      province: source.region,
+      city: item.city ?? null,
+      industry: null,
+      depth: 0,
+    },
+    signals: [
+      {
+        type: "labor_violation",
+        period,
+        severity: "high",
+        value,
+        sourceUrl: source.url,
+        sourceTitle: source.name,
+        sourcePublishedAt: publishedAt,
+        fetchedAt,
+        snapshotFile: source.snapshotFile,
+        ingestRunId: ingestRun.id,
+        parserVersion: ingestRun.parserVersion,
+      },
+    ],
+  };
+}
+
+function buildOutput(
+  source: SourceConfig,
+  publishedAt: string,
+  fetchedAt: string,
+  cases: ParsedCase[],
+  ingestRun: IngestRunMeta,
+) {
+  return {
+    source: {
+      key: source.key,
+      name: source.name,
+      category: "labor_violation",
+      level: "A",
+      region: source.region,
+      baseUrl: `${new URL(source.url).origin}/`,
+      accessType: "public_web",
+      fetchMode: "script",
+      reviewCycleDays: 30,
+      enabled: true,
+      notes:
+        "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。",
+    },
+    announcement: {
+      title: source.name,
+      url: source.url,
+      publishedAt,
+      fetchedAt,
+      snapshotFile: source.snapshotFile,
+    },
+    ingestRun,
+    companies: cases.map((item) =>
+      buildCompanyEntry(item, source, publishedAt, fetchedAt, ingestRun),
+    ),
+  };
+}
+
+async function writeJsonIfChanged(
+  file: string,
+  data: unknown,
+): Promise<boolean> {
+  const absolute = path.resolve(process.cwd(), file);
+  const content = `${JSON.stringify(data, null, 2)}\n`;
+
+  await mkdir(path.dirname(absolute), { recursive: true });
+
+  try {
+    const existing = await readFile(absolute, "utf8");
+    if (existing === content) return false;
+  } catch {
+    // 文件不存在时直接写入。
+  }
+
+  await writeFile(absolute, content, "utf8");
+  return true;
+}
+
+async function fetchHtml(
+  url: string,
+): Promise<{ html: string; status: number }> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+
+  try {
+    const response = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        "user-agent": "zhi-gu-wen-data-ingest/0.1 (+public-announcement-reader)",
+        accept: "text/html,application/xhtml+xml",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} ${response.statusText}`);
+    }
+
+    return { html: await response.text(), status: response.status };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function readExistingFetchedAt(
+  file: string,
+): Promise<string | null> {
+  try {
+    const raw = JSON.parse(
+      await readFile(path.resolve(process.cwd(), file), "utf8"),
+    ) as { announcement?: { fetchedAt?: string } };
+    return raw.announcement?.fetchedAt ?? null;
+  } catch {
+    return null;
+  }
+}
+
+async function readExistingIngestRun(
+  file: string,
+): Promise<IngestRunMeta | null> {
+  try {
+    const raw = JSON.parse(
+      await readFile(path.resolve(process.cwd(), file), "utf8"),
+    ) as { ingestRun?: IngestRunMeta };
+    return raw.ingestRun ?? null;
+  } catch {
+    return null;
+  }
+}
+
+type SourceResult = {
+  key: string;
+  ok: boolean;
+  cases: number;
+  duplicates: number;
+  warnings: number;
+  written?: boolean;
+  error?: string;
+  ingestRunId?: string;
+  names?: string[];
+  warningDetails?: string[];
+};
+
+async function main() {
+  const args = process.argv.slice(2);
+  const dryRun = args.includes("--dry-run");
+  const offline = args.includes("--offline");
+  const verbose = args.includes("--verbose");
+  const onlyArg = args.find((arg) => arg.startsWith("--only="));
+  const only = onlyArg
+    ? onlyArg
+        .slice("--only=".length)
+        .split(",")
+        .map((item) => item.trim())
+        .filter(Boolean)
+    : null;
+
+  const selected = SOURCES.filter(
+    (source) =>
+      !only ||
+      only.some((prefix) => source.key === prefix || source.key.startsWith(prefix)),
+  );
+
+  if (selected.length === 0) {
+    throw new Error(`没有匹配的数据源：${only?.join(",") ?? ""}`);
+  }
+
+  const results: SourceResult[] = [];
+
+  for (const source of selected) {
+    const startedAt = new Date().toISOString();
+
+    try {
+      let html: string;
+      let httpStatus: number | null = null;
+
+      if (offline) {
+        html = await readFile(
+          path.resolve(process.cwd(), source.snapshotFile),
+          "utf8",
+        );
+      } else {
+        const fetched = await fetchHtml(source.url);
+        html = fetched.html;
+        httpStatus = fetched.status;
+        if (!dryRun) {
+          const snapshotPath = path.resolve(
+            process.cwd(),
+            source.snapshotFile,
+          );
+          await mkdir(path.dirname(snapshotPath), { recursive: true });
+          await writeFile(snapshotPath, html, "utf8");
+        }
+      }
+
+      const contentHash = createHash("sha256").update(html).digest("hex");
+      const publishedAt = parsePublishedAt(html, source.publishedAt);
+      const parsed = source.parser(html);
+      const { cases, duplicates } = dedupeCases(parsed.cases);
+
+      if (cases.length === 0) {
+        throw new Error("解析结果为空");
+      }
+
+      const fetchedAt =
+        (offline ? await readExistingFetchedAt(source.outputFile) : null) ??
+        new Date().toISOString();
+
+      const existingRun = offline
+        ? await readExistingIngestRun(source.outputFile)
+        : null;
+      // 离线重跑且内容/解析器未变时复用原运行记录，保证生成文件幂等。
+      // 在线重新抓取始终创建新运行，形成可追溯的核验历史。
+      const ingestRun: IngestRunMeta =
+        existingRun &&
+        existingRun.parserVersion === PARSER_VERSION &&
+        existingRun.contentHash === contentHash
+          ? existingRun
+          : {
+              id: randomUUID(),
+              sourceKey: source.key,
+              sourceUrl: source.url,
+              parserVersion: PARSER_VERSION,
+              status: parsed.warnings.length > 0 ? "partial" : "success",
+              startedAt,
+              finishedAt: new Date().toISOString(),
+              httpStatus,
+              contentHash,
+              snapshotPath: source.snapshotFile,
+              warnings: parsed.warnings.length,
+              errors: 0,
+              actor: "scripts/ingest-announcements.ts",
+            };
+
+      let written = false;
+      if (!dryRun) {
+        written = await writeJsonIfChanged(
+          source.outputFile,
+          buildOutput(source, publishedAt, fetchedAt, cases, ingestRun),
+        );
+      }
+
+      results.push({
+        key: source.key,
+        ok: true,
+        cases: cases.length,
+        duplicates,
+        warnings: parsed.warnings.length,
+        written,
+        ingestRunId: ingestRun.id,
+        ...(verbose
+          ? {
+              names: cases.map((item) => item.name),
+              warningDetails: parsed.warnings,
+            }
+          : {}),
+      });
+    } catch (error) {
+      results.push({
+        key: source.key,
+        ok: false,
+        cases: 0,
+        duplicates: 0,
+        warnings: 0,
+        error: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
+  process.stdout.write(
+    `${JSON.stringify(
+      {
+        dryRun,
+        offline,
+        results,
+        failed: results.filter((item) => !item.ok).length,
+      },
+      null,
+      2,
+    )}\n`,
+  );
+
+  if (results.some((item) => !item.ok)) {
+    process.exitCode = 1;
+  }
+}
+
+const isMain =
+  Boolean(process.argv[1]) &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isMain) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

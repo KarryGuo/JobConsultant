@@ -19,9 +19,9 @@ const SCENES = [
   ),
   () => (
     <>
-      招聘启事不会写，
-      <br className="sm:hidden" />
-      <span className="whitespace-nowrap text-lime">公开记录会</span>。
+      欠薪、社保、招聘收费。
+      <br />
+      <span className="text-lime">公开记录里都有。</span>
     </>
   ),
 ];
@@ -55,7 +55,7 @@ export function CinematicIntro({
       };
     }
 
-    const timers = [2200, 4400, 6600].map((ms, index) =>
+    const timers = [1800, 3600, 5400].map((ms, index) =>
       window.setTimeout(() => setScene(index + 1), ms),
     );
     const focusTimer = window.setTimeout(
@@ -140,20 +140,23 @@ export function CinematicIntro({
       </div>
 
       <div className="relative z-10 flex flex-1 items-center px-5 sm:px-8">
-        <div className="relative mx-auto h-[38vh] w-full max-w-5xl">
+        <div className="relative mx-auto h-[46vh] w-full max-w-5xl sm:h-[40vh]">
           {isFinal ? (
             <div className="intro-final absolute inset-0 flex flex-col justify-center">
               <p className="font-mono text-[10px] tracking-[0.26em] text-lime">
-                求职调查 / VOL. 01
+                求职调查 / 公开记录
               </p>
               <h1 className="mt-3 font-serif text-[clamp(3rem,8vw,6.5rem)] font-semibold leading-none tracking-[-0.03em]">
                 职顾问
               </h1>
-              <p className="mt-4 font-serif text-xl text-paper/70 sm:text-2xl">
-                offer 之前，先看一眼。
+              <p className="mt-4 font-serif text-xl text-paper/80 sm:text-2xl">
+                offer 之前，先查一家公司。
+              </p>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-paper/55 sm:text-base">
+                输入公司名，看看它有没有欠薪、社保欠缴、招聘收费等公开记录。每条结论都能点回官方原文。
               </p>
 
-              <div className="mt-8 flex flex-col gap-5 border-t border-paper/15 pt-5 sm:flex-row sm:items-end sm:justify-between">
+              <div className="mt-6 flex flex-col gap-5 border-t border-paper/15 pt-5 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="font-serif text-4xl leading-none sm:text-5xl">
                     {stats.companies}
@@ -162,7 +165,7 @@ export function CinematicIntro({
                     </span>
                   </p>
                   <p className="mt-2 font-mono text-[9px] tracking-[0.14em] text-paper/40 sm:text-[10px]">
-                    {stats.signals} 条公开记录 · 每条都能点回原文
+                    {stats.signals} 条公开记录 · 持续补充
                   </p>
                 </div>
 
@@ -171,9 +174,13 @@ export function CinematicIntro({
                   onClick={() => dismiss(true)}
                   className="inline-flex h-12 items-center justify-center bg-lime px-6 text-sm font-medium text-ink transition hover:bg-lime/90"
                 >
-                  查一家公司 <span className="ml-2">→</span>
+                  免费查一家公司 <span className="ml-2">→</span>
                 </button>
               </div>
+
+              <p className="mt-3 font-mono text-[9px] tracking-[0.12em] text-paper/35 sm:text-[10px]">
+                不用登录 · 不收钱 · 查不到，不代表安全
+              </p>
             </div>
           ) : (
             <div

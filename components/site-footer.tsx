@@ -50,6 +50,16 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/privacy" className="transition hover:text-ink">
+                隐私说明
+              </Link>
+            </li>
+            <li>
+              <Link href="/coverage" className="transition hover:text-ink">
+                收录请求
+              </Link>
+            </li>
+            <li>
               <Link href="/?intro=1" className="transition hover:text-ink">
                 重播开场
               </Link>

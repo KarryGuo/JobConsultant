@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EvidenceText } from "@/components/evidence-text";
 import type { EvidenceItem } from "@/components/evidence-dialog";
 import { FeedbackSummary } from "@/components/feedback-summary";
+import { OfficialLookup } from "@/components/official-lookup";
 import { ReportFeedback } from "@/components/report-feedback";
 import { SeverityLabel } from "@/components/severity-label";
 import { Timeline } from "@/components/timeline";
@@ -17,10 +19,51 @@ import {
   staleSignals,
 } from "@/lib/freshness";
 import { getCompanyReport } from "@/lib/report-service";
+import { SITE_URL } from "@/lib/site";
 import { buildTimeline } from "@/lib/timeline";
 import type { ReportPoint } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const company = await prisma.company.findUnique({
+    where: { id },
+    select: { name: true, city: true, industry: true },
+  });
+
+  if (!company) return { title: "企业未收录" };
+
+  const place = [company.city, company.industry].filter(Boolean).join(" · ");
+  const title = `${company.name} · 求职调查`;
+  const description = `${company.name}${
+    place ? `（${place}）` : ""
+  }的公开记录整理。每条结论都能点回原始来源；查不到不代表安全。`;
+  const canonical = `/company/${id}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      url: canonical,
+      siteName: "职顾问",
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default async function CompanyPage({
   params,
@@ -33,6 +76,27 @@ export default async function CompanyPage({
   if (!result) notFound();
 
   const { company, signals, report, feedbacks } = result;
+  const hasSignals = signals.length > 0;
+  const sourceUrls = Array.from(
+    new Set(signals.map((signal) => signal.sourceUrl)),
+  ).slice(0, 5);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: company.name,
+    url: `${SITE_URL}/company/${company.id}`,
+    ...(company.creditCode ? { identifier: company.creditCode } : {}),
+    ...(company.province || company.city
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            ...(company.province ? { addressRegion: company.province } : {}),
+            ...(company.city ? { addressLocality: company.city } : {}),
+          },
+        }
+      : {}),
+    ...(sourceUrls.length > 0 ? { sameAs: sourceUrls } : {}),
+  };
   const points = report.points as unknown as ReportPoint[];
   const timeline = buildTimeline(company, signals);
   const feedbackStats = summarizeFeedback(feedbacks);
@@ -67,6 +131,30 @@ export default async function CompanyPage({
     (correction) => (correction.publicNote ?? "").trim().length > 0,
   );
 
+  const auditRows =
+    signals.length > 0
+      ? await prisma.signalAuditEvent.findMany({
+          where: { signalId: { in: signals.map((signal) => signal.id) } },
+          orderBy: { createdAt: "desc" },
+          select: {
+            signalId: true,
+            action: true,
+            createdAt: true,
+          },
+        })
+      : [];
+  const latestAuditBySignalId = new Map<
+    string,
+    { action: string; createdAt: string }
+  >();
+  for (const row of auditRows) {
+    if (!row.signalId || latestAuditBySignalId.has(row.signalId)) continue;
+    latestAuditBySignalId.set(row.signalId, {
+      action: row.action,
+      createdAt: row.createdAt.toISOString(),
+    });
+  }
+
   const evidenceBySignalId = new Map<string, EvidenceItem>(
     signals.map((signal) => [
       signal.id,
@@ -82,6 +170,8 @@ export default async function CompanyPage({
         nextReviewAt: signal.nextReviewAt?.toISOString() ?? null,
         reviewCycleDays: signal.reviewCycleDays,
         stale: isStale(signal.nextReviewAt),
+        hasSnapshot: Boolean(signal.snapshotPath),
+        lastAudit: latestAuditBySignalId.get(signal.id) ?? null,
       },
     ]),
   );
@@ -103,6 +193,12 @@ export default async function CompanyPage({
 
   return (
     <article className="mx-auto max-w-4xl pb-28 pt-8 md:pb-12 md:pt-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link
           href="/"
@@ -121,9 +217,15 @@ export default async function CompanyPage({
         </p>
         <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-muted">
           <span className="border border-accent/40 px-1.5 py-0.5 font-mono tracking-wide text-accent">
-            公开数据
+            {hasSignals ? "公开数据" : "主体档案"}
           </span>
-          <span>{company.depth === 1 ? "深度档案" : "基础信号"}</span>
+          <span>
+            {hasSignals
+              ? company.depth === 1
+                ? "深度档案"
+                : "基础信号"
+              : "仅主体信息"}
+          </span>
           {company.province ? <span>· {company.province}</span> : null}
           {company.city ? <span>· {company.city}</span> : null}
           {company.industry ? <span>· {company.industry}</span> : null}
@@ -136,14 +238,33 @@ export default async function CompanyPage({
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap gap-x-5 gap-y-1 font-mono text-[11px] leading-5 text-muted">
             <span>信用代码 {company.creditCode ?? "未收录"}</span>
-            <span>数据截止 {formatDateTime(report.dataCutoff)}</span>
-            <span>最后核验 {formatDate(lastVerifiedAt)}</span>
-            <span>下次复核 {formatDate(nextReviewAt)}</span>
-            <span>版本 {report.modelVersion}</span>
+            {hasSignals ? (
+              <>
+                <span>数据截止 {formatDateTime(report.dataCutoff)}</span>
+                <span>最后核验 {formatDate(lastVerifiedAt)}</span>
+                <span>下次复核 {formatDate(nextReviewAt)}</span>
+                <span>版本 {report.modelVersion}</span>
+              </>
+            ) : (
+              <>
+                <span>收录状态 主体已收录</span>
+                <span>风险信号 暂未命中</span>
+                <span>公开来源 待补充</span>
+              </>
+            )}
           </div>
-          <span className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.18em] text-accent">
-            <span className="h-1.5 w-1.5 bg-accent" aria-hidden="true" />
-            来源已核实
+          <span
+            className={`inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.18em] ${
+              hasSignals ? "text-accent" : "text-muted"
+            }`}
+          >
+            <span
+              className={`h-1.5 w-1.5 ${
+                hasSignals ? "bg-accent" : "bg-muted"
+              }`}
+              aria-hidden="true"
+            />
+            {hasSignals ? "来源已核实" : "主体已收录"}
           </span>
         </div>
       </header>
@@ -211,7 +332,7 @@ export default async function CompanyPage({
         {points.length === 0 ? (
           <div className="mt-5 border border-line bg-white/70 p-5">
             <p className="text-sm font-medium">
-              本次没有命中已收录的风险规则
+              该主体已收录，本次没有命中已收录的风险规则
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
               这只代表已收录来源里没有相关记录，不代表公司没有风险。
@@ -363,31 +484,8 @@ export default async function CompanyPage({
             </li>
           )}
         </ul>
-        <div className="mt-4 space-y-2 text-sm">
-          <a
-            href="https://www.gsxt.gov.cn/index.html"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="block text-accent underline underline-offset-4"
-          >
-            国家企业信用信息公示系统：查年度报告与参保人数 ↗
-          </a>
-          <a
-            href="http://zxgk.court.gov.cn/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="block text-accent underline underline-offset-4"
-          >
-            中国执行信息公开网：查被执行记录 ↗
-          </a>
-          <a
-            href="https://www.creditchina.gov.cn/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="block text-accent underline underline-offset-4"
-          >
-            信用中国：查行政处罚与经营异常 ↗
-          </a>
+        <div className="mt-4">
+          <OfficialLookup companyName={company.name} compact />
         </div>
         <p className="mt-4 border-t border-line pt-4 text-sm">
           <Link
@@ -406,8 +504,17 @@ export default async function CompanyPage({
       </section>
 
       <p className="mt-8 border-t border-line pt-4 font-mono text-[10px] leading-5 text-muted">
-        报告生成时间 {formatDateTime(report.generatedAt)} · 数据截止{" "}
-        {formatDateTime(report.dataCutoff)} · 版本 {report.modelVersion}
+        {hasSignals ? (
+          <>
+            报告生成时间 {formatDateTime(report.generatedAt)} · 数据截止{" "}
+            {formatDateTime(report.dataCutoff)} · 版本 {report.modelVersion}
+          </>
+        ) : (
+          <>
+            主体收录时间 {formatDateTime(company.createdAt)} · 暂无公开风险信号 ·
+            页面生成于 {formatDateTime(report.generatedAt)}
+          </>
+        )}
       </p>
 
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 p-3 backdrop-blur md:hidden">

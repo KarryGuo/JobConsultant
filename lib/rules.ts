@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import ruleConfig from "@/rules/rules.json";
 import type {
   ComparisonOp,
@@ -9,6 +10,15 @@ import type {
 } from "./types";
 
 const RULES = ruleConfig as unknown as RuleConfig[];
+
+/**
+ * 规则内容哈希。报告缓存键必须包含它：
+ * 规则文件改动后，即使忘了手工 bump PIPELINE_VERSION，也不会继续返回旧报告。
+ */
+export const RULES_VERSION = createHash("sha256")
+  .update(JSON.stringify(ruleConfig))
+  .digest("hex")
+  .slice(0, 12);
 
 const COMPARATORS: Record<ComparisonOp, (left: number, right: number) => boolean> = {
   gte: (left, right) => left >= right,

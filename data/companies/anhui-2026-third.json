@@ -1,0 +1,279 @@
+{
+  "source": {
+    "key": "anhui-hrss-labor-violation",
+    "name": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "安徽省",
+    "baseUrl": "https://hrss.ah.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+    "publishedAt": "2026-10-10",
+    "fetchedAt": "2026-11-19T11:49:05.174Z",
+    "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "17bf0a4f-e106-4d41-a258-f263073d4264",
+    "sourceKey": "anhui-hrss-labor-violation",
+    "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+    "parserVersion": "2026-11-22.1",
+    "status": "partial",
+    "startedAt": "2026-11-21T16:47:02.434Z",
+    "finishedAt": "2026-11-21T16:47:02.460Z",
+    "httpStatus": null,
+    "contentHash": "ee9063f5c60770560c249828993dbc960ce7d1cd1a4a672906244dd74283ddfb",
+    "snapshotPath": "data/snapshots/anhui-2026-third-labor-violations.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "安徽乾三名门业有限公司",
+        "aliases": [],
+        "creditCode": "91341622MA8PB9WH19",
+        "province": "安徽省",
+        "city": "蒙城县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠13名劳动者劳动报酬47.39万元",
+            "workerCount": 13,
+            "amountYuan": 473900,
+            "authority": "蒙城县人社局",
+            "decisionNo": "蒙人社监列决字〔2026〕1号",
+            "legalRep": "徐向阳",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-05",
+            "listedAt": "2026-08-05",
+            "expiresAt": "2029-08-04"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+          "sourceTitle": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-10",
+          "fetchedAt": "2026-11-19T11:49:05.174Z",
+          "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html",
+          "ingestRunId": "17bf0a4f-e106-4d41-a258-f263073d4264",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安徽中能发建设有限公司",
+        "aliases": [],
+        "creditCode": "91340100MAEFXX6K8E",
+        "province": "安徽省",
+        "city": "界首市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠22名劳动者劳动报酬41万元",
+            "workerCount": 22,
+            "amountYuan": 410000,
+            "authority": "界首市人社局",
+            "decisionNo": "界人社监列决字〔2026〕2号",
+            "legalRep": "邢少奇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-21",
+            "listedAt": "2026-08-21",
+            "expiresAt": "2029-08-20"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+          "sourceTitle": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-10",
+          "fetchedAt": "2026-11-19T11:49:05.174Z",
+          "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html",
+          "ingestRunId": "17bf0a4f-e106-4d41-a258-f263073d4264",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "颍上县维爱音服装有限公司",
+        "aliases": [],
+        "creditCode": "91341226MA8PWCQE1X",
+        "province": "安徽省",
+        "city": "颍上县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠104名劳动者劳动报酬72.89万元",
+            "workerCount": 104,
+            "amountYuan": 728900,
+            "authority": "颍上县人社局",
+            "decisionNo": "颍人社监列决字〔2026〕1号",
+            "legalRep": "汤学菊",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-07-08",
+            "listedAt": "2026-07-08",
+            "expiresAt": "2029-07-07"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+          "sourceTitle": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-10",
+          "fetchedAt": "2026-11-19T11:49:05.174Z",
+          "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html",
+          "ingestRunId": "17bf0a4f-e106-4d41-a258-f263073d4264",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "太和县博德置业有限公司",
+        "aliases": [],
+        "creditCode": "91341222MA2UD8Y74C",
+        "province": "安徽省",
+        "city": "太和县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠15名劳动者劳动报酬122.64万元",
+            "workerCount": 15,
+            "amountYuan": 1226400,
+            "authority": "太和县人社局",
+            "decisionNo": "太人社监列决字〔2026〕3号",
+            "legalRep": "翟 宇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-07-17",
+            "listedAt": "2026-07-17",
+            "expiresAt": "2029-07-16"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+          "sourceTitle": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-10",
+          "fetchedAt": "2026-11-19T11:49:05.174Z",
+          "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html",
+          "ingestRunId": "17bf0a4f-e106-4d41-a258-f263073d4264",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "大连跃金建设有限公司",
+        "aliases": [],
+        "creditCode": "91210200554969454A",
+        "province": "安徽省",
+        "city": "芜湖市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠32名劳动者劳动报酬21.16万元",
+            "workerCount": 32,
+            "amountYuan": 211600,
+            "authority": "芜湖市弋江区人社局",
+            "decisionNo": "弋人社监列决字〔2026〕1号",
+            "legalRep": "王 威",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-03",
+            "listedAt": "2026-06-03",
+            "expiresAt": "2029-06-02"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+          "sourceTitle": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-10",
+          "fetchedAt": "2026-11-19T11:49:05.174Z",
+          "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html",
+          "ingestRunId": "17bf0a4f-e106-4d41-a258-f263073d4264",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江苏春沣建设科技有限公司",
+        "aliases": [],
+        "creditCode": "91320682MA26D7FYXU",
+        "province": "安徽省",
+        "city": "芜湖市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠25名劳动者劳动报酬15.09万元",
+            "workerCount": 25,
+            "amountYuan": 150900,
+            "authority": "芜湖市弋江区人社局",
+            "decisionNo": "弋人社监列决字〔2026〕2号",
+            "legalRep": "李光胜",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-08",
+            "listedAt": "2026-06-08",
+            "expiresAt": "2029-06-07"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/zxzx/gsgg/80813691.html",
+          "sourceTitle": "省人社厅公布2026年第三批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-10",
+          "fetchedAt": "2026-11-19T11:49:05.174Z",
+          "snapshotFile": "data/snapshots/anhui-2026-third-labor-violations.html",
+          "ingestRunId": "17bf0a4f-e106-4d41-a258-f263073d4264",
+          "parserVersion": "2026-11-22.1"
+        }
+      ]
+    }
+  ]
+}

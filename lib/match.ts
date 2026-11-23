@@ -79,10 +79,11 @@ function similarity(a: string, b: string): number {
 }
 
 /**
- * 三级匹配：
+ * 匹配优先级：
  * L1 信用代码 / 归一化名称 / 别名精确命中
- * L2 拼音首字母
- * L3 包含 + 编辑距离（当前量级直接内存扫描；上千家后换 pg_trgm）
+ * L2 反向别名（输入包含别名，如「腾讯控股」⊃「腾讯」）
+ * L3 拼音首字母
+ * L4 包含 + 编辑距离（当前量级直接内存扫描；上千家后换 pg_trgm）
  */
 export async function matchCompany(raw: string): Promise<MatchResult> {
   const input = raw.trim();
@@ -100,24 +101,59 @@ export async function matchCompany(raw: string): Promise<MatchResult> {
     if (byCode) return { kind: "hit", company: byCode };
   }
 
-  const exact = await prisma.company.findUnique({
+  // normalized 不再全局唯一：同名企业可能在不同省市。
+  // 唯一命中才自动跳转，多条则让用户确认，避免查错公司。
+  const exact = await prisma.company.findMany({
     where: { normalized },
     select: SUMMARY_SELECT,
+    take: 5,
   });
-  if (exact) return { kind: "hit", company: exact };
+  if (exact.length === 1) return { kind: "hit", company: exact[0] };
+  if (exact.length > 1) {
+    return { kind: "candidates", candidates: exact.map(toSummary) };
+  }
 
-  const byAlias = await prisma.company.findFirst({
+  const byAlias = await prisma.company.findMany({
     where: { aliases: { has: normalized } },
     select: SUMMARY_SELECT,
+    take: 5,
   });
-  if (byAlias) return { kind: "hit", company: byAlias };
+  if (byAlias.length === 1) return { kind: "hit", company: byAlias[0] };
+  if (byAlias.length > 1) {
+    return { kind: "candidates", candidates: byAlias.map(toSummary) };
+  }
 
   const isAsciiInput = /^[a-z0-9]+$/.test(normalized);
   const initials = isAsciiInput ? normalized : toPinyinInitials(normalized);
 
   const all = await prisma.company.findMany({
-    select: { ...SUMMARY_SELECT, normalized: true, pinyinInitials: true },
+    select: {
+      ...SUMMARY_SELECT,
+      normalized: true,
+      pinyinInitials: true,
+      aliases: true,
+    },
   });
+
+  // 反向别名：用户输入的惯用名常比库内别名长，例如「腾讯控股」包含别名「腾讯」。
+  // 输入包含某个别名即视为关联；唯一命中直接返回，多个命中给出候选。
+  const aliasContained = all.filter((company) =>
+    company.aliases.some(
+      (alias) =>
+        alias.length >= 2 &&
+        alias !== normalized &&
+        normalized.includes(alias),
+    ),
+  );
+  if (aliasContained.length === 1) {
+    return { kind: "hit", company: toSummary(aliasContained[0]) };
+  }
+  if (aliasContained.length > 1) {
+    return {
+      kind: "candidates",
+      candidates: aliasContained.slice(0, 5).map(toSummary),
+    };
+  }
 
   // 拼音匹配只用于用户输入字母（如 zt / zjtd）。
   // 中文输入若也走首字母，会匹配到大量无关公司。
@@ -224,6 +260,17 @@ export async function suggestCompanies(
       reason = "prefix";
     } else if (company.normalized.includes(normalized)) {
       score = 0.94;
+      reason = "contains";
+    } else if (
+      company.aliases.some(
+        (alias) =>
+          alias.length >= 2 &&
+          alias !== normalized &&
+          normalized.includes(alias),
+      )
+    ) {
+      // 反向别名：输入比别名长，如「腾讯控股」包含别名「腾讯」。
+      score = 0.92;
       reason = "contains";
     } else if (
       isAsciiInput &&

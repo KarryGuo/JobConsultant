@@ -5,6 +5,7 @@ import { ExampleLinks } from "@/components/example-links";
 import { FeaturedReportPreview } from "@/components/featured-report-preview";
 import { NewsTicker } from "@/components/news-ticker";
 import { SearchForm } from "@/components/search-form";
+import { COVERED_REGIONS } from "@/lib/coverage";
 import { prisma } from "@/lib/db";
 import { formatDate } from "@/lib/format";
 import { recordLabel } from "@/lib/record-label";
@@ -36,9 +37,17 @@ export default async function HomePage({
   const showIntro =
     cookieStore.get("zgw_intro_seen")?.value !== "1" || intro === "1";
 
-  const [companies, totalCompanies, totalSignals, preferredFeatured] =
-    await Promise.all([
+  const [
+    companies,
+    totalCompanies,
+    totalSignals,
+    preferredFeatured,
+    withSignals,
+    subjectOnly,
+  ] = await Promise.all([
       prisma.company.findMany({
+        // 首页只展示已有公开信号的档案；仅登记主体的企业进入列表与搜索。
+        where: { signals: { some: {} } },
         orderBy: { updatedAt: "desc" },
         take: 6,
         select: {
@@ -57,10 +66,12 @@ export default async function HomePage({
       }),
       prisma.company.count(),
       prisma.signal.count(),
-      prisma.company.findUnique({
+      prisma.company.findFirst({
         where: { normalized: "陕西知途科技互联网" },
         include: { signals: { orderBy: { sourcePublishedAt: "desc" } } },
       }),
+      prisma.company.count({ where: { signals: { some: {} } } }),
+      prisma.company.count({ where: { signals: { none: {} } } }),
     ]);
 
   const featured =
@@ -96,15 +107,16 @@ export default async function HomePage({
       >
         <div>
           <p className="font-mono text-[10px] tracking-[0.22em] text-accent">
-            求职调查 / 第 01 期
+            求职调查 / 公开记录
           </p>
           <h1 className="mt-5 font-serif text-[clamp(3rem,6vw,5.4rem)] font-semibold leading-[0.98] tracking-[-0.03em]">
             offer 之前，
             <br />
-            <span className="text-accent">先看一眼。</span>
+            <span className="text-accent">先查这家公司。</span>
           </h1>
           <p className="mt-6 max-w-[34rem] text-[15px] leading-7 text-muted sm:text-base">
-            欠薪、社保、招聘收费。这些都在公开记录里，只是没人替你拼起来。
+            输入公司名，看看它有没有欠薪、社保欠缴、招聘收费等公开记录。
+            每条结论都能点回官方原文；查不到，也不代表安全。
           </p>
 
           <div className="mt-8 max-w-2xl">
@@ -130,7 +142,7 @@ export default async function HomePage({
           <strong className="mr-1 font-serif text-xl font-semibold text-ink">
             {totalCompanies}
           </strong>
-          家企业
+          家企业主体
         </span>
         <span>
           <strong className="mr-1 font-serif text-xl font-semibold text-ink">
@@ -146,6 +158,26 @@ export default async function HomePage({
         </span>
         <span className="text-muted/80">每条记录都带来源与快照</span>
       </div>
+
+      <p className="mt-3 text-xs leading-6 text-muted">
+        本期覆盖：{withSignals} 家已核验到公开信号，{subjectOnly}{" "}
+        家仅收录主体信息；主要来源为{COVERED_REGIONS.join("、")}
+        人社部门的劳动用工公告与一线企业公开主体。这不是全国企业库，未收录企业可在{" "}
+        <Link
+          href="/coverage"
+          className="text-accent underline underline-offset-4"
+        >
+          收录请求页
+        </Link>{" "}
+        提交，或查看{" "}
+        <Link
+          href="/about#coverage"
+          className="text-accent underline underline-offset-4"
+        >
+          覆盖范围与数据来源
+        </Link>
+        。
+      </p>
 
       <section className="mt-20 grid gap-8 border-t border-line pt-12 md:grid-cols-[0.3fr_1fr]">
         <div>

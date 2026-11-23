@@ -1,18 +1,12 @@
 import { createHash } from "node:crypto";
 import { prisma } from "./db";
 import { explain } from "./explain";
-import { evaluateRules } from "./rules";
+import { evaluateRules, RULES_VERSION } from "./rules";
+import { TEMPLATE_VERSION } from "./template";
 import type { SignalLike } from "./types";
 import { ReportDraftSchema, assertReportAgainstHits } from "./validation";
 
-const dateBucketFormatter = new Intl.DateTimeFormat("en-CA", {
-  timeZone: "Asia/Shanghai",
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-});
-
-const PIPELINE_VERSION = "v3";
+const PIPELINE_VERSION = "v4";
 
 /**
  * 模型开关/模型名变化时必须生成新报告，
@@ -35,12 +29,13 @@ function buildCacheKey(
     correctedAt?: Date | null;
     correctionNote?: string | null;
   }>,
-  now = new Date(),
-): string {
-  // 缓存键包含当天日期 + 管线版本 + 信号版本；
-  // 模板/规则更新或信号更正都会生成新报告，避免页面停留在旧结论。
+): { cacheKey: string; inputHash: string } {
+  // 缓存键只由输入决定，不含“当天日期”：
+  // 报告可以长期复用，导入/复核/规则/模板变化时才重新生成。
   const material = [
     PIPELINE_VERSION,
+    RULES_VERSION,
+    TEMPLATE_VERSION,
     modelCacheKey(),
     ...signals
       .map(
@@ -52,7 +47,10 @@ function buildCacheKey(
       .sort(),
   ].join("|");
   const inputHash = createHash("sha256").update(material).digest("hex").slice(0, 16);
-  return `${companyId}:${dateBucketFormatter.format(now)}:${inputHash}`;
+  return {
+    cacheKey: `${companyId}:${inputHash}`,
+    inputHash,
+  };
 }
 
 function isUniqueConstraintError(error: unknown): boolean {
@@ -95,7 +93,7 @@ export async function getCompanyReport(companyId: string) {
     take: 500,
   });
 
-  const cacheKey = buildCacheKey(companyId, activeSignals);
+  const { cacheKey, inputHash } = buildCacheKey(companyId, activeSignals);
   const cached = await prisma.report.findUnique({ where: { cacheKey } });
   if (cached) {
     return {
@@ -143,6 +141,9 @@ export async function getCompanyReport(companyId: string) {
         status: parsed.status,
         dataCutoff: parsed.dataCutoff,
         modelVersion: parsed.modelVersion,
+        inputsHash: inputHash,
+        rulesVersion: RULES_VERSION,
+        templateVersion: TEMPLATE_VERSION,
       },
     });
 

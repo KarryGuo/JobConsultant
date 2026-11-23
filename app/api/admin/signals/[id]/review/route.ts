@@ -23,6 +23,7 @@ export async function POST(
     where: { id },
     select: {
       id: true,
+      sourceKey: true,
       reviewCycleDays: true,
       invalidatedAt: true,
     },
@@ -43,19 +44,30 @@ export async function POST(
   const nextReviewAt = computeNextReviewAt(now, signal.reviewCycleDays);
 
   try {
-    const updated = await prisma.signal.update({
-      where: { id },
-      data: {
-        lastVerifiedAt: now,
-        nextReviewAt,
-      },
-      select: {
-        id: true,
-        lastVerifiedAt: true,
-        reviewCycleDays: true,
-        nextReviewAt: true,
-      },
-    });
+    const [updated] = await prisma.$transaction([
+      prisma.signal.update({
+        where: { id },
+        data: {
+          lastVerifiedAt: now,
+          nextReviewAt,
+        },
+        select: {
+          id: true,
+          lastVerifiedAt: true,
+          reviewCycleDays: true,
+          nextReviewAt: true,
+        },
+      }),
+      prisma.signalAuditEvent.create({
+        data: {
+          signalId: id,
+          sourceKey: signal.sourceKey,
+          action: "reviewed",
+          actor: session.actor,
+          note: "后台标记已复核",
+        },
+      }),
+    ]);
 
     console.info("signal reviewed", {
       signalId: id,

@@ -16,7 +16,27 @@ export type EvidenceItem = {
   nextReviewAt: string | null;
   reviewCycleDays: number;
   stale: boolean;
+  hasSnapshot: boolean;
+  lastAudit: {
+    action: string;
+    createdAt: string;
+  } | null;
 };
+
+function auditActionLabel(action: string): string {
+  switch (action) {
+    case "reviewed":
+      return "已复核";
+    case "invalidated":
+      return "已撤回";
+    case "annotated":
+      return "已更正";
+    case "source_retracted":
+      return "来源撤回";
+    default:
+      return "已记录";
+  }
+}
 
 type Props = {
   items: EvidenceItem[];
@@ -127,15 +147,34 @@ export function EvidenceDialog({
                   </dd>
                 </div>
               </dl>
-              <a
-                href={item.sourceUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-4 inline-flex items-center gap-1 text-sm text-accent underline underline-offset-4 hover:text-ink"
-              >
-                打开原始网页
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <a
+                  href={item.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1 text-sm text-accent underline underline-offset-4 hover:text-ink"
+                >
+                  打开原始网页
+                  <span aria-hidden="true">↗</span>
+                </a>
+                {item.hasSnapshot ? (
+                  <a
+                    href={`/api/evidence/${item.signalId}`}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1 text-sm text-accent underline underline-offset-4 hover:text-ink"
+                  >
+                    查看抓取快照
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                ) : null}
+              </div>
+              {item.lastAudit ? (
+                <p className="mt-2 font-mono text-[10px] text-muted">
+                  最近复核：{auditActionLabel(item.lastAudit.action)} ·{" "}
+                  {formatDateTime(item.lastAudit.createdAt)}
+                </p>
+              ) : null}
             </article>
           ))}
         </div>

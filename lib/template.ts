@@ -8,6 +8,8 @@ import {
 } from "./format";
 import type { Hit, HitFact, ReportDraft, ReportPoint } from "./types";
 
+export const TEMPLATE_VERSION = "template-v2";
+
 function numberValue(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
@@ -266,10 +268,10 @@ export function buildTemplateReport(
 ): ReportDraft {
   if (hits.length === 0) {
     return {
-      conclusion: "未检索到公开的异常记录，但这不等于没有风险。",
+      conclusion: "该主体已收录，暂未检索到公开的异常记录，但这不等于没有风险。",
       points: [],
       status: "no_hit",
-      modelVersion: "template-v2",
+      modelVersion: TEMPLATE_VERSION,
       dataCutoff,
     };
   }
@@ -283,7 +285,7 @@ export function buildTemplateReport(
       conclusion: "本次检索到的记录暂时无法整理成结论，请查看原始来源。",
       points: [],
       status: "no_hit",
-      modelVersion: "template-v2",
+      modelVersion: TEMPLATE_VERSION,
       dataCutoff,
     };
   }

@@ -7,6 +7,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "本期档案",
+  alternates: { canonical: "/companies" },
 };
 
 type Filters = {
@@ -58,6 +59,10 @@ export default async function CompaniesPage({
       },
     },
   });
+
+  const withSignals = allCompanies.filter(
+    (company) => company._count.signals > 0,
+  ).length;
 
   const provinceCounts = new Map<string, number>();
   const cityCounts = new Map<string, number>();
@@ -162,8 +167,9 @@ export default async function CompaniesPage({
           本期档案
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-          本期收录 {allCompanies.length} 家企业，全部带来源链接、抓取时间与快照哈希。
-          未收录不代表公司有问题，也不代表没有问题；没有记录不等于安全。
+          本期收录 {allCompanies.length} 家企业主体，其中 {withSignals}{" "}
+          家已核验到公开风险信号。未命中信号只代表已收录来源里没有相关记录，
+          不代表公司有问题，也不代表没有问题；没有记录不等于安全。
         </p>
       </header>
 
