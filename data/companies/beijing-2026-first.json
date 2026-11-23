@@ -1,0 +1,179 @@
+{
+  "source": {
+    "key": "beijing-2026-first-batch",
+    "name": "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "北京市",
+    "baseUrl": "https://rsj.beijing.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+    "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+    "publishedAt": "2026-03-31",
+    "fetchedAt": "2026-11-23T12:53:42.379Z",
+    "snapshotFile": "data/snapshots/beijing-2026-first-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "c90e8045-1194-484c-9ef4-a50725c4544c",
+    "sourceKey": "beijing-2026-first-batch",
+    "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T12:53:42.076Z",
+    "finishedAt": "2026-11-23T12:53:42.379Z",
+    "httpStatus": 200,
+    "contentHash": "d49c611b9e77172b9d7c6d6048118fb2b64f9f514cba28afd9dfcd350ca93f65",
+    "snapshotPath": "data/snapshots/beijing-2026-first-labor-violations.html",
+    "warnings": 7,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "北京乾鑫通科技有限公司",
+        "aliases": [],
+        "creditCode": "91110109MADLBP0674",
+        "province": "北京市",
+        "city": "西城区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、北京乾鑫通科技有限公司拖欠工资案 单位名称：北京乾鑫通科技有限公司，负责人：郭宝生，统一社会信用代码：91110109MADLBP0674，住所：北京市密云区溪翁庄镇密溪路西侧密云国际会议中心院内3号-14号房屋及1号楼、2号楼2幢五层楼房（2号楼513、413） 2025年7月18日起西城区人力资源和社会保障局陆续接到任某、李某等6名劳动者投诉，反映北京乾鑫通科技有限公司拖欠劳动者工资",
+            "workerCount": 5,
+            "amountYuan": 155528,
+            "authority": "西城区人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+          "sourceTitle": "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-03-31",
+          "fetchedAt": "2026-11-23T12:53:42.379Z",
+          "snapshotFile": "data/snapshots/beijing-2026-first-labor-violations.html",
+          "ingestRunId": "c90e8045-1194-484c-9ef4-a50725c4544c",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京宝信行汽车销售服务有限公司",
+        "aliases": [],
+        "creditCode": "911101050766196437",
+        "province": "北京市",
+        "city": "朝阳区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、北京宝信行汽车销售服务有限公司拖欠工资案 单位名称：北京宝信行汽车销售服务有限公司，法定代表人：董彦麟，统一社会信用代码：911101050766196437，住所：北京市朝阳区将台乡安家楼西十里67号",
+            "workerCount": 112,
+            "authority": "朝阳区人力资源和社会保障局",
+            "legalRep": "董彦麟",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+          "sourceTitle": "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-03-31",
+          "fetchedAt": "2026-11-23T12:53:42.379Z",
+          "snapshotFile": "data/snapshots/beijing-2026-first-labor-violations.html",
+          "ingestRunId": "c90e8045-1194-484c-9ef4-a50725c4544c",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "上海铭尚建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91310120MA1JJ59272",
+        "province": "北京市",
+        "city": "顺义区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "顺义区人力资源和社会保障局",
+            "legalRep": "张留银",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2025-11-11"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+          "sourceTitle": "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-03-31",
+          "fetchedAt": "2026-11-23T12:53:42.379Z",
+          "snapshotFile": "data/snapshots/beijing-2026-first-labor-violations.html",
+          "ingestRunId": "c90e8045-1194-484c-9ef4-a50725c4544c",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "国信蓝桥信息技术（北京）有限公司",
+        "aliases": [],
+        "creditCode": "91110302059249644L",
+        "province": "北京市",
+        "city": "海淀区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "海淀区人力资源和社会保障局",
+            "legalRep": "蓬世友",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2025-09-18"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+          "sourceTitle": "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-03-31",
+          "fetchedAt": "2026-11-23T12:53:42.379Z",
+          "snapshotFile": "data/snapshots/beijing-2026-first-labor-violations.html",
+          "ingestRunId": "c90e8045-1194-484c-9ef4-a50725c4544c",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

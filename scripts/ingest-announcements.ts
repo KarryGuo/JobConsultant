@@ -50,7 +50,7 @@ export type SourceConfig = {
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-22.1";
+export const PARSER_VERSION = "2026-11-23.2";
 
 type IngestRunMeta = {
   id: string;
@@ -106,6 +106,116 @@ export const SOURCES: SourceConfig[] = [
     publishedAt: "2026-10-29",
     snapshotFile: "data/snapshots/fujian-2026-fourth-labor-violations.html",
     outputFile: "data/companies/fujian-2026-fourth.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "shaanxi-2025-first-batch",
+    name: "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    region: "陕西省",
+    url: "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+    publishedAt: "2025-04-23",
+    snapshotFile: "data/snapshots/shaanxi-2025-first-labor-violations.html",
+    outputFile: "data/companies/shaanxi-2025-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "shaanxi-2026-first-batch",
+    name: "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    region: "陕西省",
+    url: "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+    publishedAt: "2026-04-09",
+    snapshotFile: "data/snapshots/shaanxi-2026-first-labor-violations.html",
+    outputFile: "data/companies/shaanxi-2026-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "shaanxi-2026-second-batch",
+    name: "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    region: "陕西省",
+    url: "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+    publishedAt: "2026-07-31",
+    snapshotFile: "data/snapshots/shaanxi-2026-second-labor-violations.html",
+    outputFile: "data/companies/shaanxi-2026-second.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "henan-2025-first-batch",
+    name: "河南省人社厅关于发布2025年第一批拖欠农民工工资失信联合惩戒对象名单的公告",
+    region: "河南省",
+    url: "https://hrss.henan.gov.cn/2025/05-07/3155561.html",
+    publishedAt: "2025-05-07",
+    snapshotFile: "data/snapshots/henan-2025-first-labor-violations.html",
+    outputFile: "data/companies/henan-2025-first.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "henan-2025-second-batch",
+    name: "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+    region: "河南省",
+    url: "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+    publishedAt: "2025-07-31",
+    snapshotFile: "data/snapshots/henan-2025-second-labor-violations.html",
+    outputFile: "data/companies/henan-2025-second.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "henan-2025-third-batch",
+    name: "河南省人社厅关于发布2025年第三批拖欠农民工工资失信联合惩戒对象名单的公告",
+    region: "河南省",
+    url: "https://hrss.henan.gov.cn/2025/10-30/3240299.html",
+    publishedAt: "2025-10-30",
+    snapshotFile: "data/snapshots/henan-2025-third-labor-violations.html",
+    outputFile: "data/companies/henan-2025-third.json",
+    parser: parseTableCases,
+  },
+  {
+    key: "henan-2025-fourth-batch",
+    name: "河南省人社厅关于发布2025年第四批重大劳动保障违法行为的公告",
+    region: "河南省",
+    url: "https://hrss.henan.gov.cn/2026/01-19/3311061.html",
+    publishedAt: "2026-01-19",
+    snapshotFile: "data/snapshots/henan-2025-fourth-labor-violations.html",
+    outputFile: "data/companies/henan-2025-fourth.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "henan-2026-third-cases",
+    name: "河南省人社厅关于发布2026年第三批重大劳动保障违法行为的公告",
+    region: "河南省",
+    url: "https://hrss.henan.gov.cn/2026/10-27/3441363.html",
+    publishedAt: "2026-10-27",
+    snapshotFile: "data/snapshots/henan-2026-third-labor-violation-cases.html",
+    outputFile: "data/companies/henan-2026-third-cases.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "beijing-2026-first-batch",
+    name: "北京市2026年第一批重大劳动保障违法行为社会公布案例",
+    region: "北京市",
+    url: "https://rsj.beijing.gov.cn/xxgk/tzgg/202603/t20260331_4570554.html",
+    publishedAt: "2026-03-31",
+    snapshotFile: "data/snapshots/beijing-2026-first-labor-violations.html",
+    outputFile: "data/companies/beijing-2026-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "beijing-2026-second-batch",
+    name: "北京市2026年第二批重大劳动保障违法行为社会公布案例",
+    region: "北京市",
+    url: "https://rsj.beijing.gov.cn/xxgk/tzgg/202606/t20260629_4737261.html",
+    publishedAt: "2026-06-29",
+    snapshotFile: "data/snapshots/beijing-2026-second-labor-violations.html",
+    outputFile: "data/companies/beijing-2026-second.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "beijing-2026-third-batch",
+    name: "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+    region: "北京市",
+    url: "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+    publishedAt: "2026-09-30",
+    snapshotFile: "data/snapshots/beijing-2026-third-labor-violations.html",
+    outputFile: "data/companies/beijing-2026-third.json",
     parser: parseParagraphCases,
   },
 ];
@@ -367,6 +477,23 @@ function normalizeHeading(line: string): string {
 }
 
 /**
+ * 公司名清洗。不同省份的公告会带不同前缀、序号和附加字段：
+ * - 北京：“单位名称：北京某某有限公司，负责人：某某”
+ * - 陕西：“1 汉中市某某有限公司”
+ * 只保留主体名称，避免把“单位名称”“负责人”写进企业名。
+ */
+function normalizeCompanyName(raw: string): string {
+  return raw
+    .replace(/^(单位名称|企业名称|公司名称|用人单位)\s*[：:]\s*/, "")
+    .replace(/^\d{1,3}\s*[、.．]?\s+/, "")
+    .split(/[，,]\s*(?:法定代表人|负责人|地址|住所|统一社会信用代码)/)[0]
+    .replace(/[（(](?:分包|建设单位|施工总承包单位|用人单位)[）)]\s*$/, "")
+    .replace(/\s+/g, "")
+    .replace(/[，,；;：:]+$/, "")
+    .trim();
+}
+
+/**
  * Word 导出的页面常出现嵌套 `<table>`，按 `<table>...</table>` 匹配会
  * 在外层表格的第一个内层结束标签处截断。这里直接扫描所有 `<tr>`，
  * 只保留真正含企业信用代码的数据行，避免依赖表格层级。
@@ -432,7 +559,7 @@ export function parseTableCases(html: string): ParseResult {
 
     const codeMatch = CODE_RE.exec(cells[codeIndex]);
     const creditCode = codeMatch?.[0];
-    const name = (cells[codeIndex - 1] ?? "").trim();
+    const name = normalizeCompanyName((cells[codeIndex - 1] ?? "").trim());
 
     if (!creditCode || name.length < 4 || !COMPANY_HINT_RE.test(name)) {
       continue;
@@ -544,8 +671,8 @@ export function parseParagraphCases(html: string): ParseResult {
 
     const name =
       beforeCode.length >= 4 && COMPANY_HINT_RE.test(beforeCode)
-        ? beforeCode
-        : headingName;
+        ? normalizeCompanyName(beforeCode)
+        : normalizeCompanyName(headingName);
 
     if (name.length < 4 || !COMPANY_HINT_RE.test(name)) {
       warnings.push(`第 ${lineIndex + 1} 行：无法识别公司名，已跳过`);
@@ -751,8 +878,18 @@ async function writeJsonIfChanged(
   return true;
 }
 
-async function fetchHtml(
+/**
+ * 部分省级站点会拒绝自报身份的采集 UA。这里先用约定的采集标识，
+ * 失败后回落到常规浏览器 UA 重试一次；仍然只读取公开页面，不绕过验证码。
+ */
+const USER_AGENTS = [
+  "zhi-gu-wen-data-ingest/0.1 (+public-announcement-reader)",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+];
+
+async function fetchOnce(
   url: string,
+  userAgent: string,
 ): Promise<{ html: string; status: number }> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15000);
@@ -761,7 +898,7 @@ async function fetchHtml(
     const response = await fetch(url, {
       signal: controller.signal,
       headers: {
-        "user-agent": "zhi-gu-wen-data-ingest/0.1 (+public-announcement-reader)",
+        "user-agent": userAgent,
         accept: "text/html,application/xhtml+xml",
       },
     });
@@ -774,6 +911,22 @@ async function fetchHtml(
   } finally {
     clearTimeout(timeout);
   }
+}
+
+async function fetchHtml(
+  url: string,
+): Promise<{ html: string; status: number }> {
+  let lastError: unknown;
+
+  for (const userAgent of USER_AGENTS) {
+    try {
+      return await fetchOnce(url, userAgent);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError;
 }
 
 async function readExistingFetchedAt(

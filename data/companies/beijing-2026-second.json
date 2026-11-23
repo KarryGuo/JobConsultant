@@ -1,0 +1,148 @@
+{
+  "source": {
+    "key": "beijing-2026-second-batch",
+    "name": "北京市2026年第二批重大劳动保障违法行为社会公布案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "北京市",
+    "baseUrl": "https://rsj.beijing.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "北京市2026年第二批重大劳动保障违法行为社会公布案例",
+    "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202606/t20260629_4737261.html",
+    "publishedAt": "2026-06-29",
+    "fetchedAt": "2026-11-23T12:53:42.537Z",
+    "snapshotFile": "data/snapshots/beijing-2026-second-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "3b3ee6c1-5f24-4215-8045-794ac153112b",
+    "sourceKey": "beijing-2026-second-batch",
+    "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202606/t20260629_4737261.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T12:53:42.381Z",
+    "finishedAt": "2026-11-23T12:53:42.538Z",
+    "httpStatus": 200,
+    "contentHash": "833fb5fdba13120b2e81ec0a8a1b11dd7dfa00af48d59261c10ed2a52a224c21",
+    "snapshotPath": "data/snapshots/beijing-2026-second-labor-violations.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "北京华夏建设发展有限公司",
+        "aliases": [],
+        "creditCode": "911102296337105717",
+        "province": "北京市",
+        "city": "东城区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，北京华夏建设发展有限公司为东城区景泰西里东区（新奥洋房）小区房屋修缮工程的施工总承包单位，2024年3月至2025年12月期间该工程劳务分包单位北京某建筑劳务有限公司拖欠马某等68名劳动者工资共计1221724元",
+            "workerCount": 68,
+            "amountYuan": 1221724,
+            "authority": "东城区人力资源和社会保障局",
+            "legalRep": "陈立国",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-08"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202606/t20260629_4737261.html",
+          "sourceTitle": "北京市2026年第二批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T12:53:42.537Z",
+          "snapshotFile": "data/snapshots/beijing-2026-second-labor-violations.html",
+          "ingestRunId": "3b3ee6c1-5f24-4215-8045-794ac153112b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京方舟金诚建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91110109MA01FYBTXB",
+        "province": "北京市",
+        "city": "丰台区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，2025年2月至2026年1月期间，北京方舟金诚建筑工程有限公司拖欠蒲某等31名劳动者工资共计778696元",
+            "workerCount": 31,
+            "amountYuan": 778696,
+            "authority": "丰台区人力资源和社会保障局",
+            "legalRep": "吴静静",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202606/t20260629_4737261.html",
+          "sourceTitle": "北京市2026年第二批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T12:53:42.537Z",
+          "snapshotFile": "data/snapshots/beijing-2026-second-labor-violations.html",
+          "ingestRunId": "3b3ee6c1-5f24-4215-8045-794ac153112b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京元年诺亚舟咨询有限公司",
+        "aliases": [],
+        "creditCode": "91110108786187005Y",
+        "province": "北京市",
+        "city": "海淀区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，北京元年诺亚舟咨询有限公司拖欠伊某2024年1月1日至2025年2月12日工资共计98270.51元",
+            "amountYuan": 98271,
+            "authority": "海淀区人力资源和社会保障局",
+            "legalRep": "徐钦伟",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-04-03"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202606/t20260629_4737261.html",
+          "sourceTitle": "北京市2026年第二批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-06-29",
+          "fetchedAt": "2026-11-23T12:53:42.537Z",
+          "snapshotFile": "data/snapshots/beijing-2026-second-labor-violations.html",
+          "ingestRunId": "3b3ee6c1-5f24-4215-8045-794ac153112b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

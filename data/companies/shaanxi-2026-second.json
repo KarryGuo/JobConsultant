@@ -1,0 +1,393 @@
+{
+  "source": {
+    "key": "shaanxi-2026-second-batch",
+    "name": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "陕西省",
+    "baseUrl": "https://rst.shaanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    "url": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+    "publishedAt": "2026-07-31",
+    "fetchedAt": "2026-11-23T12:53:41.212Z",
+    "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "84a5112a-f624-4b41-ac53-db90f69e7331",
+    "sourceKey": "shaanxi-2026-second-batch",
+    "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T12:53:41.149Z",
+    "finishedAt": "2026-11-23T12:53:41.212Z",
+    "httpStatus": 200,
+    "contentHash": "5175bda409d6a850c686dd80d932f1279b9777683cfd7705230f9b83cdb7500f",
+    "snapshotPath": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+    "warnings": 15,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "西安远恒实业有限公司",
+        "aliases": [],
+        "creditCode": "91610112673259068J",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "赵 峰涉及 拖欠 25名劳动者劳动报酬共计369 000 元",
+            "workerCount": 25,
+            "legalRep": "孟宇",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-01-24"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江聚宇班建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91330783MA2K005Y97",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查， 该 公司在旺园公寓楼项目 1#、2#、3#楼提升改造工程项目中，拖欠6名劳动者共计1524 00 元",
+            "workerCount": 6,
+            "legalRep": "王东斌",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-03-18"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "鲁汉实业（陕西）有限公司",
+        "aliases": [],
+        "creditCode": "91610136MAB0T9RYXJ",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查， 该 公司拖欠 24名劳动者共计37735 0 元",
+            "workerCount": 24,
+            "legalRep": "崔娟",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-07-16"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "福建省艾邦建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91350000754968827K",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司拖欠 95名劳动者2021年至2022年期间劳动报酬共计1531910元",
+            "workerCount": 95,
+            "amountYuan": 1531910,
+            "legalRep": "陈海斌",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-05-12"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安康乐超宇农业发展有限公司",
+        "aliases": [],
+        "creditCode": "91610922MAB2Y22E7W",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年1月19日至2026年2月9日，安康市石泉县人力资源社会保障局先后接到13名劳动者投诉，反映该公司存在拖欠劳动报酬问题",
+            "workerCount": 13,
+            "amountYuan": 57238,
+            "legalRep": "乐红宇",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-05-21"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安康恒富物业有限公司",
+        "aliases": [],
+        "creditCode": "91610902MA70J1GU3C",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司拖欠 13人138067元",
+            "amountYuan": 138067,
+            "legalRep": "郭丽萍",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-02-06"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "旬阳城关镇坤群拾味居私房菜馆",
+        "aliases": [],
+        "creditCode": "92610928MAB33AH603",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年2月6日，雷某某等5名劳动者向安康市旬阳市人力资源社会保障局书面投诉该餐馆拖欠劳动报酬",
+            "workerCount": 5,
+            "amountYuan": 67000,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-05-20"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安康奥智纳新能源科技有限公司",
+        "aliases": [],
+        "creditCode": "91610991MAE963GU90",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年2月5日，苏某等9名劳动者向安康市旬阳市人力资源社会保障局书面投诉该公司拖欠劳动报酬",
+            "workerCount": 9,
+            "amountYuan": 41570,
+            "legalRep": "高朝洪",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-05-28"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "紫阳县鑫昌现代农业开发有限责任公司",
+        "aliases": [],
+        "creditCode": "91610924305596220K",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司共计拖欠刘某某、姚某某 79166元",
+            "amountYuan": 79166,
+            "legalRep": "姚富华",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-03-17"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "铜川邦佳恒业物业管理有限公司",
+        "aliases": [],
+        "creditCode": "91610201MA6TMJ9R42",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年5月30日，铜川市人力资源社会保障局依法向该公司下达《责令改正决定书》，该公司2025年6月6日报送了拖欠272名劳动者2025年3月和4月共计1303070.21元工资相关资料",
+            "workerCount": 272,
+            "amountYuan": 1303070,
+            "legalRep": "魏海秀",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-07-02"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/bznmggzzfzl/pgt/202607/t20260731_3662300.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.212Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-second-labor-violations.html",
+          "ingestRunId": "84a5112a-f624-4b41-ac53-db90f69e7331",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

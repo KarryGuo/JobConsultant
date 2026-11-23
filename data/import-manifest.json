@@ -6,6 +6,17 @@
     "companies/henan-2026-third.json",
     "companies/anhui-2026-third.json",
     "companies/hubei-2026-q2.json",
-    "companies/fujian-2026-fourth.json"
+    "companies/fujian-2026-fourth.json",
+    "companies/shaanxi-2025-first.json",
+    "companies/shaanxi-2026-first.json",
+    "companies/shaanxi-2026-second.json",
+    "companies/henan-2025-first.json",
+    "companies/henan-2025-second.json",
+    "companies/henan-2025-third.json",
+    "companies/henan-2025-fourth.json",
+    "companies/henan-2026-third-cases.json",
+    "companies/beijing-2026-first.json",
+    "companies/beijing-2026-second.json",
+    "companies/beijing-2026-third.json"
   ]
 }

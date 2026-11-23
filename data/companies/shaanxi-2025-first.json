@@ -1,0 +1,252 @@
+{
+  "source": {
+    "key": "shaanxi-2025-first-batch",
+    "name": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "陕西省",
+    "baseUrl": "https://rst.shaanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    "url": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+    "publishedAt": "2025-04-23",
+    "fetchedAt": "2026-11-23T12:53:41.065Z",
+    "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+    "sourceKey": "shaanxi-2025-first-batch",
+    "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T12:53:40.822Z",
+    "finishedAt": "2026-11-23T12:53:41.066Z",
+    "httpStatus": 200,
+    "contentHash": "64e308a3ee91c8963e40ae5946c6109477c711a759cac03b67f18c95521e067c",
+    "snapshotPath": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+    "warnings": 2,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "汉中市聚福家物业管理有限公司",
+        "aliases": [],
+        "creditCode": "91610702MA6YWE5L55",
+        "province": "陕西省",
+        "city": "汉台区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1 汉中市聚福家物业管理有限公司 91610702MA6YWE5L55 邓三群 5102221972XXXXX125 拖欠1名劳动者2024年3月至7月工资24000元 汉台区人社局 汉区人社监列决字〔2025〕1号 20250319 20280318",
+            "workerCount": 1,
+            "amountYuan": 24000,
+            "authority": "汉台区人社局",
+            "decisionNo": "汉区人社监列决字〔2025〕1号"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+          "sourceTitle": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2025-04-23",
+          "fetchedAt": "2026-11-23T12:53:41.065Z",
+          "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+          "ingestRunId": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "石泉玖安服饰工作室",
+        "aliases": [],
+        "creditCode": "92610922MAB32E6J2M",
+        "province": "陕西省",
+        "city": "石泉县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2 石泉玖安服饰工作室 92610922MAB32E6J2M 马丽 6124231994XXXXX425 拖欠10名劳动者工资19033.99元 石泉县人社局 石人社监列决字 〔2025〕1号 20250207 20280206 附件2",
+            "workerCount": 10,
+            "amountYuan": 19034,
+            "authority": "石泉县人社局"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+          "sourceTitle": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2025-04-23",
+          "fetchedAt": "2026-11-23T12:53:41.065Z",
+          "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+          "ingestRunId": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西吉弘建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91610103MA6TX8RK1T",
+        "province": "陕西省",
+        "city": "柞水县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2024年10月15日，柞水县人力资源和社会保障局接到劳动者杨某投诉，反映该公司拖欠25名劳动者劳动报酬",
+            "workerCount": 25,
+            "amountYuan": 144288,
+            "authority": "柞水县人力资源和社会保障局",
+            "legalRep": "方英成",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-02-28"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+          "sourceTitle": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2025-04-23",
+          "fetchedAt": "2026-11-23T12:53:41.065Z",
+          "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+          "ingestRunId": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "洋县鑫璐门窗有限公司",
+        "aliases": [],
+        "creditCode": "916107235869830158",
+        "province": "陕西省",
+        "city": "汉中市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2024",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司因经济困难导致拖欠21名劳动者2021年12月至2023年11月劳动报酬521594元",
+            "workerCount": 21,
+            "amountYuan": 521594,
+            "authority": "汉中市洋县人力资源和社会保障局",
+            "legalRep": "庞博",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2024-02-04"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+          "sourceTitle": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2025-04-23",
+          "fetchedAt": "2026-11-23T12:53:41.065Z",
+          "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+          "ingestRunId": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安康市亿发房地产开发有限公司",
+        "aliases": [],
+        "creditCode": "916109000698433739",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2024",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2024年8月7日，汉滨区 人力资源和社会保障局 接到王某某等4名劳动者投诉，反映该公司拖欠2022年11月至2023年8月工资及经济补偿金共计189328元",
+            "workerCount": 4,
+            "amountYuan": 189328,
+            "legalRep": "王顺金",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2024-12-05"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+          "sourceTitle": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2025-04-23",
+          "fetchedAt": "2026-11-23T12:53:41.065Z",
+          "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+          "ingestRunId": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "紫阳县紫高建筑装饰设计工程有限公司",
+        "aliases": [],
+        "creditCode": "91610924MA70Q9NY0C",
+        "province": "陕西省",
+        "city": "紫阳县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2024",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2024年7月，唐某某向紫阳县 人力资源和社会保障局 反映，该公司拖欠其2021年11月至2022年2月27000元工资",
+            "amountYuan": 27000,
+            "authority": "紫阳县人力资源和社会保障局",
+            "legalRep": "贾学禄",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2024-07-24"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202504/t20250423_3502322.html",
+          "sourceTitle": "陕西省人社厅关于公布2025年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2025-04-23",
+          "fetchedAt": "2026-11-23T12:53:41.065Z",
+          "snapshotFile": "data/snapshots/shaanxi-2025-first-labor-violations.html",
+          "ingestRunId": "67f3dddf-48b4-464f-b1c6-fc86e82119f4",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

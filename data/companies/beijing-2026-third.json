@@ -1,0 +1,181 @@
+{
+  "source": {
+    "key": "beijing-2026-third-batch",
+    "name": "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "北京市",
+    "baseUrl": "https://rsj.beijing.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+    "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+    "publishedAt": "2026-09-30",
+    "fetchedAt": "2026-11-23T12:53:42.629Z",
+    "snapshotFile": "data/snapshots/beijing-2026-third-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "f98abc8d-4598-4ebe-a047-6ceb1a4a8f3b",
+    "sourceKey": "beijing-2026-third-batch",
+    "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T12:53:42.540Z",
+    "finishedAt": "2026-11-23T12:53:42.629Z",
+    "httpStatus": 200,
+    "contentHash": "8167f15bbd0261836f6d19697633f78c0aad83b767ca752f8acd3f9ccf5a01b4",
+    "snapshotPath": "data/snapshots/beijing-2026-third-labor-violations.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "现代金融控股（成都）有限公司北京分公司",
+        "aliases": [],
+        "creditCode": "91110102596091037N",
+        "province": "北京市",
+        "city": "朝阳区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "自2026年2月6日起朝阳区人力资源和社会保障局陆续接到汪某通等29名劳动者投诉，反映现代金融控股（成都）有限公司北京分公司拖欠劳动者工资",
+            "workerCount": 22,
+            "amountYuan": 2849305,
+            "authority": "朝阳区人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+          "sourceTitle": "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-09-30",
+          "fetchedAt": "2026-11-23T12:53:42.629Z",
+          "snapshotFile": "data/snapshots/beijing-2026-third-labor-violations.html",
+          "ingestRunId": "f98abc8d-4598-4ebe-a047-6ceb1a4a8f3b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京春天医药科技发展有限公司",
+        "aliases": [],
+        "creditCode": "91110108767506808W",
+        "province": "北京市",
+        "city": "朝阳区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、北京春天医药科技发展有限公司拖欠工资案 单位名称：北京春天医药科技发展有限公司，法定代表人：宋青春，统一社会信用代码：91110108767506808W ，住所：北京市海淀区北四环西路9号9幢1501室",
+            "workerCount": 7,
+            "authority": "朝阳区人力资源和社会保障局",
+            "legalRep": "宋青春",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+          "sourceTitle": "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-09-30",
+          "fetchedAt": "2026-11-23T12:53:42.629Z",
+          "snapshotFile": "data/snapshots/beijing-2026-third-labor-violations.html",
+          "ingestRunId": "f98abc8d-4598-4ebe-a047-6ceb1a4a8f3b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京中科恒鑫建设有限公司昌平分公司",
+        "aliases": [],
+        "creditCode": "91110114MAE3KC501G",
+        "province": "北京市",
+        "city": "丰台区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，北京中科恒鑫建设有限公司昌平分公司在北京市丰台区北宫镇中海永定玖里项目拖欠李某等6名劳动者工资共计62732元",
+            "workerCount": 6,
+            "amountYuan": 62732,
+            "authority": "丰台区人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+          "sourceTitle": "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-09-30",
+          "fetchedAt": "2026-11-23T12:53:42.629Z",
+          "snapshotFile": "data/snapshots/beijing-2026-third-labor-violations.html",
+          "ingestRunId": "f98abc8d-4598-4ebe-a047-6ceb1a4a8f3b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京玩德游戏科技有限公司",
+        "aliases": [],
+        "creditCode": "91110108MA01U8WJ2F",
+        "province": "北京市",
+        "city": "海淀区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，北京玩德游戏科技有限公司在北京市海淀区宝盛东里领智中心A座2层经营，拖欠李某飞等16名劳动者2026年1月至3月工资共计851153.70元",
+            "workerCount": 16,
+            "amountYuan": 851154,
+            "authority": "海淀区人力资源和社会保障局",
+            "legalRep": "张子航",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-07-03"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202609/t20260930_4886764.html",
+          "sourceTitle": "北京市2026年第三批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2026-09-30",
+          "fetchedAt": "2026-11-23T12:53:42.629Z",
+          "snapshotFile": "data/snapshots/beijing-2026-third-labor-violations.html",
+          "ingestRunId": "f98abc8d-4598-4ebe-a047-6ceb1a4a8f3b",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

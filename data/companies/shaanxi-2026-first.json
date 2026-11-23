@@ -1,0 +1,320 @@
+{
+  "source": {
+    "key": "shaanxi-2026-first-batch",
+    "name": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "陕西省",
+    "baseUrl": "https://rst.shaanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+    "url": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+    "publishedAt": "2026-04-09",
+    "fetchedAt": "2026-11-23T12:53:41.129Z",
+    "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "7299006d-1c5d-420f-90be-7381fe9328e5",
+    "sourceKey": "shaanxi-2026-first-batch",
+    "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "partial",
+    "startedAt": "2026-11-23T12:53:41.069Z",
+    "finishedAt": "2026-11-23T12:53:41.129Z",
+    "httpStatus": 200,
+    "contentHash": "b9258ad06ae5cb9b8befd8365e6708e44b0e411cb483a3ed6b68ebb860a5ee66",
+    "snapshotPath": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "陕西裕丰昌餐饮连锁管理有限公司",
+        "aliases": [],
+        "creditCode": "91610201MAB24X5X26",
+        "province": "陕西省",
+        "city": "富平县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1 陕西裕丰昌餐饮连锁 管理有限公司 91610201MAB24X5X26 马辉 610202XXXXXXXX1625 拖欠32名劳动者工资336528.45元",
+            "workerCount": 32,
+            "amountYuan": 336528,
+            "authority": "富平县人力资源和社会保障局"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古联旭建筑劳务有限责任公司",
+        "aliases": [],
+        "creditCode": "91150626MACEFWDX3L",
+        "province": "陕西省",
+        "city": "靖边县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2 内蒙古联旭建筑劳务有限责任公司 91150626MACEFWDX3L 连罗罗 612724XXXXXXXX0936 拖欠38名劳动者工资615780.00元",
+            "workerCount": 38,
+            "amountYuan": 615780,
+            "authority": "靖边县人力资源和社会保障局",
+            "decisionNo": "靖政人社列决字〔2026〕1号"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西尚德振商贸有限公司",
+        "aliases": [],
+        "creditCode": "91610824MA70FY3N18",
+        "province": "陕西省",
+        "city": "靖边县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "3 陕西尚德振商贸有限公司 91610824MA70FY3N18 尚帅帅 612725XXXXXXXX0810 拖欠37名劳动者工资348530.00元",
+            "workerCount": 37,
+            "amountYuan": 348530,
+            "authority": "靖边县人力资源和社会保障局",
+            "decisionNo": "靖政人社列决字〔2026〕2号"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "宝鸡市陈仓区大秦宸焰烧烤园（个体工商户）",
+        "aliases": [],
+        "creditCode": "92610304MA6XLCPC20",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "4 宝鸡市陈仓区大秦宸焰烧烤园（个体工商户） 92610304MA6XLCPC20 李鹏 610321XXXXXXXX1116 拖欠11名劳动者工资55627.5元",
+            "workerCount": 11,
+            "amountYuan": 55628,
+            "authority": "陈仓人力资源和社会保障局"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西威思曼健身咨询管理有限公司",
+        "aliases": [],
+        "creditCode": "91610132MACFUCQW64",
+        "province": "陕西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，陕西威思曼健身咨询管理有限公司拖欠22名劳动者劳动报酬共计43.88万元",
+            "workerCount": 22,
+            "amountYuan": 438800,
+            "legalRep": "史维杰",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-01-06"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西尔海瑞信息技术服务有限公司",
+        "aliases": [],
+        "creditCode": "91610201MAB24KD598",
+        "province": "陕西省",
+        "city": "铜川市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司拖欠 13 名劳动者共计3.8万元工资未支付",
+            "workerCount": 13,
+            "amountYuan": 38000,
+            "authority": "铜川市王益区人社局",
+            "legalRep": "姜昆",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-08-26"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "汉中黑马少年体育发展有限公司",
+        "aliases": [],
+        "creditCode": "91610702MA7E00EL31",
+        "province": "陕西省",
+        "city": "汉中市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2024",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2024年9月，汉中市汉台区人力资源和社会保障局陆续接到3名劳动者投诉，反映该公司存在拖欠劳动者劳动报酬问题",
+            "workerCount": 3,
+            "amountYuan": 27874,
+            "authority": "汉中市汉台区人力资源和社会保障局",
+            "legalRep": "黄冠夫",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2024-12-09"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "汉中市聚福家物业管理有限公司",
+        "aliases": [],
+        "creditCode": "91610702MA6YWE5L55",
+        "province": "陕西省",
+        "city": "汉中市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年1月，汉中市汉台区人力资源和社会保障局接到1名劳动者投诉，反映该公司存在拖欠劳动者劳动报酬问题",
+            "workerCount": 1,
+            "amountYuan": 24000,
+            "authority": "汉中市汉台区人力资源和社会保障局",
+            "legalRep": "邓三群",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-03-19"
+          },
+          "sourceUrl": "https://rst.shaanxi.gov.cn/sy/tzgg/202604/t20260409_3628479.html",
+          "sourceTitle": "陕西省人社厅关于公布2026年第一批拖欠农民工工资失信联合惩戒对象名单和重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-23T12:53:41.129Z",
+          "snapshotFile": "data/snapshots/shaanxi-2026-first-labor-violations.html",
+          "ingestRunId": "7299006d-1c5d-420f-90be-7381fe9328e5",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}

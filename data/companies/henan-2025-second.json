@@ -1,0 +1,639 @@
+{
+  "source": {
+    "key": "henan-2025-second-batch",
+    "name": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "河南省",
+    "baseUrl": "https://hrss.henan.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+    "url": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+    "publishedAt": "2025-07-31",
+    "fetchedAt": "2026-11-23T12:53:41.649Z",
+    "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html"
+  },
+  "ingestRun": {
+    "id": "b458c46f-dd52-4410-bb81-444a409bd358",
+    "sourceKey": "henan-2025-second-batch",
+    "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+    "parserVersion": "2026-11-23.2",
+    "status": "success",
+    "startedAt": "2026-11-23T12:53:41.477Z",
+    "finishedAt": "2026-11-23T12:53:41.649Z",
+    "httpStatus": 200,
+    "contentHash": "54bedd7c3da74dc5c64053c2bf543a01d134ce5ca7f217a7f547afd4a924beca",
+    "snapshotPath": "data/snapshots/henan-2025-second-labor-violations.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "万泰建设集团有限公司",
+        "aliases": [],
+        "creditCode": "91500112784219544A",
+        "province": "河南省",
+        "city": "郑州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠70名劳动者劳动报酬217.4674万元",
+            "workerCount": 70,
+            "amountYuan": 2174674,
+            "authority": "郑州市惠济区人力资源和社会保障局",
+            "decisionNo": "惠人社监列决字〔2025〕001号",
+            "legalRep": "高 强",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-01-20",
+            "listedAt": "2025-01-20",
+            "expiresAt": "2028-01-19"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "郑州和一建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "914101005583130657",
+        "province": "河南省",
+        "city": "郑州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠4名劳动者劳动报酬14.42万元",
+            "workerCount": 4,
+            "amountYuan": 144200,
+            "authority": "郑州市惠济区人力资源和社会保障局",
+            "decisionNo": "惠人社监列决字〔2025〕003号",
+            "legalRep": "邹小红",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-04-29",
+            "listedAt": "2025-04-29",
+            "expiresAt": "2028-04-28"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天津匠天建筑安装工程有限公司",
+        "aliases": [],
+        "creditCode": "91120102MA06FH0B0H",
+        "province": "河南省",
+        "city": "郑州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠76名劳动者劳动报酬227.7749万元",
+            "workerCount": 76,
+            "amountYuan": 2277749,
+            "authority": "郑州市惠济区人力资源和社会保障局",
+            "decisionNo": "惠人社监列决字〔2025〕002号",
+            "legalRep": "刘东阳",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-06-26",
+            "listedAt": "2025-06-26",
+            "expiresAt": "2028-06-25"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南省永昌水电工程有限公司",
+        "aliases": [],
+        "creditCode": "91410300571039451N",
+        "province": "河南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2024",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠1名劳动者劳动报酬7.3万元",
+            "workerCount": 1,
+            "amountYuan": 73000,
+            "authority": "嵩县人力资源和社会保障局",
+            "decisionNo": "嵩人社监列决字〔2024〕第1号",
+            "legalRep": "潘友春",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2024-12-20",
+            "listedAt": "2024-12-20",
+            "expiresAt": "2027-12-19"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南祥莱路桥工程集团有限公司",
+        "aliases": [],
+        "creditCode": "91410100MA3XE2QG0U",
+        "province": "河南省",
+        "city": "平顶山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠22名劳动者劳动报酬17.13264万元",
+            "workerCount": 22,
+            "amountYuan": 171326,
+            "authority": "平顶山市湛河区人力资源和社会保障局",
+            "decisionNo": "平湛人社监列决字〔2025〕第1号",
+            "legalRep": "贾群平",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-05-11",
+            "listedAt": "2025-05-11",
+            "expiresAt": "2028-05-10"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "平顶山市晟雅物业服务有限公司",
+        "aliases": [],
+        "creditCode": "91410400MA45L8QF3M",
+        "province": "河南省",
+        "city": "平顶山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠41名劳动者劳动报酬33.365万元",
+            "workerCount": 41,
+            "amountYuan": 333650,
+            "authority": "平顶山市湛河区人力资源和社会保障局",
+            "decisionNo": "平湛人社监列决字〔2025〕第2号",
+            "legalRep": "毛润五",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-05-11",
+            "listedAt": "2025-05-11",
+            "expiresAt": "2028-05-10"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东容大生态环境工程有限公司",
+        "aliases": [],
+        "creditCode": "91370702MA3C4YC04J",
+        "province": "河南省",
+        "city": "濮阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠46名劳动者劳动报酬39.3万元",
+            "workerCount": 46,
+            "amountYuan": 393000,
+            "authority": "濮阳市人力资源和社会保障局",
+            "decisionNo": "濮人社监察列失惩决字〔2025〕第1号",
+            "legalRep": "宫树海",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-05-16",
+            "listedAt": "2025-05-16",
+            "expiresAt": "2028-05-15"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "濮阳雅袖服饰有限公司",
+        "aliases": [],
+        "creditCode": "91410183MA9GCTC09U",
+        "province": "河南省",
+        "city": "南乐县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠24名劳动者劳动报酬34.4万元",
+            "workerCount": 24,
+            "amountYuan": 344000,
+            "authority": "南乐县人力资源和社会保障局",
+            "decisionNo": "乐人社监列决字〔2025〕0401号",
+            "legalRep": "蔡正华",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-04-11",
+            "listedAt": "2025-04-11",
+            "expiresAt": "2028-04-10"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中梅建工（周口）有限公司",
+        "aliases": [],
+        "creditCode": "91411600MAD85HG38E",
+        "province": "河南省",
+        "city": "三门峡市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠1名劳动者劳动报酬4.0065万元",
+            "workerCount": 1,
+            "amountYuan": 40065,
+            "authority": "三门峡市人力资源和社会保障局",
+            "decisionNo": "三人社监列决字〔2025〕2号",
+            "legalRep": "姜力庆",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-07-01",
+            "listedAt": "2025-07-01",
+            "expiresAt": "2028-06-30"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "三门峡二仙坡绿色果业有限公司",
+        "aliases": [],
+        "creditCode": "91411222676710301T",
+        "province": "河南省",
+        "city": "三门峡市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠23名劳动者劳动报酬18.385377万元",
+            "workerCount": 23,
+            "amountYuan": 183854,
+            "authority": "三门峡市陕州区人力资源和社会保障局",
+            "decisionNo": "三陕人社监列决字〔2025〕03号",
+            "legalRep": "赵跃文",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-06-16",
+            "listedAt": "2025-06-16",
+            "expiresAt": "2028-06-15"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "三门峡高阳山温泉度假区开发有限公司",
+        "aliases": [],
+        "creditCode": "91411222576321990C",
+        "province": "河南省",
+        "city": "三门峡市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠10名劳动者劳动报酬19.463822万元",
+            "workerCount": 10,
+            "amountYuan": 194638,
+            "authority": "三门峡市陕州区人力资源和社会保障局",
+            "decisionNo": "三陕人社监列决字〔2025〕02号",
+            "legalRep": "王俊荣",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-06-16",
+            "listedAt": "2025-06-16",
+            "expiresAt": "2028-06-15"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "南阳豫宛宏泰钢结构有限公司",
+        "aliases": [],
+        "creditCode": "91411300MA9H1K279L",
+        "province": "河南省",
+        "city": "西峡县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠9名劳动者劳动报酬9.8936万元",
+            "workerCount": 9,
+            "amountYuan": 98936,
+            "authority": "西峡县人力资源和社会保障局",
+            "decisionNo": "西人社列决字〔2025〕03号",
+            "legalRep": "陈宗良",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-04-03",
+            "listedAt": "2025-04-03",
+            "expiresAt": "2028-04-02"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南省华夏建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91410728344913735B",
+        "province": "河南省",
+        "city": "淅川县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠23名劳动者劳动报酬33.22613万元",
+            "workerCount": 23,
+            "amountYuan": 332261,
+            "authority": "淅川县人力资源和社会保障局",
+            "decisionNo": "淅人社监列决字〔2025〕1号",
+            "legalRep": "燕文选",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-04-07",
+            "listedAt": "2025-04-07",
+            "expiresAt": "2028-04-06"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南宝龙交通运输有限公司",
+        "aliases": [],
+        "creditCode": "91411525MA460TB257",
+        "province": "河南省",
+        "city": "固始县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠1名劳动者劳动报酬3万元",
+            "workerCount": 1,
+            "amountYuan": 30000,
+            "authority": "固始县人力资源和社会保障局",
+            "decisionNo": "固人社监列决字〔2025〕1号",
+            "legalRep": "林广枝",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-05-13",
+            "listedAt": "2025-05-13",
+            "expiresAt": "2028-05-12"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖北大感装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91420900MA49HCNB47",
+        "province": "河南省",
+        "city": "信阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠26名劳动者劳动报酬96.23万元",
+            "workerCount": 26,
+            "amountYuan": 962300,
+            "authority": "信阳市人力资源和社会保障局",
+            "decisionNo": "信人社监列决字〔2025〕2号",
+            "legalRep": "王伟方耀武",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-06-19",
+            "listedAt": "2025-06-19",
+            "expiresAt": "2028-06-18"
+          },
+          "sourceUrl": "https://hrss.henan.gov.cn/2025/07-31/3186006.html",
+          "sourceTitle": "河南省人社厅关于发布2025年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-07-31",
+          "fetchedAt": "2026-11-23T12:53:41.649Z",
+          "snapshotFile": "data/snapshots/henan-2025-second-labor-violations.html",
+          "ingestRunId": "b458c46f-dd52-4410-bb81-444a409bd358",
+          "parserVersion": "2026-11-23.2"
+        }
+      ]
+    }
+  ]
+}
