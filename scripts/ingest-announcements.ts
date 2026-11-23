@@ -1,4 +1,5 @@
 import { createHash, randomUUID } from "node:crypto";
+import { execFile } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -350,6 +351,86 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/hebei-zhengding-2026-10.json",
     parser: parseTableCases,
   },
+  {
+    key: "neimenggu-alxa-2026-first",
+    name: "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+    region: "内蒙古自治区",
+    url: "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+    publishedAt: "2026-08-24",
+    snapshotFile: "data/snapshots/neimenggu-alxa-2026-first.html",
+    outputFile: "data/companies/neimenggu-alxa-2026-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "neimenggu-hohhot-2026-jan-aug",
+    name: "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+    region: "内蒙古自治区",
+    url: "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+    publishedAt: "2026-09-04",
+    snapshotFile: "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+    outputFile: "data/companies/neimenggu-hohhot-2026-jan-aug.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "neimenggu-tongliao-2026-first",
+    name: "通辽市2026年重大劳动保障违法行为社会公布（第一批）",
+    region: "内蒙古自治区",
+    url: "https://rsj.tongliao.gov.cn/xwzx/tzgg/202607/t20260717_1060639.html",
+    publishedAt: "2026-03-30",
+    snapshotFile: "data/snapshots/neimenggu-tongliao-2026-first.html",
+    outputFile: "data/companies/neimenggu-tongliao-2026-first.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "neimenggu-tongliao-2026-second",
+    name: "通辽市2026年重大劳动保障违法行为社会公布（第二批）",
+    region: "内蒙古自治区",
+    url: "https://rsj.tongliao.gov.cn/xwzx/tzgg/202607/t20260717_1060640.html",
+    publishedAt: "2026-06-29",
+    snapshotFile: "data/snapshots/neimenggu-tongliao-2026-second.html",
+    outputFile: "data/companies/neimenggu-tongliao-2026-second.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "liaoning-2026-first-half",
+    name: "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+    region: "辽宁省",
+    url: "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+    publishedAt: "2026-08-05",
+    snapshotFile: "data/snapshots/liaoning-2026-first-half.html",
+    outputFile: "data/companies/liaoning-2026-first-half.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "liaoning-shenyang-2026-second",
+    name: "沈阳市2026年第二批重大劳动保障违法案件公告",
+    region: "辽宁省",
+    url: "https://rsj.shenyang.gov.cn/zwxx/fdzdgknr/xzzf/zfjg/202607/t20260703_5052309.html",
+    publishedAt: "2026-07-03",
+    snapshotFile: "data/snapshots/liaoning-shenyang-2026-second.html",
+    outputFile: "data/companies/liaoning-shenyang-2026-second.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "heilongjiang-2025-q4",
+    name: "黑龙江省2025年四季度重大劳动保障违法行为社会公布",
+    region: "黑龙江省",
+    url: "https://hrss.hlj.gov.cn/hrss/c111741/202512/c00_31897328.shtml",
+    publishedAt: "2025-12-16",
+    snapshotFile: "data/snapshots/heilongjiang-2025-q4.html",
+    outputFile: "data/companies/heilongjiang-2025-q4.json",
+    parser: parseParagraphCases,
+  },
+  {
+    key: "heilongjiang-heihe-2026",
+    name: "黑河市2026年重大劳动保障违法行为社会公布",
+    region: "黑龙江省",
+    url: "https://www.heihe.gov.cn/hhs/c102625/202610/c11_361932.shtml",
+    publishedAt: "2026-10-26",
+    snapshotFile: "data/snapshots/heilongjiang-heihe-2026.html",
+    outputFile: "data/companies/heilongjiang-heihe-2026.json",
+    parser: parseParagraphCases,
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -616,9 +697,13 @@ function normalizeHeading(line: string): string {
  */
 function normalizeCompanyName(raw: string): string {
   return raw
-    .replace(/^(单位名称|企业名称|公司名称|用人单位)\s*[：:]\s*/, "")
+    .replace(
+      /^(单位名称|企业名称|公司名称|用人单位|违法主体全称|违法主体|被公布单位)\s*[：:]\s*/,
+      "",
+    )
     .replace(/^\d{1,3}\s*[、.．]?\s+/, "")
-    .split(/[，,]\s*(?:法定代表人|负责人|地址|住所|统一社会信用代码)/)[0]
+    .split(/[，,]\s*(?:法定代表人|负责人|地址|住所)/)[0]
+    .split(/统一(?:社会)?信用代码?/)[0]
     .replace(/[（(](?:分包|建设单位|施工总承包单位|用人单位)[）)]\s*$/, "")
     .replace(/\s+/g, "")
     .replace(/[，,；;：:]+$/, "")
@@ -1162,7 +1247,29 @@ async function fetchHtml(
     }
   }
 
+  // 少数站点会按 TLS 指纹拒绝 Node 内置 fetch，退回到系统 curl 再试一次。
+  try {
+    const html = await fetchWithCurl(url);
+    if (html.length > 0) return { html, status: 200 };
+  } catch (error) {
+    lastError = error;
+  }
+
   throw lastError;
+}
+
+function fetchWithCurl(url: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    execFile(
+      "curl",
+      ["-sL", "--max-time", "25", "-A", USER_AGENTS[1], url],
+      { maxBuffer: 32 * 1024 * 1024, encoding: "utf8" },
+      (error, stdout) => {
+        if (error) reject(error);
+        else resolve(stdout);
+      },
+    );
+  });
 }
 
 async function fetchBytes(

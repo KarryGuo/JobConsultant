@@ -1,0 +1,107 @@
+{
+  "source": {
+    "key": "neimenggu-tongliao-2026-first",
+    "name": "通辽市2026年重大劳动保障违法行为社会公布（第一批）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "内蒙古自治区",
+    "baseUrl": "https://rsj.tongliao.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "通辽市2026年重大劳动保障违法行为社会公布（第一批）",
+    "url": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202607/t20260717_1060639.html",
+    "publishedAt": "2026-03-30",
+    "fetchedAt": "2026-11-23T13:54:09.595Z",
+    "snapshotFile": "data/snapshots/neimenggu-tongliao-2026-first.html"
+  },
+  "ingestRun": {
+    "id": "84426a09-b037-43b0-8cd0-a6b4bca04c9e",
+    "sourceKey": "neimenggu-tongliao-2026-first",
+    "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202607/t20260717_1060639.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:54:09.281Z",
+    "finishedAt": "2026-11-23T13:54:09.595Z",
+    "httpStatus": 200,
+    "contentHash": "109f704c8a718cef864393c89e38d394877da565c508ef62b4939ea368e0c644",
+    "snapshotPath": "data/snapshots/neimenggu-tongliao-2026-first.html",
+    "warnings": 7,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "内蒙古弘达建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91150523MA0N02BP8C",
+        "province": "内蒙古自治区",
+        "city": "开鲁县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、内蒙古弘达建设工程有限公司拖欠劳动报酬案 单位名称：内蒙古弘达建设工程有限公司，统一信用代 码： 91150523MA0N02BP8C，注册地址：开鲁县开鲁镇民主街富贵园小区，法定代表人：孟繁宝",
+            "authority": "开鲁县人力资源和社会保障局",
+            "legalRep": "孟繁宝",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202607/t20260717_1060639.html",
+          "sourceTitle": "通辽市2026年重大劳动保障违法行为社会公布（第一批）",
+          "sourcePublishedAt": "2026-03-30",
+          "fetchedAt": "2026-11-23T13:54:09.595Z",
+          "snapshotFile": "data/snapshots/neimenggu-tongliao-2026-first.html",
+          "ingestRunId": "84426a09-b037-43b0-8cd0-a6b4bca04c9e",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "通辽市晨曦建筑有限公司",
+        "aliases": [],
+        "creditCode": "91150502MACTTM3889",
+        "province": "内蒙古自治区",
+        "city": "通辽市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司在奈曼旗御景花园小区建筑项目施工期间拖欠工人陈金玉工资 1.62万元",
+            "amountYuan": 16200,
+            "authority": "通辽市人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202607/t20260717_1060639.html",
+          "sourceTitle": "通辽市2026年重大劳动保障违法行为社会公布（第一批）",
+          "sourcePublishedAt": "2026-03-30",
+          "fetchedAt": "2026-11-23T13:54:09.595Z",
+          "snapshotFile": "data/snapshots/neimenggu-tongliao-2026-first.html",
+          "ingestRunId": "84426a09-b037-43b0-8cd0-a6b4bca04c9e",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "source": {
+    "key": "heilongjiang-2025-q4",
+    "name": "黑龙江省2025年四季度重大劳动保障违法行为社会公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "黑龙江省",
+    "baseUrl": "https://hrss.hlj.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "黑龙江省2025年四季度重大劳动保障违法行为社会公布",
+    "url": "https://hrss.hlj.gov.cn/hrss/c111741/202512/c00_31897328.shtml",
+    "publishedAt": "2025-12-16",
+    "fetchedAt": "2026-11-23T13:54:39.206Z",
+    "snapshotFile": "data/snapshots/heilongjiang-2025-q4.html"
+  },
+  "ingestRun": {
+    "id": "a2949f57-66a5-4489-8810-c7a405ee8f14",
+    "sourceKey": "heilongjiang-2025-q4",
+    "sourceUrl": "https://hrss.hlj.gov.cn/hrss/c111741/202512/c00_31897328.shtml",
+    "parserVersion": "2026-11-23.4",
+    "status": "success",
+    "startedAt": "2026-11-23T13:54:38.890Z",
+    "finishedAt": "2026-11-23T13:54:39.206Z",
+    "httpStatus": 200,
+    "contentHash": "a73b41c2087ccf416ec9cd2058b8f6896edebeaf835efa964a4d6e9dcfee7553",
+    "snapshotPath": "data/snapshots/heilongjiang-2025-q4.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "大庆市萨尔图区清王府饭店",
+        "aliases": [],
+        "creditCode": "92230602MAC9L0PK48",
+        "province": "黑龙江省",
+        "city": "大庆市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92230602MAC9L0PK48 张春雷 黑龙江省大庆市萨尔图区东风村育才路 1 号 拖欠 12 名劳动者工资 162643.8 元 责令改正逾期未改正，存在有能力支付拒不支付情形，以涉嫌拒不支付劳动报酬罪移送至公安机关 大庆市萨尔图区人力资源和社会保障局 大庆市人力资源和社会保障局门户网站 责任编辑： 高云静 【打印本文】 【关闭】 相关附件：",
+            "workerCount": 12,
+            "amountYuan": 162644,
+            "authority": "大庆市人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://hrss.hlj.gov.cn/hrss/c111741/202512/c00_31897328.shtml",
+          "sourceTitle": "黑龙江省2025年四季度重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2025-12-16",
+          "fetchedAt": "2026-11-23T13:54:39.206Z",
+          "snapshotFile": "data/snapshots/heilongjiang-2025-q4.html",
+          "ingestRunId": "a2949f57-66a5-4489-8810-c7a405ee8f14",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

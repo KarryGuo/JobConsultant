@@ -1,0 +1,615 @@
+{
+  "source": {
+    "key": "liaoning-2026-first-half",
+    "name": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "辽宁省",
+    "baseUrl": "https://rst.ln.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+    "url": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+    "publishedAt": "2026-08-05",
+    "fetchedAt": "2026-11-23T13:54:10.070Z",
+    "snapshotFile": "data/snapshots/liaoning-2026-first-half.html"
+  },
+  "ingestRun": {
+    "id": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+    "sourceKey": "liaoning-2026-first-half",
+    "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:54:09.752Z",
+    "finishedAt": "2026-11-23T13:54:10.070Z",
+    "httpStatus": 200,
+    "contentHash": "10d73c68a047e7c687894ad19f0b04c5be3860c69ed8fdd7a417f0328a94fcd5",
+    "snapshotPath": "data/snapshots/liaoning-2026-first-half.html",
+    "warnings": 27,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "沈阳建益家建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91210104MABY8WND1E",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、沈阳建益家建 设 工程有限公司拖欠劳动报酬案 违法主体全称： 沈阳建益家建设工程有限公司 统一社会信用代码： 91210104MABY8WND1E 注册地址 ： 辽宁省沈阳市于洪区吉力湖街218-2号（1-8-2） 法定代表人 （负责人） ： 赵勇 主要违法事实： 2026年1月6日，李 某 等5名农民工到大东区劳动者权益维护中心投诉，自诉其在大东区龙湖樘前项目 中被拖欠 工资20.3 1 万元，涉及人数10人",
+            "workerCount": 5,
+            "amountYuan": 10000,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-01-20"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古梓哲建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91150502MA7YP5E774",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、内蒙古梓哲建筑劳务有限公司拖欠劳动报酬案 违法主体全称： 内蒙古梓哲建筑劳务有限公司 统一社会信用代码： 91150502MA7YP5E774 注册地址 ： 内蒙古自治区通辽市科尔沁区明仁办事处商会大厦B座20层2004室 法定代表人 （负责人） ： 袁涛 主要违法事实： 2025年4月11日，李 某 等工人到大东区人社部门投诉，自述其在大东区劳动路公交停保场项目中干木工活被拖欠工资",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-01-12"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "违法主体全称：辽宁雨虹门窗有限公司",
+        "aliases": [],
+        "creditCode": "91210300734227634U",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司承建 的 甘井子区万科公园都会项目中，将门窗安装工程转包给辽宁 某 建设工程 分包 公司， 共 拖欠8名劳动者2024年5月至2025年6月期间劳动报酬7.14万元",
+            "workerCount": 8,
+            "amountYuan": 71400,
+            "stageDate": "2026-02-11"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "大连胜淏建设有限责任公司",
+        "aliases": [],
+        "creditCode": "91210283MA10JW0420",
+        "province": "辽宁省",
+        "city": "庄河市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "庄河市人力资源和社会保障局 将在复议、诉讼法定期限届满后，就该公司 拖欠 劳动者工资 问题 依法向人民法院申请强制执行",
+            "authority": "庄河市人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-01-05"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东熙能光伏科技有限公司",
+        "aliases": [],
+        "creditCode": "91371721MAC8KMY87P",
+        "province": "辽宁省",
+        "city": "金普新区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "五、 山东熙能光伏科技有限公司拖欠劳动报酬案 违法主体 ： 山东熙能光伏科技有限公司 统一社会信用代码： 91371721MAC8KMY87P 注册地址 ： 山东省菏泽市曹县青菏街道聚富中心9-16号 法定代表人 （负责人） ： 李翔 主要违法事实： 202 6 年 1 月 ， 9名 劳动者投诉该单位存在 拖欠工资 行为",
+            "workerCount": 9,
+            "amountYuan": 119000,
+            "authority": "金普新区人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "亮堂建设集团有限公司",
+        "aliases": [],
+        "creditCode": "91110106760928856U",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "六、 亮堂建设集团有限公司 拖欠 劳动报酬 案 违法主体 ： 亮堂建设集团有限公司 统一社会信用代码： 91110106760928856U 注册地址 ： 北京市丰台区百强大道10号楼2单元22层15号 法定代表人 （负责人） ： 王文才 主要违法事实： 该单位在 大连金普新区 融创海逸长洲六期精装修项目工程中无故拖欠32名劳动者2024年8月17日至2025年9月6日工资总计862748元",
+            "workerCount": 32,
+            "amountYuan": 862748,
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-11-10"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东豪立成建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91370983MABRJXQD7A",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司在承建35吨燃气锅炉及7.5mw发电机组安装工程项目 中 拖欠42名农民工工资 合计 62.9030万元",
+            "workerCount": 42,
+            "amountYuan": 629030,
+            "authority": "义县人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-12-25"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安徽省颍上浙皖建筑安装工程有限公司",
+        "aliases": [],
+        "creditCode": "913412263940411112",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "workerCount": 123,
+            "authority": "兴城市人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南瀚载建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91411600MA46P89U04",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "九、 河南瀚载建筑工程有限公司 拖欠劳动报酬案 违法主体全称： 河南瀚载建筑工程有限公司 统一社会信用代码： 91411600MA46P89U04 注册地址： 河南省周口市川汇区文昌大道与大庆路交叉口西南角佳利名门9号楼102商铺 相关责任人（负责人）： 吕心愿 主要违法事实： 2026年1月26日， 桑 某 、周 某 反映 河南瀚载建筑工程有限公司 在中船风电项目拖欠其工资194000元",
+            "amountYuan": 194000,
+            "authority": "兴城市人力资源和社会保障局",
+            "stageDate": "2026-02-06"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "兴城市斓悦制衣有限公司",
+        "aliases": [],
+        "creditCode": "92211481MAERQRP36E",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十一、 兴城市斓悦制衣有限公司 拖欠劳动报酬案 违法主体全称： 兴城市斓悦制衣有限公司 统一社会信用代码： 92211481MAERQRP36E 注册地址： 辽宁省葫芦岛市兴城市羊安满族乡柳蒿村柳蒿沟621-1号 相关责任人（负责人）： 杨臣 主要违法事实： 2026年2月10日， 程 某 等6人反映 兴城市斓悦制衣有限公司 拖欠其工资共计58460元",
+            "amountYuan": 58460,
+            "authority": "兴城市人力资源和社会保障局",
+            "stageDate": "2026-02-27"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西鑫晟瑞诚建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91611103MAB2K0HR7C",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十二、陕西鑫晟瑞诚建筑工程有限公司 拖欠劳动报酬案 违法主体全称： 陕西鑫晟瑞诚建筑工程有限公司 统一社会信用代码： 91611103MAB2K0HR7C 注册地址： 陕西省西安市经济技术开发区明光路与凤城四路十字东南角海璟新天地8幢7层710T80号 相关责任人（负责人）： 刘飞宇 主要违法事实： 2026年3月6日 ，兴城市人力资源和社会保障局劳动保障监察部门接到段某等7人投诉，称 陕西鑫晟瑞诚建筑工程有限公司在承建的辽沈新HG项目中存在欠薪行为，共计拖欠其7人工资合计1",
+            "amountYuan": 100789,
+            "authority": "兴城市人力资源和社会保障局",
+            "stageDate": "2026-03-23"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "辽宁菊花女食品有限公司",
+        "aliases": [],
+        "creditCode": "912114813963927402",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十三、 辽宁菊花女食品有限公司拖欠劳动报酬案 违法主体全称： 辽宁菊花女食品有限公司 统一社会信用代码： 912114813963927402 注册地址： 兴城滨海经济区 相关责任人（负责人）： 史连伟 主要违法事实： 2026年12月26日， 兴城市人力资源和社会保障局 接到 刘 某 等5人反映辽宁菊花女食品有限公司拖欠 其 2025年4月至2025年12月工资共计73039元",
+            "workerCount": 5,
+            "amountYuan": 73039,
+            "authority": "兴城市人力资源和社会保障局",
+            "stageDate": "2026-02-28"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "葫芦岛九股河食品有限公司",
+        "aliases": [],
+        "creditCode": "9121148158417146X9",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "兴城市人力资源和社会保障局",
+            "stage": "责令改正",
+            "stageLabel": "责令改正",
+            "stageDate": "2026-01-06"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "长春建工建筑装饰有限公司",
+        "aliases": [],
+        "creditCode": "91220101727123941X",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司在承建 大连市 融创壹号院 工程项目中，拖欠 16 名劳动者劳动报酬 50.15 万元",
+            "workerCount": 16,
+            "amountYuan": 501500,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "兴城市小布电竞网咖馆",
+        "aliases": [],
+        "creditCode": "91211481MAETC8M49B",
+        "province": "辽宁省",
+        "city": "兴城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "兴城市人力资源和社会保障局",
+            "stageDate": "2026-06-03"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "绥中县绥中镇老十烧烤店",
+        "aliases": [],
+        "creditCode": "92211421MA0W26KC9T",
+        "province": "辽宁省",
+        "city": "绥中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "绥中县人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-01"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "绥中县绥中镇阳光休闲洗浴中心",
+        "aliases": [],
+        "creditCode": "92211421MA0WPC2591",
+        "province": "辽宁省",
+        "city": "绥中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "绥中县人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-08"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2026080509185490890/index.shtml",
+          "sourceTitle": "辽宁省人社厅公布2026年上半年重大劳动保障违法案例",
+          "sourcePublishedAt": "2026-08-05",
+          "fetchedAt": "2026-11-23T13:54:10.070Z",
+          "snapshotFile": "data/snapshots/liaoning-2026-first-half.html",
+          "ingestRunId": "528e71c8-d634-4ae7-9a20-6e80a53017c9",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

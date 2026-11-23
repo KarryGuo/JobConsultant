@@ -10,6 +10,9 @@ export const COVERED_REGIONS = [
   "四川省",
   "江苏省",
   "河北省",
+  "内蒙古自治区",
+  "辽宁省",
+  "黑龙江省",
 ] as const;
 
 /**
@@ -24,10 +27,7 @@ export const DIRECT_LOOKUP_ONLY_REGIONS = [
 
 /** 尚未接入自动采集的其余省级行政区，按批次推进。 */
 export const PENDING_REGIONS = [
-  "内蒙古自治区",
-  "辽宁省",
   "吉林省",
-  "黑龙江省",
   "上海市",
   "山东省",
   "湖南省",

@@ -1,0 +1,250 @@
+{
+  "source": {
+    "key": "neimenggu-alxa-2026-first",
+    "name": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "内蒙古自治区",
+    "baseUrl": "https://www.als.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+    "url": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+    "publishedAt": "2026-08-24",
+    "fetchedAt": "2026-11-23T13:54:38.887Z",
+    "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html"
+  },
+  "ingestRun": {
+    "id": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+    "sourceKey": "neimenggu-alxa-2026-first",
+    "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:54:37.960Z",
+    "finishedAt": "2026-11-23T13:54:38.887Z",
+    "httpStatus": 200,
+    "contentHash": "24b88aa9f3ebfc6daa0ecd62f710902fa6035919eff9276443e6ff55f594e076",
+    "snapshotPath": "data/snapshots/neimenggu-alxa-2026-first.html",
+    "warnings": 24,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "阿拉善右旗创汇化工有限公司",
+        "aliases": [],
+        "creditCode": "91152922MA0Q4AQU0E",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（一）阿拉善右旗创汇化工有限公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：阿拉善右旗创汇化工有限公司 统一社会信用代码：91152922MA0Q4AQU0E 地址：阿拉善右旗雅布赖镇 2.法定代表人：杨杰 3.主要违法事实：2024年8月至12月、2025年1月至11月，阿拉善右旗人力资源和社会保障局在治理欠薪冬季行动工资支付情况排查时，发现该公司存在拖欠职工工资行为",
+            "authority": "阿右旗人力资源和社会保障局",
+            "legalRep": "杨杰",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-02-06"
+          },
+          "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+          "sourceTitle": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-23T13:54:38.887Z",
+          "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html",
+          "ingestRunId": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古沃信新材料科技有限公司",
+        "aliases": [],
+        "creditCode": "91152922MA0Q0GY001",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）内蒙古沃信新材料科技有限公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：内蒙古沃信新材料科技有限公司 统一社会信用代码：91152922MA0Q0GY001 地址：阿拉善右旗雅布赖镇 2.法定代表人：苗金祥 3.主要违法事实：2024年12月至2026年2月，阿拉善右旗人力资源和社会保障局陆续接到14人投诉务工期间拖欠2025年9月至2026年2月工资（包括放假生活费）、2024年8月、9月、10月放假期间生活费（涉及部分人员），以及2025",
+            "authority": "阿右旗人力资源和社会保障局",
+            "legalRep": "苗金祥",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-05-26"
+          },
+          "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+          "sourceTitle": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-23T13:54:38.887Z",
+          "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html",
+          "ingestRunId": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "呼和浩特市华廷建筑装饰材料有限公司",
+        "aliases": [],
+        "creditCode": "9115010557060093X3",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（三）呼和浩特市华廷建筑装饰材料有限公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：呼和浩特市华廷建筑装饰材料有限公司 统一社会信用代码：9115010557060093X3 地址：内蒙古自治区呼和浩特市赛罕区新华东街长安金座E－608 2. 法定代表人：梁继军 3.主要违法事实：2025年12月至2026年1月，阿拉善高新技术产业开发区示范区综合办公室陆续接到3人投诉内蒙古华电阿拉善盟高新区防沙治沙和风电光伏一体化工程80万千瓦光伏项目务工期间拖",
+            "amountYuan": 10000,
+            "legalRep": "梁继军",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-02-13"
+          },
+          "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+          "sourceTitle": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-23T13:54:38.887Z",
+          "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html",
+          "ingestRunId": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古蜂浪药业有限公司",
+        "aliases": [],
+        "creditCode": "91152900MA0QB7C65Q",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（四）内蒙古蜂浪药业有限公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：内蒙古蜂浪药业有限公司 统一社会信用代码：91152900MA0QB7C65Q 地址：内蒙古自治区阿拉善盟高新技术产业开发区乌兰布和工业园区 2.法定代表人：杨必成 3.主要违法事实：2026年1月至6月，阿拉善高新技术产业开发区示范区综合办公室接到1人投诉内蒙古蜂浪药业有限公司拖欠其工资2万元",
+            "amountYuan": 20000,
+            "legalRep": "杨必成",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-02-13"
+          },
+          "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+          "sourceTitle": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-23T13:54:38.887Z",
+          "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html",
+          "ingestRunId": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古金田能源有限公司",
+        "aliases": [],
+        "creditCode": "91152991MACKUHH803",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（五）内蒙古金田能源有限公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：内蒙古金田能源有限公司 统一社会信用代码：91152991MACKUHH803 地址：内蒙古自治区阿拉善盟高新技术产业开发区内蒙古庆华循环经济工业园职教中心办公楼2-8 2.法定代表人：宋华祥 3.主要违法事实：2026年7月，阿拉善高新技术产业开发区示范区综合办公室接到1人投诉内蒙古金田能源有限公司拖欠其工资2万元",
+            "amountYuan": 20000,
+            "legalRep": "宋华祥",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-07-28"
+          },
+          "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+          "sourceTitle": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-23T13:54:38.887Z",
+          "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html",
+          "ingestRunId": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川瑞煜建筑有限公司阿拉善分公司",
+        "aliases": [],
+        "creditCode": "91152991MA7YQ56E96",
+        "province": "内蒙古自治区",
+        "city": "阿拉善盟",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（六）四川瑞煜建筑有限公司阿拉善分公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：四川瑞煜建筑有限公司阿拉善分公司 统一社会信用代码：91152991MA7YQ56E96 地址：内蒙古自治区阿拉善盟经济技术开发区贺兰区花都盛景小区3号商业楼21号 2.法定代表人：郝二东 3.主要违法事实：2026年7月，阿拉善高新技术产业开发区示范区综合办公室接到1人投诉四川瑞煜建筑有限公司阿拉善分公司拖欠其工资0.8万元",
+            "amountYuan": 8000,
+            "authority": "阿拉善盟人力资源和社会保障局",
+            "legalRep": "郝二东",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2026-07-28"
+          },
+          "sourceUrl": "https://www.als.gov.cn/art/2026/8/24/art_46_553515.html",
+          "sourceTitle": "阿拉善盟关于公布2026年第一批重大劳动保障违法行为对象名单的公告",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-23T13:54:38.887Z",
+          "snapshotFile": "data/snapshots/neimenggu-alxa-2026-first.html",
+          "ingestRunId": "6a0a943e-70ab-4bf9-a161-a88648c683c5",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

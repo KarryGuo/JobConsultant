@@ -1,0 +1,142 @@
+{
+  "source": {
+    "key": "heilongjiang-heihe-2026",
+    "name": "黑河市2026年重大劳动保障违法行为社会公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "黑龙江省",
+    "baseUrl": "https://www.heihe.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "黑河市2026年重大劳动保障违法行为社会公布",
+    "url": "https://www.heihe.gov.cn/hhs/c102625/202610/c11_361932.shtml",
+    "publishedAt": "2026-10-26",
+    "fetchedAt": "2026-11-23T13:54:10.926Z",
+    "snapshotFile": "data/snapshots/heilongjiang-heihe-2026.html"
+  },
+  "ingestRun": {
+    "id": "df2bbc1e-0bef-44fd-9f72-44312adf522d",
+    "sourceKey": "heilongjiang-heihe-2026",
+    "sourceUrl": "https://www.heihe.gov.cn/hhs/c102625/202610/c11_361932.shtml",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:54:10.645Z",
+    "finishedAt": "2026-11-23T13:54:10.926Z",
+    "httpStatus": 200,
+    "contentHash": "560edbac564b34add56eaab85c026bb41166da453efffd9a515dc1da67a32d69",
+    "snapshotPath": "data/snapshots/heilongjiang-heihe-2026.html",
+    "warnings": 3,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "哈尔滨中润房产经营物业管理有限公司黑河分公司",
+        "aliases": [],
+        "creditCode": "91231100MA1B4T034Y",
+        "province": "黑龙江省",
+        "city": "黑河市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91231100MA1B4T034Y 高天鹏 黑河市合作区电业名苑（合作区世纪花园小区） 哈尔滨中润房产经营物业管理有限公司黑河分公司拖欠 25 名劳动者 2025 年 8 月至 2026 年 6 月期间劳动报酬共计 39.9 万元",
+            "workerCount": 25,
+            "amountYuan": 399000,
+            "authority": "黑河市人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://www.heihe.gov.cn/hhs/c102625/202610/c11_361932.shtml",
+          "sourceTitle": "黑河市2026年重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-10-26",
+          "fetchedAt": "2026-11-23T13:54:10.926Z",
+          "snapshotFile": "data/snapshots/heilongjiang-heihe-2026.html",
+          "ingestRunId": "df2bbc1e-0bef-44fd-9f72-44312adf522d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江苏卓亚建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91320321MA1MYKJD64",
+        "province": "黑龙江省",
+        "city": "黑河市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91320321MA1MYKJD64 任红雨 丰县华山镇钢城 江苏卓亚建设工程有限公司实际拖欠 26 名劳动者 2024 年 9 月至 2025 年 7 月期间劳动报酬共计 25.612 万元",
+            "workerCount": 26,
+            "amountYuan": 256120,
+            "authority": "黑河市人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://www.heihe.gov.cn/hhs/c102625/202610/c11_361932.shtml",
+          "sourceTitle": "黑河市2026年重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-10-26",
+          "fetchedAt": "2026-11-23T13:54:10.926Z",
+          "snapshotFile": "data/snapshots/heilongjiang-heihe-2026.html",
+          "ingestRunId": "df2bbc1e-0bef-44fd-9f72-44312adf522d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中国铁建大桥工程局集团有限公司",
+        "aliases": [],
+        "creditCode": "91120116244997951G",
+        "province": "黑龙江省",
+        "city": "黑河市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "黑河市人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://www.heihe.gov.cn/hhs/c102625/202610/c11_361932.shtml",
+          "sourceTitle": "黑河市2026年重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2026-10-26",
+          "fetchedAt": "2026-11-23T13:54:10.926Z",
+          "snapshotFile": "data/snapshots/heilongjiang-heihe-2026.html",
+          "ingestRunId": "df2bbc1e-0bef-44fd-9f72-44312adf522d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "source": {
+    "key": "liaoning-shenyang-2026-second",
+    "name": "沈阳市2026年第二批重大劳动保障违法案件公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "辽宁省",
+    "baseUrl": "https://rsj.shenyang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "沈阳市2026年第二批重大劳动保障违法案件公告",
+    "url": "https://rsj.shenyang.gov.cn/zwxx/fdzdgknr/xzzf/zfjg/202607/t20260703_5052309.html",
+    "publishedAt": "2026-07-03",
+    "fetchedAt": "2026-11-23T13:54:10.363Z",
+    "snapshotFile": "data/snapshots/liaoning-shenyang-2026-second.html"
+  },
+  "ingestRun": {
+    "id": "c2aa517a-4066-4354-b45b-029277a2336f",
+    "sourceKey": "liaoning-shenyang-2026-second",
+    "sourceUrl": "https://rsj.shenyang.gov.cn/zwxx/fdzdgknr/xzzf/zfjg/202607/t20260703_5052309.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:54:10.073Z",
+    "finishedAt": "2026-11-23T13:54:10.363Z",
+    "httpStatus": 200,
+    "contentHash": "6c45e7163607366226431a03154402d371de2a4bbd538e3329aca62b9ffb78d0",
+    "snapshotPath": "data/snapshots/liaoning-shenyang-2026-second.html",
+    "warnings": 4,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "沈阳建益家建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91210104MABY8WND1E",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、沈阳建益家建筑工程有限公司拖欠劳动报酬案 （一）违法主体全称、统一社会信用代码及地址： 违法主体全称：沈阳建益家建筑工程有限公司 统一社会信用代码：91210104MABY8WND1E 地址：辽宁省沈阳市于洪区吉力湖街218-2号（1-8-2） （二）法定代表人：赵勇 （三）主要违法事实：2026年1月6日，李文月等5名农民工到大东区劳动者权益维护中心投诉，自诉其在大东区龙湖樘前项目干外墙保温活没有得到工资，欠薪金额20.3085万元，涉及人数10人",
+            "workerCount": 5,
+            "legalRep": "赵勇",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-01-20"
+          },
+          "sourceUrl": "https://rsj.shenyang.gov.cn/zwxx/fdzdgknr/xzzf/zfjg/202607/t20260703_5052309.html",
+          "sourceTitle": "沈阳市2026年第二批重大劳动保障违法案件公告",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-23T13:54:10.363Z",
+          "snapshotFile": "data/snapshots/liaoning-shenyang-2026-second.html",
+          "ingestRunId": "c2aa517a-4066-4354-b45b-029277a2336f",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古梓哲建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91150502MA7YP5E774",
+        "province": "辽宁省",
+        "city": "沈阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、内蒙古梓哲建筑劳务有限公司拖欠劳动报酬案 （一）违法主体全称、统一社会信用代码及地址： 违法主体全称：内蒙古梓哲建筑劳务有限公司 统一社会信用代码：91150502MA7YP5E774 地址：内蒙古自治区通辽市科尔沁区明仁办事处商会大厦B座20层2004室 （二）法定代表人：袁涛 （三）主要违法事实：2025年4月11日，李华国等工人到大东区人社部门投诉，自述其在大东区劳动路公交停保场项目中干木工活被拖欠工资",
+            "authority": "沈阳市人力资源和社会保障局",
+            "legalRep": "袁涛",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-01-12"
+          },
+          "sourceUrl": "https://rsj.shenyang.gov.cn/zwxx/fdzdgknr/xzzf/zfjg/202607/t20260703_5052309.html",
+          "sourceTitle": "沈阳市2026年第二批重大劳动保障违法案件公告",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-23T13:54:10.363Z",
+          "snapshotFile": "data/snapshots/liaoning-shenyang-2026-second.html",
+          "ingestRunId": "c2aa517a-4066-4354-b45b-029277a2336f",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

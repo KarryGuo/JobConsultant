@@ -1,0 +1,610 @@
+{
+  "source": {
+    "key": "neimenggu-hohhot-2026-jan-aug",
+    "name": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "内蒙古自治区",
+    "baseUrl": "http://rsj.huhhot.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+    "url": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+    "publishedAt": "2026-09-04",
+    "fetchedAt": "2026-11-23T13:54:09.278Z",
+    "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html"
+  },
+  "ingestRun": {
+    "id": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+    "sourceKey": "neimenggu-hohhot-2026-jan-aug",
+    "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-23T13:54:09.160Z",
+    "finishedAt": "2026-11-23T13:54:09.278Z",
+    "httpStatus": 200,
+    "contentHash": "51aa6e82b550229b41fb749d61e846af4dde0503290d7910062e1fe2eba7ae8d",
+    "snapshotPath": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+    "warnings": 2,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "沈阳腾越建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91210100696523992T",
+        "province": "内蒙古自治区",
+        "city": "新城区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、 沈阳腾越建筑工程有限公司 统一社会信用代码： 91210100696523992T 法定代表人：刘静 列入名单事由：沈阳腾越建筑工程有限公司承建的新城区碧桂园星作二期项目，拖欠 97名农民工工资947170元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 97,
+            "amountYuan": 947170,
+            "authority": "新城区人力资源和社会保障局",
+            "legalRep": "刘静",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中睿鼎泰建筑有限公司",
+        "aliases": [],
+        "creditCode": "91110109MA01LC7MX4",
+        "province": "内蒙古自治区",
+        "city": "新城区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、 中睿鼎泰（北京）建筑有限公司 统一社会信用代码： 91110109MA01LC7MX4 法定代表人：张孟宇 列入名单事由：中睿鼎泰（北京）建筑有限公司在新城区东河院子项目施工期间，拖欠 162名农民工工资1746850元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 162,
+            "amountYuan": 1746850,
+            "authority": "新城区人力资源和社会保障局",
+            "legalRep": "张孟宇",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古禹丰建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91150104MA7YN5EB9Y",
+        "province": "内蒙古自治区",
+        "city": "和林格尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "三、 内蒙古禹丰建设工程有限公司 统一社会信用代码： 91150104MA7YN5EB9Y 法定代表人：朱嘉君 列入名单事由：内蒙古禹丰建设工程有限公司承建的和林格尔新区滨河悦府住宅小区项目，拖欠 5名农民工工资314436元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 5,
+            "amountYuan": 314436,
+            "authority": "和林格尔县人力资源和社会保障局",
+            "legalRep": "朱嘉君",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "深圳市建艺装饰集团股份有限公司",
+        "aliases": [],
+        "creditCode": "914403001922545226",
+        "province": "内蒙古自治区",
+        "city": "赛罕区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四、 深圳市建艺装饰集团股份有限公司 统一社会信用代码： 914403001922545226 法定代表人：张有文 列入名单事由：深圳市建艺装饰集团股份有限公司承建的呼和浩特市殡仪馆新建项目，拖欠 27名农民工工资2448440元",
+            "workerCount": 27,
+            "amountYuan": 2448440,
+            "authority": "赛罕区人力资源和社会保障局",
+            "legalRep": "张有文",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "沈阳远大铝业工程有限公司",
+        "aliases": [],
+        "creditCode": "912101066046126811",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "五、 沈阳远大铝业工程有限公司 统一社会信用代码： 912101066046126811 法定代表人：康宝华 列入名单事由：沈阳远大铝业工程有限公司拖欠 35名农民工工资295143.5元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 35,
+            "amountYuan": 295144,
+            "authority": "土默特左旗人力资源和社会保障局",
+            "legalRep": "康宝华",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西瑞天皓建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91610116MAB0JWND0J",
+        "province": "内蒙古自治区",
+        "city": "和林格尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "六、 陕西瑞天皓建筑工程有限公司 统一社会信用代码： 91610116MAB0JWND0J 法定代表人：孙周周 列入名单事由：陕西瑞天皓建筑工程有限公司承建的呼和浩特新机场航站区第一标段项目，拖欠 16名农民工工资280168元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 16,
+            "amountYuan": 280168,
+            "authority": "和林格尔县人力资源和社会保障局",
+            "legalRep": "孙周周",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "呼和浩特裕荣物业管理有限公司",
+        "aliases": [],
+        "creditCode": "91150105MADYAP8W71",
+        "province": "内蒙古自治区",
+        "city": "赛罕区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "七、 呼和浩特裕荣物业管理有限公司 统一社会信用代码： 91150105MADYAP8W71 法定代表人：石高红 列入名单事由：呼和浩特裕荣物业管理有限公司拖欠 15人工资65652.73元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "amountYuan": 65653,
+            "authority": "赛罕区人力资源和社会保障局",
+            "legalRep": "石高红",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天津贝宏建筑工程有限公司内蒙古一分公司",
+        "aliases": [],
+        "creditCode": "91150104MACT51YL3L",
+        "province": "内蒙古自治区",
+        "city": "回民区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "八、 天津贝宏建筑工程有限公司内蒙古一分公司 统一社会信用代码： 91150104MACT51YL3L 项目负责人：赵刚强 列入名单事由：天津贝宏建筑工程有限公司内蒙古一分公司承建的回民区浩鑫机电广场项目，拖欠 257名农民工工资3174410元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 257,
+            "amountYuan": 3174410,
+            "authority": "回民区人力资源和社会保障局",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古聚丰建筑工程有限责任公司",
+        "aliases": [],
+        "creditCode": "911501005581440976",
+        "province": "内蒙古自治区",
+        "city": "回民区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "九、 内蒙古聚丰建筑工程有限责任公司 统一社会信用代码： 911501005581440976 法定代表人：陆根小 列入名单事由：内蒙古聚丰建筑工程有限责任公司承建回民区龙新综合小区项目，拖欠 50名农民工工资1148920元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 50,
+            "amountYuan": 1148920,
+            "authority": "回民区人力资源和社会保障局",
+            "legalRep": "陆根小",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "腾越建筑科技集团有限公司",
+        "aliases": [],
+        "creditCode": "91440606231927946T",
+        "province": "内蒙古自治区",
+        "city": "回民区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十一、 腾越建筑科技集团有限公司 统一社会信用代码： 91440606231927946T 项目负责人：杨泽辉 列入名单事由：腾越建筑科技集团有限公司承建的回民区碧桂园星耀项目，拖欠 105名农民工工资4126000元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 105,
+            "amountYuan": 4126000,
+            "authority": "回民区人力资源和社会保障局",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "神木市铭伏新能源有限公司",
+        "aliases": [],
+        "creditCode": "91610821MAB3M0D45M",
+        "province": "内蒙古自治区",
+        "city": "和林格尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十二、 神木市铭伏新能源有限公司 统一社会信用代码： 91610821MAB3M0D45M 项目负责人：乔兆喜 列入名单事由：神木市铭伏新能源有限公司承建的和林格尔县 10MW户用分布式光伏项目拖欠7名农民工工资85100元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 7,
+            "amountYuan": 85100,
+            "authority": "和林格尔县人力资源和社会保障局",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古梁垣建筑工程有限责任公司",
+        "aliases": [],
+        "creditCode": "91150100MA0PXJCR9Y",
+        "province": "内蒙古自治区",
+        "city": "和林格尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十三、 内蒙古梁垣建筑工程有限责任公司 统一社会信用代码： 91150100MA0PXJCR9Y 法定代表人：卢瑞强 列入名单事由：该单位承建的和林格尔新区滨河悦府住宅小区项目，在施工期间拖欠 5名农民工工资314436元经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 5,
+            "amountYuan": 314436,
+            "authority": "和林格尔县人力资源和社会保障局",
+            "legalRep": "卢瑞强",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古华硕建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91150104MA13N75081",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十四、 内蒙古华硕建筑工程有限公司 统一社会信用代码： 91150104MA13N75081 法定代表人：李建华 列入名单事由：该单位承建的土左旗西部作坊民族特色食品小镇加工园区项目，在施工期间拖欠 13名农民工工资130600元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 13,
+            "amountYuan": 130600,
+            "legalRep": "李建华",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古杬沣建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91150104MA13NLUQ8L",
+        "province": "内蒙古自治区",
+        "city": "玉泉区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十五、 内蒙古杬沣建筑劳务有限公司 统一社会信用代码： 91150104MA13NLUQ8L 法定代表人：师威风 列入名单事由：该单位承建的内蒙古苁蓉事业有限责任公司厂区项目，在施工期间拖欠 11名农民工工资353384元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 11,
+            "amountYuan": 353384,
+            "authority": "玉泉区人力资源和社会保障局",
+            "legalRep": "师威风",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "泓天建设有限公司内蒙古建设工程分公司",
+        "aliases": [],
+        "creditCode": "91150103MAE1J60U9A",
+        "province": "内蒙古自治区",
+        "city": "新城区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十六、 泓天建设有限公司内蒙古建设工程分公司 统一社会信用代码： 91150103MAE1J60U9A 法定代表人：张传智 列入名单事由：泓天建设有限公司内蒙古建设工程分公司承建的博王府大酒店二期项目，拖欠 32名农民工工资238100元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 32,
+            "amountYuan": 238100,
+            "authority": "新城区人力资源和社会保障局",
+            "legalRep": "张传智",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西博鹏建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91140200MA0HGQJE6L",
+        "province": "内蒙古自治区",
+        "city": "呼和浩特市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十七、 山西博鹏建筑工程有限公司 统一社会信用代码： 91140200MA0HGQJE6L 法定代表人：邢勇超 列入名单事由：山西博鹏建筑工程有限公司承揽的清水河县 G18荣乌高速分布式光伏项目，拖欠21名农民工190910元，经人力资源社会保障行政部门责令限期支付，拒不支付",
+            "workerCount": 21,
+            "amountYuan": 190910,
+            "authority": "呼和浩特市人力资源和社会保障局",
+            "legalRep": "邢勇超",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://rsj.huhhot.gov.cn/slb/ywzt_slb/202609/t20260904_2034302.html",
+          "sourceTitle": "呼和浩特市2026年1至8月拖欠农民工工资失信联合惩戒对象名单公示",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-23T13:54:09.278Z",
+          "snapshotFile": "data/snapshots/neimenggu-hohhot-2026-jan-aug.html",
+          "ingestRunId": "912a1b52-f549-4a38-aeeb-b46d4c2cc153",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}
