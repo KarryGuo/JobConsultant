@@ -1,0 +1,73 @@
+{
+  "source": {
+    "key": "xizang-2026-07",
+    "name": "西藏自治区2026年重大劳动保障违法行为社会公布名单（7月）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "西藏自治区",
+    "baseUrl": "https://hrss.xizang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "西藏自治区2026年重大劳动保障违法行为社会公布名单（7月）",
+    "url": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202607/t20260716_550280.html",
+    "publishedAt": "2026-07-16",
+    "fetchedAt": "2026-11-24T02:21:38.882Z",
+    "snapshotFile": "data/snapshots/xizang-2026-07.html"
+  },
+  "ingestRun": {
+    "id": "4bbb357e-7677-48de-8d41-705a255409f4",
+    "sourceKey": "xizang-2026-07",
+    "sourceUrl": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202607/t20260716_550280.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-24T02:21:38.399Z",
+    "finishedAt": "2026-11-24T02:21:38.882Z",
+    "httpStatus": 200,
+    "contentHash": "17244780dcc2cd2fb4e8c98a62e0119967bb55326949e599fa3e1c8ac47f5c04",
+    "snapshotPath": "data/snapshots/xizang-2026-07.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "四川盛誉建业建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91510703MAE63XWWXG",
+        "province": "西藏自治区",
+        "city": "日喀则市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四川盛誉建业建设工程有限公司 拖欠工资案 违法主体 名称 ： 四川盛誉建业建设工程有限公司 统一社会信用代码： 91510703MAE63XWWXG 单位地址： 四川省绵阳市涪城区绵安路 35 号（中国（绵阳）科技城软件产业园 B 区 105-J485 号） 法人代表： 惠三 主要违法事实： 2026 年 4 月 21 日 ，昌都市丁青县人力资源社会保障局 接到劳动者次某、张某投诉 “ 四川盛誉建业建设工程有限公司拖欠 7 人工资共计 112094 元 ”",
+            "amountYuan": 112094,
+            "authority": "日喀则市人社局",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202607/t20260716_550280.html",
+          "sourceTitle": "西藏自治区2026年重大劳动保障违法行为社会公布名单（7月）",
+          "sourcePublishedAt": "2026-07-16",
+          "fetchedAt": "2026-11-24T02:21:38.882Z",
+          "snapshotFile": "data/snapshots/xizang-2026-07.html",
+          "ingestRunId": "4bbb357e-7677-48de-8d41-705a255409f4",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

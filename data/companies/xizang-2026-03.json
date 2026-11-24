@@ -1,0 +1,110 @@
+{
+  "source": {
+    "key": "xizang-2026-03",
+    "name": "西藏自治区2026年重大劳动保障违法行为社会公布名单（3月）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "西藏自治区",
+    "baseUrl": "https://hrss.xizang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "西藏自治区2026年重大劳动保障违法行为社会公布名单（3月）",
+    "url": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202603/t20260319_530116.html",
+    "publishedAt": "2026-03-19",
+    "fetchedAt": "2026-11-24T02:21:39.024Z",
+    "snapshotFile": "data/snapshots/xizang-2026-03.html"
+  },
+  "ingestRun": {
+    "id": "70bc27d5-269b-4a58-b5c7-5bfba240eacb",
+    "sourceKey": "xizang-2026-03",
+    "sourceUrl": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202603/t20260319_530116.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-24T02:21:38.888Z",
+    "finishedAt": "2026-11-24T02:21:39.024Z",
+    "httpStatus": 200,
+    "contentHash": "57e13d75dc2af502858714711a4263ae32a34470288658ba7eb276ca57b7e928",
+    "snapshotPath": "data/snapshots/xizang-2026-03.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "西藏蜀源实业有限公司",
+        "aliases": [],
+        "creditCode": "91540123MA6TEP498U",
+        "province": "西藏自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "统一社会信用代码： 91540123MA6TEP498U 单位地址： 西藏自治区拉萨市城关区军民路哈达幸福花苑小区 2 栋 2 单元 3 楼 法定代表人： 胡姚 身份证号： 510182********4023 2025 年 12 月 8 日，周 某某 、贺 某 等 9 名劳动者反映 西藏蜀源实业有限公司 承建的那曲市综合应急指挥基地及救援装备储备基地建设项目务工期间被拖欠 工资",
+            "workerCount": 107,
+            "amountYuan": 961388,
+            "legalRep": "胡姚",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202603/t20260319_530116.html",
+          "sourceTitle": "西藏自治区2026年重大劳动保障违法行为社会公布名单（3月）",
+          "sourcePublishedAt": "2026-03-19",
+          "fetchedAt": "2026-11-24T02:21:39.024Z",
+          "snapshotFile": "data/snapshots/xizang-2026-03.html",
+          "ingestRunId": "70bc27d5-269b-4a58-b5c7-5bfba240eacb",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江苏金宇通建设科技集团有限公司",
+        "aliases": [],
+        "creditCode": "91321300757300881H",
+        "province": "西藏自治区",
+        "city": "山南市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "统一社会信用代码： 91321300757300881H 单位地址： 苏州工业园区唯华路 3 号军地商务广场 3 幢 1005 室 法定代表人： 张世德 身份证号： 321324********4215 2025 年 10 月 30 日，朱某某等 36 名劳动者反映在江苏金宇通建设科技集团有限公司承建的嘉黎县嘉黎镇清洁供暖建设项目中，被拖欠劳动报酬",
+            "workerCount": 36,
+            "amountYuan": 352145,
+            "authority": "山南市人社局",
+            "legalRep": "张世德",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zwgk/fdzdgknr/xzzfxxgs/202603/t20260319_530116.html",
+          "sourceTitle": "西藏自治区2026年重大劳动保障违法行为社会公布名单（3月）",
+          "sourcePublishedAt": "2026-03-19",
+          "fetchedAt": "2026-11-24T02:21:39.024Z",
+          "snapshotFile": "data/snapshots/xizang-2026-03.html",
+          "ingestRunId": "70bc27d5-269b-4a58-b5c7-5bfba240eacb",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

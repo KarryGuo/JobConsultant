@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="SiteName" content="青海省人力资源和社会保障厅">
+	<meta name="SiteDomain" content="rst.qinghai.gov.cn">
+	<meta name="SiteIDCode" content="6300000023">
+	<meta name="ColumnName" content="青海人社">
+	<meta name="ColumnType" content="青海人社">
+	<meta name="ColumnKeywords" content="青海人社">
+	<meta name="ColumnDescription" content="青海人社">
+	<title>青海省人力资源和社会保障厅</title>
+	<link href="/css/index.css?t=v1.0" rel="stylesheet">
+	<link href="/css/index20220110.css?t=v1.0" rel="stylesheet">
+	<link href="/css/tp.css?t=v1.0" rel="stylesheet" type="text/css">
+	<link href="/css/lrtk.css?t=v1.0" rel="stylesheet">
+	<link href="/css/zixuncenter.css?t=v1.0" rel="stylesheet">
+	<link href="/css/qtym.css?t=v1.0" rel="stylesheet">
+	<!--焦点图-->
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+	<script>
+		new LingQue.Monitor().init({
+			id: "JitjFumDqxVihdb3"
+		});
+	</script>
+	<script>
+		LA.init({
+			id: "3FmS3CawowBKXfMJ",
+			ck: "3FmS3CawowBKXfMJ"
+		})
+	</script>
+	<script type="text/javascript" src="/js/lrtk.min.1.5.js"></script>
+	<!--焦点图 end-->
+	<script type="text/javascript" src="/js/gd/jquery.pack.js"></script>
+	<script type="text/javascript" src="/js/gd/jQuery.blockUI.js"></script>
+	<script type="text/javascript" src="/js/gd/jquery.SuperSlide.js"></script>
+
+	<style type="text/css">
+		/* 置灰色 开始*/
+		/* html,body,div,img{
+												 -webkit-filter: grayscale(100%);
+												 -moz-filter: grayscale(100%);
+												 -ms-filter: grayscale(100%);
+												 -o-filter: grayscale(100%);
+												 filter: grayscale(100%);
+												 filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+												 filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+												 filter: gray;
+											 } */
+		/* 置灰色 结束*/
+		.pictureDemo {
+			height: 105px;
+			margin-top: 1px;
+			text-align: center;
+		}
+
+		.pictureDemo img {
+			align-content: center;
+		}
+	</style>
+	<!--滚动图片-->
+	<link href="/css/tpgd.css" rel="stylesheet">
+	<link href="/js/layui/css/layui.css" rel="stylesheet">
+	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/js/alixixi_jquery.min.js"></script>
+	<script type="text/javascript" src="/js/config.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//检查IE的版本
+			function IEVersion() {
+				var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+				var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -
+					1; //判断是否IE<11浏览器  
+				var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
+				var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+				if (isIE) {
+					var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+					reIE.test(userAgent);
+					var fIEVersion = parseFloat(RegExp["$1"]);
+					debugger;
+					if (fIEVersion < 8) {
+						alert("浏览器版本过低，可能会造成大部分功能无法正常使用，建议使用IE9及以上版本或者谷歌浏览器");
+					}
+				}
+			}
+		});
+
+		/*
+		bxCarousel v1.0
+		Plugin developed by: Steven Wanderski
+		*/
+		(function($) {
+			$.fn.bxCarousel = function(options) {
+				var defaults = {
+					move: 4,
+					display_num: 4,
+					speed: 500,
+					margin: 0,
+					auto: false,
+					auto_interval: 2000,
+					auto_dir: 'next',
+					auto_hover: false,
+					next_text: 'next',
+					next_image: '',
+					prev_text: 'prev',
+					prev_image: '',
+					controls: true
+				};
+				var options = $.extend(defaults, options);
+				return this.each(function() {
+					var $this = $(this);
+					var li = $this.find('li');
+					var first = 0;
+					var fe = 0;
+					var last = options.display_num - 1;
+					var le = options.display_num - 1;
+					var is_working = false;
+					var j = '';
+					var clicked = false;
+					li.css({
+						'float': 'left',
+						'listStyle': 'none',
+						'marginRight': options.margin
+					});
+					var ow = li.outerWidth(true);
+					wrap_width = (ow * options.display_num) - options.margin;
+					var seg = ow * options.move;
+					$this.wrap('<div class="bx_container"></div>').width(999999);
+					if (options.controls) {
+						if (options.next_image != '' || options.prev_image != '') {
+							var controls = '<a href="" class="prev"><img src="' + options.prev_image +
+								'"/></a><a href="" class="next"><img src="' + options.next_image +
+								'"/></a>';
+						} else {
+							var controls = '<a href="" class="prev">' + options.prev_text +
+								'</a><a href="" class="next">' + options.next_text + '</a>';
+						}
+					}
+					$this.parent('.bx_container').wrap('<div class="bx_wrap"></div>').css({
+						'position': 'relative',
+						'width': wrap_width,
+						'overflow': 'hidden'
+					}).before(controls);
+					var w = li.slice(0, options.display_num).clone();
+					var last_appended = (options.display_num + options.move) - 1;
+					$this.empty().append(w);
+					get_p();
+					get_a();
+					$this.css({
+						'position': 'relative',
+						'left': -(seg)
+					});
+					$this.parent().siblings('.next').click(function() {
+						slide_next();
+						clearInterval(j);
+						clicked = true;
+						return false;
+					});
+					$this.parent().siblings('.prev').click(function() {
+						slide_prev();
+						clearInterval(j);
+						clicked = true;
+						return false;
+					});
+					if (options.auto) {
+						start_slide();
+						if (options.auto_hover && clicked != true) {
+							$this.find('li').live('mouseenter', function() {
+								if (!clicked) {
+									clearInterval(j);
+								}
+							});
+							$this.find('li').live('mouseleave', function() {
+								if (!clicked) {
+									start_slide();
+								}
+							});
+						}
+					}
+
+					function start_slide() {
+						if (options.auto_dir == 'next') {
+							j = setInterval(function() {
+								slide_next()
+							}, options.auto_interval);
+						} else {
+							j = setInterval(function() {
+								slide_prev()
+							}, options.auto_interval);
+						}
+					}
+
+					function slide_next() {
+						if (!is_working) {
+							is_working = true;
+							set_pos('next');
+							$this.animate({
+								left: '-=' + seg
+							}, options.speed, function() {
+								$this.find('li').slice(0, options.move).remove();
+								$this.css('left', -(seg));
+								get_a();
+								is_working = false;
+							});
+						}
+					}
+
+					function slide_prev() {
+						if (!is_working) {
+							is_working = true;
+							set_pos('prev');
+							$this.animate({
+								left: '+=' + seg
+							}, options.speed, function() {
+								$this.find('li').slice(-options.move).remove();
+								$this.css('left', -(seg));
+								get_p();
+								is_working = false;
+							});
+						}
+					}
+
+					function get_a() {
+						var str = new Array();
+						var lix = li.clone();
+						le = last;
+						for (i = 0; i < options.move; i++) {
+							le++
+							if (lix[le] != undefined) {
+								str[i] = $(lix[le]);
+							} else {
+								le = 0;
+								str[i] = $(lix[le]);
+							}
+						}
+						$.each(str, function(index) {
+							$this.append(str[index][0]);
+						});
+					}
+
+					function get_p() {
+						var str = new Array();
+						var lix = li.clone();
+						fe = first;
+						for (i = 0; i < options.move; i++) {
+							fe--
+							if (lix[fe] != undefined) {
+								str[i] = $(lix[fe]);
+							} else {
+								fe = li.length - 1;
+								str[i] = $(lix[fe]);
+							}
+						}
+						$.each(str, function(index) {
+							$this.prepend(str[index][0]);
+						});
+					}
+
+					function set_pos(dir) {
+						if (dir == 'next') {
+							first += options.move;
+							if (first >= li.length) {
+								first = first % li.length;
+							}
+							last += options.move;
+							if (last >= li.length) {
+								last = last % li.length;
+							}
+						} else if (dir == 'prev') {
+							first -= options.move;
+							if (first < 0) {
+								first = li.length + first;
+							}
+							last -= options.move;
+							if (last < 0) {
+								last = li.length + last;
+							}
+						}
+					}
+				});
+			}
+		})(jQuery);
+	</script>
+	<!--滚动图片 end-->
+	<!--tab 切换-->
+
+</head>
+
+<body>
+
+
+
+	<!--header-->
+	<head>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<link href="/css/accessiblity.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="/js/accessiblity.js"></script>
+	<script type="text/javascript" src="/js/readText.js"></script>
+</head>
+<body>
+	<header class="headerType">
+		<div class="toplinkpanel-big" id="accessibilityDiv" class="acce1024E">
+			<ul class="acce1024E">
+				<li class="acce1024E" onclick="readTextEvent()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico01.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">读屏</p>
+					</a></li>
+			<!-- 	<li class="acce1024E" onclick="convertToTxtEventNew()"><a href="#" class="navmenu"><img
+							class="acce1024E" src="/images/topico02.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">文本</p>
+					</a></li> -->
+				<li class="acce1024E" onclick="zoomOutNew()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico03.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">放大</p>
+					</a></li>
+				<li class="acce1024E" onclick="zoomInNew()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico04.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">缩小</p>
+					</a></li>
+				<li class="peise"><a href="#" class="navmenu"><img class="acce1024E" src="/images/topico05.png"
+							width="45px" height="45px" alt="" />
+						<p class="acce1024E">配色</p>
+					</a>
+					<ul class="acce1024E">
+						<li class="acce1024E" onclick="resetContrastEvent()" style="background-color: #90EE90;"><a
+								class="acce1024E" href="#">还原对比度</a></li>
+						<li class="acce1024E" onclick="blackContrastEvent()" style="background-color: #666666;"><a
+								class="acce1024E" href="#">黑白对比度</a></li>
+						<li class="acce1024E" onclick="purpleContrastEvent()" style="background-color: darkviolet;"><a
+								class="acce1024E" href="#">紫白对比度</a></li>
+						<li class="acce1024E" onclick="blueContrastEvent()" style="background-color: #00BFFF;"><a
+								class="acce1024E" href="#">蓝黑对比度</a></li>
+						<li class="acce1024E" onclick="redContrastEvent()" style="background-color: red;"><a
+								class="acce1024E" href="#">白红对比度</a></li>
+					</ul>
+				</li>
+				<li class="acce1024E" onclick="showHelpLineEvent()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico06.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">辅助线</p>
+					</a></li>
+				<li class="acce1024E" onclick="showTipsDiv()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico07.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">文字提示</p>
+					</a></li>
+				<li class="acce1024E" onclick="controlFuncDivBtnEvent()"><a href="#" class="navmenu"><img
+							class="acce1024E" src="/images/topico10.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">关闭</p>
+					</a></li>
+			</ul>
+
+			<!-- 辅助线的两条横线和竖线 -->
+			<div id="divx" class="acce1024E"></div>
+			<div id="divy" class="acce1024E"></div>
+			<!-- 文字提示的div -->
+			<div id="wordTipDiv" class="acce1024E">
+				<h2 id="tipTxt" class="acce1024E">文字提示</h2>
+			</div>
+		</div>
+</body>
+
+
+<script>
+	function search2(e) {
+		window.location.href = '/includes/search_all.html?title=' + escape(e);
+	}
+
+	// 设置为主页 
+	function SetHome(obj, vrl) {
+		try {
+			obj.style.behavior = 'url(#default#homepage)';
+			obj.setHomePage(vrl);
+		} catch (e) {
+			if (window.netscape) {
+				try {
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+				} catch (e) {
+					alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入：" + "http://rst.qinghai.gov.cn/" + "点击确定。");
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces
+					.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage', vrl);
+			} else {
+				alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入：" + "http://rst.qinghai.gov.cn/" + "点击确定。");
+			}
+		}
+	}
+	// 加入收藏 兼容360和IE6 
+	function shoucang(sTitle, sURL) {
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("请使用Ctrl+D进行添加");
+			}
+		}
+	}
+</script>
+</script>
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<div id="header">
+	<div class="header0" style="width:1180px">
+		<div class="jrsc" style="margin-left:175px"><a style="color:black ;font-size:15px" href="javascript:void(0)"
+				onclick="shoucang(document.title,window.location) ">加入收藏</a>|
+			<a style="color:black ;font-size:15px" onclick="SetHome(window.location)"
+				href="javascript:void(0)">设为首页</a>|
+			<a id="zxzc_sy" href="http://rst.qinghai.gov.cn/qhrst/sign/signup"
+				style="cursor:pointer;color:black ;font-size:15px">注册</a>|
+			<a id="zxdl_sy" href="http://rst.qinghai.gov.cn/qhrst/sso/login"
+				style="cursor:pointer;color:black ;font-size:15px">登录</a>
+			<!-- 无障碍的按钮 -->
+			<button id="accessBtn" type="button" onclick="controlFuncDivBtnEvent()">无障碍</button>
+		</div>
+		<div class="logo">
+			<a href="/index.html"><img src="/images/header-logo.png"></a>
+		</div>
+		<div class="ewm"><span>12333公众号</span><img src="/images/12333.jpg"></div>
+		<div class="ewm"><span>青海人社通APP</span><img src="/images/renshetong.png"></div>
+		<div class="ewm"><span>微信公众号</span><img src="/images/ewm.png"></div>
+		<!--<div class="ewm"><span>青海人社APP</span><img src="/images/app_ewm.jpg"></div> -->
+		<div class="add"><img src="/images/header-add.png" border="0">
+		</div>
+	</div>
+</div>
+<!--header end-->
+<!--导航nav-->
+<div id="navigation">
+  <div class="nav">
+    <ul>
+      <li><a href="/index.html" >网站首页</a></li>
+      <li><a href="/zxzx.html" >资讯中心</a></li>
+      <li><a target="_blank" id="wsbs_dt" href="https://www.qhzwfw.gov.cn/department_window.html?ouguid=55e478c6-a791-4861-9096-cb34f1ba60e8&ouname=%E9%9D%92%E6%B5%B7%E7%9C%81%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E5%92%8C%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%9A%9C%E5%8E%85" target="_blank">政务服务</a></li>
+      <li><a href="/zfxxgk.html" >政府信息公开</a></li>
+      <li><a href="/zcfg.html" >政策法规</a></li>
+      <li><a href="/zxfw.html" >在线服务</a></li>
+      <li><a href="/ztzl.html" class="xz-hover">专题专栏</a></li>
+    </ul>
+    <div class="search">
+      <input id='search' type="text" class="input-wb" value="" placeholder="请输入要搜索的关键字">
+      <input type="button" onclick="location.href='/search.html?key='+encodeURI(document.getElementById('search').value);" class="input-an">
+    </div>
+  </div>
+</div>
+<!--nav end-->
+
+<!--body start-->
+
+<div class="cur_pos" style="margin-top:2px;"><span>当前位置</span><a id="cus" href="/ztzl.html">专题专栏</a>
+    <a href="/ztzl/gzqxbgt/index.html">曝光台</a>
+</div>
+<div class="content">
+    <div class="content_tt">青海省人力资源和社会保障厅公布2026年第一季度重大劳动保障违法行为典型案件</div>
+    <div class="content_ttx"><span>来源:青海省人力资源和社会保障厅</span><span>创建时间：2026-04-09</span><span id="dianjiliang">点击量：</span><br/>
+        <span style="font-size:14px;color:#000;"></span><br/>
+    </div>
+    <br/>
+    <br/>
+    <div class="content_con">
+        
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="ProgId" content="Word.Document"/><meta name="Generator" content="Microsoft Word 14"/><meta name="Originator" content="Microsoft Word 14"/><title></title><!--[if gte mso 9]><xml><o:DocumentProperties><o:Revision>1</o:Revision><o:Pages>1</o:Pages><o:Lines>1</o:Lines><o:Paragraphs>1</o:Paragraphs></o:DocumentProperties></xml><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings></o:OfficeDocumentSettings></xml><![endif]--><!--[if gte mso 9]><xml><w:WordDocument><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><w:DocumentKind>DocumentNotSpecified</w:DocumentKind><w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><w:PunctuationKerning></w:PunctuationKerning><w:View>Normal</w:View><w:Compatibility><w:DontGrowAutofit/><w:BalanceSingleByteDoubleByteWidth/><w:DoNotExpandShiftReturn/><w:UseFELayout/></w:Compatibility><w:Zoom>0</w:Zoom></w:WordDocument></xml><![endif]--><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false"  DefUnhideWhenUsed="true"  DefSemiHidden="true"  DefQFormat="false"  DefPriority="99"  LatentStyleCount="260" ><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="footnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="annotation text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="footer" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="caption" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="table of figures" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="envelope address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="envelope return" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="footnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="annotation reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="line number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="page number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="endnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="endnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="table of authorities" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="macro" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toa heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Title" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Closing" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Default Paragraph Font" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Message Header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Subtitle" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Salutation" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Date" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text First Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text First Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Note Heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text Indent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Block Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Hyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="FollowedHyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Strong" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Emphasis" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Document Map" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Plain Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="E-mail Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal (Web)" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Acronym" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Cite" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Code" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Definition" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Keyboard" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Preformatted" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Sample" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Typewriter" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Variable" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal Table" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="annotation subject" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="No List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="1 / a / i" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="1 / 1.1 / 1.1.1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Article / Section" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Simple 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Simple 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Simple 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Colorful 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Colorful 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Colorful 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table 3D effects 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table 3D effects 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table 3D effects 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Contemporary" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Elegant" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Professional" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Subtle 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Subtle 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Web 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Web 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Web 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Balloon Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Theme" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Placeholder Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="No Spacing" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Paragraph" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Quote" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Intense Quote" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 6" ></w:LsdException></w:LatentStyles></xml><![endif]--><style>@font-face{
+font-family:"Times New Roman";
+}
+
+@font-face{
+font-family:"宋体";
+}
+
+@font-face{
+font-family:"方正仿宋_GBK";
+}
+
+@font-face{
+font-family:"Arial";
+}
+
+@font-face{
+font-family:"Calibri";
+}
+
+p.MsoNormal{
+mso-style-name:正文;
+mso-style-parent:"";
+mso-style-next:引文目录标题;
+margin:0pt;
+margin-bottom:.0001pt;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:'Times New Roman';
+mso-fareast-font-family:方正仿宋_GBK;
+font-size:16.0000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.MsoFooter{
+mso-style-name:页脚;
+mso-style-next:"索引 5";
+margin:0pt;
+margin-bottom:.0001pt;
+layout-grid-mode:char;
+mso-pagination:none;
+text-align:left;
+font-family:'Times New Roman';
+mso-fareast-font-family:方正仿宋_GBK;
+font-size:16.0000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.MsoToaHeading{
+mso-style-name:引文目录标题;
+mso-style-noshow:yes;
+mso-style-next:正文;
+margin-top:6.0000pt;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Arial;
+mso-fareast-font-family:方正仿宋_GBK;
+font-size:12.0000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.17{
+mso-style-name:正文1;
+mso-style-next:正文-公1;
+margin:0pt;
+margin-bottom:.0001pt;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+mso-bidi-font-family:'Times New Roman';
+font-size:10.5000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.18{
+mso-style-name:正文-公1;
+mso-style-parent:正文1;
+mso-style-next:正文;
+margin:0pt;
+margin-bottom:.0001pt;
+text-indent:10.0000pt;
+mso-char-indent-count:2.0000;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+color:rgb(0,0,0);
+font-size:10.5000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.MsoIndex5{
+mso-style-name:"索引 5";
+mso-style-next:正文;
+margin-left:84.0000pt;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:'Times New Roman';
+mso-fareast-font-family:方正仿宋_GBK;
+font-size:16.0000pt;
+mso-font-kerning:1.0000pt;
+}
+
+span.msoIns{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:underline;
+text-underline:single;
+color:blue;
+}
+
+span.msoDel{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:line-through;
+color:red;
+}
+@page{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}@page Section0{
+}
+div.Section0{page:Section0;}</style><!--StartFragment--><p style="text-indent: 2em;"><strong><span style="font-family: 宋体, SimSun; font-size: 16px;">1.浙江正品建设工程有限公司拖欠劳动报酬案</span></strong><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：浙江正品建设工程有限公司</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：913300006761505354</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：浙江省杭州市拱墅区朝晖六区41-2幢204室</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：&nbsp;吴新华</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年12月12日，西宁市城西区人力资源和社会保障局接到余某某等农民工投诉，反映浙江正品建设工程有限公司存在拖欠工资行为。经立案调查核实，该公司在承建“青年巷棚户区改造项目”期间，拖欠余某某、李某某、田某某等72名农民工工资共计160.5万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：2026年1月29日，西宁市城西区人力资源和社会保障局依法向浙江正品建设工程有限公司下达了《劳动保障监察责令改正决定书》（城西人社监令决字〔2026〕第6号），责令其限期支付所拖欠的劳动报酬。2月14日，浙江正品建工程有限公司向72名农民工支付了拖欠的工资。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">&nbsp;<strong>2.杭州建工集团有限责任公司拖欠劳动报酬案</strong></span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：杭州建工集团有限责任公司</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：91330100704213776M &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：浙江省杭州市西湖区天目山路306号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：代国杰</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年12月12日，西宁市城西区人力资源和社会保障局接到陆某某等农民工投诉，反映杭州建工集团有限责任公司存在拖欠工资行为。经立案调查核实，该公司在承建“青年巷棚户区改造项目”期间，拖欠陆某某、余某某等84名劳动者工资共计26.2万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：2026年1月29日，西宁市城西区人力资源和社会保障局依法向杭州建工集团有限责任公司下达了《劳动保障监察责令改正决定书》（城西人社监令决字〔2026〕第7号），责令其限期支付所拖欠的劳动报酬。2月14日，杭州建工集团有限公司向84名农民工支付了拖欠的工资。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-indent: 2em;"><strong><span style="font-family: 宋体, SimSun; font-size: 16px;">3.青海润泽工程建设有限公司拖欠劳动报酬案</span></strong><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：青海润泽工程建设有限公司</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：91630104MA759U8P0G</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：青海省西宁市城西区西川南路69号28-2-401号</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：彭贤兵</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年12月7日，黄某某等向西宁市城东区劳动保障监察部门投诉，称青海润泽工程建设有限公司拖欠黄某某及其工友工资。经查，青海润泽工程建设有限公司拖欠黄某某等19名员工2025年3月至5月工资共计7.29万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：2025年12月24日，西宁市城东区劳动保障监察部门依法对青海润泽工程建设有限公司下达《劳动保障监察责令改正决定书》（宁东人社劳监令字〔2025〕第68号），责令其限期支付所拖欠的劳动报酬，该公司逾期未履行支付义务。2026年1月7日，城东区劳动保障监察部门向青海润泽工程建设有限公司下达《列入拖欠农民工工资失信联合惩戒对象名单事先告知书》（宁东人社监列告字〔2026〕第1号）。截至目前，该公司仍未履行支付义务。现拟依法将青海润泽工程建设有限公司列入拖欠农民工工资失信联合惩戒对象名单，并依法依规作进一步处置。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-indent: 2em;"><strong><span style="font-family: 宋体, SimSun; font-size: 16px;">4.青海誉岩建设工程有限公司拖欠劳动报酬案</span></strong><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：青海誉岩建设工程有限公司</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：91630121MABR2QA15Q </span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：青海省西宁市大通回族土族自治县桥头镇宁张公路41号</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：何先睿</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">实际负责人：白岩</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2026年1月6日，铁某某、王某某等向西宁市大通回族土族自治县人力资源和社会保障局劳动保障监察部门投诉，称青海誉岩建设工程有限公司拖欠铁某某、王某某及其多名工友工资。经查，青海誉岩建设工程有限公司拖欠铁某某、王某某等85名员工工资共计71.65万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：2026年1月19日，西宁市大通回族土族自治县人力资源和社会保障局劳动保障监察部门依法对青海誉岩建设工程有限公司下达《劳动保障监察责令改正决定书》（大人社监令字〔2026〕第8号），责令其限期支付所拖欠的劳动报酬，该公司逾期未履行支付义务。2026年1月30日，西宁市大通回族土族自治县人力资源和社会保障局劳动保障监察部门向青海誉岩建设工程有限公司下达《列入拖欠农民工工资失信联合惩戒对象名单事先告知书》（大人社列告字〔2026〕第5号）。2月14日青海誉岩建设工程有限公司向85名员工支付50万元拖欠的工资，剩余款项正在协调中。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-indent: 2em;"><strong><span style="font-family: 宋体, SimSun; font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;5.湟源御澜水境洗浴店拖欠劳动报酬案</span></strong><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：湟源御澜水境洗浴店</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：92630123MABJ94QK32</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：青海省西宁市湟源县城关镇建设东路为胜广场二层</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：王荣琪</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年8月18日，湟源县人力资源和社会保障局接到湟源御澜水境洗浴店员工郭某某、张某某等人投诉，称湟源御澜水境洗浴店拖欠其工资。经查，湟源御澜水境洗浴店拖欠郭某某等11名员工工资共计5.06万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：经协调，湟源御澜水境洗浴店实际负责人漆某某承诺于2025年9月20日前支付所有拖欠工资，但其逾期未支付。2025年10月10日，湟源县人力资源和社会保障局依法向湟源御澜水境洗浴店下达《劳动保障监察责令改正决定书》（源人社监令字〔2025〕第24号），责令其限期支付所拖欠的劳动报酬，该店逾期仍未履行支付义务。2025年11月26日，湟源县人力资源和社会保障局依法将湟源御澜水境洗浴店涉嫌拒不支付劳动报酬罪的案件线索移送公安机关，当日该店法定代表人在公安机关向11名员工支付了拖欠的工资。</span><o:p></o:p></p><p style="text-indent: 2em;"><strong style="font-family: 宋体, SimSun; text-indent: 2em;"><br/></strong></p><p style="text-indent: 2em;"><strong style="font-family: 宋体, SimSun; text-indent: 2em;">&nbsp;6.青海忠邦保安服务有限公司拖欠劳动报酬案</strong><br/></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：青海忠邦保安服务有限公司</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：91632900MA759UBY3A</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：青海省西宁市东川工业园金汇路6号</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：徐忠</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年11月28日，甘河工业园区人力资源和社会事务管理局接到马某某等工人投诉，称青海忠邦保安服务有限公司拖欠其工资。经查，青海忠邦保安服务有限公司拖欠马某某等42名工人2024年12月至2025年12月工资18.6万元。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：经协调，青海忠邦保安服务有限公司负责人徐忠承诺于2026年1月7日前支付所有拖欠工资，但承诺到期后该公司未支付。2026年1月14日，西宁市人力资源和社会保障局依法向青海忠邦保安服务有限公司下达《劳动保障监察责令改正决定书》（宁人社监令字〔2026〕第1号），责令其限期支付所拖欠的劳动报酬，但该公司未全额支付所拖欠劳动报酬。2026年1月30日，西宁市人力资源和社会保障局依法向该公司下达《劳动保障监察行政处罚告知书》（宁人社监罚告字〔2026〕第1号）。截至目前，该公司仍未履行完毕支付义务。西宁市人力资源和社会保障局将依法依规进行处置。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-indent: 2em;"><strong><span style="font-family: 宋体, SimSun; font-size: 16px;">7.青海韵盈快递有限公司生物园分公司拖欠劳动报酬案</span></strong><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：青海韵盈快递有限公司生物园分公司</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：91633100MAC5P9KE6W</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：青海省西宁市青海生物科技产业园区经一路1号9号楼1-35室</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：苏兰</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">主要负责人：张旭</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年9月25日，生物园区管委会人力资源和社会事务管理局接到汪某某等3人投诉，称青海韵盈快递有限公司生物园分公司拖欠其工资。经查，青海韵盈快递有限公司生物园分公司拖欠汪某某等3人2024年12月至2025年3月工资4.02万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：经协调，青海韵盈快递有限公司生物园分公司负责人张旭承诺于2025年10月20日前支付拖欠工资，但承诺到期后该公司未支付。2025年10月31日，西宁市人力资源和社会保障局依法向青海韵盈快递有限公司生物园分公司下达《劳动保障监察责令改正决定书》（宁人社监令字〔2025〕第9号），责令其限期支付所拖欠的劳动报酬，该公司逾期未履行支付义务。2025年12月11日，西宁市人力资源和社会保障局依法向青海韵盈快递有限公司生物园分公司下达《列入拖欠农民工工资失信联合惩戒对象名单决定书》（宁人社监列决字〔2025〕第1号），将该公司列入拖欠农民工工资失信联合惩戒对象名单。截至目前，该公司仍未履行支付义务。西宁市人力资源和社会保障局将依法依规进行处置。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-indent: 2em;"><strong><span style="font-family: 宋体, SimSun; font-size: 16px;">8.西宁市城北区兰亭私膳餐厅拖欠劳动报酬案</span></strong><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法主体：西宁市城北区兰亭私膳餐厅（个体工商户）</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">统一社会信用代码：92630105MAET3X4517</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">地址：青海省西宁市城北区生物科技产业园经三路26-2号6号楼1031室</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">法定代表人：索妮娜</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">违法事实：2025年10月31日，生物园区管委会人力资源和社会事务管理局接到蒲某某等2人投诉，称西宁市城北区兰亭私膳餐厅拖欠其工资。经查，西宁市城北区兰亭私膳餐厅拖欠蒲某某等10人2025年9月工资7.11万元。</span><o:p></o:p></p><p style="text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">处理结果：经协调，西宁市城北区兰亭私膳餐厅负责人索妮娜承诺尽快结清工资，但其未履行承诺。2025年11月19日，西宁市人力资源和社会保障局依法向西宁市城北区兰亭私膳餐厅下达《劳动保障监察责令改正决定书》（宁人社监令字〔2025〕第10号），责令其限期支付所拖欠的劳动报酬，该餐厅逾期未履行支付义务。2026年1月27日，西宁市人力资源和社会保障局依法向西宁市城北区兰亭私膳餐厅下达《列入拖欠农民工工资失信联合惩戒对象名单决定书》（宁人社监列决字〔2026〕第1号），将西宁市城北区兰亭私膳餐厅列入拖欠农民工工资失信联合惩戒对象名单，并将依法依规作进一步处置。</span><span style="mso-spacerun:&#39;yes&#39;;font-family:&#39;Times New Roman&#39;;mso-fareast-font-family:方正仿宋_GBK;
+font-size:16.0000pt;mso-font-kerning:1.0000pt;"><o:p></o:p></span></p><!--EndFragment-->
+        
+    </div>
+
+    
+        <span style="margin-left:20px;">上一条：
+                <a href="/ztzl/gzqxbgt/query/202605081801311149.html" title="青海省人力资源和社会保障厅公布2026年第一批失信联合惩戒对象名单" style="color:#000;">
+                        青海省人力资源和社会保障厅公布2026年第一批失信联合惩戒对象名单
+                </a>
+            </span>
+        <br>
+    
+    
+        <span style="margin-left:20px;">下一条：
+                <a href="/ztzl/gzqxbgt/query/202601161029220411.html" title="青海省人力资源和社会保障厅公布2025年第四季度重大劳动保障违法行为典型案件" style="color:#000;">
+                        青海省人力资源和社会保障厅公布2025年第四季度重大劳动保障违法行为典型案件
+                </a>
+            </span>
+    
+
+    <script type="text/javascript" id="_visit_" code="202605081755058598" src="/js/visit.js"></script>
+</div>
+
+<!--body end-->
+
+<!--移动漂窗 end-->
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/js/config.js"></script>
+<style>
+#pop .pop-a1 
+{
+   width:95px;
+}
+#pop .pop-a1:hover
+{
+   width:95px;
+}
+#pop .pop-a3
+{
+   width:95px;
+}
+#pop .pop-a3:hover
+{
+   width:95px;
+}
+#pop .pop-a4
+{
+   width:95px;
+}
+#pop .pop-a4:hover
+{
+   width:95px;
+}
+        .pc0421 {
+         line-height: 70px;
+    position: fixed;
+    width: 95px;
+    cursor: pointer;
+    height: 138px;
+    right:140px;
+    background: url(../images/pc0422.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    top: 250px;
+
+}
+</style>
+
+<!-- 惠企惠农惠民飘窗 2026.04.23-->
+<div class="pc0421"  style="z-index:21">
+		<a style="width: 100%;display: inline-block; height: 100%;" href="http://www.qinghai.gov.cn/zwgk/xwdt/jd/" target="_blank">
+		</a>
+	</div>
+<!--社保投诉举报 2022-05-24-->
+<div style="position: fixed;right: 40px;top: 250px;z-index:999;">
+    <a href="/zxzx/tzgg/query/116419588.html" target="_blank">
+        <img src="/images/20220524175826.jpg" style="width: 95px;" alt=""/>
+    </a>
+</div>
+
+<!--工具栏-->
+<div style="position: fixed;right: 40px;top: 420px;z-index:999;">
+    <a href="/ztzl/gzqx.html" target="_blank">
+        <img src="/images/zlqx.png" alt=""/>
+    </a>
+    <!-- <img src="/images/jqrc/arrowdown.png" alt="工具栏" οnclick="opendiv()" style="cursor: pointer;"></img -->
+</div>
+<!--右侧漂浮-->
+<div id="pop" style="position: fixed;right: 60px;top: 590px;z-index:999;">
+    <table>
+        <tr>
+            <td><a href="/search.html" target="_blank" class="pop-a1">
+            </a></td>
+        </tr>
+        <tr>
+            <td><a href="/zxfw/tzxx/index.html" target="_blank" class="pop-a3"></a></td>
+            <td><a href="http://rst.qinghai.gov.cn/qhrst/sso/login" target="_blank" class="pop-a5"></a></td>
+        </tr>
+        <tr>
+            <td><a href="https://qhrsggfw.org.cn/qhrst/index/" target="_blank" class="pop-a4"></a></td>
+            <td><a href="javascript:void(0);" id="guanbi" src="/images/jqrc/gb.png" alt="工具栏" onclick="closediv()" style="cursor: pointer; " class="pop-a6"></a></td>
+        </tr>
+    </table>
+
+    <!--<a id="zcdl_ycfd" onclick="http://rst.qinghai.gov.cn/qhrst/sso/login" target="_self" class="pop-a5"></a>-->
+
+    <!--     <a href="#top" title="返回顶端" class="pop-a0"></a> -->
+
+</div>
+
+<!-- <div style="position: fixed;right: 40px;top: 250px;z-index:999;">
+<a href="http://223.220.252.167:8061" target="_blank"><img src="/images/jqrc/jqrc4.jpg"></a>
+</div> -->
+<script>
+    function closediv() {
+        $("#guanbi").click(function () {
+            document.getElementById("pop").style.display = "none";
+        });
+    }
+</script>
+
+
+<div class="clear"></div>
+<div class="link">
+    <div class="left">
+        <a href="http://www.mohrss.gov.cn/" target="_blank"><img src="/images/link-zg.png"></a>
+    </div>
+    <div class="center">
+        <div class="sx">
+            <a href="http://www.xining.gov.cn" target="_blank">西宁市</a>
+            <a href="http://www.haidong.gov.cn" target="_blank">海东市</a>
+            <a href="http://www.hainanzhou.gov.cn/" target="_blank">海南州</a>
+            <a href="http://www.haixi.gov.cn" target="_blank">海西州</a>
+            <a href="http://www.haibei.gov.cn/" target="_blank">海北州</a>
+            <a href="http://www.huangnan.gov.cn" target="_blank">黄南州</a>
+            <a href="http://www.yushuzhou.gov.cn" target="_blank">玉树州</a>
+            <a href="http://www.guoluo.gov.cn" target="_blank">果洛州</a>
+
+
+        </div>
+        <div class="lj">
+            <select class="zfl"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option>--省直属各厅局--</option>
+                <option value="http://fgw.qinghai.gov.cn/">省发展和改革委员会</option>
+                <option value="http://gxgz.qinghai.gov.cn/">青海省工业和信息化厅</option>
+                <option value="http://jyt.qinghai.gov.cn/">省教育厅</option>
+                <option value="http://kjt.qinghai.gov.cn/">省科学技术厅</option>
+                <option value="http://mzw.qinghai.gov.cn/">省民族宗教事务委员会</option>
+                <option value="http://gat.qinghai.gov.cn/stmhwz/">省公安厅</option>
+                <option value="http://www.qhjc.gov.cn/">省监察委员会</option>
+                <option value="http://mzt.qinghai.gov.cn/">省民政厅</option>
+                <option value="http://sft.qinghai.gov.cn/">省司法厅</option>
+                <option value="http://czt.qinghai.gov.cn/">省财政厅</option>
+                <option value="http://zrzyt.qinghai.gov.cn/index">青海省自然资源厅</option>
+                <option value="http://sthjt.qinghai.gov.cn/">省生态环境厅</option>
+                <option value="http://zjt.qinghai.gov.cn/">省住房和城乡建设厅</option>
+                <option value="http://jtyst.qinghai.gov.cn/">省交通运输厅</option>
+                <option value="http://slt.qinghai.gov.cn/">省水利厅</option>
+                <option value="http://nynct.qinghai.gov.cn">青海省农业农村厅</option>
+                <option value="http://lcj.qinghai.gov.cn/">省林业厅</option>
+                <option value="http://swt.qinghai.gov.cn/">省商务厅</option>
+                <option value="http://whlyt.qinghai.gov.cn/">青海省文化和旅游厅</option>
+                <option value="https://wsjkw.qinghai.gov.cn/">青海省卫生健康委员会</option>
+                <option value="http://sjt.qinghai.gov.cn/">省审计厅</option>
+                <option value="http://wsb.qinghai.gov.cn/">省外事办公室</option>
+                <option value="http://tyj.qinghai.gov.cn/">省体育局</option>
+                <option value="http://yjt.qinghai.gov.cn/">青海省应急管理厅</option>
+                <option value="http://scjgj.qinghai.gov.cn/index.htm">青海省市场监督管理局</option>
+                <option value="http://ypjgj.qinghai.gov.cn/">省食品药品监督管理局</option>
+                <option value="http://tjj.qinghai.gov.cn/">省统计局</option>
+                <option value="http://gdj.qinghai.gov.cn/ ">省广电局</option>
+                <option value="http://jyj.qinghai.gov.cn/">省监狱局</option>
+                <option value="http://www.coopqh.cn/">省供销社</option>
+                <option value="http://www.qast.org.cn/">省科协</option>
+                <option value="http://www.qhcl.org.cn/">省残联</option>
+                <option value="https://www.qhfic.cn/qinghgcc/#/">省工商联</option>
+                <option value="http://www.qhredcross.org.cn/">省红十字会</option>
+                <option value="http://qhh.qinghai.gov.cn/">青海湖景区保护利用管理局</option>
+                <option value="http://sjy.qinghai.gov.cn/">三江源国家公园管理局</option>
+                <option value="http://www.qhbb.gov.cn/">省编制办</option>
+                <option value="http://rfb.qinghai.gov.cn/">省人民防空办公室</option>
+            </select>
+
+            <select class="rlw"
+                    onchange=javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0>
+                <option>--各省人力资源和社会保障网--</option>
+                <OPTION value="http://rsj.beijing.gov.cn">北京市人力资源和社会保障局</OPTION>
+                <OPTION value="http://hrss.tj.gov.cn">天津人力资源和社会保障局</OPTION>
+                <OPTION value="http://www.hbrsw.gov.cn">河北省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.shanxi.gov.cn">山西省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.nmg.gov.cn">内蒙古自治区人力资源和社会保障网</OPTION>
+                <OPTION value="http://rst.ln.gov.cn">辽宁省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.jl.gov.cn">吉林省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.hlj.gov.cn">黑龙江省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rsj.sh.gov.cn">上海市人力资源和社会保障局</OPTION>
+                <OPTION value="http://jshrss.jiangsu.gov.cn">江苏人力资源和社会保障网</OPTION>
+                <OPTION value="http://rlsbt.zj.gov.cn">浙江省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.ah.gov.cn">安徽省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.fujian.gov.cn">福建省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.jiangxi.gov.cn">江西省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.shandong.gov.cn">山东省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.henan.gov.cn">河南省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.hubei.gov.cn">湖北省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.hunan.gov.cn">湖南省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.gd.gov.cn">广东省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.gxzf.gov.cn">广西壮族自治区人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.hainan.gov.cn">海南省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rlsbj.cq.gov.cn">重庆人力资源和社会保障网</OPTION>
+                <OPTION value="http://rst.sc.gov.cn">四川省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.guizhou.gov.cn">贵州人力资源和社会保障网</OPTION>
+                <OPTION value="http://hrss.yn.gov.cn">云南人力资源和社会保障网</OPTION>
+                <OPTION value="http://hrss.xizang.gov.cn">西藏自治区人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.shaanxi.gov.cn">陕西省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.gansu.gov.cn">甘肃省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.nx.gov.cn">宁夏人力资源和社会保障网</OPTION>
+                <OPTION value="http://rst.xinjiang.gov.cn">新疆维吾尔自治区人力资源和社会保障厅</OPTION>
+            </select>
+        </div>
+    </div>
+    <!--<div class="right1"><a href="http://111.12.148.99/" target="_blank"><img src="/images/link-1.png"></a></div>-->
+    <div class="right1">
+        <a href="http://www.qinghai.gov.cn/" target="_blank">
+            <img style="height: 41px;width: 120px" src="/images/qhrmzf.png">
+        </a>
+    </div>
+    <div class="right2">
+        <a href="https://qhrsggfw.org.cn/qhrst/index/qhrs/talant/index.jspx" target="_blank">
+            <img style="height: 41px;width: 120px" src="/images/ggjy.png">
+        </a>
+    </div>
+    <div class="right2">
+        <a href="http://www.qhpta.com" target="_blank">
+            <img style="height: 41px;width: 120px" src="/images/link-4.png"></a>
+    </div>
+
+
+</div>
+<!-- 友情链接 end-->
+<!-- foot-->
+<div class="clear"></div>
+<div class="foot">
+    <div class="link">
+        <div class="link0">
+            <a href="/wzdt.html" target="_blank">网站地图</a>
+            <a href="/zxfw/yjjy/index.html" target="_blank">意见建议</a>
+        </div>
+    </div>
+
+
+    <div class="bq">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td style="text-align: center;">
+                    <a style="margin-left: 300px;"
+                       href="http://bszs.conac.cn/sitename?method=show&id=06F2A98B1B8C75A8E053022819ACA1CE"
+                       target="_blank"><img src="/images/red.png" border="0"/></a>
+                </td>
+                <!-- <td width="2%" align="right">&nbsp;</td> -->
+                <td style="text-align: center;">
+                    <script id="_jiucuo_" sitecode='6300000023' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'>
+                    </script>
+                    <!--<a href="http://pucha.kaipuyun.cn/exposure/jiucuo.html?site_code=6300000023&url=http%3A%2F%2Fwww.qhhrss.gov.cn%2F" target="_blank"><img style="margin-top:-5px;" src="/images/jiucuo.png" border="0" /></a>  -->
+                </td>
+            </tr>
+        </table>
+        <br/> 主办单位：青海省人力资源和社会保障厅
+        <br/>地址：青海省西宁市黄河路156号 邮政编码： 810008 传真：（0971）8258000 政策咨询：（0971）12333<br/>
+
+        <span
+                style="color:#000;text-decoration:none; padding:0 5px margin:5px">政府网站标识码:6300000023&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=63010402000046" target="_blank"
+                style="color:#000;margin:5px"><img src="static/qhrst/images/batb1.png" />公安备案号:63010402000046&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				<a href="http://beian.miit.gov.cn/#/Integrated/index" target="_blank"
+                   style="color:#000;margin:5px">ICP备案序号:青ICP备10000392号&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		</span>
+    </div>
+</div>
+<!-- foot end-->
+<script>
+    var url = location.href;
+
+    if (url.indexOf("?frompage=homepage") > 0) {
+        var obj = document.getElementById("cus");
+        obj.href = "/index.html";
+        obj.innerHTML = "首页";
+
+    }
+</script>
+<div class="foot">
+    <div class="bq" id="visit-sum">
+    </div>
+    <div class="bq">
+        <a target="_blank" title="网站统计" href="https://v6.51.la/land/JflquE6CoZFPciBF"><img src="https://sdk.51.la/icon/3-3.png"></a>
+    </div>
+</div>
+</body>
+<script src="/js/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form'], function () {
+        var carousel = layui.carousel,
+            form = layui.form;
+        //常规轮播
+        //建造实例
+        carousel.render({
+            elem: '#test1',
+            width: '100%', //设置容器宽度
+            height: '100px',
+            arrow: 'always', //始终显示箭头
+            indicator: 'none'
+            //,anim: 'updown' //切换动画方式
+        });
+    })
+</script>
+
+</html> 

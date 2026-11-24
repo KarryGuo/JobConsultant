@@ -1,0 +1,299 @@
+{
+  "source": {
+    "key": "qinghai-2026-q1",
+    "name": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "青海省",
+    "baseUrl": "http://rst.qinghai.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+    "url": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+    "publishedAt": "2026-04-09",
+    "fetchedAt": "2026-11-24T02:21:38.133Z",
+    "snapshotFile": "data/snapshots/qinghai-2026-q1.html"
+  },
+  "ingestRun": {
+    "id": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+    "sourceKey": "qinghai-2026-q1",
+    "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+    "parserVersion": "2026-11-23.4",
+    "status": "partial",
+    "startedAt": "2026-11-24T02:21:37.715Z",
+    "finishedAt": "2026-11-24T02:21:38.133Z",
+    "httpStatus": 200,
+    "contentHash": "893d9fa9cf2796842730add2a99724ccbdefb6939d002c0d59b7b7ce5585c47e",
+    "snapshotPath": "data/snapshots/qinghai-2026-q1.html",
+    "warnings": 3,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "浙江正品建设工程有限公司",
+        "aliases": [],
+        "creditCode": "913300006761505354",
+        "province": "青海省",
+        "city": "西宁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经立案调查核实，该公司在承建“青年巷棚户区改造项目”期间，拖欠余某某、李某某、田某某等72名农民工工资共计160.5万元",
+            "workerCount": 72,
+            "amountYuan": 1605000,
+            "authority": "西宁市城西区人力资源和社会保障局",
+            "decisionNo": "城西人社监令决字〔2026〕第6号",
+            "legalRep": "吴新华",
+            "stage": "责令改正",
+            "stageLabel": "责令改正",
+            "stageDate": "2026-01-29"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "杭州建工集团有限责任公司",
+        "aliases": [],
+        "creditCode": "91330100704213776M",
+        "province": "青海省",
+        "city": "西宁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经立案调查核实，该公司在承建“青年巷棚户区改造项目”期间，拖欠陆某某、余某某等84名劳动者工资共计26.2万元",
+            "workerCount": 84,
+            "amountYuan": 262000,
+            "authority": "西宁市城西区人力资源和社会保障局",
+            "decisionNo": "城西人社监令决字〔2026〕第7号",
+            "legalRep": "代国杰",
+            "stage": "责令改正",
+            "stageLabel": "责令改正",
+            "stageDate": "2026-01-29"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "青海润泽工程建设有限公司",
+        "aliases": [],
+        "creditCode": "91630104MA759U8P0G",
+        "province": "青海省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，青海润泽工程建设有限公司拖欠黄某某等19名员工2025年3月至5月工资共计7.29万元",
+            "workerCount": 19,
+            "amountYuan": 72900,
+            "legalRep": "彭贤兵",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-24"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "青海誉岩建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91630121MABR2QA15Q",
+        "province": "青海省",
+        "city": "西宁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，青海誉岩建设工程有限公司拖欠铁某某、王某某等85名员工工资共计71.65万元",
+            "workerCount": 85,
+            "amountYuan": 716500,
+            "authority": "西宁市大通回族土族自治县人力资源和社会保障局",
+            "legalRep": "何先睿",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-01-19"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湟源御澜水境洗浴店",
+        "aliases": [],
+        "creditCode": "92630123MABJ94QK32",
+        "province": "青海省",
+        "city": "湟源县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，湟源御澜水境洗浴店拖欠郭某某等11名员工工资共计5.06万元",
+            "workerCount": 11,
+            "amountYuan": 50600,
+            "authority": "湟源县人力资源和社会保障局",
+            "legalRep": "王荣琪",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-11-26"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "青海忠邦保安服务有限公司",
+        "aliases": [],
+        "creditCode": "91632900MA759UBY3A",
+        "province": "青海省",
+        "city": "西宁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，青海忠邦保安服务有限公司拖欠马某某等42名工人2024年12月至2025年12月工资18.6万元",
+            "workerCount": 42,
+            "amountYuan": 186000,
+            "authority": "西宁市人力资源和社会保障局",
+            "legalRep": "徐忠",
+            "stage": "责令改正",
+            "stageLabel": "责令改正",
+            "stageDate": "2026-01-14"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "青海韵盈快递有限公司生物园分公司",
+        "aliases": [],
+        "creditCode": "91633100MAC5P9KE6W",
+        "province": "青海省",
+        "city": "西宁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，青海韵盈快递有限公司生物园分公司拖欠汪某某等3人2024年12月至2025年3月工资4.02万元",
+            "amountYuan": 40200,
+            "authority": "西宁市人力资源和社会保障局",
+            "decisionNo": "宁人社监列决字〔2025〕第1号",
+            "legalRep": "苏兰",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-31"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202605081755058598.html",
+          "sourceTitle": "青海省2026年第一季度重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-04-09",
+          "fetchedAt": "2026-11-24T02:21:38.133Z",
+          "snapshotFile": "data/snapshots/qinghai-2026-q1.html",
+          "ingestRunId": "1241f1d2-1ad4-44d0-8fdf-3d135b05ef1d",
+          "parserVersion": "2026-11-23.4"
+        }
+      ]
+    }
+  ]
+}

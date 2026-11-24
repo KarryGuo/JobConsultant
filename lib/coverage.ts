@@ -17,6 +17,8 @@ export const COVERED_REGIONS = [
   "贵州省",
   "云南省",
   "广西壮族自治区",
+  "青海省",
+  "西藏自治区",
 ] as const;
 
 /**
@@ -36,9 +38,7 @@ export const PENDING_REGIONS = [
   "山东省",
   "湖南省",
   "海南省",
-  "西藏自治区",
   "甘肃省",
-  "青海省",
   "宁夏回族自治区",
   "新疆维吾尔自治区",
 ] as const;
