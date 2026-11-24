@@ -1,0 +1,75 @@
+{
+  "source": {
+    "key": "gansu-jiuquan-2026-q2-cases",
+    "name": "酒泉市关于公布2026年第二批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "甘肃省",
+    "baseUrl": "https://rsj.jiuquan.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "酒泉市关于公布2026年第二批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+    "url": "https://rsj.jiuquan.gov.cn/rsj/c106789/202606/af3605af2e4741418eca62b4eb8b3378.shtml",
+    "publishedAt": "2026-06-04",
+    "fetchedAt": "2026-11-24T11:43:01.898Z",
+    "snapshotFile": "data/snapshots/gansu-jiuquan-2026-q2-cases.html"
+  },
+  "ingestRun": {
+    "id": "67af2518-3825-4cc6-94cd-abf083e75e35",
+    "sourceKey": "gansu-jiuquan-2026-q2-cases",
+    "sourceUrl": "https://rsj.jiuquan.gov.cn/rsj/c106789/202606/af3605af2e4741418eca62b4eb8b3378.shtml",
+    "parserVersion": "2026-11-24.3",
+    "status": "partial",
+    "startedAt": "2026-11-24T11:43:01.895Z",
+    "finishedAt": "2026-11-24T11:43:01.899Z",
+    "httpStatus": null,
+    "contentHash": "9b092a1f366f63817f11f457dd9f2196c041bae48186c8ba9b0a086c8d0310a1",
+    "snapshotPath": "data/snapshots/gansu-jiuquan-2026-q2-cases.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "甘肃中利弘盛建设有限公司",
+        "aliases": [],
+        "creditCode": "91621102MA720ETUXL",
+        "province": "甘肃省",
+        "city": "肃州区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（一）甘肃中利弘盛建设有限公司拖欠劳动报酬案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：甘肃中利弘盛建设有限公司 统一社会信用代码：91621102MA720ETUXL 地址：甘肃省酒泉市肃州区总寨镇总寨工业园区东园三街西侧B-6号 2.法定代表人： 韩春军 联系电话：173****1516 3.违法事实： 2025年10月25日至2026年2月10日，肃州区人力资源和社会保障局陆续接到张某红等79人、李某等5人共计84人分两批投诉，称在甘肃中利弘盛建设有限公司",
+            "amountYuan": 1624255,
+            "authority": "肃州区人力资源和社会保障局",
+            "legalRep": "韩春军",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-29"
+          },
+          "sourceUrl": "https://rsj.jiuquan.gov.cn/rsj/c106789/202606/af3605af2e4741418eca62b4eb8b3378.shtml",
+          "sourceTitle": "酒泉市关于公布2026年第二批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2026-06-04",
+          "fetchedAt": "2026-11-24T11:43:01.898Z",
+          "snapshotFile": "data/snapshots/gansu-jiuquan-2026-q2-cases.html",
+          "ingestRunId": "67af2518-3825-4cc6-94cd-abf083e75e35",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    }
+  ]
+}

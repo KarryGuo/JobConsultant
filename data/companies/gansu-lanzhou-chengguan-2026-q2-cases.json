@@ -1,0 +1,219 @@
+{
+  "source": {
+    "key": "gansu-lanzhou-chengguan-2026-q2-cases",
+    "name": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "甘肃省",
+    "baseUrl": "https://credit.lanzhou.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+    "url": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+    "publishedAt": "2026-09-02",
+    "fetchedAt": "2026-11-24T11:43:01.903Z",
+    "snapshotFile": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html"
+  },
+  "ingestRun": {
+    "id": "9143656d-e20d-498b-8e92-719659c7f90e",
+    "sourceKey": "gansu-lanzhou-chengguan-2026-q2-cases",
+    "sourceUrl": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+    "parserVersion": "2026-11-24.3",
+    "status": "partial",
+    "startedAt": "2026-11-24T11:43:01.900Z",
+    "finishedAt": "2026-11-24T11:43:01.903Z",
+    "httpStatus": null,
+    "contentHash": "adb0e7fb5a5754f11c5a7bed671d6d080b10b3b962859531a90afcf10f623221",
+    "snapshotPath": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+    "warnings": 5,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "甘肃业辉昇建筑装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91620103MA74H49390",
+        "province": "甘肃省",
+        "city": "兰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目是甘肃业辉昇建筑装饰工程有限公司未按月足额支付工人工资，导致拖欠张建吉等18人228830元工人工资",
+            "amountYuan": 228830,
+            "authority": "兰州市城关区人力资源和社会保障局",
+            "legalRep": "王坤亮",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-15"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+          "sourceTitle": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-02",
+          "fetchedAt": "2026-11-24T11:43:01.903Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+          "ingestRunId": "9143656d-e20d-498b-8e92-719659c7f90e",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "沈阳远大铝业工程有限公司",
+        "aliases": [],
+        "creditCode": "912101066046126811",
+        "province": "甘肃省",
+        "city": "兰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目是沈阳远大铝业工程有限公司未落实实名制管理，未对分包单位劳动用工和工资发放情况进行监督，导致拖欠王国全等88人农民工工资共计170.5054万元工人工资",
+            "amountYuan": 1705054,
+            "authority": "兰州市城关区人力资源和社会保障局",
+            "legalRep": "康宝华",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-07-07"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+          "sourceTitle": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-02",
+          "fetchedAt": "2026-11-24T11:43:01.903Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+          "ingestRunId": "9143656d-e20d-498b-8e92-719659c7f90e",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "甘肃海华土石方工程有限公司",
+        "aliases": [],
+        "creditCode": "91620102MA74AP647E",
+        "province": "甘肃省",
+        "city": "兰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目是甘肃海华土石方工程有限公司未按月足额支付工资，导致拖欠张兆义23100元工人工资",
+            "amountYuan": 23100,
+            "authority": "兰州市城关区人力资源和社会保障局",
+            "legalRep": "杨晓春",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-07-17"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+          "sourceTitle": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-02",
+          "fetchedAt": "2026-11-24T11:43:01.903Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+          "ingestRunId": "9143656d-e20d-498b-8e92-719659c7f90e",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "甘肃国中园林绿化工程有限公司",
+        "aliases": [],
+        "creditCode": "91620102MA730L915G",
+        "province": "甘肃省",
+        "city": "兰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目是甘肃国中园林绿化工程有限公司未按月足额支付工人工资，导致拖欠刘志成等8人332710元工人工资",
+            "amountYuan": 332710,
+            "authority": "兰州市城关区人力资源和社会保障局",
+            "legalRep": "梁国中",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2025-07-24"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+          "sourceTitle": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-02",
+          "fetchedAt": "2026-11-24T11:43:01.903Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+          "ingestRunId": "9143656d-e20d-498b-8e92-719659c7f90e",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "深圳市璞栖园林绿化有限公司",
+        "aliases": [],
+        "creditCode": "91440300342491575F",
+        "province": "甘肃省",
+        "city": "兰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目是深圳市璞栖园林绿化有限公司未按月足额支付工人工资，导致拖欠杨秋林等24人783428元工人工资",
+            "amountYuan": 783428,
+            "authority": "兰州市城关区人力资源和社会保障局",
+            "legalRep": "王登友",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-07-02"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+          "sourceTitle": "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-02",
+          "fetchedAt": "2026-11-24T11:43:01.903Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+          "ingestRunId": "9143656d-e20d-498b-8e92-719659c7f90e",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "source": {
+    "key": "gansu-tianshui-2026-q3-cases",
+    "name": "天水市关于公布2026年度第三批重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "甘肃省",
+    "baseUrl": "https://www.tianshui.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "天水市关于公布2026年度第三批重大劳动保障违法行为的公告",
+    "url": "https://www.tianshui.gov.cn/rsj/info/1952/139522.htm",
+    "publishedAt": "2026-09-04",
+    "fetchedAt": "2026-11-24T11:43:01.892Z",
+    "snapshotFile": "data/snapshots/gansu-tianshui-2026-q3-cases.html"
+  },
+  "ingestRun": {
+    "id": "00f121f9-027b-4233-81df-e9cd0b73b258",
+    "sourceKey": "gansu-tianshui-2026-q3-cases",
+    "sourceUrl": "https://www.tianshui.gov.cn/rsj/info/1952/139522.htm",
+    "parserVersion": "2026-11-24.3",
+    "status": "partial",
+    "startedAt": "2026-11-24T11:43:01.889Z",
+    "finishedAt": "2026-11-24T11:43:01.892Z",
+    "httpStatus": null,
+    "contentHash": "bf464ef80cc6a3c1d660c6326af5602f6160044a4c98644b87aa3a263ff508f6",
+    "snapshotPath": "data/snapshots/gansu-tianshui-2026-q3-cases.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "甘肃康蓝凡艺装饰有限公司",
+        "aliases": [],
+        "creditCode": "91620503MA72CPA84D",
+        "province": "甘肃省",
+        "city": "天水市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "统一社会信用代码： 91620503MA72CPA84D 地址： 甘肃省天水市麦积区北道埠街道社棠路万达物流 B1-06 号商铺 2. 法定代表人 ： 王晓明 3. 主要违法事实 ： 2026 年 4 月 7 日，天水市麦积区人社局接到闫某某等两名劳动者投诉，称在甘肃康蓝凡艺装饰有限公司工作期间工资被拖欠，经查，该公司拖欠上述劳动者 2025 年 10 月至 2026 年 4 月期间工资共计 58919 元，欠薪情况属实",
+            "amountYuan": 58919,
+            "authority": "天水市人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://www.tianshui.gov.cn/rsj/info/1952/139522.htm",
+          "sourceTitle": "天水市关于公布2026年度第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-04",
+          "fetchedAt": "2026-11-24T11:43:01.892Z",
+          "snapshotFile": "data/snapshots/gansu-tianshui-2026-q3-cases.html",
+          "ingestRunId": "00f121f9-027b-4233-81df-e9cd0b73b258",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    }
+  ]
+}

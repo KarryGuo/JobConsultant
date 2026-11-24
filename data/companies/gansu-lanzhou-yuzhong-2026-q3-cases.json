@@ -1,0 +1,219 @@
+{
+  "source": {
+    "key": "gansu-lanzhou-yuzhong-2026-q3-cases",
+    "name": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "甘肃省",
+    "baseUrl": "https://credit.lanzhou.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+    "url": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+    "publishedAt": "2026-09-01",
+    "fetchedAt": "2026-11-24T11:43:01.908Z",
+    "snapshotFile": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html"
+  },
+  "ingestRun": {
+    "id": "bc9532eb-b38f-4089-a220-2e5792e0e087",
+    "sourceKey": "gansu-lanzhou-yuzhong-2026-q3-cases",
+    "sourceUrl": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+    "parserVersion": "2026-11-24.3",
+    "status": "partial",
+    "startedAt": "2026-11-24T11:43:01.905Z",
+    "finishedAt": "2026-11-24T11:43:01.908Z",
+    "httpStatus": null,
+    "contentHash": "ddb82e5e4bd012db56fcc6d9819a45fd9b3ec8fc021389bb95402c306c42d7a1",
+    "snapshotPath": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+    "warnings": 5,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "甘肃省第八建设集团有限责任公司",
+        "aliases": [],
+        "creditCode": "91620500224890807Y",
+        "province": "甘肃省",
+        "city": "榆中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、甘肃省第八建设集团有限责任公司拖欠工资行政处罚案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：甘肃省第八建设集团有限责任公司 统一社会信用代码：91620500224890807Y 地址：甘肃省天水市秦州区建设路161号 2.法定代表人：王和泰 3.主要违法事实：2026年1月，榆中县人力资源和社会保障局接到高某某等3人投诉甘肃省第八建设集团有限责任公司在黄河流域兰西城市群-兰州生态创新城生态产业孵化园建设南侧地块（一期）三标段项目中拖欠工资共计220000元",
+            "amountYuan": 220000,
+            "authority": "榆中县人力资源和社会保障局",
+            "legalRep": "王和泰",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-05-19"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+          "sourceTitle": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-01",
+          "fetchedAt": "2026-11-24T11:43:01.908Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+          "ingestRunId": "bc9532eb-b38f-4089-a220-2e5792e0e087",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "榆中羊掌柜炭火烤肉餐厅",
+        "aliases": [],
+        "creditCode": "92620123MAEFDB6Q8Q",
+        "province": "甘肃省",
+        "city": "榆中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、榆中羊掌柜炭火烤肉餐厅拖欠工资行政处罚案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：榆中羊掌柜炭火烤肉餐厅 统一社会信用代码：92620123MAEFDB6Q8Q 地址：甘肃省兰州市榆中县和平镇金川大道3号嘉禾名都住宅小区第D45001013幢一层1-102号 2.法定代表人：王兴发 3.主要违法事实：2026年5月，榆中县人力资源和社会保障局接到刘某某投诉榆中羊掌柜炭火烤肉餐厅拖欠其工资3190元",
+            "amountYuan": 3190,
+            "authority": "榆中县人力资源和社会保障局",
+            "legalRep": "王兴发",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-10"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+          "sourceTitle": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-01",
+          "fetchedAt": "2026-11-24T11:43:01.908Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+          "ingestRunId": "bc9532eb-b38f-4089-a220-2e5792e0e087",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "甘肃和平医院有限责任公司",
+        "aliases": [],
+        "creditCode": "91620123MA74APE48C",
+        "province": "甘肃省",
+        "city": "榆中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "三、甘肃和平医院有限责任公司拖欠工资行政处罚案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：甘肃和平医院有限责任公司 统一社会信用代码：91620123MA74APE48C 地址：甘肃省兰州市榆中县来紫堡乡方家泉村马家梁570号 2.法定代表人：张伟 3.主要违法事实：2026年4月，榆中县人力资源和社会保障局接到张某等276人投诉甘肃和平医院有限责任公司拖欠工资共计3629177元",
+            "amountYuan": 3629177,
+            "authority": "榆中县人力资源和社会保障局",
+            "legalRep": "张伟",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-10"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+          "sourceTitle": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-01",
+          "fetchedAt": "2026-11-24T11:43:01.908Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+          "ingestRunId": "bc9532eb-b38f-4089-a220-2e5792e0e087",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "甘肃筑诚混凝土有限公司",
+        "aliases": [],
+        "creditCode": "9162012308238895X2",
+        "province": "甘肃省",
+        "city": "榆中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四、甘肃筑诚混凝土有限公司拖欠工资行政处罚案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：甘肃筑诚混凝土有限公司 统一社会信用代码：9162012308238895X2 地址：甘肃省兰州市榆中县来紫堡乡桑园子村286号 2.法定代表人：杨禄鹏 3.主要违法事实：2026年3月，榆中县人力资源和社会保障局接到柴某某等2人投诉甘肃筑诚混凝土有限公司拖欠工资共计73942.51元",
+            "amountYuan": 73943,
+            "authority": "榆中县人力资源和社会保障局",
+            "legalRep": "杨禄鹏",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-16"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+          "sourceTitle": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-01",
+          "fetchedAt": "2026-11-24T11:43:01.908Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+          "ingestRunId": "bc9532eb-b38f-4089-a220-2e5792e0e087",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "榆中北关村成宜和餐饮店",
+        "aliases": [],
+        "creditCode": "92620123MA73REDR14",
+        "province": "甘肃省",
+        "city": "榆中县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "五、榆中北关村成宜和餐饮店拖欠工资行政处罚案 1.违法主体全称、统一社会信用代码及地址 违法主体全称：榆中北关村成宜和餐饮店 统一社会信用代码：92620123MA73REDR14 地址：甘肃省兰州市榆中县城关镇栖云北路188-17号润苑华府1层2号商铺（三电对面） 2.法定代表人：王克心 3.主要违法事实：2026年4月，榆中县人力资源和社会保障局接到金某投诉榆中北关村成宜和餐饮店拖欠其工资7040元",
+            "amountYuan": 7040,
+            "authority": "榆中县人力资源和社会保障局",
+            "legalRep": "王克心",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-06-11"
+          },
+          "sourceUrl": "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+          "sourceTitle": "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-09-01",
+          "fetchedAt": "2026-11-24T11:43:01.908Z",
+          "snapshotFile": "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+          "ingestRunId": "bc9532eb-b38f-4089-a220-2e5792e0e087",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    }
+  ]
+}

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // 审计截图与第三方脚本属于生成物，不参与源码 lint。
+    ".screenshots/**",
   ]),
 ]);
 

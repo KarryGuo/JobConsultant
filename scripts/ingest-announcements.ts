@@ -68,7 +68,7 @@ export type SourceConfig = {
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-24.2";
+export const PARSER_VERSION = "2026-11-24.3";
 
 type IngestRunMeta = {
   id: string;
@@ -805,6 +805,56 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/shanghai-2026-q3-list.json",
     parser: parseTextTableCases,
   },
+  {
+    key: "gansu-tianshui-2026-q4-cases",
+    name: "天水市关于公布2026年度第四批重大劳动保障违法行为的公告",
+    region: "甘肃省",
+    url: "https://www.tianshui.gov.cn/rsj/info/1051/140362.htm",
+    publishedAt: "2026-11-10",
+    snapshotFile: "data/snapshots/gansu-tianshui-2026-q4-cases.html",
+    outputFile: "data/companies/gansu-tianshui-2026-q4-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "gansu-tianshui-2026-q3-cases",
+    name: "天水市关于公布2026年度第三批重大劳动保障违法行为的公告",
+    region: "甘肃省",
+    url: "https://www.tianshui.gov.cn/rsj/info/1952/139522.htm",
+    publishedAt: "2026-09-04",
+    snapshotFile: "data/snapshots/gansu-tianshui-2026-q3-cases.html",
+    outputFile: "data/companies/gansu-tianshui-2026-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "gansu-jiuquan-2026-q2-cases",
+    name: "酒泉市关于公布2026年第二批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+    region: "甘肃省",
+    url: "https://rsj.jiuquan.gov.cn/rsj/c106789/202606/af3605af2e4741418eca62b4eb8b3378.shtml",
+    publishedAt: "2026-06-04",
+    snapshotFile: "data/snapshots/gansu-jiuquan-2026-q2-cases.html",
+    outputFile: "data/companies/gansu-jiuquan-2026-q2-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "gansu-lanzhou-chengguan-2026-q2-cases",
+    name: "关于公布兰州市城关区2026年第二批重大劳动保障违法行为的公告",
+    region: "甘肃省",
+    url: "https://credit.lanzhou.gov.cn/775.news.detail.dhtml?news_id=167392",
+    publishedAt: "2026-09-02",
+    snapshotFile: "data/snapshots/gansu-lanzhou-chengguan-2026-q2-cases.html",
+    outputFile: "data/companies/gansu-lanzhou-chengguan-2026-q2-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "gansu-lanzhou-yuzhong-2026-q3-cases",
+    name: "榆中县关于公布2026年第三批重大劳动保障违法行为的公告",
+    region: "甘肃省",
+    url: "https://credit.lanzhou.gov.cn/324.news.detail.dhtml?news_id=167508",
+    publishedAt: "2026-09-01",
+    snapshotFile: "data/snapshots/gansu-lanzhou-yuzhong-2026-q3-cases.html",
+    outputFile: "data/companies/gansu-lanzhou-yuzhong-2026-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -812,7 +862,7 @@ const DATE_RE = /(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/g;
 const AUTHORITY_RE =
   /[\u4e00-\u9fa5]{2,24}(?:人力资源和社会保障局|人社局|劳动保障监察大队|综合行政执法局)/g;
 const COMPANY_HINT_RE =
-  /(公司|厂|店|中心|超市|幼儿园|服务部|工作室|合作社|集团|企业|商行|馆|站|园)/;
+  /(公司|厂|店|中心|超市|幼儿园|服务部|工作室|合作社|集团|企业|商行|馆|站|园|餐厅|饭店|酒楼|餐馆|酒馆)/;
 
 function pad2(value: number): string {
   return String(value).padStart(2, "0");

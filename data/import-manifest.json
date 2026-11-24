@@ -64,6 +64,11 @@
     "companies/jilin-2026-q2-list.json",
     "companies/jilin-2026-q3-list.json",
     "companies/shanghai-2026-q2-list.json",
-    "companies/shanghai-2026-q3-list.json"
+    "companies/shanghai-2026-q3-list.json",
+    "companies/gansu-tianshui-2026-q4-cases.json",
+    "companies/gansu-tianshui-2026-q3-cases.json",
+    "companies/gansu-jiuquan-2026-q2-cases.json",
+    "companies/gansu-lanzhou-chengguan-2026-q2-cases.json",
+    "companies/gansu-lanzhou-yuzhong-2026-q3-cases.json"
   ]
 }

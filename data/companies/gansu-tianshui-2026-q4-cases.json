@@ -1,0 +1,110 @@
+{
+  "source": {
+    "key": "gansu-tianshui-2026-q4-cases",
+    "name": "天水市关于公布2026年度第四批重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "甘肃省",
+    "baseUrl": "https://www.tianshui.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "天水市关于公布2026年度第四批重大劳动保障违法行为的公告",
+    "url": "https://www.tianshui.gov.cn/rsj/info/1051/140362.htm",
+    "publishedAt": "2026-11-10",
+    "fetchedAt": "2026-11-24T11:43:01.886Z",
+    "snapshotFile": "data/snapshots/gansu-tianshui-2026-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "17af0cc9-18f1-4af6-91f4-687840369ead",
+    "sourceKey": "gansu-tianshui-2026-q4-cases",
+    "sourceUrl": "https://www.tianshui.gov.cn/rsj/info/1051/140362.htm",
+    "parserVersion": "2026-11-24.3",
+    "status": "success",
+    "startedAt": "2026-11-24T11:43:01.875Z",
+    "finishedAt": "2026-11-24T11:43:01.887Z",
+    "httpStatus": null,
+    "contentHash": "ed6ddbc8e58c8112740de791c1f838957c0e27b40975e2d165e34ee483987375",
+    "snapshotPath": "data/snapshots/gansu-tianshui-2026-q4-cases.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "天水浣溪沙洗涤有限公司",
+        "aliases": [],
+        "creditCode": "91620500MAE77QNB42",
+        "province": "甘肃省",
+        "city": "天水市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、 天水浣溪沙洗涤有限公司涉嫌拒不支付劳动报酬罪案件 1. 违法主体全称、统一社会信用代码及地址 违法主体全称： 天水浣溪沙洗涤有限公司 统一社会信用代码： 91620500MAE77QNB42 地址： 甘肃省天水市经济技术开发区社棠园区天水长秦特变电工电器有限公司院内 4 号钢构厂房（经开区） 2. 法定代表人 ： 王小妹 3. 主要违法事实 ： 202 6 年 7 月 10 日 ， 经开区劳动监察室 接到王某某等 13 名劳动者投诉， 称 其在 天水浣溪沙洗涤有限公司 ",
+            "workerCount": 13,
+            "amountYuan": 60216,
+            "authority": "天水市人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://www.tianshui.gov.cn/rsj/info/1051/140362.htm",
+          "sourceTitle": "天水市关于公布2026年度第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-11-10",
+          "fetchedAt": "2026-11-24T11:43:01.886Z",
+          "snapshotFile": "data/snapshots/gansu-tianshui-2026-q4-cases.html",
+          "ingestRunId": "17af0cc9-18f1-4af6-91f4-687840369ead",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天水鑫润万佳商贸有限公司",
+        "aliases": [],
+        "creditCode": "91620500MAK8JDQ3XR",
+        "province": "甘肃省",
+        "city": "天水市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "二、 天水鑫润万佳商贸有限公司涉嫌拒不支付劳动报酬罪案件 1. 违法主体全称、统一社会信用代码及地址 违法主体全称： 天水鑫润万佳商贸有限公司 统一社会信用代码： 91620500MAK8JDQ3XR 地址： 甘肃省天水市经济技术开发区社棠园区甘肃建总置业发展有限公司天水总部经济城 14 幢 1 号办公楼 1 层（经开区） 2. 法定代表人： 刘逸轩 3. 主要违法事实 ： 202 6 年 7 月 29 日 ， 经开区劳动监察室 接到王某某等 13 名劳动者投诉， 称 其 在",
+            "workerCount": 13,
+            "amountYuan": 103794,
+            "authority": "天水市人力资源和社会保障局",
+            "legalRep": "刘逸轩",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://www.tianshui.gov.cn/rsj/info/1051/140362.htm",
+          "sourceTitle": "天水市关于公布2026年度第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-11-10",
+          "fetchedAt": "2026-11-24T11:43:01.886Z",
+          "snapshotFile": "data/snapshots/gansu-tianshui-2026-q4-cases.html",
+          "ingestRunId": "17af0cc9-18f1-4af6-91f4-687840369ead",
+          "parserVersion": "2026-11-24.3"
+        }
+      ]
+    }
+  ]
+}

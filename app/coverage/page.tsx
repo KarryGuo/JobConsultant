@@ -67,21 +67,23 @@ export default function CoveragePage() {
             </div>
           </div>
 
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.16em] text-muted">
-              待接入 · {PENDING_REGIONS.length}
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {PENDING_REGIONS.map((region) => (
-                <span
-                  key={region}
-                  className="border border-line px-2 py-1 text-muted"
-                >
-                  {region}
-                </span>
-              ))}
+          {PENDING_REGIONS.length > 0 && (
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.16em] text-muted">
+                待接入 · {PENDING_REGIONS.length}
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {PENDING_REGIONS.map((region) => (
+                  <span
+                    key={region}
+                    className="border border-line px-2 py-1 text-muted"
+                  >
+                    {region}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           <div>
             <p className="font-mono text-[10px] tracking-[0.16em] text-muted">
