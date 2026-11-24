@@ -23,6 +23,9 @@ export const COVERED_REGIONS = [
   "宁夏回族自治区",
   "海南省",
   "湖南省",
+  "吉林省",
+  "上海市",
+  "山东省",
 ] as const;
 
 /**
@@ -36,12 +39,7 @@ export const DIRECT_LOOKUP_ONLY_REGIONS = [
 ] as const;
 
 /** 尚未接入自动采集的其余省级行政区，按批次推进。 */
-export const PENDING_REGIONS = [
-  "吉林省",
-  "上海市",
-  "山东省",
-  "甘肃省",
-] as const;
+export const PENDING_REGIONS = ["甘肃省"] as const;
 
 export const COVERED_RISK_TYPES = ["劳动用工记录"] as const;
 

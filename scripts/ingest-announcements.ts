@@ -68,7 +68,7 @@ export type SourceConfig = {
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-24.1";
+export const PARSER_VERSION = "2026-11-24.2";
 
 type IngestRunMeta = {
   id: string;
@@ -695,6 +695,116 @@ export const SOURCES: SourceConfig[] = [
         "列入失信名单",
       ),
   },
+  {
+    key: "shandong-2026-q3-cases",
+    name: "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+    region: "山东省",
+    url: "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+    publishedAt: "2026-10-15",
+    snapshotFile: "data/snapshots/shandong-2026-q3-cases.html",
+    outputFile: "data/companies/shandong-2026-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "shandong-2026-q2-cases",
+    name: "山东省人力资源和社会保障厅关于公布全省2026年第二批重大劳动保障违法行为的公告",
+    region: "山东省",
+    url: "http://hrss.shandong.gov.cn/articles/ch05525/202607/438d3ae9-8e12-42c8-8870-ed1656f1ffaa.shtml",
+    publishedAt: "2026-07-06",
+    snapshotFile: "data/snapshots/shandong-2026-q2-cases.html",
+    outputFile: "data/companies/shandong-2026-q2-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "shandong-2026-q3-list",
+    name: "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    region: "山东省",
+    url: "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+    publishedAt: "2026-10-15",
+    snapshotFile: "data/snapshots/shandong-2026-q3-list.xlsx",
+    documentFile: "data/snapshots/shandong-2026-q3-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "http://hrss.shandong.gov.cn/resource/srst/att/202610/9b087cb5-24aa-45f8-84f8-e511448ddd8a.xlsx",
+    outputFile: "data/companies/shandong-2026-q3-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "jilin-2026-q1-cases",
+    name: "吉林省人社厅公布2026年第一批重大劳动保障违法行为典型案件",
+    region: "吉林省",
+    url: "http://hrss.jl.gov.cn/ldgx/ldjc/ldbzjcgzdt/202607/t20260717_9666375.html",
+    publishedAt: "2026-07-17",
+    snapshotFile: "data/snapshots/jilin-2026-q1-cases.html",
+    outputFile: "data/companies/jilin-2026-q1-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "jilin-2026-q2-list",
+    name: "吉林省人社厅公布2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+    region: "吉林省",
+    url: "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/t20260717_9666373.html",
+    publishedAt: "2026-07-17",
+    snapshotFile: "data/snapshots/jilin-2026-q2-list.xlsx",
+    documentFile: "data/snapshots/jilin-2026-q2-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/P020260717521818974010.xlsx",
+    outputFile: "data/companies/jilin-2026-q2-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "jilin-2026-q3-list",
+    name: "吉林省人社厅公布2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    region: "吉林省",
+    url: "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202611/t20261106_9739854.html",
+    publishedAt: "2026-11-06",
+    snapshotFile: "data/snapshots/jilin-2026-q3-list.xlsx",
+    documentFile: "data/snapshots/jilin-2026-q3-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202611/P020261106316225577429.xlsx",
+    outputFile: "data/companies/jilin-2026-q3-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "shanghai-2026-q2-list",
+    name: "2026年二季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+    region: "上海市",
+    url: "https://rsj.sh.gov.cn/tgsgg_17341/20260803/ac331283218340779f68a6d01e51ba1d.html",
+    publishedAt: "2026-06-30",
+    snapshotFile: "data/snapshots/shanghai-2026-q2-list.xlsx",
+    documentFile: "data/snapshots/shanghai-2026-q2-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://rsj.sh.gov.cn/cmsres/33/3386b6204bfa4d3e8db111ca1e77fbf3/f56551b124afc27a4686522672602d47.xlsx",
+    outputFile: "data/companies/shanghai-2026-q2-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "shanghai-2026-q3-list",
+    name: "2026年三季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+    region: "上海市",
+    url: "https://rsj.sh.gov.cn/tgsgg_17341/20261103/f7acfeeee0864d1a822de25a711ced56.html",
+    publishedAt: "2026-09-30",
+    snapshotFile: "data/snapshots/shanghai-2026-q3-list.xlsx",
+    documentFile: "data/snapshots/shanghai-2026-q3-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://rsj.sh.gov.cn/cmsres/13/136a7b63304c476ab75d13fbc16ab460/f56551b124afc27a4686522672602d47.xlsx",
+    outputFile: "data/companies/shanghai-2026-q3-list.json",
+    parser: parseTextTableCases,
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -708,10 +818,27 @@ function pad2(value: number): string {
   return String(value).padStart(2, "0");
 }
 
+/**
+ * 个别政府站点存在未闭合的 <style>/<script>。直接按正则删除成对标签，
+ * 会把后续正文一起吞掉；标签数量不平衡时只去掉标签本身，保留正文。
+ */
+function stripBlockTag(input: string, tag: "style" | "script"): string {
+  const openRe = new RegExp(`<${tag}\\b`, "gi");
+  const closeRe = new RegExp(`</${tag}>`, "gi");
+  const opens = (input.match(openRe) ?? []).length;
+  const closes = (input.match(closeRe) ?? []).length;
+  if (opens === 0) return input;
+  if (opens !== closes) {
+    return input.replace(new RegExp(`</?${tag}\\b[^>]*>`, "gi"), " ");
+  }
+  return input.replace(
+    new RegExp(`<${tag}\\b[^>]*>[\\s\\S]*?</${tag}>`, "gi"),
+    " ",
+  );
+}
+
 function decodeHtml(input: string): string {
-  return input
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+  return stripBlockTag(stripBlockTag(input, "style"), "script")
     .replace(/&nbsp;|&#160;/gi, " ")
     .replace(/&emsp;|&#8195;/gi, " ")
     .replace(/&ensp;|&#8194;/gi, " ")
@@ -733,9 +860,8 @@ function decodeHtml(input: string): string {
  */
 function htmlToText(html: string): string {
   return decodeHtml(
-    html
+    stripBlockTag(html, "style")
       .replace(/<script[\s\S]*?<\/script>/gi, "\n")
-      .replace(/<style[\s\S]*?<\/style>/gi, "\n")
       .replace(/<(?:br|\/p|\/div|\/li|\/tr|\/h[1-6])\s*\/?>/gi, "\n"),
   )
     .replace(/<[^>]+>/g, " ")
@@ -746,7 +872,10 @@ function htmlToText(html: string): string {
 }
 
 function parseDate(value: string): string | null {
-  const match = /(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/.exec(value);
+  const match =
+    /(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/.exec(value) ??
+    // 吉林等省的附件把日期写成紧凑的 20260820。
+    /^(20\d{2})(\d{2})(\d{2})$/.exec(value.trim());
   if (!match) return null;
   return `${match[1]}-${pad2(Number(match[2]))}-${pad2(Number(match[3]))}`;
 }
@@ -924,10 +1053,12 @@ function decisionDate(text: string, stage?: string): string | undefined {
 
 function isCaseHeading(line: string): boolean {
   return (
-    /^[一二三四五六七八九十百]+[、.．]/.test(line) ||
+    /^[一二三四五六七八九十百]+\s*[、.．]/.test(line) ||
     /(拖欠劳动报酬案|拖欠工资案|重大劳动保障违法行为|拒不支付劳动报酬案)\s*$/.test(
       line,
-    )
+    ) ||
+    // 无编号的小标题也可能以“××公司……案”单独成行。
+    /^.{0,80}(?:公司|厂|店|中心|集团).{0,40}案\s*$/.test(line)
   );
 }
 
@@ -944,7 +1075,7 @@ function extractLegalRep(text: string): string | undefined {
 
 function normalizeHeading(line: string): string {
   const cleaned = line
-    .replace(/^[一二三四五六七八九十百]+[、.．]\s*/, "")
+    .replace(/^[一二三四五六七八九十百]+\s*[、.．]\s*/, "")
     .replace(/[（(][^）)]*[）)]/g, "")
     .replace(/[（(][^）)]*$/, "")
     .replace(/拖欠劳动报酬案.*$/, "")
@@ -988,6 +1119,8 @@ function normalizeCompanyName(raw: string): string {
     .split(/[，,]\s*(?:法定代表人|负责人|地址|住所)/)[0]
     .split(/统一(?:社会)?信用代码?/)[0]
     .replace(/[（(](?:分包|建设单位|施工总承包单位|用人单位)[）)]\s*$/, "")
+    // 部分公告把“基本情况”混进标题，不能带进企业主体名称。
+    .replace(/基本情况$/, "")
     .replace(/\s+/g, "")
     .replace(/[，,；;：:（(]+$/, "")
     .trim();
@@ -1570,7 +1703,12 @@ export function parseWageParagraphCases(html: string): ParseResult {
 
   for (const line of lines) {
     if (isCaseHeading(line)) {
-      keepBlock = /拖欠|欠薪|工资|劳动报酬/.test(line);
+      // 只保留欠薪类案件：工资保证金、社保登记、工时、职业中介等
+      // 虽然也属于劳动保障违法，但不能标成“欠薪”信号。
+      keepBlock =
+        /拖欠[^案]{0,24}(?:工资|劳动报酬)|未清偿[^案]{0,16}工资|拒不支付劳动报酬/.test(
+          line,
+        );
     }
     if (keepBlock) keptLines.push(line);
   }
@@ -2025,7 +2163,7 @@ export function parseXlsxCases(
   const headerIndex = rows.findIndex(
     (row) =>
       row.some((cell) =>
-        /单位名称|企业名称|公司名称|用人单位|对象名称/.test(cell),
+        /单位名称|企业名称|公司名称|用人单位|对象名称|^名称$/.test(cell),
       ) &&
       row.some((cell) =>
         /统一社会信用代码|信用代码|工商注册号|注册号|对象证件号码|证件号码/.test(
@@ -2043,7 +2181,7 @@ export function parseXlsxCases(
     header.findIndex((cell) => pattern.test(cell));
 
   const nameIndex = findColumn(
-    /单位名称|企业名称|公司名称|用人单位|对象名称/,
+    /单位名称|企业名称|公司名称|用人单位|对象名称|^名称$/,
   );
   const codeIndex = findColumn(
     /统一社会信用代码|信用代码|工商注册号|注册号|对象证件号码|证件号码/,

@@ -1,0 +1,353 @@
+{
+  "source": {
+    "key": "shandong-2026-q3-cases",
+    "name": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山东省",
+    "baseUrl": "http://hrss.shandong.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+    "url": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+    "publishedAt": "2026-10-15",
+    "fetchedAt": "2026-11-24T11:28:07.149Z",
+    "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html"
+  },
+  "ingestRun": {
+    "id": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+    "sourceKey": "shandong-2026-q3-cases",
+    "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+    "parserVersion": "2026-11-24.2",
+    "status": "partial",
+    "startedAt": "2026-11-24T11:28:07.124Z",
+    "finishedAt": "2026-11-24T11:28:07.150Z",
+    "httpStatus": null,
+    "contentHash": "db15d4c515f94420a08a0e1bc023371b37f29b531cfea695eea3eeb8935d8e08",
+    "snapshotPath": "data/snapshots/shandong-2026-q3-cases.html",
+    "warnings": 9,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "山东世纪华诺劳务有限公司",
+        "aliases": [],
+        "creditCode": "91370202MA7GWFAH29",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 拖欠 18名劳动者工资 278000 元，拒不履行人社部门责令改正决定",
+            "workerCount": 18,
+            "amountYuan": 278000,
+            "legalRep": "程建立",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东烟务建设发展有限公司",
+        "aliases": [],
+        "creditCode": "91370213MAEKWKG367",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 拖欠 35名劳动者工资704584.04元，拒不履行人社部门行政处理决定",
+            "workerCount": 35,
+            "amountYuan": 704584,
+            "legalRep": "韩述谦",
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "福州诚至建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91350105MABY5FY45F",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 该单位作为国宾壹号小区地块一 6#、9#、10#楼及地下车库项目总承包单位，未清偿项目劳务分包单位拖欠的24名农民工工资731424.77元，且拒不按照劳动保障监察调查询问通知书的要求接受调查询问，经责令改正拒不改正",
+            "workerCount": 24,
+            "amountYuan": 731425,
+            "legalRep": "何融清",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京亿启航建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91110109MAD27EFD0C",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（三）相关处理情况 针对 拖欠农民工工资 案， 下达《 劳动保障监察 行政处罚决定书》，根据具体违法情节，处以 16000 元罚款；列入重大劳动保障违法行为予以社会公布 ； 列入拖欠农民工工资 失信联合惩戒对象名单实施联合惩戒",
+            "workerCount": 35,
+            "amountYuan": 16000,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "济宁奋锝再生资源有限公司",
+        "aliases": [],
+        "creditCode": "91370686MAEFJRUW6F",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二 ） 主要违法事实 拖欠 24 名 劳动者 工资 报酬 136200 元 未支付",
+            "workerCount": 24,
+            "amountYuan": 136200,
+            "legalRep": "焦守东",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东邑东福邸物业服务有限公司",
+        "aliases": [],
+        "creditCode": "91371326349022560Q",
+        "province": "山东省",
+        "city": "平邑县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 经查，山东邑东福邸物业服务有限公司拖欠 40 名职工工资 320813 元，经平邑县人力资源和社会保障局限期整改后拒不改正",
+            "workerCount": 40,
+            "amountYuan": 320813,
+            "authority": "平邑县人力资源和社会保障局",
+            "legalRep": "王希家",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "平邑银辉餐饮有限公司",
+        "aliases": [],
+        "creditCode": "91371326MAKBWF391X",
+        "province": "山东省",
+        "city": "平邑县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 经查，平邑银辉餐饮有限公司拖欠 26 名职工工资 96720.5 元，经平邑县人力资源和社会保障局限期整改后拒不改正",
+            "workerCount": 26,
+            "amountYuan": 96721,
+            "authority": "平邑县人力资源和社会保障局",
+            "legalRep": "宋春彦",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "腾越建筑科技集团有限公司",
+        "aliases": [],
+        "creditCode": "91440606231927946T",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 该单位拖欠聊城市东昌府区碧桂园凤凰壹品、碧桂园云麓九里项目施工中存在拖欠分包方山东顺安建筑工程劳务有限公司施工电梯安拆工、司机李瑞生、孙汝明、权建军、王瑞霞等 16人工资404235.86元的违法行为，拒不履行人社部门行政处理决定",
+            "amountYuan": 404236,
+            "legalRep": "杨泽辉",
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "高唐县好易买生鲜超市",
+        "aliases": [],
+        "creditCode": "92371526MA3NPXXF2R",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "（二）主要违法事实 拖欠 29人劳动报酬共计635799元，拒不按照人社部门劳动保障监察调查询问通知书的要求接受调查询问",
+            "amountYuan": 635799,
+            "legalRep": "黄立新",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202610/fb875684-0609-468f-acc6-453201d51a6e.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2026年第三批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.149Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-cases.html",
+          "ingestRunId": "a99f1104-9307-4d9b-a1ff-5d20429d3ae7",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    }
+  ]
+}

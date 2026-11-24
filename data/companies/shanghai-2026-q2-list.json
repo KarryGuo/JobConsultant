@@ -1,0 +1,119 @@
+{
+  "source": {
+    "key": "shanghai-2026-q2-list",
+    "name": "2026年二季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "上海市",
+    "baseUrl": "https://rsj.sh.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "2026年二季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+    "url": "https://rsj.sh.gov.cn/tgsgg_17341/20260803/ac331283218340779f68a6d01e51ba1d.html",
+    "publishedAt": "2026-06-30",
+    "fetchedAt": "2026-11-24T11:28:07.202Z",
+    "snapshotFile": "data/snapshots/shanghai-2026-q2-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "59452858-8fa8-459f-a16e-4115fe656ad0",
+    "sourceKey": "shanghai-2026-q2-list",
+    "sourceUrl": "https://rsj.sh.gov.cn/tgsgg_17341/20260803/ac331283218340779f68a6d01e51ba1d.html",
+    "parserVersion": "2026-11-24.2",
+    "status": "success",
+    "startedAt": "2026-11-24T11:28:07.199Z",
+    "finishedAt": "2026-11-24T11:28:07.202Z",
+    "httpStatus": null,
+    "contentHash": "411108f1093166f8a5a675ad1cf980a26c4176a9c5e651e3ad3b89730b1dfebe",
+    "snapshotPath": "data/snapshots/shanghai-2026-q2-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "上海浩创亘永科技有限公司",
+        "aliases": [],
+        "creditCode": "91310118MA1JL37Y16",
+        "province": "上海市",
+        "city": "上海市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠5名农民工2025年5月至2025年12月期间的工资，共计人民币222394.56元",
+            "workerCount": 5,
+            "amountYuan": 222395,
+            "authority": "上海市青浦区人力资源和社会保障局",
+            "decisionNo": "（青浦）人社执法〔2026〕列决字第00175号",
+            "legalRep": "周洁",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-06",
+            "listedAt": "2026-05-06",
+            "expiresAt": "2029-05-05"
+          },
+          "sourceUrl": "https://rsj.sh.gov.cn/tgsgg_17341/20260803/ac331283218340779f68a6d01e51ba1d.html",
+          "sourceTitle": "2026年二季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+          "sourcePublishedAt": "2026-06-30",
+          "fetchedAt": "2026-11-24T11:28:07.202Z",
+          "snapshotFile": "data/snapshots/shanghai-2026-q2-list.xlsx",
+          "ingestRunId": "59452858-8fa8-459f-a16e-4115fe656ad0",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "上海征世科技股份有限公司",
+        "aliases": [],
+        "creditCode": "91310118324330567A",
+        "province": "上海市",
+        "city": "上海市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠41名农民工2025年11月至2026年1月期间的工资，共计人民币557310.33元",
+            "workerCount": 41,
+            "amountYuan": 557310,
+            "authority": "上海市青浦区人力资源和社会保障局",
+            "decisionNo": "（青浦）人社执法〔2026〕列决字第00297号",
+            "legalRep": "何龙",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-19",
+            "listedAt": "2026-05-19",
+            "expiresAt": "2029-05-18"
+          },
+          "sourceUrl": "https://rsj.sh.gov.cn/tgsgg_17341/20260803/ac331283218340779f68a6d01e51ba1d.html",
+          "sourceTitle": "2026年二季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+          "sourcePublishedAt": "2026-06-30",
+          "fetchedAt": "2026-11-24T11:28:07.202Z",
+          "snapshotFile": "data/snapshots/shanghai-2026-q2-list.xlsx",
+          "ingestRunId": "59452858-8fa8-459f-a16e-4115fe656ad0",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    }
+  ]
+}

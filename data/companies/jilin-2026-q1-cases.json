@@ -1,0 +1,113 @@
+{
+  "source": {
+    "key": "jilin-2026-q1-cases",
+    "name": "吉林省人社厅公布2026年第一批重大劳动保障违法行为典型案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "吉林省",
+    "baseUrl": "http://hrss.jl.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "吉林省人社厅公布2026年第一批重大劳动保障违法行为典型案件",
+    "url": "http://hrss.jl.gov.cn/ldgx/ldjc/ldbzjcgzdt/202607/t20260717_9666375.html",
+    "publishedAt": "2026-07-17",
+    "fetchedAt": "2026-11-24T11:28:07.180Z",
+    "snapshotFile": "data/snapshots/jilin-2026-q1-cases.html"
+  },
+  "ingestRun": {
+    "id": "f1865e53-168f-4c73-8d55-d4587c72a13c",
+    "sourceKey": "jilin-2026-q1-cases",
+    "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldbzjcgzdt/202607/t20260717_9666375.html",
+    "parserVersion": "2026-11-24.2",
+    "status": "success",
+    "startedAt": "2026-11-24T11:28:07.175Z",
+    "finishedAt": "2026-11-24T11:28:07.181Z",
+    "httpStatus": null,
+    "contentHash": "40c671d37fece28abf1879cc0a14dfa08548acedd57bf439285b4b3a73d09ad7",
+    "snapshotPath": "data/snapshots/jilin-2026-q1-cases.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "吉林宏桥建筑集团有限公司",
+        "aliases": [],
+        "creditCode": "91222400126338269H",
+        "province": "吉林省",
+        "city": "汪清县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，吉林宏桥建筑集团有限公司拖欠437名劳动者劳动报酬共计1138.0519万元",
+            "workerCount": 437,
+            "amountYuan": 11380519,
+            "authority": "汪清县人力资源和社会保障局",
+            "legalRep": "刘凤吉",
+            "stage": "责令改正",
+            "stageLabel": "责令改正",
+            "stageDate": "2025-11-07"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldbzjcgzdt/202607/t20260717_9666375.html",
+          "sourceTitle": "吉林省人社厅公布2026年第一批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-17",
+          "fetchedAt": "2026-11-24T11:28:07.180Z",
+          "snapshotFile": "data/snapshots/jilin-2026-q1-cases.html",
+          "ingestRunId": "f1865e53-168f-4c73-8d55-d4587c72a13c",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "吉林超柔玻璃制造有限公司",
+        "aliases": [],
+        "creditCode": "91220284MA84YD102A",
+        "province": "吉林省",
+        "city": "磐石市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，吉林超柔玻璃制造有限公司在吉林超柔玻璃制造有限公司车载3D显示玻璃产业园建设项目施工期间，拖欠130名劳动者劳动报酬共计289.8329万元",
+            "workerCount": 130,
+            "amountYuan": 2898329,
+            "authority": "磐石市人力资源和社会保障局",
+            "legalRep": "马勇",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-12-26"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldbzjcgzdt/202607/t20260717_9666375.html",
+          "sourceTitle": "吉林省人社厅公布2026年第一批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2026-07-17",
+          "fetchedAt": "2026-11-24T11:28:07.180Z",
+          "snapshotFile": "data/snapshots/jilin-2026-q1-cases.html",
+          "ingestRunId": "f1865e53-168f-4c73-8d55-d4587c72a13c",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    }
+  ]
+}

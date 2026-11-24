@@ -1,0 +1,513 @@
+{
+  "source": {
+    "key": "shandong-2026-q3-list",
+    "name": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山东省",
+    "baseUrl": "http://hrss.shandong.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+    "publishedAt": "2026-10-15",
+    "fetchedAt": "2026-11-24T11:28:07.171Z",
+    "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "3a532811-36bd-4881-8ed3-396e92f1986f",
+    "sourceKey": "shandong-2026-q3-list",
+    "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+    "parserVersion": "2026-11-24.2",
+    "status": "partial",
+    "startedAt": "2026-11-24T11:28:07.165Z",
+    "finishedAt": "2026-11-24T11:28:07.172Z",
+    "httpStatus": null,
+    "contentHash": "59a39127d101c277a170fbbf47d8536e55d66c345ca609e6027eb9de063754cb",
+    "snapshotPath": "data/snapshots/shandong-2026-q3-list.xlsx",
+    "warnings": 6,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "临沂从圆建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91371321MAC8TR3M7A",
+        "province": "山东省",
+        "city": "淄博高新技术产业开发区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位在预制件工程项目淄博班组拖欠60名农民工工资合计约553661元。达到拒不支付劳动报酬罪数额标准，经淄博高新技术产业开发区管理委员会责令改正仍拒不改正，在指定时间未到指定地点配合解决该拖欠工资问题。",
+            "workerCount": 60,
+            "amountYuan": 553661,
+            "authority": "淄博高新技术产业开发区管理委员会",
+            "decisionNo": "淄高新人社监列决字〔2026〕第2号",
+            "legalRep": "张鹏程",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-21",
+            "listedAt": "2026-08-21",
+            "expiresAt": "2029-08-20"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东省铁丰建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91371502MAC3RC8X2N",
+        "province": "山东省",
+        "city": "淄博高新技术产业开发区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位在预制件工程项目淄博班组拖欠约96人次农民工工资合计约1617984元。达到拒不支付劳动报酬罪数额标准，经淄博高新技术产业开发区管理委员会责令改正仍拒不改正，在指定时间未到指定地点配合解决该拖欠工资问题。",
+            "amountYuan": 1617984,
+            "authority": "淄博高新技术产业开发区管理委员会",
+            "decisionNo": "淄高新人社监列决字〔2026〕第3号",
+            "legalRep": "张乃涛",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-28",
+            "listedAt": "2026-08-28",
+            "expiresAt": "2029-08-27"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "彰利建筑工程有限公司昌邑分公司",
+        "aliases": [],
+        "creditCode": "91370786MADLDH8LXX",
+        "province": "山东省",
+        "city": "淄博高新技术产业开发区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位在预制件工程项目淄博班组拖欠约280名农民工工资合计约4497795元。达到拒不支付劳动报酬罪数额标准，经淄博高新技术产业开发区管理委员会责令改正仍拒不改正，在指定时间未到指定地点配合解决该拖欠工资问题。",
+            "workerCount": 280,
+            "amountYuan": 4497795,
+            "authority": "淄博高新技术产业开发区管理委员会",
+            "decisionNo": "淄高新人社监列决字〔2026〕第1号",
+            "legalRep": "郭清凯",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-21",
+            "listedAt": "2026-08-21",
+            "expiresAt": "2029-08-20"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东顺为陶瓷有限公司",
+        "aliases": [],
+        "creditCode": "91370302349261799T",
+        "province": "山东省",
+        "city": "淄博市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠部分员工2024年12月，2025年1月、2月、3月工资，合计约211.4723万元；拖欠所有员工2025年4月到7月全部工资，合计约966.1059万元。上述共计约1177.6288万元。本机关于2025年8月6日向该单位送达《劳动保障监察限期整改指令书》（淄经开人社监令〔2025〕1号），责令限期支付拖欠的农民工工资，但该单位逾期未完成整改。",
+            "amountYuan": 2114723,
+            "authority": "淄博市经济开发区人力资源和社会保障局",
+            "decisionNo": "淄经开区人社监列决〔2025〕1号",
+            "legalRep": "胡潇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-29",
+            "listedAt": "2025-12-29",
+            "expiresAt": "2028-12-28"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "淄博锦昊陶瓷有限公司",
+        "aliases": [],
+        "creditCode": "91370302780751197M",
+        "province": "山东省",
+        "city": "淄博市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠部分员工2024年8月和11月、2025年1月工资约167.8404万元;拖欠所有员工2025年4月到7月全部工资约716.3939万元，上述共计约884.2343万元。本机关于2025年8月6日向该单位送达《劳动保障监察限期整改指令书》（淄经开人社监令〔2025〕2号），责令限期支付拖欠的农民工工资，但该单位逾期未完成整改。",
+            "amountYuan": 1678404,
+            "authority": "淄博市经济开发区人力资源和社会保障局",
+            "decisionNo": "淄经开区人社监列决〔2025〕2号",
+            "legalRep": "张帅",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-29",
+            "listedAt": "2025-12-29",
+            "expiresAt": "2028-12-28"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "青岛恒海劳务服务有限公司",
+        "aliases": [],
+        "creditCode": "91370200595277921F",
+        "province": "山东省",
+        "city": "莱州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠232名农民工工资13831398元，经人力资源社会保障行政部门责令改正，拒不改正。",
+            "workerCount": 232,
+            "amountYuan": 13831398,
+            "authority": "莱州市人力资源和社会保障局",
+            "decisionNo": "莱人社监列决〔2026〕01号",
+            "legalRep": "常飞",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-13",
+            "listedAt": "2026-06-13",
+            "expiresAt": "2029-06-13"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京亿启航建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91110109MAD27EFD0C",
+        "province": "山东省",
+        "city": "烟台市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位未按照国家规定及时足额支付35名农民工劳动报酬共计793524元，经人力资源社会保障行政部门责令改正，拒不改正。",
+            "workerCount": 35,
+            "authority": "烟台市牟平区人力资源和社会保障局",
+            "decisionNo": "烟牟人社监列决〔2026〕002号",
+            "legalRep": "孙明明",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-07-02",
+            "listedAt": "2026-07-02",
+            "expiresAt": "2029-07-01"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "河南维电电力工程有限公司",
+        "aliases": [],
+        "creditCode": "91410100MAEKH7CF1F",
+        "province": "山东省",
+        "city": "烟台市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位未按照国家规定及时足额支付33名农民工工资共计234750元，经人力资源社会保障行政部门责令限期支付工资，拒不改正。",
+            "workerCount": 33,
+            "authority": "烟台市牟平区人力资源和社会保障局",
+            "decisionNo": "烟牟人社监列决〔2026〕003号",
+            "legalRep": "张鹏",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-27",
+            "listedAt": "2026-08-27",
+            "expiresAt": "2029-08-26"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "莱州市程鑫建筑劳务分包有限公司",
+        "aliases": [],
+        "creditCode": "91370683MA7EEAL936",
+        "province": "山东省",
+        "city": "烟台市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠13名农民工工资584000元，经人力资源社会保障行政部门责令改正，逾期不改正。",
+            "workerCount": 13,
+            "amountYuan": 584000,
+            "authority": "烟台市人力资源和社会保障局",
+            "decisionNo": "烟人社监列决〔2026〕01号",
+            "legalRep": "皇国玉",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-09-11",
+            "listedAt": "2026-09-11",
+            "expiresAt": "2029-09-10"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州建工永泰建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91520114MAAJXNAA0X",
+        "province": "山东省",
+        "city": "德州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠37名农民工工资1022825元，经人力资源社会保障行政部门责令改正，拒不改正。",
+            "workerCount": 37,
+            "amountYuan": 1022825,
+            "authority": "德州市陵城区人力资源和社会保障局",
+            "decisionNo": "陵人社监列决字〔2026〕第001号",
+            "legalRep": "谢剑",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-22",
+            "listedAt": "2026-06-22",
+            "expiresAt": "2029-06-21"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "腾越建筑科技集团有限公司",
+        "aliases": [],
+        "creditCode": "91440606231927946T",
+        "province": "山东省",
+        "city": "聊城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠聊城市东昌府区凤凰壹品、云麓九里项目施工中存在拖欠分包方山东顺安建筑工程劳务有限公司施工电梯安拆工、司机李瑞生、孙汝明、权建军、王瑞霞等16人工资404235.86元的违法行为，经人力资源社会保障行政部门责令改正，拒不改正。",
+            "amountYuan": 404236,
+            "authority": "聊城市东昌府区人力资源和社会保障局",
+            "decisionNo": "东昌人社监列决〔2026〕2号",
+            "legalRep": "杨泽辉",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-10",
+            "listedAt": "2026-08-10",
+            "expiresAt": "2029-08-10"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "临清市众安建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91371581MAELU7B8XN",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "该单位拖欠12名农民工工资173483元，经人力资源社会保障行政部门责令改正，拒不改正。",
+            "workerCount": 12,
+            "amountYuan": 173483,
+            "authority": "冠县人力资源和社会保证局",
+            "decisionNo": "冠人社监列决〔2026〕001号",
+            "legalRep": "汪化生",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-07-28",
+            "listedAt": "2026-07-28",
+            "expiresAt": "2029-07-27"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch05525/202610/20f242ba-110f-4da4-af80-96da928bf0c7.shtml",
+          "sourceTitle": "山东省2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-10-15",
+          "fetchedAt": "2026-11-24T11:28:07.171Z",
+          "snapshotFile": "data/snapshots/shandong-2026-q3-list.xlsx",
+          "ingestRunId": "3a532811-36bd-4881-8ed3-396e92f1986f",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    }
+  ]
+}

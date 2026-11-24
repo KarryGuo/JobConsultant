@@ -1,0 +1,153 @@
+{
+  "source": {
+    "key": "jilin-2026-q2-list",
+    "name": "吉林省人社厅公布2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "吉林省",
+    "baseUrl": "http://hrss.jl.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "吉林省人社厅公布2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/t20260717_9666373.html",
+    "publishedAt": "2026-07-17",
+    "fetchedAt": "2026-11-24T11:28:07.188Z",
+    "snapshotFile": "data/snapshots/jilin-2026-q2-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "058e3d8c-1396-47c2-a153-69f4a63ac2fe",
+    "sourceKey": "jilin-2026-q2-list",
+    "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/t20260717_9666373.html",
+    "parserVersion": "2026-11-24.2",
+    "status": "success",
+    "startedAt": "2026-11-24T11:28:07.185Z",
+    "finishedAt": "2026-11-24T11:28:07.189Z",
+    "httpStatus": null,
+    "contentHash": "114da04bf465a7750b454c07da3165f28788053b23e175611b8bdcf819aea0de",
+    "snapshotPath": "data/snapshots/jilin-2026-q2-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "公主岭市天宝建筑有限公司",
+        "aliases": [],
+        "creditCode": "91220381126762238X",
+        "province": "吉林省",
+        "city": "四平市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠39名劳动者劳动报酬2034900元",
+            "workerCount": 39,
+            "amountYuan": 2034900,
+            "authority": "四平市人力资源和社会保障局",
+            "legalRep": "李贵明",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-15",
+            "listedAt": "2026-06-15"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/t20260717_9666373.html",
+          "sourceTitle": "吉林省人社厅公布2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-07-17",
+          "fetchedAt": "2026-11-24T11:28:07.188Z",
+          "snapshotFile": "data/snapshots/jilin-2026-q2-list.xlsx",
+          "ingestRunId": "058e3d8c-1396-47c2-a153-69f4a63ac2fe",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "农安腾达建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91220122MA17DB8QXR",
+        "province": "吉林省",
+        "city": "农安县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠88名劳动者劳动报酬4050040元",
+            "workerCount": 88,
+            "amountYuan": 4050040,
+            "authority": "农安县人力资源和社会保障局",
+            "legalRep": "董大勇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-29",
+            "listedAt": "2026-05-29"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/t20260717_9666373.html",
+          "sourceTitle": "吉林省人社厅公布2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-07-17",
+          "fetchedAt": "2026-11-24T11:28:07.188Z",
+          "snapshotFile": "data/snapshots/jilin-2026-q2-list.xlsx",
+          "ingestRunId": "058e3d8c-1396-47c2-a153-69f4a63ac2fe",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "吉林建工集团有限公司",
+        "aliases": [],
+        "creditCode": "9122000012392334XN",
+        "province": "吉林省",
+        "city": "长春高新技术产业开发区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠132名劳动者劳动报酬3690950元",
+            "workerCount": 132,
+            "amountYuan": 3690950,
+            "authority": "长春高新技术产业开发区人力资源和社会保障局",
+            "legalRep": "张旭",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-28",
+            "listedAt": "2026-05-28"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202607/t20260717_9666373.html",
+          "sourceTitle": "吉林省人社厅公布2026年第二批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-07-17",
+          "fetchedAt": "2026-11-24T11:28:07.188Z",
+          "snapshotFile": "data/snapshots/jilin-2026-q2-list.xlsx",
+          "ingestRunId": "058e3d8c-1396-47c2-a153-69f4a63ac2fe",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    }
+  ]
+}

@@ -56,6 +56,14 @@
     "companies/hunan-2026-q2-cases.json",
     "companies/hunan-2026-q2-list.json",
     "companies/hunan-2026-q3-cases.json",
-    "companies/hunan-2026-q3-list.json"
+    "companies/hunan-2026-q3-list.json",
+    "companies/shandong-2026-q2-cases.json",
+    "companies/shandong-2026-q3-cases.json",
+    "companies/shandong-2026-q3-list.json",
+    "companies/jilin-2026-q1-cases.json",
+    "companies/jilin-2026-q2-list.json",
+    "companies/jilin-2026-q3-list.json",
+    "companies/shanghai-2026-q2-list.json",
+    "companies/shanghai-2026-q3-list.json"
   ]
 }

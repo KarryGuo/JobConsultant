@@ -1,0 +1,77 @@
+{
+  "source": {
+    "key": "jilin-2026-q3-list",
+    "name": "吉林省人社厅公布2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "吉林省",
+    "baseUrl": "http://hrss.jl.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "吉林省人社厅公布2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202611/t20261106_9739854.html",
+    "publishedAt": "2026-11-06",
+    "fetchedAt": "2026-11-24T11:28:07.194Z",
+    "snapshotFile": "data/snapshots/jilin-2026-q3-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "cff8c836-0e67-47b9-8449-d95a73fdac64",
+    "sourceKey": "jilin-2026-q3-list",
+    "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202611/t20261106_9739854.html",
+    "parserVersion": "2026-11-24.2",
+    "status": "success",
+    "startedAt": "2026-11-24T11:28:07.192Z",
+    "finishedAt": "2026-11-24T11:28:07.196Z",
+    "httpStatus": null,
+    "contentHash": "52c996b033d129792f68131ce85e826398b6711071f5f67a38ac1f84e430dfda",
+    "snapshotPath": "data/snapshots/jilin-2026-q3-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "吉林省华林矿建工程有限公司",
+        "aliases": [],
+        "creditCode": "91220600MACAECRP3H",
+        "province": "吉林省",
+        "city": "临江市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠203名劳动者劳动报酬1107209元",
+            "workerCount": 203,
+            "amountYuan": 1107209,
+            "authority": "临江市民政和人力资源 社会保障局",
+            "legalRep": "曾庆鹏",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-08-20",
+            "listedAt": "2026-08-20"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202611/t20261106_9739854.html",
+          "sourceTitle": "吉林省人社厅公布2026年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-11-06",
+          "fetchedAt": "2026-11-24T11:28:07.194Z",
+          "snapshotFile": "data/snapshots/jilin-2026-q3-list.xlsx",
+          "ingestRunId": "cff8c836-0e67-47b9-8449-d95a73fdac64",
+          "parserVersion": "2026-11-24.2"
+        }
+      ]
+    }
+  ]
+}
