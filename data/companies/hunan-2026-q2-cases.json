@@ -1,0 +1,261 @@
+{
+  "source": {
+    "key": "hunan-2026-q2-cases",
+    "name": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "湖南省",
+    "baseUrl": "https://rst.hunan.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+    "url": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+    "publishedAt": "2026-07-24",
+    "fetchedAt": "2026-11-24T02:56:47.834Z",
+    "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx"
+  },
+  "ingestRun": {
+    "id": "ff010450-5010-4697-bec0-1b249efcc3bc",
+    "sourceKey": "hunan-2026-q2-cases",
+    "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+    "parserVersion": "2026-11-24.1",
+    "status": "partial",
+    "startedAt": "2026-11-24T02:56:47.830Z",
+    "finishedAt": "2026-11-24T02:56:47.835Z",
+    "httpStatus": null,
+    "contentHash": "728d439799d4d37898138e520a449533918ec7a8b87740cf2fc8899383c2d2b4",
+    "snapshotPath": "data/snapshots/hunan-2026-q2-cases.docx",
+    "warnings": 3,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "湖南晨光建设工程有限公司",
+        "aliases": [],
+        "creditCode": "914306001862472891",
+        "province": "湖南省",
+        "city": "岳阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，湖南晨光建设工程有限公司共拖欠李建义、卢拥军等59名工人工资，合计522034元",
+            "workerCount": 59,
+            "amountYuan": 522034,
+            "authority": "岳阳市人力资源和社会保障局",
+            "legalRep": "李伏初",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.834Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx",
+          "ingestRunId": "ff010450-5010-4697-bec0-1b249efcc3bc",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖南岳阳友阿国际商业广场有限公司",
+        "aliases": [],
+        "creditCode": "91430600MA4L59K53B",
+        "province": "湖南省",
+        "city": "岳阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，湖南岳阳友阿国际商业广场有限公司拖欠程可山等9个班组142人195.8586万元劳务尾款，经扣除劳务税票后实际拖欠142人188.35848万元工资",
+            "amountYuan": 1958586,
+            "authority": "岳阳市人力资源和社会保障局",
+            "decisionNo": "岳市人社监列决字〔2026〕001号",
+            "legalRep": "彭卫国",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-03-31"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.834Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx",
+          "ingestRunId": "ff010450-5010-4697-bec0-1b249efcc3bc",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "汝城县伟景汽车贸易有限公司",
+        "aliases": [],
+        "creditCode": "91431026776767065Q",
+        "province": "湖南省",
+        "city": "郴州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，郴州市汝城县伟景汽车贸易有限公司拖欠1名员工10个月工资共计18708.05元",
+            "workerCount": 1,
+            "amountYuan": 18708,
+            "authority": "郴州市汝城县人力资源和社会保障局",
+            "decisionNo": "汝人社监列决字〔2026〕1号",
+            "legalRep": "朱杰强",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-05-09"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.834Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx",
+          "ingestRunId": "ff010450-5010-4697-bec0-1b249efcc3bc",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "邵阳市三只牛企业运营管理有限公司",
+        "aliases": [],
+        "creditCode": "91430502MADQ51PP84",
+        "province": "湖南省",
+        "city": "邵阳市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，邵阳市三只牛企业运营管理有限公司拖欠263名劳动者劳动报酬共计368.0258万元",
+            "workerCount": 263,
+            "amountYuan": 3680258,
+            "authority": "邵阳市双清区人力资源和社会保障局",
+            "legalRep": "刘四清",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2026-05-01"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.834Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx",
+          "ingestRunId": "ff010450-5010-4697-bec0-1b249efcc3bc",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江光元建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91330000771900779A",
+        "province": "湖南省",
+        "city": "后续长沙市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年1月26日至28日，长沙市望城区人力资源和社会保障局接到冯东风等9人投诉浙江光元建筑劳务有限公司拖欠其9人工资285556元",
+            "amountYuan": 285556,
+            "authority": "后续长沙市望城区人力资源和社会保障局",
+            "decisionNo": "望人社监列决字〔2026〕X007号",
+            "legalRep": "蒋红亮",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-04-21"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.834Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx",
+          "ingestRunId": "ff010450-5010-4697-bec0-1b249efcc3bc",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江恒骏建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91330201MA2J3ECP3C",
+        "province": "湖南省",
+        "city": "后续长沙市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年1月23日，长沙市望城区人力资源和社会保障局接到李强等3人投诉浙江恒骏建筑劳务有限公司拖欠其3人工资179900元",
+            "amountYuan": 179900,
+            "authority": "后续长沙市望城区人力资源和社会保障局",
+            "decisionNo": "望人社监列决字〔2026〕X006号",
+            "legalRep": "蒋红亮",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚",
+            "stageDate": "2026-04-21"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.834Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-cases.docx",
+          "ingestRunId": "ff010450-5010-4697-bec0-1b249efcc3bc",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    }
+  ]
+}

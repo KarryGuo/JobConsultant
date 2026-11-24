@@ -1,0 +1,195 @@
+{
+  "source": {
+    "key": "hunan-2026-q2-list",
+    "name": "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "湖南省",
+    "baseUrl": "https://rst.hunan.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+    "url": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+    "publishedAt": "2026-07-24",
+    "fetchedAt": "2026-11-24T02:56:47.840Z",
+    "snapshotFile": "data/snapshots/hunan-2026-q2-list.docx"
+  },
+  "ingestRun": {
+    "id": "81faeefa-5529-4523-89aa-46e6006e9c50",
+    "sourceKey": "hunan-2026-q2-list",
+    "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+    "parserVersion": "2026-11-24.1",
+    "status": "success",
+    "startedAt": "2026-11-24T02:56:47.837Z",
+    "finishedAt": "2026-11-24T02:56:47.840Z",
+    "httpStatus": null,
+    "contentHash": "f3773596bf048cff8ecab78fbedc740bae9618008761fb90dc1491fa78245fbb",
+    "snapshotPath": "data/snapshots/hunan-2026-q2-list.docx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "浙江光元建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": null,
+        "province": "湖南省",
+        "city": "长沙市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "amountYuan": 265556,
+            "authority": "长沙市望城区人力资源和社会保障局",
+            "decisionNo": "望人社监列决字〔2026〕X0007号",
+            "legalRep": "蒋红亮",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-04-29",
+            "listedAt": "2026-04-29",
+            "expiresAt": "2029-04-29"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.840Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-list.docx",
+          "ingestRunId": "81faeefa-5529-4523-89aa-46e6006e9c50",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江恒骏建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": null,
+        "province": "湖南省",
+        "city": "长沙市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "amountYuan": 166900,
+            "authority": "长沙市望城区人力资源和社会保障局",
+            "decisionNo": "望人社监列决字〔2026〕X0006号",
+            "legalRep": "蒋红亮",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-04-29",
+            "listedAt": "2026-04-29",
+            "expiresAt": "2029-04-29"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.840Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-list.docx",
+          "ingestRunId": "81faeefa-5529-4523-89aa-46e6006e9c50",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "汝城县伟景汽车贸易有限公司",
+        "aliases": [],
+        "creditCode": null,
+        "province": "湖南省",
+        "city": "郴州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "amountYuan": 18708,
+            "authority": "郴州市汝城县人力资源和社会保障局",
+            "decisionNo": "汝人社监列决字〔2026〕1号",
+            "legalRep": "朱杰强",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-05-09",
+            "listedAt": "2026-05-09",
+            "expiresAt": "2029-05-08"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.840Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-list.docx",
+          "ingestRunId": "81faeefa-5529-4523-89aa-46e6006e9c50",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "深圳市猛虎上山传媒有限公司",
+        "aliases": [],
+        "creditCode": null,
+        "province": "湖南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资",
+            "amountYuan": 41030,
+            "authority": "湘西州人力资源和社会保障局",
+            "decisionNo": "州人社监列决字〔2026〕1号",
+            "legalRep": "黄明辉",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-07-16",
+            "listedAt": "2026-07-16",
+            "expiresAt": "2029-07-16"
+          },
+          "sourceUrl": "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+          "sourceTitle": "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+          "sourcePublishedAt": "2026-07-24",
+          "fetchedAt": "2026-11-24T02:56:47.840Z",
+          "snapshotFile": "data/snapshots/hunan-2026-q2-list.docx",
+          "ingestRunId": "81faeefa-5529-4523-89aa-46e6006e9c50",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    }
+  ]
+}

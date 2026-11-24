@@ -19,6 +19,10 @@ export const COVERED_REGIONS = [
   "广西壮族自治区",
   "青海省",
   "西藏自治区",
+  "新疆维吾尔自治区",
+  "宁夏回族自治区",
+  "海南省",
+  "湖南省",
 ] as const;
 
 /**
@@ -36,11 +40,7 @@ export const PENDING_REGIONS = [
   "吉林省",
   "上海市",
   "山东省",
-  "湖南省",
-  "海南省",
   "甘肃省",
-  "宁夏回族自治区",
-  "新疆维吾尔自治区",
 ] as const;
 
 export const COVERED_RISK_TYPES = ["劳动用工记录"] as const;

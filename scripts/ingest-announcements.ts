@@ -4,6 +4,8 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { inflateRawSync } from "node:zlib";
+import WordExtractor from "word-extractor";
+import * as XLSX from "xlsx";
 
 /**
  * 官方公开公告采集脚本。
@@ -52,8 +54,11 @@ export type SourceConfig = {
    */
   documentUrl?: string;
   documentFile?: string;
-  /** 附件类型，默认 docx。 */
-  documentType?: "docx" | "xlsx";
+  /**
+   * 附件类型，默认 docx。`xlsx` 同时覆盖 xlsx 与老版 xls：
+   * 运行时按文件头（ZIP / OLE2）自动选择读取方式。
+   */
+  documentType?: "docx" | "xlsx" | "xls";
   /** 表格类附件的阶段文案。 */
   stage?: string;
   stageLabel?: string;
@@ -63,7 +68,7 @@ export type SourceConfig = {
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-23.4";
+export const PARSER_VERSION = "2026-11-24.1";
 
 type IngestRunMeta = {
   id: string;
@@ -558,6 +563,138 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/xizang-2026-03.json",
     parser: parseParagraphCases,
   },
+  {
+    key: "xinjiang-2026-first-cases",
+    name: "新疆2026年第一批重大劳动保障违法行为公布",
+    region: "新疆维吾尔自治区",
+    url: "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+    publishedAt: "2026-08-24",
+    snapshotFile: "data/snapshots/xinjiang-2026-first-cases.doc",
+    documentFile: "data/snapshots/xinjiang-2026-first-cases.doc",
+    documentUrl: encodeURI(
+      "https://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6/files/新疆2026年第一批重大劳动保障违法行为公布.docx",
+    ),
+    outputFile: "data/companies/xinjiang-2026-first-cases.json",
+    parser: (text) =>
+      parseLegacyDocCases(
+        text,
+        "重大劳动保障违法行为社会公布",
+        "社会公布",
+      ),
+  },
+  {
+    key: "xinjiang-2026-first-list",
+    name: "新疆2026年第一批拖欠农民工工资失信联合惩戒对象名单公布",
+    region: "新疆维吾尔自治区",
+    url: "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+    publishedAt: "2026-08-24",
+    snapshotFile: "data/snapshots/xinjiang-2026-first-list.xls",
+    documentFile: "data/snapshots/xinjiang-2026-first-list.xls",
+    documentType: "xls",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl: encodeURI(
+      "https://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6/files/新疆2026年第一批拖欠农民工工资失信联合惩戒对象名单公布.xlsx",
+    ),
+    outputFile: "data/companies/xinjiang-2026-first-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "ningxia-2026-q2-cases",
+    name: "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+    region: "宁夏回族自治区",
+    url: "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+    publishedAt: "2026-07-09",
+    snapshotFile: "data/snapshots/ningxia-2026-q2-cases.doc",
+    documentFile: "data/snapshots/ningxia-2026-q2-cases.doc",
+    documentUrl:
+      "https://hrss.nx.gov.cn/gzdt/gsgg/202607/P020260709633176139254.doc",
+    outputFile: "data/companies/ningxia-2026-q2-cases.json",
+    parser: (text) =>
+      parseLegacyDocCases(
+        text,
+        "重大劳动保障违法行为社会公布",
+        "社会公布",
+      ),
+  },
+  {
+    key: "hainan-2026-second-list",
+    name: "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+    region: "海南省",
+    url: "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+    publishedAt: "2026-07-31",
+    snapshotFile: "data/snapshots/hainan-2026-second-list.xlsx",
+    documentFile: "data/snapshots/hainan-2026-second-list.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4/files/a056b0fdb4174483a1bc687133821a2d.xlsx",
+    outputFile: "data/companies/hainan-2026-second-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "hunan-2026-q3-cases",
+    name: "湖南省人力资源和社会保障厅关于公布2026年第三季度重大劳动保障违法案件的公告",
+    region: "湖南省",
+    url: "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202611/t20261123_34109978.html",
+    publishedAt: "2026-11-23",
+    snapshotFile: "data/snapshots/hunan-2026-q3-cases.doc",
+    documentFile: "data/snapshots/hunan-2026-q3-cases.doc",
+    documentUrl:
+      "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202611/34109978/files/6240feb42afc4fc68b72243b0a82b8cc.doc",
+    outputFile: "data/companies/hunan-2026-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "hunan-2026-q3-list",
+    name: "湖南省人力资源和社会保障厅关于公布2026年第三季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+    region: "湖南省",
+    url: "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202611/t20261123_34109977.html",
+    publishedAt: "2026-11-23",
+    snapshotFile: "data/snapshots/hunan-2026-q3-list.doc",
+    documentFile: "data/snapshots/hunan-2026-q3-list.doc",
+    documentUrl:
+      "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202611/34109977/files/b904f82816d2435ca4ff875c79c247d1.doc",
+    outputFile: "data/companies/hunan-2026-q3-list.json",
+    parser: (text) =>
+      parseNameListCases(
+        text,
+        "列入拖欠农民工工资失信联合惩戒对象名单",
+        "列入失信名单",
+      ),
+  },
+  {
+    key: "hunan-2026-q2-cases",
+    name: "湖南省人力资源和社会保障厅关于公布2026年第二季度重大劳动保障违法案件的公告",
+    region: "湖南省",
+    url: "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033166.html",
+    publishedAt: "2026-07-24",
+    snapshotFile: "data/snapshots/hunan-2026-q2-cases.docx",
+    documentFile: "data/snapshots/hunan-2026-q2-cases.docx",
+    documentUrl:
+      "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/34033166/files/5ee015f385c649d5b39fd5e6f1005f77.docx",
+    outputFile: "data/companies/hunan-2026-q2-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "hunan-2026-q2-list",
+    name: "湖南省人力资源和社会保障厅关于公布2026年第二季度拖欠农民工工资失信联合惩戒对象名单信息的公告",
+    region: "湖南省",
+    url: "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/t20260724_34033111.html",
+    publishedAt: "2026-07-24",
+    snapshotFile: "data/snapshots/hunan-2026-q2-list.docx",
+    documentFile: "data/snapshots/hunan-2026-q2-list.docx",
+    documentUrl:
+      "https://rst.hunan.gov.cn/rst/ztzl/gzqx/zdal/202607/34033111/files/9025ef5b0384432382fd4a390501068a.docx",
+    outputFile: "data/companies/hunan-2026-q2-list.json",
+    parser: (text) =>
+      parseNameListCases(
+        text,
+        "列入拖欠农民工工资失信联合惩戒对象名单",
+        "列入失信名单",
+      ),
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -1001,6 +1138,102 @@ export function parseTextTableCases(text: string): ParseResult {
 }
 
 
+/**
+ * 老版 Word（.doc）附件没有可直接读取的行列结构，只能拿到以制表符/换行
+ * 分隔的文本。这里以 18 位信用代码为锚点：向前找企业名称（优先以
+ * “公司/厂/中心”等主体后缀结尾的片段，避免误取地址），向后找违法事实。
+ * 适用于“序号/企业名称/…/信用代码/主要违法事实/处理情况”的省级模板。
+ */
+export function parseLegacyDocCases(
+  text: string,
+  stage = "重大劳动保障违法行为社会公布",
+  stageLabel = "社会公布",
+): ParseResult {
+  const tokens = text
+    .split(/[\t\n\r]+/)
+    .map((token) => token.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const cases: ParsedCase[] = [];
+  const warnings: string[] = [];
+  const seen = new Set<string>();
+  const companySuffix =
+    /(?:有限责任公司|股份有限公司|有限公司|公司|集团|厂|中心|超市|幼儿园|服务部|经营部|工作室|合作社|商行|店|馆)$/;
+
+  for (let index = 0; index < tokens.length; index += 1) {
+    const creditCode = CODE_RE.exec(tokens[index])?.[0];
+    if (!creditCode || seen.has(creditCode)) continue;
+
+    let name = "";
+    for (let offset = 1; offset <= 6; offset += 1) {
+      const candidate = normalizeCompanyName(tokens[index - offset] ?? "");
+      if (candidate.length < 4 || CODE_RE.test(candidate)) continue;
+      if (companySuffix.test(candidate)) {
+        name = candidate;
+        break;
+      }
+    }
+
+    if (!name) {
+      // 附件表格末尾常附“认定部门代码”（也是 18 位），它不是企业主体，
+      // 不必为它产生噪声警告。
+      const nearby = tokens.slice(Math.max(0, index - 6), index + 2).join(" ");
+      if (!/认定部门|行政部门|人力资源和社会保障局/.test(nearby)) {
+        warnings.push(`第 ${index + 1} 个单元格：无法识别公司名，已跳过`);
+      }
+      continue;
+    }
+
+    let violation = "";
+    for (let offset = 1; offset <= 6; offset += 1) {
+      const candidate = tokens[index + offset] ?? "";
+      if (CODE_RE.test(candidate)) break;
+      if (
+        candidate.length >= 8 &&
+        /(拖欠|欠薪|未依法|拒不|违法)/.test(candidate)
+      ) {
+        violation = candidate;
+        break;
+      }
+    }
+
+    const blockText = tokens
+      .slice(Math.max(0, index - 3), index + 8)
+      .join(" ");
+    const authority = lastAuthority(blockText);
+    const legalRep = /法定代表人(?:或负责人|或相关责任人)?\s*[：:]\s*([\u4e00-\u9fa5·]{2,12})/.exec(
+      blockText,
+    )?.[1];
+
+    const caseWarnings: string[] = [];
+    if (!violation) caseWarnings.push(`${name}：未解析到违法事实`);
+    if (!authority) caseWarnings.push(`${name}：未解析到决定机关`);
+
+    const amountYuan = parseAmount(violation);
+    const workerCount = parseWorkerCount(violation);
+    if (amountYuan === undefined) caseWarnings.push(`${name}：未解析到欠薪金额`);
+    if (workerCount === undefined) caseWarnings.push(`${name}：未解析到欠薪人数`);
+
+    seen.add(creditCode);
+    cases.push({
+      name,
+      creditCode,
+      legalRep,
+      violation: violation || "拖欠劳动者劳动报酬",
+      workerCount,
+      amountYuan,
+      authority,
+      stage,
+      stageLabel,
+      city: cityFromAuthority(authority),
+      warnings: caseWarnings,
+    });
+  }
+
+  warnings.push(...cases.flatMap((item) => item.warnings));
+  return { cases, warnings };
+}
+
 export function parseTableCases(html: string): ParseResult {
   const cases: ParsedCase[] = [];
   const warnings: string[] = [];
@@ -1225,6 +1458,124 @@ export function parseParagraphCases(html: string): ParseResult {
 
   warnings.push(...cases.flatMap((item) => item.warnings));
   return { cases, warnings };
+}
+
+/**
+ * 部分省级“失信名单”附件只有企业名称、没有统一社会信用代码
+ * （如湖南的季度汇总表）。这里以“企业名称 + 法定代表人”相邻出现作为
+ * 记录锚点，向后取列入事由、金额、列入日期、认定部门与文书号。
+ */
+export function parseNameListCases(
+  text: string,
+  stage = "列入拖欠农民工工资失信联合惩戒对象名单",
+  stageLabel = "列入失信名单",
+): ParseResult {
+  const tokens = text
+    .split(/[\t\n\r]+/)
+    .map((token) => token.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const cases: ParsedCase[] = [];
+  const warnings: string[] = [];
+  const seen = new Set<string>();
+  const companySuffix =
+    /(?:有限责任公司|股份有限公司|有限公司|公司|集团|厂|中心|超市|幼儿园|服务部|经营部|工作室|合作社|商行|店|馆|酒吧)$/;
+  // 湖南等省的汇总表在表头标注金额单位为万元，需按 1 万元 = 10000 元换算。
+  const amountInWan = /涉及金额[\s\S]{0,8}万元/.test(text);
+
+  for (let index = 0; index < tokens.length; index += 1) {
+    const candidate = normalizeCompanyName(tokens[index]);
+    if (
+      candidate.length < 4 ||
+      !companySuffix.test(candidate) ||
+      CODE_RE.test(candidate) ||
+      seen.has(candidate)
+    ) {
+      continue;
+    }
+
+    const legalRep = tokens[index + 1] ?? "";
+    // 记录锚点必须紧跟一个人名，避免把标题、说明文字误判为企业。
+    if (!/^[\u4e00-\u9fa5·]{2,6}$/.test(legalRep)) continue;
+
+    const window = tokens.slice(index + 1, index + 12);
+    let violation = "";
+    let amountYuan: number | undefined;
+    let listedAt: string | undefined;
+    let expiresAt: string | undefined;
+    let authority: string | undefined;
+    let decisionNo: string | undefined;
+
+    for (const token of window) {
+      if (!violation && /^(?:拖欠|欠薪|拒不)/.test(token)) {
+        violation = token;
+        continue;
+      }
+      if (amountYuan === undefined && /^\d+(?:\.\d+)?$/.test(token)) {
+        const numeric = Number(token);
+        if (Number.isFinite(numeric) && numeric > 0) {
+          amountYuan = Math.round(numeric * (amountInWan ? 10000 : 1));
+        }
+        continue;
+      }
+      if (!authority) {
+        authority = AUTHORITY_RE.exec(token)?.[0];
+      }
+      if (!decisionNo && /决字/.test(token)) {
+        decisionNo = token;
+        continue;
+      }
+      const date = parseDate(token);
+      if (date) {
+        if (!listedAt) listedAt = date;
+        else if (!expiresAt) expiresAt = date;
+      }
+    }
+
+    seen.add(candidate);
+    cases.push({
+      name: candidate,
+      legalRep,
+      violation: violation || "拖欠农民工工资",
+      amountYuan,
+      authority,
+      decisionNo,
+      listedAt,
+      expiresAt,
+      stage,
+      stageLabel,
+      stageDate: listedAt,
+      city: cityFromAuthority(authority),
+      warnings: [],
+    });
+  }
+
+  if (cases.length === 0) {
+    warnings.push("名单附件中未识别到“企业名称 + 法定代表人”形式的记录");
+  }
+
+  return { cases, warnings };
+}
+
+/**
+ * 重大劳动保障违法案件正文里的非欠薪案件（如未经许可职业中介）
+ * 不属于欠薪信号，导入前按违法事实过滤，避免 subtype 误标。
+ */
+export function parseWageParagraphCases(html: string): ParseResult {
+  // 先按“一、二、三……”小标题切块，丢掉非欠薪案件（如未经许可职业中介），
+  // 再交给段落解析器，避免默认违法事实把非欠薪案件误算成欠薪信号。
+  const lines = htmlToText(html).split("\n");
+  const keptLines: string[] = [];
+  let keepBlock = true;
+
+  for (const line of lines) {
+    if (isCaseHeading(line)) {
+      keepBlock = /拖欠|欠薪|工资|劳动报酬/.test(line);
+    }
+    if (keepBlock) keptLines.push(line);
+  }
+
+  return parseParagraphCases(keptLines.join("\n"));
 }
 
 export function dedupeCases(cases: ParsedCase[]): {
@@ -1499,6 +1850,37 @@ function readZipEntry(buffer: Buffer, entryName: string): Buffer | null {
   return null;
 }
 
+/**
+ * 老版 Office（Word 97-2003 .doc / Excel 97-2003 .xls）是 OLE2 复合文档，
+ * 文件头固定为 D0 CF 11 E0 A1 B1 1A E1。部分省级站点会把这类文件
+ * 直接标成 .docx/.xlsx 发布，因此不能只看扩展名。
+ */
+export function isOle2Buffer(buffer: Buffer): boolean {
+  return (
+    buffer.length >= 8 &&
+    buffer[0] === 0xd0 &&
+    buffer[1] === 0xcf &&
+    buffer[2] === 0x11 &&
+    buffer[3] === 0xe0 &&
+    buffer[4] === 0xa1 &&
+    buffer[5] === 0xb1 &&
+    buffer[6] === 0x1a &&
+    buffer[7] === 0xe1
+  );
+}
+
+/** 从 Word 97-2003 .doc 提取正文纯文本（保留制表符与换行）。 */
+export async function legacyDocToText(buffer: Buffer): Promise<string> {
+  const extractor = new WordExtractor();
+  const document = await extractor.extract(buffer);
+  return document.getBody();
+}
+
+/** 按文件头把 Word 附件转成纯文本：OLE2 走老版解析，ZIP 走 docx。 */
+export async function documentToText(buffer: Buffer): Promise<string> {
+  return isOle2Buffer(buffer) ? legacyDocToText(buffer) : docxToText(buffer);
+}
+
 /** 从 docx 提取正文纯文本，保留段落与表格单元格换行。 */
 export function docxToText(buffer: Buffer): string {
   const xml = readZipEntry(buffer, "word/document.xml")?.toString("utf8") ?? "";
@@ -1590,6 +1972,39 @@ export function xlsxToRows(buffer: Buffer): string[][] {
   return rows;
 }
 
+/**
+ * 表格附件统一入口：ZIP 包按现有轻量解析器读取；
+ * OLE2（老版 .xls）交给 SheetJS 的 BIFF 读取器。
+ */
+export function spreadsheetToRows(buffer: Buffer): string[][] {
+  if (!isOle2Buffer(buffer)) return xlsxToRows(buffer);
+
+  const workbook = XLSX.read(buffer, { type: "buffer", cellDates: true });
+  const sheet = workbook.Sheets[workbook.SheetNames[0]];
+  if (!sheet) return [];
+
+  const rows = XLSX.utils.sheet_to_json<unknown[]>(sheet, {
+    header: 1,
+    raw: true,
+    defval: "",
+  });
+
+  return rows
+    .map((row) =>
+      row.map((cell) => {
+        if (cell instanceof Date) {
+          // SheetJS 的 cellDates 按本地时区构造日期，直接 toISOString
+          // 在 UTC+8 会退到前一天，这里按本地年月日格式化。
+          return `${cell.getFullYear()}-${pad2(cell.getMonth() + 1)}-${pad2(
+            cell.getDate(),
+          )}`;
+        }
+        return String(cell ?? "").replace(/\s+/g, " ").trim();
+      }),
+    )
+    .filter((row) => row.some((cell) => cell !== ""));
+}
+
 /** Excel 日期序列号转 ISO 日期。 */
 function excelDateToIso(value: string): string | undefined {
   const numeric = Number(value);
@@ -1606,11 +2021,17 @@ export function parseXlsxCases(
   stage = "列入重大劳动保障违法行为社会公布",
   stageLabel = "社会公布",
 ): ParseResult {
-  const rows = xlsxToRows(buffer);
+  const rows = spreadsheetToRows(buffer);
   const headerIndex = rows.findIndex(
     (row) =>
-      row.some((cell) => /单位名称/.test(cell)) &&
-      row.some((cell) => /统一社会信用代码|信用代码|工商注册号/.test(cell)),
+      row.some((cell) =>
+        /单位名称|企业名称|公司名称|用人单位|对象名称/.test(cell),
+      ) &&
+      row.some((cell) =>
+        /统一社会信用代码|信用代码|工商注册号|注册号|对象证件号码|证件号码/.test(
+          cell,
+        ),
+      ),
   );
 
   if (headerIndex < 0) {
@@ -1621,10 +2042,16 @@ export function parseXlsxCases(
   const findColumn = (pattern: RegExp) =>
     header.findIndex((cell) => pattern.test(cell));
 
-  const nameIndex = findColumn(/单位名称/);
-  const codeIndex = findColumn(/统一社会信用代码|信用代码|工商注册号/);
-  const violationIndex = findColumn(/违法事实/);
-  const authorityIndex = findColumn(/公布机构|作出列入决定部门|决定部门/);
+  const nameIndex = findColumn(
+    /单位名称|企业名称|公司名称|用人单位|对象名称/,
+  );
+  const codeIndex = findColumn(
+    /统一社会信用代码|信用代码|工商注册号|注册号|对象证件号码|证件号码/,
+  );
+  const violationIndex = findColumn(/违法事实|列入名单事由|列入事由/);
+  const authorityIndex = findColumn(
+    /公布机构|作出列入决定部门|决定部门|认定部门/,
+  );
   const decisionIndex = findColumn(/文书号/);
   const listedIndex = findColumn(/列入日期/);
   const expiresIndex = findColumn(/到期日期|退出日期/);
@@ -1634,6 +2061,9 @@ export function parseXlsxCases(
   const warnings: string[] = [];
 
   for (const row of rows.slice(headerIndex + 1)) {
+    // 名单里可能混有“自然人”欠薪记录，本平台只登记用人单位主体。
+    if (row.some((cell) => cell.trim() === "自然人")) continue;
+
     const creditCode = CODE_RE.exec(row[codeIndex] ?? "")?.[0];
     const name = normalizeCompanyName(row[nameIndex] ?? "");
 
@@ -1784,9 +2214,9 @@ async function main() {
           }
         }
         html =
-          source.documentType === "xlsx"
+          source.documentType === "xlsx" || source.documentType === "xls"
             ? ""
-            : docxToText(documentBuffer);
+            : await documentToText(documentBuffer);
       } else if (offline) {
         html = await readFile(
           path.resolve(process.cwd(), source.snapshotFile),
@@ -1810,7 +2240,8 @@ async function main() {
 
       const publishedAt = parsePublishedAt(html, source.publishedAt);
       const parsed =
-        source.documentType === "xlsx" && documentBuffer
+        (source.documentType === "xlsx" || source.documentType === "xls") &&
+        documentBuffer
           ? parseXlsxCases(documentBuffer, source.stage, source.stageLabel)
           : source.parser(html);
       const { cases, duplicates } = dedupeCases(parsed.cases);

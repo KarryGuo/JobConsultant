@@ -1,0 +1,239 @@
+{
+  "source": {
+    "key": "hainan-2026-second-list",
+    "name": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "海南省",
+    "baseUrl": "https://hrss.hainan.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+    "url": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+    "publishedAt": "2026-07-31",
+    "fetchedAt": "2026-11-24T02:56:47.808Z",
+    "snapshotFile": "data/snapshots/hainan-2026-second-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "e661d6ca-dde7-4962-a932-eb95e18150bd",
+    "sourceKey": "hainan-2026-second-list",
+    "sourceUrl": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+    "parserVersion": "2026-11-24.1",
+    "status": "success",
+    "startedAt": "2026-11-24T02:56:47.804Z",
+    "finishedAt": "2026-11-24T02:56:47.808Z",
+    "httpStatus": null,
+    "contentHash": "b7914e7e22b3561b0128b21b95f8af8c60d60e3cb3b4a17d639180fd6bfc7e95",
+    "snapshotPath": "data/snapshots/hainan-2026-second-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "屯昌屯城奈斯派对服务酒吧",
+        "aliases": [],
+        "creditCode": "92460000MAECH9P509",
+        "province": "海南省",
+        "city": "屯昌县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠36名职工工资154698元。经屯昌县综合行政执法局责令改正仍拒不改正。",
+            "workerCount": 36,
+            "amountYuan": 154698,
+            "authority": "屯昌县人力资源和社会保障局",
+            "decisionNo": "屯人社监列决字 〔2026〕1号",
+            "legalRep": "符翔瑞",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-10",
+            "listedAt": "2026-06-10",
+            "expiresAt": "2029-06-09"
+          },
+          "sourceUrl": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+          "sourceTitle": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-24T02:56:47.808Z",
+          "snapshotFile": "data/snapshots/hainan-2026-second-list.xlsx",
+          "ingestRunId": "e661d6ca-dde7-4962-a932-eb95e18150bd",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "海南富励建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91460000MAD0F94TXB",
+        "province": "海南省",
+        "city": "三亚市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠张某某等 6 名工人工资 60389 元。经三亚市综合行政执法局海棠分局责令改正仍拒不改正。",
+            "workerCount": 6,
+            "amountYuan": 60389,
+            "authority": "三亚市海棠区人力资源和社会保障局",
+            "decisionNo": "海棠人社监列决字 〔2026〕6号",
+            "legalRep": "蒋海登",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-10",
+            "listedAt": "2026-06-10",
+            "expiresAt": "2029-06-09"
+          },
+          "sourceUrl": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+          "sourceTitle": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-24T02:56:47.808Z",
+          "snapshotFile": "data/snapshots/hainan-2026-second-list.xlsx",
+          "ingestRunId": "e661d6ca-dde7-4962-a932-eb95e18150bd",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "海南鹏瑞建筑劳务服务有限公司",
+        "aliases": [],
+        "creditCode": "9146030057872761XG",
+        "province": "海南省",
+        "city": "三亚市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠李某等 36 名工人工资 784523.5 元，经三亚市综合行政执法局吉阳分局责令改正仍拒不改正。",
+            "workerCount": 36,
+            "amountYuan": 784524,
+            "authority": "三亚市吉阳区人力资源和社会保障局",
+            "decisionNo": "吉人社列决字〔2026〕1号",
+            "legalRep": "代斌",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-30",
+            "listedAt": "2026-06-30",
+            "expiresAt": "2029-06-29"
+          },
+          "sourceUrl": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+          "sourceTitle": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-24T02:56:47.808Z",
+          "snapshotFile": "data/snapshots/hainan-2026-second-list.xlsx",
+          "ingestRunId": "e661d6ca-dde7-4962-a932-eb95e18150bd",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "金刚幕墙集团有限公司",
+        "aliases": [],
+        "creditCode": "914401017799662621",
+        "province": "海南省",
+        "city": "三亚市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠郑某等22名劳动者工资395106元，经三亚市综合行政执法局吉阳分局责令改正仍拒不改正。",
+            "workerCount": 22,
+            "amountYuan": 395106,
+            "authority": "三亚市吉阳区人力资源和社会保障局",
+            "decisionNo": "吉人社列决字〔2026〕2号",
+            "legalRep": "耿天勇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-30",
+            "listedAt": "2026-06-30",
+            "expiresAt": "2029-06-29"
+          },
+          "sourceUrl": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+          "sourceTitle": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-24T02:56:47.808Z",
+          "snapshotFile": "data/snapshots/hainan-2026-second-list.xlsx",
+          "ingestRunId": "e661d6ca-dde7-4962-a932-eb95e18150bd",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中洋一诺(海南)建设集团有限公司",
+        "aliases": [],
+        "creditCode": "91460100MA5T7DNB24",
+        "province": "海南省",
+        "city": "临高县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠刘某等4名工人工资合计85000元，经临高县综合行政执法局责令改正仍拒不改正。",
+            "workerCount": 4,
+            "amountYuan": 85000,
+            "authority": "临高县人力资源和社会保障局",
+            "decisionNo": "临人社监列决字 〔2026〕3号",
+            "legalRep": "冯妮菊",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-06-12",
+            "listedAt": "2026-06-12",
+            "expiresAt": "2026-06-11"
+          },
+          "sourceUrl": "https://hrss.hainan.gov.cn/hrss/1000/202608/1969fc6ef3f740beb3a007eb948008c4.shtml",
+          "sourceTitle": "海南省人力资源和社会保障厅关于公布2026年第二批拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2026-07-31",
+          "fetchedAt": "2026-11-24T02:56:47.808Z",
+          "snapshotFile": "data/snapshots/hainan-2026-second-list.xlsx",
+          "ingestRunId": "e661d6ca-dde7-4962-a932-eb95e18150bd",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    }
+  ]
+}

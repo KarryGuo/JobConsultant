@@ -1,0 +1,115 @@
+{
+  "source": {
+    "key": "xinjiang-2026-first-list",
+    "name": "新疆2026年第一批拖欠农民工工资失信联合惩戒对象名单公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "新疆维吾尔自治区",
+    "baseUrl": "http://rst.xinjiang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "新疆2026年第一批拖欠农民工工资失信联合惩戒对象名单公布",
+    "url": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+    "publishedAt": "2026-08-24",
+    "fetchedAt": "2026-11-24T02:56:47.794Z",
+    "snapshotFile": "data/snapshots/xinjiang-2026-first-list.xls"
+  },
+  "ingestRun": {
+    "id": "3c7aedcf-58d7-42e4-b237-c3fa834a3503",
+    "sourceKey": "xinjiang-2026-first-list",
+    "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+    "parserVersion": "2026-11-24.1",
+    "status": "success",
+    "startedAt": "2026-11-24T02:56:47.781Z",
+    "finishedAt": "2026-11-24T02:56:47.795Z",
+    "httpStatus": null,
+    "contentHash": "c6671f14fd5b23e40ced735f8ef7979990034c5bf21468448917b6ecd943c824",
+    "snapshotPath": "data/snapshots/xinjiang-2026-first-list.xls",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "阿克苏华鹏建筑安装工程有限公司",
+        "aliases": [],
+        "creditCode": "91652901564388223A",
+        "province": "新疆维吾尔自治区",
+        "city": "昭苏县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠647名劳动者劳动报酬1131.7万元，拒不履行。",
+            "workerCount": 647,
+            "amountYuan": 11317000,
+            "authority": "昭苏县人力资源和社会保障局",
+            "legalRep": "李宗谕",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-03-10",
+            "listedAt": "2026-03-10"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+          "sourceTitle": "新疆2026年第一批拖欠农民工工资失信联合惩戒对象名单公布",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-24T02:56:47.794Z",
+          "snapshotFile": "data/snapshots/xinjiang-2026-first-list.xls",
+          "ingestRunId": "3c7aedcf-58d7-42e4-b237-c3fa834a3503",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆盛能建设工程有限公司",
+        "aliases": [],
+        "creditCode": "9165290132889452XD",
+        "province": "新疆维吾尔自治区",
+        "city": "阿克苏市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠71名劳动者劳动报酬56.31万元，拒不履行。",
+            "workerCount": 71,
+            "amountYuan": 563100,
+            "authority": "阿克苏市人力资源和社会保障局",
+            "legalRep": "刘 菁",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2026-03-10",
+            "listedAt": "2026-03-10"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+          "sourceTitle": "新疆2026年第一批拖欠农民工工资失信联合惩戒对象名单公布",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-24T02:56:47.794Z",
+          "snapshotFile": "data/snapshots/xinjiang-2026-first-list.xls",
+          "ingestRunId": "3c7aedcf-58d7-42e4-b237-c3fa834a3503",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    }
+  ]
+}

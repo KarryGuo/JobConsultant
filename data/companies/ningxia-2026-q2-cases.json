@@ -1,0 +1,179 @@
+{
+  "source": {
+    "key": "ningxia-2026-q2-cases",
+    "name": "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "宁夏回族自治区",
+    "baseUrl": "https://hrss.nx.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+    "url": "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+    "publishedAt": "2026-07-09",
+    "fetchedAt": "2026-11-24T02:56:47.802Z",
+    "snapshotFile": "data/snapshots/ningxia-2026-q2-cases.doc"
+  },
+  "ingestRun": {
+    "id": "97b42c38-a5d9-452a-926e-79121f92dc44",
+    "sourceKey": "ningxia-2026-q2-cases",
+    "sourceUrl": "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+    "parserVersion": "2026-11-24.1",
+    "status": "success",
+    "startedAt": "2026-11-24T02:56:47.797Z",
+    "finishedAt": "2026-11-24T02:56:47.802Z",
+    "httpStatus": null,
+    "contentHash": "3733faa844bd422d44793fb2a9593da0637a60db529f78c9bd3e37020fe9e1a8",
+    "snapshotPath": "data/snapshots/ningxia-2026-q2-cases.doc",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "石嘴山市宝利源特种合金有限公司",
+        "aliases": [],
+        "creditCode": "916402006704136998",
+        "province": "宁夏回族自治区",
+        "city": "石嘴山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "石嘴山市宝利源特种合金有限公司存在拖欠96名职工2024年至2025年期间（7个月）工资共计158.5万元。",
+            "workerCount": 96,
+            "amountYuan": 1585000,
+            "authority": "石嘴山市惠农区人力资源和社会保障局",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+          "sourceTitle": "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+          "sourcePublishedAt": "2026-07-09",
+          "fetchedAt": "2026-11-24T02:56:47.802Z",
+          "snapshotFile": "data/snapshots/ningxia-2026-q2-cases.doc",
+          "ingestRunId": "97b42c38-a5d9-452a-926e-79121f92dc44",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东瑞邦环保科技有限公司",
+        "aliases": [],
+        "creditCode": "91370303MA3D5YE622",
+        "province": "宁夏回族自治区",
+        "city": "石嘴山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "山东瑞邦环保科技有限公司承建丹斯克化工公司厂区设备安装工程期间存在拖欠代保华等45名农民工工资共计61.5万元。",
+            "workerCount": 45,
+            "amountYuan": 615000,
+            "authority": "石嘴山市惠农区人力资源和社会保障局",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+          "sourceTitle": "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+          "sourcePublishedAt": "2026-07-09",
+          "fetchedAt": "2026-11-24T02:56:47.802Z",
+          "snapshotFile": "data/snapshots/ningxia-2026-q2-cases.doc",
+          "ingestRunId": "97b42c38-a5d9-452a-926e-79121f92dc44",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "宁夏荣华缘特种新材料有限公司",
+        "aliases": [],
+        "creditCode": "91640205763200481L",
+        "province": "宁夏回族自治区",
+        "city": "石嘴山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "宁夏荣华缘特种新材料有限公司拖欠200名职工2026年1月工资92.9万元。",
+            "workerCount": 200,
+            "amountYuan": 929000,
+            "authority": "石嘴山市惠农区人力资源和社会保障局",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+          "sourceTitle": "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+          "sourcePublishedAt": "2026-07-09",
+          "fetchedAt": "2026-11-24T02:56:47.802Z",
+          "snapshotFile": "data/snapshots/ningxia-2026-q2-cases.doc",
+          "ingestRunId": "97b42c38-a5d9-452a-926e-79121f92dc44",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "银川天骐热动力设备有限公司",
+        "aliases": [],
+        "creditCode": "91640100694330150T",
+        "province": "宁夏回族自治区",
+        "city": "石嘴山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "银川天骐热动力设备有限公司承建宁夏拓航油脂有限公司100TPD胡麻籽油精炼脱蜡生产线车间外围分项安装工程期间，拖欠12名务工人员工资11.3万元。",
+            "workerCount": 12,
+            "amountYuan": 113000,
+            "authority": "石嘴山市平罗县人力资源和社会保障局",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.nx.gov.cn/gzdt/gsgg/202607/t20260709_5285997.html",
+          "sourceTitle": "宁夏回族自治区2026年第二季度重大劳动保障违法行为信息表",
+          "sourcePublishedAt": "2026-07-09",
+          "fetchedAt": "2026-11-24T02:56:47.802Z",
+          "snapshotFile": "data/snapshots/ningxia-2026-q2-cases.doc",
+          "ingestRunId": "97b42c38-a5d9-452a-926e-79121f92dc44",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    }
+  ]
+}

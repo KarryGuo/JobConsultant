@@ -1,0 +1,111 @@
+{
+  "source": {
+    "key": "xinjiang-2026-first-cases",
+    "name": "新疆2026年第一批重大劳动保障违法行为公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "新疆维吾尔自治区",
+    "baseUrl": "http://rst.xinjiang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "新疆2026年第一批重大劳动保障违法行为公布",
+    "url": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+    "publishedAt": "2026-08-24",
+    "fetchedAt": "2026-11-24T02:56:47.778Z",
+    "snapshotFile": "data/snapshots/xinjiang-2026-first-cases.doc"
+  },
+  "ingestRun": {
+    "id": "72a9b340-5119-4a6a-b7de-5050c109b73b",
+    "sourceKey": "xinjiang-2026-first-cases",
+    "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+    "parserVersion": "2026-11-24.1",
+    "status": "success",
+    "startedAt": "2026-11-24T02:56:47.765Z",
+    "finishedAt": "2026-11-24T02:56:47.778Z",
+    "httpStatus": null,
+    "contentHash": "ab86bb87ee76915bfb31b78af687a0d22bbc5f93a5f6b0c617593c7f771c9a83",
+    "snapshotPath": "data/snapshots/xinjiang-2026-first-cases.doc",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "新疆护翼新材料科技有限公司",
+        "aliases": [],
+        "creditCode": "91653126MA78N66J24",
+        "province": "新疆维吾尔自治区",
+        "city": "叶城县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠165名劳动者劳动报酬150.21万元，拒不履行。",
+            "workerCount": 165,
+            "amountYuan": 1502100,
+            "authority": "叶城县人力资源和社会保障局",
+            "legalRep": "姜伟",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+          "sourceTitle": "新疆2026年第一批重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-24T02:56:47.778Z",
+          "snapshotFile": "data/snapshots/xinjiang-2026-first-cases.doc",
+          "ingestRunId": "72a9b340-5119-4a6a-b7de-5050c109b73b",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆云兴建筑装饰设计工程有限责任公司",
+        "aliases": [],
+        "creditCode": "91653101MAECQ1614J",
+        "province": "新疆维吾尔自治区",
+        "city": "阿克陶县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠耿某、齐某等30名劳动者劳动报酬33.94万元，拒不履行。",
+            "workerCount": 30,
+            "amountYuan": 339400,
+            "authority": "阿克陶县人力资源和社会保障局",
+            "legalRep": "陈小影",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112681/202608/2065b8ab1d48475699d585f35b5585b6.shtml",
+          "sourceTitle": "新疆2026年第一批重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-08-24",
+          "fetchedAt": "2026-11-24T02:56:47.778Z",
+          "snapshotFile": "data/snapshots/xinjiang-2026-first-cases.doc",
+          "ingestRunId": "72a9b340-5119-4a6a-b7de-5050c109b73b",
+          "parserVersion": "2026-11-24.1"
+        }
+      ]
+    }
+  ]
+}

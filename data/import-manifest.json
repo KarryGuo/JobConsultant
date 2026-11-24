@@ -48,6 +48,14 @@
     "companies/qinghai-2026-q1.json",
     "companies/qinghai-2026-q2.json",
     "companies/xizang-2026-07.json",
-    "companies/xizang-2026-03.json"
+    "companies/xizang-2026-03.json",
+    "companies/xinjiang-2026-first-cases.json",
+    "companies/xinjiang-2026-first-list.json",
+    "companies/ningxia-2026-q2-cases.json",
+    "companies/hainan-2026-second-list.json",
+    "companies/hunan-2026-q2-cases.json",
+    "companies/hunan-2026-q2-list.json",
+    "companies/hunan-2026-q3-cases.json",
+    "companies/hunan-2026-q3-list.json"
   ]
 }
