@@ -68,7 +68,7 @@ export type SourceConfig = {
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-24.6";
+export const PARSER_VERSION = "2026-11-24.7";
 
 type IngestRunMeta = {
   id: string;
@@ -1317,6 +1317,92 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/xinjiang-2025-q4-list.json",
     parser: parseTextTableCases,
   },
+  {
+    key: "yunnan-2025-q1-cases",
+    name: "云南省人力资源和社会保障厅关于公布2025年第一批重大劳动保障违法案例的公告（PDF 转文本）",
+    region: "云南省",
+    url: "https://gzw.yn.gov.cn/gzjg/khfp/202505/t20250507_3033345.html",
+    publishedAt: "2025-05-07",
+    snapshotFile: "data/snapshots/yunnan-2025-q1-cases.txt",
+    outputFile: "data/companies/yunnan-2025-q1-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "yunnan-2025-q3-cases",
+    name: "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+    region: "云南省",
+    url: "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+    publishedAt: "2025-10-31",
+    snapshotFile: "data/snapshots/yunnan-2025-q3-cases.txt",
+    outputFile: "data/companies/yunnan-2025-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "xizang-2025-q3-cases",
+    name: "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+    region: "西藏自治区",
+    url: "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+    publishedAt: "2025-09-29",
+    snapshotFile: "data/snapshots/xizang-2025-q3-cases.html",
+    outputFile: "data/companies/xizang-2025-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "qinghai-2025-q4-cases",
+    name: "青海省人力资源和社会保障厅公布2025年第四季度重大劳动保障违法行为典型案件",
+    region: "青海省",
+    url: "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202601161029220411.html",
+    publishedAt: "2026-01-16",
+    snapshotFile: "data/snapshots/qinghai-2025-q4-cases.html",
+    outputFile: "data/companies/qinghai-2025-q4-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "qinghai-2025-q3-list",
+    name: "青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单",
+    region: "青海省",
+    url: "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202511061546366273.html",
+    publishedAt: "2025-11-06",
+    snapshotFile: "data/snapshots/qinghai-2025-q3-list.html",
+    outputFile: "data/companies/qinghai-2025-q3-list.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "ningxia-2025-q3-cases",
+    name: "自治区人力资源和社会保障厅关于公布重大劳动保障违法行为的通告（2025年7月）",
+    region: "宁夏回族自治区",
+    url: "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202507/t20250718_4965141.html",
+    publishedAt: "2025-07-18",
+    snapshotFile: "data/snapshots/ningxia-2025-q3-cases.doc",
+    documentFile: "data/snapshots/ningxia-2025-q3-cases.doc",
+    documentUrl:
+      "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202507/P020250718565756286924.doc",
+    outputFile: "data/companies/ningxia-2025-q3-cases.json",
+    parser: (text) =>
+      parseLegacyDocCases(
+        text,
+        "重大劳动保障违法行为社会公布",
+        "社会公布",
+      ),
+  },
+  {
+    key: "ningxia-2026-q1-cases",
+    name: "自治区人力资源和社会保障厅关于公布重大劳动保障违法行为和拖欠农民工工资失信联合惩戒对象名单的通告（2026年1月）",
+    region: "宁夏回族自治区",
+    url: "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202601/t20260112_5133039.html",
+    publishedAt: "2026-01-12",
+    snapshotFile: "data/snapshots/ningxia-2026-q1-cases.doc",
+    documentFile: "data/snapshots/ningxia-2026-q1-cases.doc",
+    documentUrl:
+      "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202601/P020260112629270928017.doc",
+    outputFile: "data/companies/ningxia-2026-q1-cases.json",
+    parser: (text) =>
+      parseLegacyDocCases(
+        text,
+        "重大劳动保障违法行为社会公布",
+        "社会公布",
+      ),
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
@@ -1831,7 +1917,12 @@ export function parseLegacyDocCases(
 
   for (let index = 0; index < tokens.length; index += 1) {
     const creditCode = CODE_RE.exec(tokens[index])?.[0];
-    if (!creditCode || isIdCardNumber(creditCode) || seen.has(creditCode)) {
+    if (
+      !creditCode ||
+      /X{2,}|\*{2,}/.test(creditCode) ||
+      isIdCardNumber(creditCode) ||
+      seen.has(creditCode)
+    ) {
       continue;
     }
 
@@ -2068,7 +2159,12 @@ export function parseParagraphCases(html: string): ParseResult {
         ? normalizeCompanyName(beforeCode)
         : normalizeCompanyName(headingName);
 
-    if (name.length < 4 || !COMPANY_HINT_RE.test(name)) {
+    if (
+      name.length < 4 ||
+      !COMPANY_HINT_RE.test(name) ||
+      // 标题被换行截断后只剩“集团有限公司”，不能作为主体名。
+      /^(?:集团|公司|有限责任公司|股份有限公司|有限公司)/.test(name)
+    ) {
       warnings.push(`第 ${lineIndex + 1} 行：无法识别公司名，已跳过`);
       continue;
     }

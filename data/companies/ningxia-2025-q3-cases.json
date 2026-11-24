@@ -1,0 +1,108 @@
+{
+  "source": {
+    "key": "ningxia-2025-q3-cases",
+    "name": "自治区人力资源和社会保障厅关于公布重大劳动保障违法行为的通告（2025年7月）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "宁夏回族自治区",
+    "baseUrl": "https://hrss.nx.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "自治区人力资源和社会保障厅关于公布重大劳动保障违法行为的通告（2025年7月）",
+    "url": "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202507/t20250718_4965141.html",
+    "publishedAt": "2025-07-18",
+    "fetchedAt": "2026-11-24T13:16:44.119Z",
+    "snapshotFile": "data/snapshots/ningxia-2025-q3-cases.doc"
+  },
+  "ingestRun": {
+    "id": "79a7169b-b39c-4539-8c20-38cb0f07b73d",
+    "sourceKey": "ningxia-2025-q3-cases",
+    "sourceUrl": "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202507/t20250718_4965141.html",
+    "parserVersion": "2026-11-24.7",
+    "status": "partial",
+    "startedAt": "2026-11-24T13:16:44.108Z",
+    "finishedAt": "2026-11-24T13:16:44.119Z",
+    "httpStatus": null,
+    "contentHash": "c3521377ecaf6af2e59418d4e3fe69174b2ef77683655a106aaf09a0f2fedbb2",
+    "snapshotPath": "data/snapshots/ningxia-2025-q3-cases.doc",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "河北羌牧建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91411400MA9LNQE750",
+        "province": "宁夏回族自治区",
+        "city": "惠农区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "河北羌牧建筑工程有限公司在承建宁夏晶体新能源材料有限公司年产12.5万吨多晶硅项目安装工程一二标段冷氢化安装项目期间拖欠刘楷、张志强等128名农民工2024年1月、2024年4至8月工资286079元。",
+            "workerCount": 128,
+            "amountYuan": 286079,
+            "authority": "惠农区人社局",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202507/t20250718_4965141.html",
+          "sourceTitle": "自治区人力资源和社会保障厅关于公布重大劳动保障违法行为的通告（2025年7月）",
+          "sourcePublishedAt": "2025-07-18",
+          "fetchedAt": "2026-11-24T13:16:44.119Z",
+          "snapshotFile": "data/snapshots/ningxia-2025-q3-cases.doc",
+          "ingestRunId": "79a7169b-b39c-4539-8c20-38cb0f07b73d",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "内蒙古豪东新能源技术服务有限公司",
+        "aliases": [],
+        "creditCode": "91152921MABTG7C731",
+        "province": "宁夏回族自治区",
+        "city": "惠农区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "内蒙古豪东新能源技术服务有限公司在承建石嘴山市世吉辉20MW分布式光伏发电项目期间拖欠陈虎等农民工2024年4月至2024年8月和2025年2月至2025年4月农民工工资1580806元。",
+            "amountYuan": 1580806,
+            "authority": "惠农区人社局",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.nx.gov.cn/xxgk/gkmu/cfgs/xzqzycf/202507/t20250718_4965141.html",
+          "sourceTitle": "自治区人力资源和社会保障厅关于公布重大劳动保障违法行为的通告（2025年7月）",
+          "sourcePublishedAt": "2025-07-18",
+          "fetchedAt": "2026-11-24T13:16:44.119Z",
+          "snapshotFile": "data/snapshots/ningxia-2025-q3-cases.doc",
+          "ingestRunId": "79a7169b-b39c-4539-8c20-38cb0f07b73d",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    }
+  ]
+}

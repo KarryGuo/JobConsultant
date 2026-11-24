@@ -2,6 +2,7 @@ import { createHash, createHmac, randomBytes, timingSafeEqual } from "node:crypt
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { prisma } from "./db";
+import { readEnv } from "./env";
 
 export const ADMIN_COOKIE = "zgw_admin";
 export const ADMIN_SESSION_MAX_AGE = 60 * 60 * 12;
@@ -23,11 +24,11 @@ export type AdminSessionToken = {
 };
 
 function sessionSecret(): string {
-  return process.env.ADMIN_SESSION_SECRET ?? process.env.ANON_SALT ?? "";
+  return readEnv("ADMIN_SESSION_SECRET") ?? readEnv("ANON_SALT") ?? "";
 }
 
 export function adminConfigured(): boolean {
-  return Boolean(process.env.ADMIN_PASSWORD && sessionSecret());
+  return Boolean(readEnv("ADMIN_PASSWORD") && sessionSecret());
 }
 
 /**
@@ -35,7 +36,7 @@ export function adminConfigured(): boolean {
  * 所有旧会话的指纹失配，立即失效，无需等待过期。
  */
 function passwordFingerprint(): string {
-  const password = process.env.ADMIN_PASSWORD ?? "";
+  const password = readEnv("ADMIN_PASSWORD") ?? "";
   if (!password) return "";
   return createHash("sha256").update(password).digest("hex").slice(0, 16);
 }

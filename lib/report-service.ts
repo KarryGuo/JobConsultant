@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { prisma } from "./db";
+import { readEnv } from "./env";
 import { explain } from "./explain";
 import { evaluateRules, RULES_VERSION } from "./rules";
 import { TEMPLATE_VERSION } from "./template";
@@ -13,10 +14,10 @@ const PIPELINE_VERSION = "v4";
  * 否则当天缓存会继续返回旧模型或模板生成的措辞。
  */
 function modelCacheKey(): string {
-  if (!process.env.MODEL_API_KEY) return "template";
+  if (!readEnv("MODEL_API_KEY")) return "template";
   const baseUrl =
-    process.env.MODEL_BASE_URL ?? "https://api.deepseek.com/v1";
-  const model = process.env.MODEL_NAME ?? "deepseek-flash";
+    readEnv("MODEL_BASE_URL") ?? "https://api.deepseek.com/v1";
+  const model = readEnv("MODEL_NAME") ?? "deepseek-flash";
   return `${baseUrl}|${model}`;
 }
 

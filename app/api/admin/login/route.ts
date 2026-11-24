@@ -10,6 +10,7 @@ import {
   createAdminSession,
 } from "@/lib/admin-auth";
 import { prisma } from "@/lib/db";
+import { readEnv } from "@/lib/env";
 
 export const runtime = "nodejs";
 
@@ -73,7 +74,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const expected = process.env.ADMIN_PASSWORD ?? "";
+  const expected = readEnv("ADMIN_PASSWORD") ?? "";
   if (!passwordMatches(parsed.data.password, expected)) {
     attempts.set(ip, {
       count: attempt.count + 1,

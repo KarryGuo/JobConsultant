@@ -107,6 +107,13 @@
     "companies/guizhou-2025-q4-cases.json",
     "companies/gansu-dingxi-2025-q4-cases.json",
     "companies/xinjiang-2025-q4-cases.json",
-    "companies/xinjiang-2025-q4-list.json"
+    "companies/xinjiang-2025-q4-list.json",
+    "companies/yunnan-2025-q1-cases.json",
+    "companies/yunnan-2025-q3-cases.json",
+    "companies/xizang-2025-q3-cases.json",
+    "companies/qinghai-2025-q4-cases.json",
+    "companies/qinghai-2025-q3-list.json",
+    "companies/ningxia-2025-q3-cases.json",
+    "companies/ningxia-2026-q1-cases.json"
   ]
 }

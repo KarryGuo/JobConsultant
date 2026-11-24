@@ -1,0 +1,274 @@
+{
+  "source": {
+    "key": "yunnan-2025-q3-cases",
+    "name": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "云南省",
+    "baseUrl": "http://zwfw.hrss.yn.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+    "url": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+    "publishedAt": "2025-10-31",
+    "fetchedAt": "2026-11-24T13:16:44.089Z",
+    "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt"
+  },
+  "ingestRun": {
+    "id": "2ca41b9f-7070-4908-af94-c2772e210616",
+    "sourceKey": "yunnan-2025-q3-cases",
+    "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+    "parserVersion": "2026-11-24.7",
+    "status": "partial",
+    "startedAt": "2026-11-24T13:16:44.086Z",
+    "finishedAt": "2026-11-24T13:16:44.089Z",
+    "httpStatus": null,
+    "contentHash": "6483d1946b64b575b251269e8678761e36fee1daf15ffc6c81cb704a04b5b117",
+    "snapshotPath": "data/snapshots/yunnan-2025-q3-cases.txt",
+    "warnings": 7,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "云南勇升机动车检测有限公司",
+        "aliases": [],
+        "creditCode": "91532331MA6PQ5TL2N",
+        "province": "云南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、云南勇升机动车检测有限公司拖欠劳动报酬案 违法主体全称：云南勇升机动车检测有限公司 统一社会信用代码：91532331MA6PQ5TL2N 法定代表人：石文俊 注册地址：云南省楚雄彝族自治州禄丰市工业园区土官片区 松树园2 号地块 主要违法事实：2025 年 7 月 22 日，禄丰市人力资源和社会 保障局陆续接到投诉，反映云南勇升机动车检测有限公司存在拖 欠劳动者劳动报酬问题",
+            "workerCount": 9,
+            "legalRep": "石文俊",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "贵州大鑫建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91522300322085369D",
+        "province": "云南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经进 一步核查，贵州大鑫建设工程有限公司共计拖欠 170 名劳动者工",
+            "workerCount": 170,
+            "legalRep": "张江"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "大理坤承建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91532901MAE0JEC00M",
+        "province": "云南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，大理坤承建筑工程有限公司拖欠 252 名劳动者工资共计 4438240.00 元",
+            "workerCount": 252,
+            "amountYuan": 4438240,
+            "legalRep": "尹李江"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "云南祥亚农业开发有限公司",
+        "aliases": [],
+        "creditCode": "91532625MA6QCRUM1A",
+        "province": "云南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，云南祥亚农业开发有限公司拖欠 50 名劳动者工资共计 195500.00 元",
+            "workerCount": 50,
+            "amountYuan": 195500,
+            "legalRep": "戚伟"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "云南粟元环保科技有限公司",
+        "aliases": [],
+        "creditCode": "91532928MABTCNHR0U",
+        "province": "云南省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，云南粟元环保科技有限公司拖欠 27 名劳动者工资共计 293414.00 元",
+            "workerCount": 27,
+            "amountYuan": 293414,
+            "legalRep": "粟庆",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "宾川县博运建筑劳务分包有限公司",
+        "aliases": [],
+        "creditCode": "91532924MAC1JYCC06",
+        "province": "云南省",
+        "city": "宾川县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，宾川县博运建筑劳务分包有 — 6 — 限公司拖欠 15 名劳动者工资共计 171173.00 元",
+            "workerCount": 15,
+            "amountYuan": 171173,
+            "authority": "宾川县人力资源和社会保障局",
+            "legalRep": "李春"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "普洱市丽娟劳务工程有限公司",
+        "aliases": [],
+        "creditCode": "91530802MA6PKURR4M",
+        "province": "云南省",
+        "city": "临沧市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，普洱市丽娟劳务工程有限 — 7 — 公司拖欠 41 名劳动者工资共计 628385.70 元",
+            "workerCount": 41,
+            "amountYuan": 628386,
+            "authority": "临沧市临翔区人力资源和社会保障局",
+            "legalRep": "袁恒忠"
+          },
+          "sourceUrl": "http://zwfw.hrss.yn.gov.cn/html/2025/10/31/63376.html",
+          "sourceTitle": "云南省人力资源和社会保障厅关于公布2025年第三批重大劳动保障违法案例的公告（PDF 转文本）",
+          "sourcePublishedAt": "2025-10-31",
+          "fetchedAt": "2026-11-24T13:16:44.089Z",
+          "snapshotFile": "data/snapshots/yunnan-2025-q3-cases.txt",
+          "ingestRunId": "2ca41b9f-7070-4908-af94-c2772e210616",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    }
+  ]
+}

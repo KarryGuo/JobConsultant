@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/db";
+import { readEnv } from "@/lib/env";
 import {
   clientKey,
   createRateLimiter,
@@ -50,7 +51,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const salt = process.env.ANON_SALT;
+  const salt = readEnv("ANON_SALT");
   if (!salt) {
     console.error("ANON_SALT is not configured");
     return NextResponse.json({ error: "server misconfigured" }, { status: 500 });

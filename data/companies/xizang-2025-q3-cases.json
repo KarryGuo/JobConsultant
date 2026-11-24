@@ -1,0 +1,318 @@
+{
+  "source": {
+    "key": "xizang-2025-q3-cases",
+    "name": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "西藏自治区",
+    "baseUrl": "https://hrss.xizang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+    "url": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+    "publishedAt": "2025-09-29",
+    "fetchedAt": "2026-11-24T13:16:44.095Z",
+    "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html"
+  },
+  "ingestRun": {
+    "id": "b60988e5-95ba-4162-80d8-175292966511",
+    "sourceKey": "xizang-2025-q3-cases",
+    "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+    "parserVersion": "2026-11-24.7",
+    "status": "partial",
+    "startedAt": "2026-11-24T13:16:44.091Z",
+    "finishedAt": "2026-11-24T13:16:44.095Z",
+    "httpStatus": null,
+    "contentHash": "712cf9811441c62c0a54584fee12403ebe481afb7f264d43b40da9c176c86c48",
+    "snapshotPath": "data/snapshots/xizang-2025-q3-cases.html",
+    "warnings": 13,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "西藏美康虫草贸易有限公司",
+        "aliases": [],
+        "creditCode": "91540100MA6T11EQ4R",
+        "province": "西藏自治区",
+        "city": "拉萨市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "拉萨市人社局",
+            "legalRep": "晋美桑格",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西藏民商投资有限公司",
+        "aliases": [],
+        "creditCode": "91540091321378434R",
+        "province": "西藏自治区",
+        "city": "拉萨市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "拉萨市人社局",
+            "legalRep": "尼玛扎西",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西藏阿若蒲巴餐饮服务有限公司",
+        "aliases": [],
+        "creditCode": "91540192MA6T5TEH9X",
+        "province": "西藏自治区",
+        "city": "拉萨市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "统一社会信用代码： 91540192MA6T5TEH9X 单位地址： 西藏拉萨市城关区林廓路团结新村小区格桑路 1 号 1 楼 101-102-104-105-106-107 号 法定代表人： 白成 身份证号码： 63272519 ****** 1919 2025 年 3 月 31 日， 尊某 等 2 人陆续到拉萨市人社局监察科投诉西藏阿若蒲巴餐饮服务有限公司拖欠劳动者工资",
+            "authority": "拉萨市人社局",
+            "legalRep": "白成",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西藏鸿罡酒店有限公司",
+        "aliases": [],
+        "creditCode": "91540192MA6T2YMM8C",
+        "province": "西藏自治区",
+        "city": "拉萨市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，西藏鸿罡酒店有限公司拖欠 1 人工资 10645 元，事实清楚、证据确凿",
+            "amountYuan": 10645,
+            "authority": "拉萨市人社局",
+            "legalRep": "李正全",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西藏藏安翔怡建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91540091MAB05JH982",
+        "province": "西藏自治区",
+        "city": "拉萨市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "拉萨市人社局",
+            "legalRep": "何功怡",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西藏江孜平康医院有限责任公司",
+        "aliases": [],
+        "creditCode": "91540222MAB02J27X1",
+        "province": "西藏自治区",
+        "city": "江孜县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "6. 西藏江孜平康医院有限责任公司拖欠工资案 违法主体名称： 西藏江孜平康医院有限责任公司 社会统一信用代码： 91540222MAB02J27X1 单位地址： 西藏自治区日喀则市江孜县国防东路 法定代表人： 罗桑云丹 身份证号码： 54232319 ****** 0017 2025 年 5 月 23 日，江孜县人社局接到任某等 8 名员工投诉西藏江孜平康医院有限责任公司拖欠工资",
+            "workerCount": 8,
+            "amountYuan": 280309,
+            "authority": "江孜县人社局",
+            "legalRep": "罗桑云丹",
+            "stage": "责令改正",
+            "stageLabel": "责令改正"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中铁十八局集团有限公司",
+        "aliases": [],
+        "creditCode": "9112000010306009X2",
+        "province": "西藏自治区",
+        "city": "墨脱县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "7. 中 铁十八局集团有限公司拖欠工资案 违法主体名称： 中铁十八局集团有限公司 统一社会信用代码： 9112000010306009X2 单位地址： 天津市津港南区双港乡 法定代表人： 闫广天 负责人： 李小余 负责人身份证号码： 50038219 ****** 7633 2025 年 1 月 10 日，墨脱县人社局收到投诉，反映中铁十八局 1404 总承包 BF-352 项目拖欠民工工资，经核实，该项目总承包单位为中铁十八局集团有限公司，劳务分包单位为西藏鸿头建筑工程有限",
+            "workerCount": 38,
+            "amountYuan": 1507100,
+            "authority": "墨脱县人社局",
+            "legalRep": "闫广天",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西藏鸿头建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91540192MAB03PYE2N",
+        "province": "西藏自治区",
+        "city": "墨脱县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "8. 西藏鸿头建筑工程有限公司拖欠工资案 违法主体名称： 西藏鸿头建筑工程有限公司 统一社会信用代码： 91540192MAB03PYE2N 单位地址： 西藏自治区拉萨市柳梧新区海亮世纪新城 5 栋 1 单元 101 室 法定代表人： 张冬冬 负责人： 曹阳 负责人身份证号码： 51168119 ****** 5014 2025 年 1 月 10 日，墨脱县人社局收到投诉，反映中铁十八局 1404 总承包 BF-352 项目拖欠民工工资，经核实，该项目总承包单位为中铁十八局集",
+            "workerCount": 38,
+            "amountYuan": 1507100,
+            "authority": "墨脱县人社局",
+            "legalRep": "张冬冬",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.xizang.gov.cn/zcfg/ldgx/202509/t20250929_502008.html",
+          "sourceTitle": "西藏自治区2025年第三季度重大劳动保障违法行为社会公布名单",
+          "sourcePublishedAt": "2025-09-29",
+          "fetchedAt": "2026-11-24T13:16:44.095Z",
+          "snapshotFile": "data/snapshots/xizang-2025-q3-cases.html",
+          "ingestRunId": "b60988e5-95ba-4162-80d8-175292966511",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    }
+  ]
+}

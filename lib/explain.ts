@@ -1,3 +1,4 @@
+import { readEnv } from "./env";
 import { buildTemplateReport } from "./template";
 import type { Hit, ReportDraft } from "./types";
 import { ModelOutputSchema, ReportDraftSchema } from "./validation";
@@ -101,15 +102,15 @@ async function callModelOnce(
   companyName: string,
   hits: Hit[],
 ): Promise<{ conclusion: string; points: ModelPoint[] } | null> {
-  const apiKey = process.env.MODEL_API_KEY;
+  const apiKey = readEnv("MODEL_API_KEY");
   if (!apiKey) return null;
 
-  const baseUrl = (process.env.MODEL_BASE_URL ?? "https://api.deepseek.com/v1").replace(
+  const baseUrl = (readEnv("MODEL_BASE_URL") ?? "https://api.deepseek.com/v1").replace(
     /\/$/,
     "",
   );
-  const model = process.env.MODEL_NAME ?? "deepseek-flash";
-  const configuredTimeout = Number(process.env.MODEL_TIMEOUT_MS ?? "");
+  const model = readEnv("MODEL_NAME") ?? "deepseek-flash";
+  const configuredTimeout = Number(readEnv("MODEL_TIMEOUT_MS") ?? "");
   const timeoutMs =
     Number.isFinite(configuredTimeout) && configuredTimeout >= 1000
       ? configuredTimeout
@@ -186,7 +187,7 @@ export async function explain(
 ): Promise<ReportDraft> {
   const fallback = buildTemplateReport(hits, dataCutoff);
 
-  if (!process.env.MODEL_API_KEY || hits.length === 0) {
+  if (!readEnv("MODEL_API_KEY") || hits.length === 0) {
     return fallback;
   }
 
@@ -245,7 +246,7 @@ export async function explain(
 
       if (!conclusionUsable) {
         console.warn("model conclusion rejected, using template conclusion", {
-          model: process.env.MODEL_NAME ?? "deepseek-flash",
+          model: readEnv("MODEL_NAME") ?? "deepseek-flash",
           length: conclusionLength,
         });
       }
@@ -254,7 +255,7 @@ export async function explain(
         conclusion,
         points,
         status: "ok",
-        modelVersion: `model:${process.env.MODEL_NAME ?? "default"}`,
+        modelVersion: `model:${readEnv("MODEL_NAME") ?? "default"}`,
         dataCutoff,
       };
 
@@ -263,7 +264,7 @@ export async function explain(
       const validated = ReportDraftSchema.safeParse(candidate);
       if (!validated.success) {
         console.warn("model report validation failed", {
-          model: process.env.MODEL_NAME ?? "deepseek-flash",
+          model: readEnv("MODEL_NAME") ?? "deepseek-flash",
           issues: validated.error.issues.map((issue) => issue.message),
         });
         continue;
@@ -273,7 +274,7 @@ export async function explain(
     } catch (error) {
       // 超时、网络错误、非法 JSON、校验失败：记录原因并重试，仍失败走模板。
       console.warn("model explain attempt failed", {
-        model: process.env.MODEL_NAME ?? "deepseek-flash",
+        model: readEnv("MODEL_NAME") ?? "deepseek-flash",
         message: error instanceof Error ? error.message : String(error),
       });
     }

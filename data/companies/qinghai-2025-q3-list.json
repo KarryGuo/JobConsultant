@@ -1,0 +1,106 @@
+{
+  "source": {
+    "key": "qinghai-2025-q3-list",
+    "name": "青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "青海省",
+    "baseUrl": "http://rst.qinghai.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单",
+    "url": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202511061546366273.html",
+    "publishedAt": "2025-11-06",
+    "fetchedAt": "2026-11-24T13:16:44.107Z",
+    "snapshotFile": "data/snapshots/qinghai-2025-q3-list.html"
+  },
+  "ingestRun": {
+    "id": "ef4df4d6-62ff-4e80-b16a-ae73e4a4e5f2",
+    "sourceKey": "qinghai-2025-q3-list",
+    "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202511061546366273.html",
+    "parserVersion": "2026-11-24.7",
+    "status": "partial",
+    "startedAt": "2026-11-24T13:16:44.104Z",
+    "finishedAt": "2026-11-24T13:16:44.107Z",
+    "httpStatus": null,
+    "contentHash": "4469bb1cb6d088b78fe77f50e4ff9beee79320c2f0adbac888a75b7e6cd76c97",
+    "snapshotPath": "data/snapshots/qinghai-2025-q3-list.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "青海西宁闽坤酒店管理有限公司",
+        "aliases": [],
+        "creditCode": "91630103MAE016NX0G",
+        "province": "青海省",
+        "city": "城中区城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2028",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91630103MAE016NX0G 卓南福 拖欠 44 名农民工工资 37.7751 万元 城中区城市管理综合行政执法局 城中综合执法监列决字 [2025]04 号 2025/8/18 2028/8/17 2 西安市银锚幕墙装饰有限公司",
+            "workerCount": 44,
+            "amountYuan": 377751,
+            "authority": "城中区城市管理综合行政执法局",
+            "stageDate": "2028-08-17"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202511061546366273.html",
+          "sourceTitle": "青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-06",
+          "fetchedAt": "2026-11-24T13:16:44.107Z",
+          "snapshotFile": "data/snapshots/qinghai-2025-q3-list.html",
+          "ingestRunId": "ef4df4d6-62ff-4e80-b16a-ae73e4a4e5f2",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "西安市银锚幕墙装饰有限公司",
+        "aliases": [],
+        "creditCode": "916101007101088920",
+        "province": "青海省",
+        "city": "城北区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2028",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "916101007101088920 李冬冬 拖欠 49 人工资共计 52.0286 万元 城北区人力资源和社会保障局 城北人社监列决字 [2025]14 号 2025/8/4 2028/8/5 上一条： 青海省人力资源和社会保障厅公布2025年第四季度重大劳动保障违法行为典型案件 下一条：",
+            "amountYuan": 520286,
+            "authority": "城北区人力资源和社会保障局",
+            "stageDate": "2028-08-05"
+          },
+          "sourceUrl": "http://rst.qinghai.gov.cn/ztzl/gzqxbgt/query/202511061546366273.html",
+          "sourceTitle": "青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-06",
+          "fetchedAt": "2026-11-24T13:16:44.107Z",
+          "snapshotFile": "data/snapshots/qinghai-2025-q3-list.html",
+          "ingestRunId": "ef4df4d6-62ff-4e80-b16a-ae73e4a4e5f2",
+          "parserVersion": "2026-11-24.7"
+        }
+      ]
+    }
+  ]
+}

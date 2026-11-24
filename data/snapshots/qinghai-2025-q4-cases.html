@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="SiteName" content="青海省人力资源和社会保障厅">
+	<meta name="SiteDomain" content="rst.qinghai.gov.cn">
+	<meta name="SiteIDCode" content="6300000023">
+	<meta name="ColumnName" content="青海人社">
+	<meta name="ColumnType" content="青海人社">
+	<meta name="ColumnKeywords" content="青海人社">
+	<meta name="ColumnDescription" content="青海人社">
+	<title>青海省人力资源和社会保障厅</title>
+	<link href="/css/index.css?t=v1.0" rel="stylesheet">
+	<link href="/css/index20220110.css?t=v1.0" rel="stylesheet">
+	<link href="/css/tp.css?t=v1.0" rel="stylesheet" type="text/css">
+	<link href="/css/lrtk.css?t=v1.0" rel="stylesheet">
+	<link href="/css/zixuncenter.css?t=v1.0" rel="stylesheet">
+	<link href="/css/qtym.css?t=v1.0" rel="stylesheet">
+	<!--焦点图-->
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+	<script>
+		new LingQue.Monitor().init({
+			id: "JitjFumDqxVihdb3"
+		});
+	</script>
+	<script>
+		LA.init({
+			id: "3FmS3CawowBKXfMJ",
+			ck: "3FmS3CawowBKXfMJ"
+		})
+	</script>
+	<script type="text/javascript" src="/js/lrtk.min.1.5.js"></script>
+	<!--焦点图 end-->
+	<script type="text/javascript" src="/js/gd/jquery.pack.js"></script>
+	<script type="text/javascript" src="/js/gd/jQuery.blockUI.js"></script>
+	<script type="text/javascript" src="/js/gd/jquery.SuperSlide.js"></script>
+
+	<style type="text/css">
+		/* 置灰色 开始*/
+		/* html,body,div,img{
+												 -webkit-filter: grayscale(100%);
+												 -moz-filter: grayscale(100%);
+												 -ms-filter: grayscale(100%);
+												 -o-filter: grayscale(100%);
+												 filter: grayscale(100%);
+												 filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+												 filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+												 filter: gray;
+											 } */
+		/* 置灰色 结束*/
+		.pictureDemo {
+			height: 105px;
+			margin-top: 1px;
+			text-align: center;
+		}
+
+		.pictureDemo img {
+			align-content: center;
+		}
+	</style>
+	<!--滚动图片-->
+	<link href="/css/tpgd.css" rel="stylesheet">
+	<link href="/js/layui/css/layui.css" rel="stylesheet">
+	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/js/alixixi_jquery.min.js"></script>
+	<script type="text/javascript" src="/js/config.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//检查IE的版本
+			function IEVersion() {
+				var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+				var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -
+					1; //判断是否IE<11浏览器  
+				var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
+				var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+				if (isIE) {
+					var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+					reIE.test(userAgent);
+					var fIEVersion = parseFloat(RegExp["$1"]);
+					debugger;
+					if (fIEVersion < 8) {
+						alert("浏览器版本过低，可能会造成大部分功能无法正常使用，建议使用IE9及以上版本或者谷歌浏览器");
+					}
+				}
+			}
+		});
+
+		/*
+		bxCarousel v1.0
+		Plugin developed by: Steven Wanderski
+		*/
+		(function($) {
+			$.fn.bxCarousel = function(options) {
+				var defaults = {
+					move: 4,
+					display_num: 4,
+					speed: 500,
+					margin: 0,
+					auto: false,
+					auto_interval: 2000,
+					auto_dir: 'next',
+					auto_hover: false,
+					next_text: 'next',
+					next_image: '',
+					prev_text: 'prev',
+					prev_image: '',
+					controls: true
+				};
+				var options = $.extend(defaults, options);
+				return this.each(function() {
+					var $this = $(this);
+					var li = $this.find('li');
+					var first = 0;
+					var fe = 0;
+					var last = options.display_num - 1;
+					var le = options.display_num - 1;
+					var is_working = false;
+					var j = '';
+					var clicked = false;
+					li.css({
+						'float': 'left',
+						'listStyle': 'none',
+						'marginRight': options.margin
+					});
+					var ow = li.outerWidth(true);
+					wrap_width = (ow * options.display_num) - options.margin;
+					var seg = ow * options.move;
+					$this.wrap('<div class="bx_container"></div>').width(999999);
+					if (options.controls) {
+						if (options.next_image != '' || options.prev_image != '') {
+							var controls = '<a href="" class="prev"><img src="' + options.prev_image +
+								'"/></a><a href="" class="next"><img src="' + options.next_image +
+								'"/></a>';
+						} else {
+							var controls = '<a href="" class="prev">' + options.prev_text +
+								'</a><a href="" class="next">' + options.next_text + '</a>';
+						}
+					}
+					$this.parent('.bx_container').wrap('<div class="bx_wrap"></div>').css({
+						'position': 'relative',
+						'width': wrap_width,
+						'overflow': 'hidden'
+					}).before(controls);
+					var w = li.slice(0, options.display_num).clone();
+					var last_appended = (options.display_num + options.move) - 1;
+					$this.empty().append(w);
+					get_p();
+					get_a();
+					$this.css({
+						'position': 'relative',
+						'left': -(seg)
+					});
+					$this.parent().siblings('.next').click(function() {
+						slide_next();
+						clearInterval(j);
+						clicked = true;
+						return false;
+					});
+					$this.parent().siblings('.prev').click(function() {
+						slide_prev();
+						clearInterval(j);
+						clicked = true;
+						return false;
+					});
+					if (options.auto) {
+						start_slide();
+						if (options.auto_hover && clicked != true) {
+							$this.find('li').live('mouseenter', function() {
+								if (!clicked) {
+									clearInterval(j);
+								}
+							});
+							$this.find('li').live('mouseleave', function() {
+								if (!clicked) {
+									start_slide();
+								}
+							});
+						}
+					}
+
+					function start_slide() {
+						if (options.auto_dir == 'next') {
+							j = setInterval(function() {
+								slide_next()
+							}, options.auto_interval);
+						} else {
+							j = setInterval(function() {
+								slide_prev()
+							}, options.auto_interval);
+						}
+					}
+
+					function slide_next() {
+						if (!is_working) {
+							is_working = true;
+							set_pos('next');
+							$this.animate({
+								left: '-=' + seg
+							}, options.speed, function() {
+								$this.find('li').slice(0, options.move).remove();
+								$this.css('left', -(seg));
+								get_a();
+								is_working = false;
+							});
+						}
+					}
+
+					function slide_prev() {
+						if (!is_working) {
+							is_working = true;
+							set_pos('prev');
+							$this.animate({
+								left: '+=' + seg
+							}, options.speed, function() {
+								$this.find('li').slice(-options.move).remove();
+								$this.css('left', -(seg));
+								get_p();
+								is_working = false;
+							});
+						}
+					}
+
+					function get_a() {
+						var str = new Array();
+						var lix = li.clone();
+						le = last;
+						for (i = 0; i < options.move; i++) {
+							le++
+							if (lix[le] != undefined) {
+								str[i] = $(lix[le]);
+							} else {
+								le = 0;
+								str[i] = $(lix[le]);
+							}
+						}
+						$.each(str, function(index) {
+							$this.append(str[index][0]);
+						});
+					}
+
+					function get_p() {
+						var str = new Array();
+						var lix = li.clone();
+						fe = first;
+						for (i = 0; i < options.move; i++) {
+							fe--
+							if (lix[fe] != undefined) {
+								str[i] = $(lix[fe]);
+							} else {
+								fe = li.length - 1;
+								str[i] = $(lix[fe]);
+							}
+						}
+						$.each(str, function(index) {
+							$this.prepend(str[index][0]);
+						});
+					}
+
+					function set_pos(dir) {
+						if (dir == 'next') {
+							first += options.move;
+							if (first >= li.length) {
+								first = first % li.length;
+							}
+							last += options.move;
+							if (last >= li.length) {
+								last = last % li.length;
+							}
+						} else if (dir == 'prev') {
+							first -= options.move;
+							if (first < 0) {
+								first = li.length + first;
+							}
+							last -= options.move;
+							if (last < 0) {
+								last = li.length + last;
+							}
+						}
+					}
+				});
+			}
+		})(jQuery);
+	</script>
+	<!--滚动图片 end-->
+	<!--tab 切换-->
+
+</head>
+
+<body>
+
+
+
+	<!--header-->
+	<head>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<link href="/css/accessiblity.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="/js/accessiblity.js"></script>
+	<script type="text/javascript" src="/js/readText.js"></script>
+</head>
+<body>
+	<header class="headerType">
+		<div class="toplinkpanel-big" id="accessibilityDiv" class="acce1024E">
+			<ul class="acce1024E">
+				<li class="acce1024E" onclick="readTextEvent()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico01.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">读屏</p>
+					</a></li>
+			<!-- 	<li class="acce1024E" onclick="convertToTxtEventNew()"><a href="#" class="navmenu"><img
+							class="acce1024E" src="/images/topico02.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">文本</p>
+					</a></li> -->
+				<li class="acce1024E" onclick="zoomOutNew()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico03.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">放大</p>
+					</a></li>
+				<li class="acce1024E" onclick="zoomInNew()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico04.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">缩小</p>
+					</a></li>
+				<li class="peise"><a href="#" class="navmenu"><img class="acce1024E" src="/images/topico05.png"
+							width="45px" height="45px" alt="" />
+						<p class="acce1024E">配色</p>
+					</a>
+					<ul class="acce1024E">
+						<li class="acce1024E" onclick="resetContrastEvent()" style="background-color: #90EE90;"><a
+								class="acce1024E" href="#">还原对比度</a></li>
+						<li class="acce1024E" onclick="blackContrastEvent()" style="background-color: #666666;"><a
+								class="acce1024E" href="#">黑白对比度</a></li>
+						<li class="acce1024E" onclick="purpleContrastEvent()" style="background-color: darkviolet;"><a
+								class="acce1024E" href="#">紫白对比度</a></li>
+						<li class="acce1024E" onclick="blueContrastEvent()" style="background-color: #00BFFF;"><a
+								class="acce1024E" href="#">蓝黑对比度</a></li>
+						<li class="acce1024E" onclick="redContrastEvent()" style="background-color: red;"><a
+								class="acce1024E" href="#">白红对比度</a></li>
+					</ul>
+				</li>
+				<li class="acce1024E" onclick="showHelpLineEvent()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico06.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">辅助线</p>
+					</a></li>
+				<li class="acce1024E" onclick="showTipsDiv()"><a href="#" class="navmenu"><img class="acce1024E"
+							src="/images/topico07.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">文字提示</p>
+					</a></li>
+				<li class="acce1024E" onclick="controlFuncDivBtnEvent()"><a href="#" class="navmenu"><img
+							class="acce1024E" src="/images/topico10.png" width="45px" height="45px" alt="" />
+						<p class="acce1024E">关闭</p>
+					</a></li>
+			</ul>
+
+			<!-- 辅助线的两条横线和竖线 -->
+			<div id="divx" class="acce1024E"></div>
+			<div id="divy" class="acce1024E"></div>
+			<!-- 文字提示的div -->
+			<div id="wordTipDiv" class="acce1024E">
+				<h2 id="tipTxt" class="acce1024E">文字提示</h2>
+			</div>
+		</div>
+</body>
+
+
+<script>
+	function search2(e) {
+		window.location.href = '/includes/search_all.html?title=' + escape(e);
+	}
+
+	// 设置为主页 
+	function SetHome(obj, vrl) {
+		try {
+			obj.style.behavior = 'url(#default#homepage)';
+			obj.setHomePage(vrl);
+		} catch (e) {
+			if (window.netscape) {
+				try {
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+				} catch (e) {
+					alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入：" + "http://rst.qinghai.gov.cn/" + "点击确定。");
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces
+					.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage', vrl);
+			} else {
+				alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入：" + "http://rst.qinghai.gov.cn/" + "点击确定。");
+			}
+		}
+	}
+	// 加入收藏 兼容360和IE6 
+	function shoucang(sTitle, sURL) {
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("请使用Ctrl+D进行添加");
+			}
+		}
+	}
+</script>
+</script>
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<div id="header">
+	<div class="header0" style="width:1180px">
+		<div class="jrsc" style="margin-left:175px"><a style="color:black ;font-size:15px" href="javascript:void(0)"
+				onclick="shoucang(document.title,window.location) ">加入收藏</a>|
+			<a style="color:black ;font-size:15px" onclick="SetHome(window.location)"
+				href="javascript:void(0)">设为首页</a>|
+			<a id="zxzc_sy" href="http://rst.qinghai.gov.cn/qhrst/sign/signup"
+				style="cursor:pointer;color:black ;font-size:15px">注册</a>|
+			<a id="zxdl_sy" href="http://rst.qinghai.gov.cn/qhrst/sso/login"
+				style="cursor:pointer;color:black ;font-size:15px">登录</a>
+			<!-- 无障碍的按钮 -->
+			<button id="accessBtn" type="button" onclick="controlFuncDivBtnEvent()">无障碍</button>
+		</div>
+		<div class="logo">
+			<a href="/index.html"><img src="/images/header-logo.png"></a>
+		</div>
+		<div class="ewm"><span>12333公众号</span><img src="/images/12333.jpg"></div>
+		<div class="ewm"><span>青海人社通APP</span><img src="/images/renshetong.png"></div>
+		<div class="ewm"><span>微信公众号</span><img src="/images/ewm.png"></div>
+		<!--<div class="ewm"><span>青海人社APP</span><img src="/images/app_ewm.jpg"></div> -->
+		<div class="add"><img src="/images/header-add.png" border="0">
+		</div>
+	</div>
+</div>
+<!--header end-->
+<!--导航nav-->
+<div id="navigation">
+  <div class="nav">
+    <ul>
+      <li><a href="/index.html" >网站首页</a></li>
+      <li><a href="/zxzx.html" >资讯中心</a></li>
+      <li><a target="_blank" id="wsbs_dt" href="https://www.qhzwfw.gov.cn/department_window.html?ouguid=55e478c6-a791-4861-9096-cb34f1ba60e8&ouname=%E9%9D%92%E6%B5%B7%E7%9C%81%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E5%92%8C%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%9A%9C%E5%8E%85" target="_blank">政务服务</a></li>
+      <li><a href="/zfxxgk.html" >政府信息公开</a></li>
+      <li><a href="/zcfg.html" >政策法规</a></li>
+      <li><a href="/zxfw.html" >在线服务</a></li>
+      <li><a href="/ztzl.html" class="xz-hover">专题专栏</a></li>
+    </ul>
+    <div class="search">
+      <input id='search' type="text" class="input-wb" value="" placeholder="请输入要搜索的关键字">
+      <input type="button" onclick="location.href='/search.html?key='+encodeURI(document.getElementById('search').value);" class="input-an">
+    </div>
+  </div>
+</div>
+<!--nav end-->
+
+<!--body start-->
+
+<div class="cur_pos" style="margin-top:2px;"><span>当前位置</span><a id="cus" href="/ztzl.html">专题专栏</a>
+    <a href="/ztzl/gzqxbgt/index.html">曝光台</a>
+</div>
+<div class="content">
+    <div class="content_tt">青海省人力资源和社会保障厅公布2025年第四季度重大劳动保障违法行为典型案件</div>
+    <div class="content_ttx"><span>来源:青海省人力资源和社会保障厅</span><span>创建时间：2026-01-06</span><span id="dianjiliang">点击量：</span><br/>
+        <span style="font-size:14px;color:#000;"></span><br/>
+    </div>
+    <br/>
+    <br/>
+    <div class="content_con">
+        
+            <p style="text-indent: 2em;"><strong><span style="font-size: 16px; font-family: 宋体, SimSun;">1.西藏嘉亿惠广建设工程有限公司拖欠劳动报酬案</span></strong></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">违法主体：西藏嘉亿惠广建设工程有限公司</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">统一社会信用代码：91540195MA6TFPM98D</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">地址：西藏自治区拉萨市柳梧新区金盾宛7-1-201室</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">法定代表人：惠三</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">违法事实：2025年8月3日，都兰县人力资源和社会保障局接到陈某某在都兰县热水乡铜钼多金属矿详查项目从事厨师工作，工资被拖欠1.51万元。经核查，西藏嘉亿惠广建设工程有限公司拖欠陈某某等14名农民工工资10.05万元。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">处理结果：2025年8月6日，都兰县人力资源和社会保障局向西藏嘉亿惠广建设工程有限公司下发《劳动保障监察责令改正决定书》（都人社监令决字〔2025〕第011号），责令其限期支付被拖欠劳动者工资，该公司逾期未支付。9月23日，都兰县人力资源和社会保障局以邮寄方式向该公司送达《列入拖欠农民工工资失信联合惩戒对象名单事先告知书》（都人社监列告字〔2025〕002号）告知书。10月9日，都兰县综合执法局以本案涉嫌拒不支付劳动报酬罪为由，提请都兰县公安机关依法介入调查。10月21至25日，都兰县执法局联合都兰县公安局工作人员，赴西藏就热水乡铜钼多金属矿“惠三涉嫌拒不支付劳动报酬案”开展调查。10月28日西藏嘉亿惠广建设工程有限公司将拖欠的14名农民工工资10.05万元全部结清。</span></p><p style="text-indent: 2em;"><strong><span style="font-size: 16px; font-family: 宋体, SimSun;"><br/></span></strong></p><p style="text-indent: 2em;"><strong><span style="font-size: 16px; font-family: 宋体, SimSun;">2.四川乾亘建设工程有限公司拖欠劳动报酬案</span></strong></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">违法主体：四川乾亘建设工程有限公司</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">统一社会信用代码：91510000709164520W</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">地址：四川省成都市金牛区兴盛西路2号固特大厦1栋11楼</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">法人代表人：侯兴文</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">违法事实：2025年4月28日，思某某等11人向果洛州驻省信访局接访人员投诉反映2021年4月至7月期间四川乾亘建设工程有限公司承建的甘德县县城雨污分流建设项目时该公司拖欠59人工资209.1万元。经查，该项目施工总包企业四川乾亘建设工程有限公司确存在该项目挂靠经营、挪用项目资金、支付制度未落实，拖欠农民工工资等违法事实。最终核实拖欠47人工资160万元。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 隶书, SimLi;">处理结果：2025年6月5日甘德县人力资源和社会保障局依法对总包企业四川乾亘建设工程有限公司及项目挂靠人下达《劳动保障监察限期整改指令书》（甘劳监限字〔2025〕1号），2025年7月21日，甘德县人力资源和社会保障局向总包企业下达《劳动保障监察行政处理决定书》（甘人社监罚字〔2025〕1号），要求总包企业限期履行清偿责任；同时将拒不履行支付主体责任的项目挂靠人张某以涉嫌拒不支付劳动报酬罪移交公安机关依法侦办。2025年10月9日总包企业和项目挂靠人共同筹资160万元清偿支付47人全部所拖欠的工资。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 宋体, SimSun;">&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 宋体, SimSun;">&nbsp;</span></p><p><br/></p>
+        
+    </div>
+
+    
+        <span style="margin-left:20px;">上一条：
+                <a href="/ztzl/gzqxbgt/query/202605081755058598.html" title="青海省人力资源和社会保障厅公布2026年第一季度重大劳动保障违法行为典型案件" style="color:#000;">
+                        青海省人力资源和社会保障厅公布2026年第一季度重大劳动保障违法行为典型案件
+                </a>
+            </span>
+        <br>
+    
+    
+        <span style="margin-left:20px;">下一条：
+                <a href="/ztzl/gzqxbgt/query/202511061546366273.html" title="青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单" style="color:#000;">
+                        青海省人力资源和社会保障厅公布2025年第三批失信联合惩戒对象名单
+                </a>
+            </span>
+    
+
+    <script type="text/javascript" id="_visit_" code="202601161029220411" src="/js/visit.js"></script>
+</div>
+
+<!--body end-->
+
+<!--移动漂窗 end-->
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/js/config.js"></script>
+<style>
+#pop .pop-a1 
+{
+   width:95px;
+}
+#pop .pop-a1:hover
+{
+   width:95px;
+}
+#pop .pop-a3
+{
+   width:95px;
+}
+#pop .pop-a3:hover
+{
+   width:95px;
+}
+#pop .pop-a4
+{
+   width:95px;
+}
+#pop .pop-a4:hover
+{
+   width:95px;
+}
+        .pc0421 {
+         line-height: 70px;
+    position: fixed;
+    width: 95px;
+    cursor: pointer;
+    height: 138px;
+    right:140px;
+    background: url(../images/pc0422.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    top: 250px;
+
+}
+</style>
+
+<!-- 惠企惠农惠民飘窗 2026.04.23-->
+<div class="pc0421"  style="z-index:21">
+		<a style="width: 100%;display: inline-block; height: 100%;" href="http://www.qinghai.gov.cn/zwgk/xwdt/jd/" target="_blank">
+		</a>
+	</div>
+<!--社保投诉举报 2022-05-24-->
+<div style="position: fixed;right: 40px;top: 250px;z-index:999;">
+    <a href="/zxzx/tzgg/query/116419588.html" target="_blank">
+        <img src="/images/20220524175826.jpg" style="width: 95px;" alt=""/>
+    </a>
+</div>
+
+<!--工具栏-->
+<div style="position: fixed;right: 40px;top: 420px;z-index:999;">
+    <a href="/ztzl/gzqx.html" target="_blank">
+        <img src="/images/zlqx.png" alt=""/>
+    </a>
+    <!-- <img src="/images/jqrc/arrowdown.png" alt="工具栏" οnclick="opendiv()" style="cursor: pointer;"></img -->
+</div>
+<!--右侧漂浮-->
+<div id="pop" style="position: fixed;right: 60px;top: 590px;z-index:999;">
+    <table>
+        <tr>
+            <td><a href="/search.html" target="_blank" class="pop-a1">
+            </a></td>
+        </tr>
+        <tr>
+            <td><a href="/zxfw/tzxx/index.html" target="_blank" class="pop-a3"></a></td>
+            <td><a href="http://rst.qinghai.gov.cn/qhrst/sso/login" target="_blank" class="pop-a5"></a></td>
+        </tr>
+        <tr>
+            <td><a href="https://qhrsggfw.org.cn/qhrst/index/" target="_blank" class="pop-a4"></a></td>
+            <td><a href="javascript:void(0);" id="guanbi" src="/images/jqrc/gb.png" alt="工具栏" onclick="closediv()" style="cursor: pointer; " class="pop-a6"></a></td>
+        </tr>
+    </table>
+
+    <!--<a id="zcdl_ycfd" onclick="http://rst.qinghai.gov.cn/qhrst/sso/login" target="_self" class="pop-a5"></a>-->
+
+    <!--     <a href="#top" title="返回顶端" class="pop-a0"></a> -->
+
+</div>
+
+<!-- <div style="position: fixed;right: 40px;top: 250px;z-index:999;">
+<a href="http://223.220.252.167:8061" target="_blank"><img src="/images/jqrc/jqrc4.jpg"></a>
+</div> -->
+<script>
+    function closediv() {
+        $("#guanbi").click(function () {
+            document.getElementById("pop").style.display = "none";
+        });
+    }
+</script>
+
+
+<div class="clear"></div>
+<div class="link">
+    <div class="left">
+        <a href="http://www.mohrss.gov.cn/" target="_blank"><img src="/images/link-zg.png"></a>
+    </div>
+    <div class="center">
+        <div class="sx">
+            <a href="http://www.xining.gov.cn" target="_blank">西宁市</a>
+            <a href="http://www.haidong.gov.cn" target="_blank">海东市</a>
+            <a href="http://www.hainanzhou.gov.cn/" target="_blank">海南州</a>
+            <a href="http://www.haixi.gov.cn" target="_blank">海西州</a>
+            <a href="http://www.haibei.gov.cn/" target="_blank">海北州</a>
+            <a href="http://www.huangnan.gov.cn" target="_blank">黄南州</a>
+            <a href="http://www.yushuzhou.gov.cn" target="_blank">玉树州</a>
+            <a href="http://www.guoluo.gov.cn" target="_blank">果洛州</a>
+
+
+        </div>
+        <div class="lj">
+            <select class="zfl"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option>--省直属各厅局--</option>
+                <option value="http://fgw.qinghai.gov.cn/">省发展和改革委员会</option>
+                <option value="http://gxgz.qinghai.gov.cn/">青海省工业和信息化厅</option>
+                <option value="http://jyt.qinghai.gov.cn/">省教育厅</option>
+                <option value="http://kjt.qinghai.gov.cn/">省科学技术厅</option>
+                <option value="http://mzw.qinghai.gov.cn/">省民族宗教事务委员会</option>
+                <option value="http://gat.qinghai.gov.cn/stmhwz/">省公安厅</option>
+                <option value="http://www.qhjc.gov.cn/">省监察委员会</option>
+                <option value="http://mzt.qinghai.gov.cn/">省民政厅</option>
+                <option value="http://sft.qinghai.gov.cn/">省司法厅</option>
+                <option value="http://czt.qinghai.gov.cn/">省财政厅</option>
+                <option value="http://zrzyt.qinghai.gov.cn/index">青海省自然资源厅</option>
+                <option value="http://sthjt.qinghai.gov.cn/">省生态环境厅</option>
+                <option value="http://zjt.qinghai.gov.cn/">省住房和城乡建设厅</option>
+                <option value="http://jtyst.qinghai.gov.cn/">省交通运输厅</option>
+                <option value="http://slt.qinghai.gov.cn/">省水利厅</option>
+                <option value="http://nynct.qinghai.gov.cn">青海省农业农村厅</option>
+                <option value="http://lcj.qinghai.gov.cn/">省林业厅</option>
+                <option value="http://swt.qinghai.gov.cn/">省商务厅</option>
+                <option value="http://whlyt.qinghai.gov.cn/">青海省文化和旅游厅</option>
+                <option value="https://wsjkw.qinghai.gov.cn/">青海省卫生健康委员会</option>
+                <option value="http://sjt.qinghai.gov.cn/">省审计厅</option>
+                <option value="http://wsb.qinghai.gov.cn/">省外事办公室</option>
+                <option value="http://tyj.qinghai.gov.cn/">省体育局</option>
+                <option value="http://yjt.qinghai.gov.cn/">青海省应急管理厅</option>
+                <option value="http://scjgj.qinghai.gov.cn/index.htm">青海省市场监督管理局</option>
+                <option value="http://ypjgj.qinghai.gov.cn/">省食品药品监督管理局</option>
+                <option value="http://tjj.qinghai.gov.cn/">省统计局</option>
+                <option value="http://gdj.qinghai.gov.cn/ ">省广电局</option>
+                <option value="http://jyj.qinghai.gov.cn/">省监狱局</option>
+                <option value="http://www.coopqh.cn/">省供销社</option>
+                <option value="http://www.qast.org.cn/">省科协</option>
+                <option value="http://www.qhcl.org.cn/">省残联</option>
+                <option value="https://www.qhfic.cn/qinghgcc/#/">省工商联</option>
+                <option value="http://www.qhredcross.org.cn/">省红十字会</option>
+                <option value="http://qhh.qinghai.gov.cn/">青海湖景区保护利用管理局</option>
+                <option value="http://sjy.qinghai.gov.cn/">三江源国家公园管理局</option>
+                <option value="http://www.qhbb.gov.cn/">省编制办</option>
+                <option value="http://rfb.qinghai.gov.cn/">省人民防空办公室</option>
+            </select>
+
+            <select class="rlw"
+                    onchange=javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0>
+                <option>--各省人力资源和社会保障网--</option>
+                <OPTION value="http://rsj.beijing.gov.cn">北京市人力资源和社会保障局</OPTION>
+                <OPTION value="http://hrss.tj.gov.cn">天津人力资源和社会保障局</OPTION>
+                <OPTION value="http://www.hbrsw.gov.cn">河北省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.shanxi.gov.cn">山西省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.nmg.gov.cn">内蒙古自治区人力资源和社会保障网</OPTION>
+                <OPTION value="http://rst.ln.gov.cn">辽宁省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.jl.gov.cn">吉林省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.hlj.gov.cn">黑龙江省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rsj.sh.gov.cn">上海市人力资源和社会保障局</OPTION>
+                <OPTION value="http://jshrss.jiangsu.gov.cn">江苏人力资源和社会保障网</OPTION>
+                <OPTION value="http://rlsbt.zj.gov.cn">浙江省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.ah.gov.cn">安徽省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.fujian.gov.cn">福建省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.jiangxi.gov.cn">江西省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.shandong.gov.cn">山东省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.henan.gov.cn">河南省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.hubei.gov.cn">湖北省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.hunan.gov.cn">湖南省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.gd.gov.cn">广东省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.gxzf.gov.cn">广西壮族自治区人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.hainan.gov.cn">海南省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rlsbj.cq.gov.cn">重庆人力资源和社会保障网</OPTION>
+                <OPTION value="http://rst.sc.gov.cn">四川省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.guizhou.gov.cn">贵州人力资源和社会保障网</OPTION>
+                <OPTION value="http://hrss.yn.gov.cn">云南人力资源和社会保障网</OPTION>
+                <OPTION value="http://hrss.xizang.gov.cn">西藏自治区人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.shaanxi.gov.cn">陕西省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://rst.gansu.gov.cn">甘肃省人力资源和社会保障厅</OPTION>
+                <OPTION value="http://hrss.nx.gov.cn">宁夏人力资源和社会保障网</OPTION>
+                <OPTION value="http://rst.xinjiang.gov.cn">新疆维吾尔自治区人力资源和社会保障厅</OPTION>
+            </select>
+        </div>
+    </div>
+    <!--<div class="right1"><a href="http://111.12.148.99/" target="_blank"><img src="/images/link-1.png"></a></div>-->
+    <div class="right1">
+        <a href="http://www.qinghai.gov.cn/" target="_blank">
+            <img style="height: 41px;width: 120px" src="/images/qhrmzf.png">
+        </a>
+    </div>
+    <div class="right2">
+        <a href="https://qhrsggfw.org.cn/qhrst/index/qhrs/talant/index.jspx" target="_blank">
+            <img style="height: 41px;width: 120px" src="/images/ggjy.png">
+        </a>
+    </div>
+    <div class="right2">
+        <a href="http://www.qhpta.com" target="_blank">
+            <img style="height: 41px;width: 120px" src="/images/link-4.png"></a>
+    </div>
+
+
+</div>
+<!-- 友情链接 end-->
+<!-- foot-->
+<div class="clear"></div>
+<div class="foot">
+    <div class="link">
+        <div class="link0">
+            <a href="/wzdt.html" target="_blank">网站地图</a>
+            <a href="/zxfw/yjjy/index.html" target="_blank">意见建议</a>
+        </div>
+    </div>
+
+
+    <div class="bq">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td style="text-align: center;">
+                    <a style="margin-left: 300px;"
+                       href="http://bszs.conac.cn/sitename?method=show&id=06F2A98B1B8C75A8E053022819ACA1CE"
+                       target="_blank"><img src="/images/red.png" border="0"/></a>
+                </td>
+                <!-- <td width="2%" align="right">&nbsp;</td> -->
+                <td style="text-align: center;">
+                    <script id="_jiucuo_" sitecode='6300000023' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'>
+                    </script>
+                    <!--<a href="http://pucha.kaipuyun.cn/exposure/jiucuo.html?site_code=6300000023&url=http%3A%2F%2Fwww.qhhrss.gov.cn%2F" target="_blank"><img style="margin-top:-5px;" src="/images/jiucuo.png" border="0" /></a>  -->
+                </td>
+            </tr>
+        </table>
+        <br/> 主办单位：青海省人力资源和社会保障厅
+        <br/>地址：青海省西宁市黄河路156号 邮政编码： 810008 传真：（0971）8258000 政策咨询：（0971）12333<br/>
+
+        <span
+                style="color:#000;text-decoration:none; padding:0 5px margin:5px">政府网站标识码:6300000023&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=63010402000046" target="_blank"
+                style="color:#000;margin:5px"><img src="static/qhrst/images/batb1.png" />公安备案号:63010402000046&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				<a href="http://beian.miit.gov.cn/#/Integrated/index" target="_blank"
+                   style="color:#000;margin:5px">ICP备案序号:青ICP备10000392号&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		</span>
+    </div>
+</div>
+<!-- foot end-->
+<script>
+    var url = location.href;
+
+    if (url.indexOf("?frompage=homepage") > 0) {
+        var obj = document.getElementById("cus");
+        obj.href = "/index.html";
+        obj.innerHTML = "首页";
+
+    }
+</script>
+<div class="foot">
+    <div class="bq" id="visit-sum">
+    </div>
+    <div class="bq">
+        <a target="_blank" title="网站统计" href="https://v6.51.la/land/JflquE6CoZFPciBF"><img src="https://sdk.51.la/icon/3-3.png"></a>
+    </div>
+</div>
+</body>
+<script src="/js/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form'], function () {
+        var carousel = layui.carousel,
+            form = layui.form;
+        //常规轮播
+        //建造实例
+        carousel.render({
+            elem: '#test1',
+            width: '100%', //设置容器宽度
+            height: '100px',
+            arrow: 'always', //始终显示箭头
+            indicator: 'none'
+            //,anim: 'updown' //切换动画方式
+        });
+    })
+</script>
+
+</html> 
