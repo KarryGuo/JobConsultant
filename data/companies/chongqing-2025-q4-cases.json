@@ -1,0 +1,412 @@
+{
+  "source": {
+    "key": "chongqing-2025-q4-cases",
+    "name": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "重庆市",
+    "baseUrl": "https://rlsbj.cq.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+    "url": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+    "publishedAt": "2025-12-25",
+    "fetchedAt": "2026-11-24T12:57:33.948Z",
+    "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "13d08763-97e9-4749-ab56-27b263802076",
+    "sourceKey": "chongqing-2025-q4-cases",
+    "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.942Z",
+    "finishedAt": "2026-11-24T12:57:33.948Z",
+    "httpStatus": null,
+    "contentHash": "17bc485762462da5229186f6e992cd8ee1055d58eb553799e70fcdc09c78f09d",
+    "snapshotPath": "data/snapshots/chongqing-2025-q4-cases.html",
+    "warnings": 14,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "垫江县千川艺术培训中心有限公司",
+        "aliases": [],
+        "creditCode": "91500231MA60FWPG7U",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，垫江县千川艺术培训中心有限公司法定代表人为谭科，公司地址为重庆市垫江县桂西大道白龙转盘（桂溪大道北段 468 号牡丹城 52 栋 2-7 、 8 号），该 单位在 经营期间拖欠赵 某 渝等 15 名劳动 者 劳动报酬 15.94 万 元",
+            "workerCount": 15,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "正能建工集团有限公司",
+        "aliases": [],
+        "creditCode": "91500115450483388R",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，正能建工集团有限公司法定代表人为陈小勇，公司地址为重庆市长寿区凤城街道黄桷湾创业街 13 号，共拖欠 11 名劳动者 2024 年 6 月至 2024 年 7 月的劳动报酬 6.26 万元",
+            "workerCount": 11,
+            "amountYuan": 62600,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆浪鑫劳务有限公司",
+        "aliases": [],
+        "creditCode": "91500113MA618322XT",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆浪鑫劳务有限公司法定代表人为吴正祥，公司地址为重庆市巴南区渝南大道 243 号 18-17 ，共拖欠 22 名劳动者 2025 年 2 月至 2025 年 3 月的劳动报酬 21.64 万元",
+            "workerCount": 22,
+            "amountYuan": 216400,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆驰盛汽车城有限公司",
+        "aliases": [],
+        "creditCode": "91500113089100840H",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四、重庆驰盛汽车城有限公司、重庆利欧鸿福水务有限公司拖欠劳动报酬案 2025 年 9 月 24 日， 巴南区 人力社保局 接到赵 某 、赵某勤 2 名劳动者 投诉， 称 重庆协信汽车城项目 9# 楼、 9-1# 楼供水安装工程 拖欠劳动报酬",
+            "workerCount": 2,
+            "amountYuan": 75000,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖北富景建筑安装有限公司",
+        "aliases": [],
+        "creditCode": "91421126180718828M",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该工程总承包单位为湖北富景建筑安装有限公司 （统一社会信用代码： 91421126180718828M ），公司法人为张棋，公司地址为蕲春县漕河镇傅畈社区，劳务分包单位为重庆渝鲁机电工程有限公司（统一社会信用代码： 91500226MA60YFPC14 ），公司法人为徐君梅，公司地址为重庆市荣昌区昌州街道昌龙大道 37 号 3 幢 12-6 ，共拖欠 1 1 名员工工资 29.2 万元",
+            "workerCount": 1,
+            "amountYuan": 292000,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "该项目劳务分包单位为重庆旭瑞建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "915001166992583547",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目劳务分包单位为重庆旭瑞建筑劳务有限公司（统一社会信用代码： 915001166992583547 ），公司法人为段兴贵，公司地址为重庆市江津区几江滨江中路 17 幢 17 号，共拖欠 20 名工人工资共计 60.79 万元",
+            "workerCount": 20,
+            "amountYuan": 607900,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆维控自动化设备有限公司",
+        "aliases": [],
+        "creditCode": "91500107MA60BL3R5P",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆维控自动化设备有限公司法定代表人为吴其，公司地址为璧山区大兴镇科技路 230 号附 8 号，共拖欠 5 名劳动者 2025 年 6 月至 7 月的劳动报酬 10.92 万元",
+            "workerCount": 5,
+            "amountYuan": 109200,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川蓥城建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91511681MA62GCLJ9Y",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，四川蓥城建设工程有限公司法定代表人为甘从垒，公司地址为四川省华蓥市新华大道三段豪情骏座 17 号楼二层 1 、 2-1 、 2-2 号，共拖欠 3 名劳动者 2024 年 11 月至 12 月的劳动报酬 8.3 万元",
+            "workerCount": 3,
+            "amountYuan": 83000,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川立远天成建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91510300MA64E60L6A",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2024 年 11 月至 2025 年 6 月，该公司在承建垫江县高新区现代农业泵阀产业园（一期）检测中心 EPC 项目施工期间，共拖欠 178 名劳动者劳动报酬 79.51 万元",
+            "workerCount": 178,
+            "amountYuan": 795100,
+            "stage": "行政处理",
+            "stageLabel": "行政处理"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆融尚盛世体育文化传播有限公司",
+        "aliases": [],
+        "creditCode": "91500112MAEFRYHQ7G",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆融尚盛世体育文化传播有限公司法定代表人为李世林 , 实际经营人为舒某，公司地址为 原 渝北区双凤桥街道空港大道 665 号锦尚城商业裙楼车库，共拖欠 30 名劳动者 2025 年 7 月至 2025 年 9 月的劳动报酬 15.02 万元",
+            "workerCount": 30,
+            "amountYuan": 150200,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "重庆安宸建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91500107MA60RNXF0C",
+        "province": "重庆市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，重庆安宸建筑劳务有限公司法定代表人为莫维，公司地址为重庆市九龙坡区石桥铺街道石桥铺石杨路 4 号附 1-9-1 号，共拖欠 125 名劳动者 2021 年 8 月至 2023 年 8 月的劳动报酬 173.52 万元",
+            "workerCount": 125,
+            "amountYuan": 1735200,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rlsbj.cq.gov.cn/zwgk_182/fdzdgknr/cfqz_635/xkcfsgs/202512/t20251225_15270479.html",
+          "sourceTitle": "重庆市人力资源和社会保障局重大劳动保障违法行为社会公布（2025年四季度）",
+          "sourcePublishedAt": "2025-12-25",
+          "fetchedAt": "2026-11-24T12:57:33.948Z",
+          "snapshotFile": "data/snapshots/chongqing-2025-q4-cases.html",
+          "ingestRunId": "13d08763-97e9-4749-ab56-27b263802076",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

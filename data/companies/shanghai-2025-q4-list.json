@@ -1,0 +1,119 @@
+{
+  "source": {
+    "key": "shanghai-2025-q4-list",
+    "name": "2025年四季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "上海市",
+    "baseUrl": "https://rsj.sh.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "2025年四季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+    "url": "https://rsj.sh.gov.cn/tgsgg_17341/20260115/t0035_1437988.html",
+    "publishedAt": "2025-12-30",
+    "fetchedAt": "2026-11-24T12:57:33.886Z",
+    "snapshotFile": "data/snapshots/shanghai-2025-q4-list.xls"
+  },
+  "ingestRun": {
+    "id": "d2603fda-6b09-4fd4-88ef-a766c4e42125",
+    "sourceKey": "shanghai-2025-q4-list",
+    "sourceUrl": "https://rsj.sh.gov.cn/tgsgg_17341/20260115/t0035_1437988.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.872Z",
+    "finishedAt": "2026-11-24T12:57:33.887Z",
+    "httpStatus": null,
+    "contentHash": "8bd99912710e67442bcabee17bd2326efacae10f1fa05c50aac3b3448c3ce0e3",
+    "snapshotPath": "data/snapshots/shanghai-2025-q4-list.xls",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "上海纯煦电梯工程有限公司",
+        "aliases": [],
+        "creditCode": "91310113MA1GM1RK1W",
+        "province": "上海市",
+        "city": "上海市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠1名农民工2023年5月至2023年8月期间工资，共计人民币37775元。",
+            "workerCount": 1,
+            "amountYuan": 37775,
+            "authority": "上海市宝山区人力资源和社会保障局",
+            "decisionNo": "（宝山）人社执法〔2024〕列决字第01349号",
+            "legalRep": "伊喜和",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-04-14",
+            "listedAt": "2025-04-14",
+            "expiresAt": "2028-04-13"
+          },
+          "sourceUrl": "https://rsj.sh.gov.cn/tgsgg_17341/20260115/t0035_1437988.html",
+          "sourceTitle": "2025年四季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.886Z",
+          "snapshotFile": "data/snapshots/shanghai-2025-q4-list.xls",
+          "ingestRunId": "d2603fda-6b09-4fd4-88ef-a766c4e42125",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "上海磊岳建筑装潢工程有限公司",
+        "aliases": [],
+        "creditCode": "91310114772119829B",
+        "province": "上海市",
+        "city": "上海市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠32名农民工2023年5月28日至2023年8月30日期间工资，共计人民币764241元。",
+            "workerCount": 32,
+            "amountYuan": 764241,
+            "authority": "上海市崇明区人力资源和社会保障局",
+            "decisionNo": "沪崇人社执〔2024〕列决字第153号",
+            "legalRep": "王国蓉",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-09-04",
+            "listedAt": "2025-09-04",
+            "expiresAt": "2028-09-03"
+          },
+          "sourceUrl": "https://rsj.sh.gov.cn/tgsgg_17341/20260115/t0035_1437988.html",
+          "sourceTitle": "2025年四季度本市拖欠农民工工资失信联合惩戒对象名单集中通报",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.886Z",
+          "snapshotFile": "data/snapshots/shanghai-2025-q4-list.xls",
+          "ingestRunId": "d2603fda-6b09-4fd4-88ef-a766c4e42125",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

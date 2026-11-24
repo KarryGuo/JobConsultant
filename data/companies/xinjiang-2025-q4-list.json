@@ -1,0 +1,267 @@
+{
+  "source": {
+    "key": "xinjiang-2025-q4-list",
+    "name": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "新疆维吾尔自治区",
+    "baseUrl": "http://rst.xinjiang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+    "publishedAt": "2026-01-09",
+    "fetchedAt": "2026-11-24T12:57:33.972Z",
+    "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "84ede410-a091-4743-8f53-f5207c919d15",
+    "sourceKey": "xinjiang-2025-q4-list",
+    "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.970Z",
+    "finishedAt": "2026-11-24T12:57:33.972Z",
+    "httpStatus": null,
+    "contentHash": "43e7d90baf260da9634fdc0cf53571de613d40c9ad23edcf92c44cf0a2da2dbd",
+    "snapshotPath": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "新疆明振建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91650104MA78U4NN6N",
+        "province": "新疆维吾尔自治区",
+        "city": "乌鲁木齐市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠106名劳动者劳动报酬250.931283万元",
+            "workerCount": 106,
+            "amountYuan": 2509313,
+            "authority": "乌鲁木齐市人力资源和社会保障局",
+            "legalRep": "徐新成",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-09-28",
+            "listedAt": "2025-09-28"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.972Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+          "ingestRunId": "84ede410-a091-4743-8f53-f5207c919d15",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆赢在合建筑工程有限责任公司",
+        "aliases": [],
+        "creditCode": "91650105MA78GY1H23",
+        "province": "新疆维吾尔自治区",
+        "city": "乌鲁木齐市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠334名劳动者劳动报酬1048.047356万元",
+            "workerCount": 334,
+            "amountYuan": 10480474,
+            "authority": "乌鲁木齐市人力资源和社会保障局",
+            "legalRep": "曾海鑫",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-20",
+            "listedAt": "2025-11-20"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.972Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+          "ingestRunId": "84ede410-a091-4743-8f53-f5207c919d15",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆奥森建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91652327MADD5ARX9Q",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠8名劳动者劳动报酬27.4287万元",
+            "workerCount": 8,
+            "amountYuan": 274287,
+            "authority": "吉木萨尔县人力资源和社会保障局",
+            "legalRep": "季成新",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-25",
+            "listedAt": "2025-11-25"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.972Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+          "ingestRunId": "84ede410-a091-4743-8f53-f5207c919d15",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "阿拉尔市怡景园林绿化有限公司",
+        "aliases": [],
+        "creditCode": "91659002076052472R",
+        "province": "新疆维吾尔自治区",
+        "city": "阿克苏市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠132名劳动者劳动报酬199.6万元",
+            "workerCount": 132,
+            "amountYuan": 1996000,
+            "authority": "阿克苏市人力资源和社会保障局",
+            "legalRep": "焦封祥",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-02",
+            "listedAt": "2025-12-02"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.972Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+          "ingestRunId": "84ede410-a091-4743-8f53-f5207c919d15",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆盛茂源建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91652327MA77P7925N",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠72名劳动者劳动报酬90.6804万元",
+            "workerCount": 72,
+            "amountYuan": 906804,
+            "authority": "吉木萨尔县人力资源和社会保障局",
+            "legalRep": "付红强",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-11",
+            "listedAt": "2025-12-11"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.972Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+          "ingestRunId": "84ede410-a091-4743-8f53-f5207c919d15",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆玉隆信达建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91650102MA783L3H9U",
+        "province": "新疆维吾尔自治区",
+        "city": "乌鲁木齐市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠13名劳动者劳动报酬98.0189万元",
+            "workerCount": 13,
+            "amountYuan": 980189,
+            "authority": "乌鲁木齐市人力资源和社会保障局",
+            "legalRep": "冶浪",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-23",
+            "listedAt": "2025-12-23"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.972Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-list.xlsx",
+          "ingestRunId": "84ede410-a091-4743-8f53-f5207c919d15",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

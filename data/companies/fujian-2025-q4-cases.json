@@ -1,0 +1,112 @@
+{
+  "source": {
+    "key": "fujian-2025-q4-cases",
+    "name": "福建省人社厅公布2025年第四批重大劳动保障违法行为",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "福建省",
+    "baseUrl": "https://rst.fujian.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "福建省人社厅公布2025年第四批重大劳动保障违法行为",
+    "url": "https://rst.fujian.gov.cn/zw/ldjy/202512/t20251229_7062008.htm",
+    "publishedAt": "2025-12-29",
+    "fetchedAt": "2026-11-24T12:57:33.907Z",
+    "snapshotFile": "data/snapshots/fujian-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "c85b20d1-6d83-49c7-97f6-67e3f19402e7",
+    "sourceKey": "fujian-2025-q4-cases",
+    "sourceUrl": "https://rst.fujian.gov.cn/zw/ldjy/202512/t20251229_7062008.htm",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.904Z",
+    "finishedAt": "2026-11-24T12:57:33.907Z",
+    "httpStatus": null,
+    "contentHash": "78253ca02e66cb82f4a7b1420924e255b6ef1fcab2e7aea4fc9115460852bd02",
+    "snapshotPath": "data/snapshots/fujian-2025-q4-cases.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "福建苒苒之星科技有限公司",
+        "aliases": [],
+        "creditCode": "91350102MA349GAC0W",
+        "province": "福建省",
+        "city": "福州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，福建苒苒之星科技有限公司经营期间拖欠 54名劳动者劳动报酬合计604331.01元",
+            "workerCount": 54,
+            "amountYuan": 604331,
+            "authority": "福州市仓山区人力资源和社会保障局",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-01-14"
+          },
+          "sourceUrl": "https://rst.fujian.gov.cn/zw/ldjy/202512/t20251229_7062008.htm",
+          "sourceTitle": "福建省人社厅公布2025年第四批重大劳动保障违法行为",
+          "sourcePublishedAt": "2025-12-29",
+          "fetchedAt": "2026-11-24T12:57:33.907Z",
+          "snapshotFile": "data/snapshots/fujian-2025-q4-cases.html",
+          "ingestRunId": "c85b20d1-6d83-49c7-97f6-67e3f19402e7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "福建省永春三泰鞋业有限公司",
+        "aliases": [],
+        "creditCode": "913505256115835245",
+        "province": "福建省",
+        "city": "永春县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，福建省永春三泰鞋业有限公司拖欠 182名劳动者劳动报酬189.8744万元",
+            "workerCount": 182,
+            "amountYuan": 1898744,
+            "authority": "永春县人力资源和社会保障局",
+            "legalRep": "黄金前",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-08-21"
+          },
+          "sourceUrl": "https://rst.fujian.gov.cn/zw/ldjy/202512/t20251229_7062008.htm",
+          "sourceTitle": "福建省人社厅公布2025年第四批重大劳动保障违法行为",
+          "sourcePublishedAt": "2025-12-29",
+          "fetchedAt": "2026-11-24T12:57:33.907Z",
+          "snapshotFile": "data/snapshots/fujian-2025-q4-cases.html",
+          "ingestRunId": "c85b20d1-6d83-49c7-97f6-67e3f19402e7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

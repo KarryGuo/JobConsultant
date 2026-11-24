@@ -1,0 +1,321 @@
+{
+  "source": {
+    "key": "xinjiang-2025-q4-cases",
+    "name": "新疆2025年第四季度重大劳动保障违法行为公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "新疆维吾尔自治区",
+    "baseUrl": "http://rst.xinjiang.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "新疆2025年第四季度重大劳动保障违法行为公布",
+    "url": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+    "publishedAt": "2026-01-09",
+    "fetchedAt": "2026-11-24T12:57:33.969Z",
+    "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx"
+  },
+  "ingestRun": {
+    "id": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+    "sourceKey": "xinjiang-2025-q4-cases",
+    "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.965Z",
+    "finishedAt": "2026-11-24T12:57:33.969Z",
+    "httpStatus": null,
+    "contentHash": "2a8ca29e6dafd6908fc5b43807666b72a783f9c9c96754794592f75d4fb34438",
+    "snapshotPath": "data/snapshots/xinjiang-2025-q4-cases.docx",
+    "warnings": 6,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "吉木萨尔县荣恩建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91652327MACBEMYH0N",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：拖欠6名劳动者劳动报酬10.72万元，拒绝履行。",
+            "workerCount": 6,
+            "amountYuan": 107200,
+            "authority": "吉木萨尔县人社局",
+            "legalRep": "李娟",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆万城房地产开发有限公司吉木萨尔县分公司",
+        "aliases": [],
+        "creditCode": "91652327552414754L",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：经人社部门责令改正拒不改正，拒不履行人社部门的行政处理决定。",
+            "authority": "吉木萨尔县人社局",
+            "legalRep": "王鹏",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "呼图壁众腾劳务派遣有限公司",
+        "aliases": [],
+        "creditCode": "91652323MA77XUFM3B",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：拖欠11名劳动者劳动报酬16.826万元，拒绝履行。",
+            "workerCount": 11,
+            "amountYuan": 168260,
+            "authority": "吉木萨尔县人社局",
+            "legalRep": "李建国",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆盛茂源建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91652327MA77P7925N",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：拖欠72名劳动者劳动报酬90.6804万元，拒绝履行。",
+            "workerCount": 72,
+            "amountYuan": 906804,
+            "authority": "吉木萨尔县人社局",
+            "legalRep": "付红强",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新疆奥森建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91652327MADD5ARX9Q",
+        "province": "新疆维吾尔自治区",
+        "city": "吉木萨尔县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：拖欠8名劳动者劳动报酬27.4287万元，拒绝履行。",
+            "workerCount": 8,
+            "amountYuan": 274287,
+            "authority": "吉木萨尔县人社局",
+            "legalRep": "季成新",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "喀什昆仑中农农业开发有限公司",
+        "aliases": [],
+        "creditCode": "91653126MA7FYUAC2C",
+        "province": "新疆维吾尔自治区",
+        "city": "叶城县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：经人社部门责令改正拒不改正，拒不履行人社部门的行政处理决定。",
+            "authority": "叶城县人社局",
+            "legalRep": "张学强",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西欣启吉建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91610113MA6WJQP86N",
+        "province": "新疆维吾尔自治区",
+        "city": "鄯善县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：经人社部门责令改正拒不改正，拒不履行人社部门的行政处理决定。",
+            "authority": "鄯善县人社局",
+            "legalRep": "薛冬冬",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中辉佳业建筑工程有限公司吐鲁番分公司",
+        "aliases": [],
+        "creditCode": "91650402MAEXUGFU0C",
+        "province": "新疆维吾尔自治区",
+        "city": "高昌区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "主要违法事实：拖欠15名劳动者劳动报酬16.2万元，拒绝履行。",
+            "workerCount": 15,
+            "amountYuan": 162000,
+            "authority": "高昌区人社局",
+            "legalRep": "祁成裕",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "http://rst.xinjiang.gov.cn/xjrst/c112487/202601/289672572df04f8083f7a418784ce7cd.shtml",
+          "sourceTitle": "新疆2025年第四季度重大劳动保障违法行为公布",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.969Z",
+          "snapshotFile": "data/snapshots/xinjiang-2025-q4-cases.docx",
+          "ingestRunId": "db5b60f2-3e09-45b6-b948-13ed17ea9daf",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "source": {
+    "key": "liaoning-2025-q3-cases",
+    "name": "辽宁省人力资源和社会保障厅公布2025年第三季度重大劳动保障违法案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "辽宁省",
+    "baseUrl": "https://rst.ln.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "辽宁省人力资源和社会保障厅公布2025年第三季度重大劳动保障违法案例",
+    "url": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2025102709581019785/index.shtml",
+    "publishedAt": "2025-10-27",
+    "fetchedAt": "2026-11-24T12:57:33.852Z",
+    "snapshotFile": "data/snapshots/liaoning-2025-q3-cases.html"
+  },
+  "ingestRun": {
+    "id": "8354f47b-3c5d-4188-a72b-31a444d85e62",
+    "sourceKey": "liaoning-2025-q3-cases",
+    "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2025102709581019785/index.shtml",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.849Z",
+    "finishedAt": "2026-11-24T12:57:33.852Z",
+    "httpStatus": null,
+    "contentHash": "2798422b35da3df9b8709f973c42e0d1168338924f77c1be7af022c6a94c134c",
+    "snapshotPath": "data/snapshots/liaoning-2025-q3-cases.html",
+    "warnings": 2,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "沈阳小石子建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91210123MA10W5CW5B",
+        "province": "辽宁省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司在承建大东区某项目中，拖欠42名劳动者劳动报酬71.41万元",
+            "workerCount": 42,
+            "amountYuan": 714100,
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-06-30"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2025102709581019785/index.shtml",
+          "sourceTitle": "辽宁省人力资源和社会保障厅公布2025年第三季度重大劳动保障违法案例",
+          "sourcePublishedAt": "2025-10-27",
+          "fetchedAt": "2026-11-24T12:57:33.852Z",
+          "snapshotFile": "data/snapshots/liaoning-2025-q3-cases.html",
+          "ingestRunId": "8354f47b-3c5d-4188-a72b-31a444d85e62",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "九江兴鹏装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91360429MA39UAPL2R",
+        "province": "辽宁省",
+        "city": "大连市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司在承建大连市西岗区某工程项目中，共拖欠54名劳动者劳动报酬49.25万元",
+            "workerCount": 54,
+            "amountYuan": 492500,
+            "authority": "大连市西岗区人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-08-11"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2025102709581019785/index.shtml",
+          "sourceTitle": "辽宁省人力资源和社会保障厅公布2025年第三季度重大劳动保障违法案例",
+          "sourcePublishedAt": "2025-10-27",
+          "fetchedAt": "2026-11-24T12:57:33.852Z",
+          "snapshotFile": "data/snapshots/liaoning-2025-q3-cases.html",
+          "ingestRunId": "8354f47b-3c5d-4188-a72b-31a444d85e62",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "港军建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91210213MA0XW2U322",
+        "province": "辽宁省",
+        "city": "大连金普新区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司在碳酸泉温泉机生产线建设项目工程中拖欠48名劳动者劳动报酬75.41万元",
+            "workerCount": 48,
+            "amountYuan": 754100,
+            "authority": "大连金普新区人力资源和社会保障局",
+            "stage": "行政处理",
+            "stageLabel": "行政处理",
+            "stageDate": "2025-07-14"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2025102709581019785/index.shtml",
+          "sourceTitle": "辽宁省人力资源和社会保障厅公布2025年第三季度重大劳动保障违法案例",
+          "sourcePublishedAt": "2025-10-27",
+          "fetchedAt": "2026-11-24T12:57:33.852Z",
+          "snapshotFile": "data/snapshots/liaoning-2025-q3-cases.html",
+          "ingestRunId": "8354f47b-3c5d-4188-a72b-31a444d85e62",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "阜新合利建设工程有限公司海州分公司",
+        "aliases": [],
+        "creditCode": "91210902MA0Y10LJ23",
+        "province": "辽宁省",
+        "city": "日阜新市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司存在拖欠张振德、庞小亮等61人工资23.286万元",
+            "amountYuan": 232860,
+            "authority": "日阜新市细河区人力资源和社会保障局",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-04-23"
+          },
+          "sourceUrl": "https://rst.ln.gov.cn/rst/zxzx/gsgg/2025102709581019785/index.shtml",
+          "sourceTitle": "辽宁省人力资源和社会保障厅公布2025年第三季度重大劳动保障违法案例",
+          "sourcePublishedAt": "2025-10-27",
+          "fetchedAt": "2026-11-24T12:57:33.852Z",
+          "snapshotFile": "data/snapshots/liaoning-2025-q3-cases.html",
+          "ingestRunId": "8354f47b-3c5d-4188-a72b-31a444d85e62",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

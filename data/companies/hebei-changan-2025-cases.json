@@ -1,0 +1,111 @@
+{
+  "source": {
+    "key": "hebei-changan-2025-cases",
+    "name": "石家庄市长安区人力资源和社会保障局关于公布重大劳动保障违法行为的公告（2025年12月）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "河北省",
+    "baseUrl": "http://www.sjzca.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "石家庄市长安区人力资源和社会保障局关于公布重大劳动保障违法行为的公告（2025年12月）",
+    "url": "http://www.sjzca.gov.cn/columns/00da0b69-fe80-4ed0-a4dd-f61104e9235b/202512/24/62468bff-9ee9-47ed-bb4b-f3757a7de2b7.html",
+    "publishedAt": "2025-12-24",
+    "fetchedAt": "2026-11-24T12:57:33.825Z",
+    "snapshotFile": "data/snapshots/hebei-changan-2025-cases.html"
+  },
+  "ingestRun": {
+    "id": "6a4b5e50-3211-4e66-b3b1-7c128c26264a",
+    "sourceKey": "hebei-changan-2025-cases",
+    "sourceUrl": "http://www.sjzca.gov.cn/columns/00da0b69-fe80-4ed0-a4dd-f61104e9235b/202512/24/62468bff-9ee9-47ed-bb4b-f3757a7de2b7.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.822Z",
+    "finishedAt": "2026-11-24T12:57:33.825Z",
+    "httpStatus": null,
+    "contentHash": "75c0dd1f3b3ea91c1942edb2ff018fdec9a3724ef847e9f69bbf598069421465",
+    "snapshotPath": "data/snapshots/hebei-changan-2025-cases.html",
+    "warnings": 2,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "北京建海伟业建筑装饰有限公司",
+        "aliases": [],
+        "creditCode": "91110115554832538R",
+        "province": "河北省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠61名员工工资926871.42元，经劳动保障行政部门责令改正，拒不改正",
+            "workerCount": 61,
+            "amountYuan": 926871,
+            "decisionNo": "北京市大兴区西红门北一街1号院1号楼1层(01)101",
+            "legalRep": "乔海伟",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单"
+          },
+          "sourceUrl": "http://www.sjzca.gov.cn/columns/00da0b69-fe80-4ed0-a4dd-f61104e9235b/202512/24/62468bff-9ee9-47ed-bb4b-f3757a7de2b7.html",
+          "sourceTitle": "石家庄市长安区人力资源和社会保障局关于公布重大劳动保障违法行为的公告（2025年12月）",
+          "sourcePublishedAt": "2025-12-24",
+          "fetchedAt": "2026-11-24T12:57:33.825Z",
+          "snapshotFile": "data/snapshots/hebei-changan-2025-cases.html",
+          "ingestRunId": "6a4b5e50-3211-4e66-b3b1-7c128c26264a",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "石家庄同盛建筑劳务分包有限公司",
+        "aliases": [],
+        "creditCode": "91130102673245635T",
+        "province": "河北省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠 5 名员工工资312294 元，经劳动保障行政部门责令改正，拒不改正",
+            "workerCount": 5,
+            "amountYuan": 312294,
+            "decisionNo": "河北省石家庄市正定新区迎旭大道与新城大街交口东北方向天山熙湖一期9号楼3单元602-1室",
+            "legalRep": "王立刚",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单"
+          },
+          "sourceUrl": "http://www.sjzca.gov.cn/columns/00da0b69-fe80-4ed0-a4dd-f61104e9235b/202512/24/62468bff-9ee9-47ed-bb4b-f3757a7de2b7.html",
+          "sourceTitle": "石家庄市长安区人力资源和社会保障局关于公布重大劳动保障违法行为的公告（2025年12月）",
+          "sourcePublishedAt": "2025-12-24",
+          "fetchedAt": "2026-11-24T12:57:33.825Z",
+          "snapshotFile": "data/snapshots/hebei-changan-2025-cases.html",
+          "ingestRunId": "6a4b5e50-3211-4e66-b3b1-7c128c26264a",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

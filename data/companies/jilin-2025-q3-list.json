@@ -1,0 +1,153 @@
+{
+  "source": {
+    "key": "jilin-2025-q3-list",
+    "name": "吉林省人社厅公布2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "吉林省",
+    "baseUrl": "http://hrss.jl.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "吉林省人社厅公布2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202510/t20251009_9332150.html",
+    "publishedAt": "2025-10-09",
+    "fetchedAt": "2026-11-24T12:57:33.864Z",
+    "snapshotFile": "data/snapshots/jilin-2025-q3-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "8f168bf3-c886-4d2c-9842-bcb9f2c40b8f",
+    "sourceKey": "jilin-2025-q3-list",
+    "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202510/t20251009_9332150.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.859Z",
+    "finishedAt": "2026-11-24T12:57:33.865Z",
+    "httpStatus": null,
+    "contentHash": "eac6f8004311b168eed022a8cb49d1a79a3ace77bb4d460a45c82e69dbd59252",
+    "snapshotPath": "data/snapshots/jilin-2025-q3-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "吉林省佳顺建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91220302MABTX6EC7D",
+        "province": "吉林省",
+        "city": "四平市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠44名劳动者劳动报酬663077元",
+            "workerCount": 44,
+            "amountYuan": 663077,
+            "authority": "四平市人力资源和社会保障局",
+            "legalRep": "王伟光",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-07-21",
+            "listedAt": "2025-07-21"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202510/t20251009_9332150.html",
+          "sourceTitle": "吉林省人社厅公布2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-10-09",
+          "fetchedAt": "2026-11-24T12:57:33.864Z",
+          "snapshotFile": "data/snapshots/jilin-2025-q3-list.xlsx",
+          "ingestRunId": "8f168bf3-c886-4d2c-9842-bcb9f2c40b8f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "吉林省天狮建设有限公司",
+        "aliases": [],
+        "creditCode": "91220600MA17RKTQ47",
+        "province": "吉林省",
+        "city": "辽源市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠16名劳动者劳动报酬143700元",
+            "workerCount": 16,
+            "amountYuan": 143700,
+            "authority": "辽源市人力资源和社会保障局",
+            "legalRep": "汤冲",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-08-04",
+            "listedAt": "2025-08-04"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202510/t20251009_9332150.html",
+          "sourceTitle": "吉林省人社厅公布2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-10-09",
+          "fetchedAt": "2026-11-24T12:57:33.864Z",
+          "snapshotFile": "data/snapshots/jilin-2025-q3-list.xlsx",
+          "ingestRunId": "8f168bf3-c886-4d2c-9842-bcb9f2c40b8f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "通化市中宇建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "9122050156505492X8",
+        "province": "吉林省",
+        "city": "通化市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠16名劳动者劳动报酬536650元",
+            "workerCount": 16,
+            "amountYuan": 536650,
+            "authority": "通化市人力资源和社会保障局",
+            "legalRep": "刘增文",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-08-25",
+            "listedAt": "2025-08-25"
+          },
+          "sourceUrl": "http://hrss.jl.gov.cn/ldgx/ldjc/ldjczfnljs/202510/t20251009_9332150.html",
+          "sourceTitle": "吉林省人社厅公布2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-10-09",
+          "fetchedAt": "2026-11-24T12:57:33.864Z",
+          "snapshotFile": "data/snapshots/jilin-2025-q3-list.xlsx",
+          "ingestRunId": "8f168bf3-c886-4d2c-9842-bcb9f2c40b8f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

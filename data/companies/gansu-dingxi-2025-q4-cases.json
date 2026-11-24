@@ -1,0 +1,75 @@
+{
+  "source": {
+    "key": "gansu-dingxi-2025-q4-cases",
+    "name": "定西市人力资源和社会保障局关于公布2025年第四批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "甘肃省",
+    "baseUrl": "http://rsj.dingxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "定西市人力资源和社会保障局关于公布2025年第四批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+    "url": "http://rsj.dingxi.gov.cn/art/2025/12/4/art_7469_1868618.html",
+    "publishedAt": "2025-12-05",
+    "fetchedAt": "2026-11-24T12:57:33.963Z",
+    "snapshotFile": "data/snapshots/gansu-dingxi-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "bdca3e07-f6c6-4f53-9d74-8af63fbe1108",
+    "sourceKey": "gansu-dingxi-2025-q4-cases",
+    "sourceUrl": "http://rsj.dingxi.gov.cn/art/2025/12/4/art_7469_1868618.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.962Z",
+    "finishedAt": "2026-11-24T12:57:33.964Z",
+    "httpStatus": null,
+    "contentHash": "6744459118aa0470b09e35760a78e8de94baf06656aeb336481c6f1379a6daaf",
+    "snapshotPath": "data/snapshots/gansu-dingxi-2025-q4-cases.html",
+    "warnings": 2,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "甘肃新七建筑工程有限责任公司",
+        "aliases": [],
+        "creditCode": "91620102325388293Q",
+        "province": "甘肃省",
+        "city": "定西市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司共计拖欠陇中文化旅游创意产业园谷语春秋二期项目199 人工资417.28114万元，且未缴纳该项目农民工工资保证金",
+            "amountYuan": 4172811,
+            "authority": "定西市安定区人社局",
+            "legalRep": "陈爱杰",
+            "stage": "责令改正",
+            "stageLabel": "责令改正",
+            "stageDate": "2025-09-24"
+          },
+          "sourceUrl": "http://rsj.dingxi.gov.cn/art/2025/12/4/art_7469_1868618.html",
+          "sourceTitle": "定西市人力资源和社会保障局关于公布2025年第四批重大劳动保障违法行为及拖欠农民工工资失信联合惩戒对象名单的公告",
+          "sourcePublishedAt": "2025-12-05",
+          "fetchedAt": "2026-11-24T12:57:33.963Z",
+          "snapshotFile": "data/snapshots/gansu-dingxi-2025-q4-cases.html",
+          "ingestRunId": "bdca3e07-f6c6-4f53-9d74-8af63fbe1108",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

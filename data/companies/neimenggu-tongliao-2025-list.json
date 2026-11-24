@@ -1,0 +1,132 @@
+{
+  "source": {
+    "key": "neimenggu-tongliao-2025-list",
+    "name": "通辽市关于拖欠农民工工资失信联合惩戒对象名单的公告（2025年11月）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "内蒙古自治区",
+    "baseUrl": "https://rsj.tongliao.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "通辽市关于拖欠农民工工资失信联合惩戒对象名单的公告（2025年11月）",
+    "url": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202511/t20251124_1016740.html",
+    "publishedAt": "2025-11-24",
+    "fetchedAt": "2026-11-24T12:57:33.847Z",
+    "snapshotFile": "data/snapshots/neimenggu-tongliao-2025-list.html"
+  },
+  "ingestRun": {
+    "id": "fca3e6a3-f94c-4ee5-a54c-ec5d82543aba",
+    "sourceKey": "neimenggu-tongliao-2025-list",
+    "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202511/t20251124_1016740.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.843Z",
+    "finishedAt": "2026-11-24T12:57:33.848Z",
+    "httpStatus": null,
+    "contentHash": "329002792f129a78a01f6672a6fdd7403c1fb43a78750a80a34312a3fc88a8d0",
+    "snapshotPath": "data/snapshots/neimenggu-tongliao-2025-list.html",
+    "warnings": 26,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "内蒙古弗雷农业科技有限责任公司",
+        "aliases": [],
+        "creditCode": "91150521MA7MEFWD7M",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "legalRep": "王凤训"
+          },
+          "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202511/t20251124_1016740.html",
+          "sourceTitle": "通辽市关于拖欠农民工工资失信联合惩戒对象名单的公告（2025年11月）",
+          "sourcePublishedAt": "2025-11-24",
+          "fetchedAt": "2026-11-24T12:57:33.847Z",
+          "snapshotFile": "data/snapshots/neimenggu-tongliao-2025-list.html",
+          "ingestRunId": "fca3e6a3-f94c-4ee5-a54c-ec5d82543aba",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "天沐建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91150502MAORTNBM2U",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "legalRep": "廉金华"
+          },
+          "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202511/t20251124_1016740.html",
+          "sourceTitle": "通辽市关于拖欠农民工工资失信联合惩戒对象名单的公告（2025年11月）",
+          "sourcePublishedAt": "2025-11-24",
+          "fetchedAt": "2026-11-24T12:57:33.847Z",
+          "snapshotFile": "data/snapshots/neimenggu-tongliao-2025-list.html",
+          "ingestRunId": "fca3e6a3-f94c-4ee5-a54c-ec5d82543aba",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "眉山市驰建劳务有限公司",
+        "aliases": [],
+        "creditCode": "91511402MAEGEH1D2T",
+        "province": "内蒙古自治区",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "legalRep": "谢艳茹"
+          },
+          "sourceUrl": "https://rsj.tongliao.gov.cn/xwzx/tzgg/202511/t20251124_1016740.html",
+          "sourceTitle": "通辽市关于拖欠农民工工资失信联合惩戒对象名单的公告（2025年11月）",
+          "sourcePublishedAt": "2025-11-24",
+          "fetchedAt": "2026-11-24T12:57:33.847Z",
+          "snapshotFile": "data/snapshots/neimenggu-tongliao-2025-list.html",
+          "ingestRunId": "fca3e6a3-f94c-4ee5-a54c-ec5d82543aba",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

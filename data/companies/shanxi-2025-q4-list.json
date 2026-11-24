@@ -1,0 +1,174 @@
+{
+  "source": {
+    "key": "shanxi-2025-q4-list",
+    "name": "山西省人力资源和社会保障厅发布2025年度第四批拖欠农民工工资失信联合惩戒名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山西省",
+    "baseUrl": "https://rst.shanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山西省人力资源和社会保障厅发布2025年度第四批拖欠农民工工资失信联合惩戒名单",
+    "url": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202601/t20260107_10034110.html",
+    "publishedAt": "2026-01-07",
+    "fetchedAt": "2026-11-24T12:57:33.836Z",
+    "snapshotFile": "data/snapshots/shanxi-2025-q4-list.html"
+  },
+  "ingestRun": {
+    "id": "ad572853-1bc4-4863-88c2-19db91afec3b",
+    "sourceKey": "shanxi-2025-q4-list",
+    "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202601/t20260107_10034110.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.835Z",
+    "finishedAt": "2026-11-24T12:57:33.837Z",
+    "httpStatus": null,
+    "contentHash": "757669d11436a1c5484354467337c3a3f7a193d6aafa8c50d94fbdc8754ca202",
+    "snapshotPath": "data/snapshots/shanxi-2025-q4-list.html",
+    "warnings": 4,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "广东川泸建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91440606MA4WCA0B6U",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91440606MA4WCA0B6U 张波 太原市迎泽区碧桂园二期项目 拖欠 46名农民工工资，共计88.92万元 已移送公安 2 威尔普（江苏）建筑工程有限公司长治分公司",
+            "workerCount": 46,
+            "amountYuan": 889200,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202601/t20260107_10034110.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批拖欠农民工工资失信联合惩戒名单",
+          "sourcePublishedAt": "2026-01-07",
+          "fetchedAt": "2026-11-24T12:57:33.836Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-list.html",
+          "ingestRunId": "ad572853-1bc4-4863-88c2-19db91afec3b",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "威尔普建筑工程有限公司长治分公司",
+        "aliases": [],
+        "creditCode": "91320302MA25912506",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91320302MA25912506 刘万林 长治市潞城区潞华街道南华西街 430号 拖欠 6名农民工工资，共计15.02万元 已移送公安 3 江苏财派建设工程有限公司",
+            "workerCount": 6,
+            "amountYuan": 150200,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202601/t20260107_10034110.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批拖欠农民工工资失信联合惩戒名单",
+          "sourcePublishedAt": "2026-01-07",
+          "fetchedAt": "2026-11-24T12:57:33.836Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-list.html",
+          "ingestRunId": "ad572853-1bc4-4863-88c2-19db91afec3b",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江苏财派建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91320902MA27NTQR8X",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91320902MA27NTQR8X 吴 刚 临汾市乡宁县西交口乡 10万千瓦光伏发电项目尖山铁矿 拖欠 78名农民工工资，共计78.56万元 上级劳务公司代付，已移送公安 4 山西珏硕消防设备有限公司榆次分公司",
+            "workerCount": 78,
+            "amountYuan": 785600,
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202601/t20260107_10034110.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批拖欠农民工工资失信联合惩戒名单",
+          "sourcePublishedAt": "2026-01-07",
+          "fetchedAt": "2026-11-24T12:57:33.836Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-list.html",
+          "ingestRunId": "ad572853-1bc4-4863-88c2-19db91afec3b",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西珏硕消防设备有限公司榆次分公司",
+        "aliases": [],
+        "creditCode": "91140700MADXU1XG8K",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140700MADXU1XG8K 李建平 晋中市山西珏硕消防器材有限公司 榆次分公司 拖欠 5名农民工工资，共计4.6万元 已支付 山西省人力资源和社会保障厅 2026年1月7日 返回根治欠薪专栏 返回网站首页 主办单位：山西省人力资源和社会保障厅 晋ICP07000928号 |版权所有：山西省人力资源和社会保障厅 地址：太原市万柏林区滨河西路南段129号山西焦煤双创基地B座14-18层",
+            "workerCount": 5,
+            "amountYuan": 46000,
+            "stageDate": "2026-01-07"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202601/t20260107_10034110.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批拖欠农民工工资失信联合惩戒名单",
+          "sourcePublishedAt": "2026-01-07",
+          "fetchedAt": "2026-11-24T12:57:33.836Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-list.html",
+          "ingestRunId": "ad572853-1bc4-4863-88c2-19db91afec3b",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

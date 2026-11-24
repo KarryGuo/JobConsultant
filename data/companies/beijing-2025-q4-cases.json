@@ -1,0 +1,218 @@
+{
+  "source": {
+    "key": "beijing-2025-q4-cases",
+    "name": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "北京市",
+    "baseUrl": "https://rsj.beijing.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+    "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+    "publishedAt": "2025-12-30",
+    "fetchedAt": "2026-11-24T12:57:33.816Z",
+    "snapshotFile": "data/snapshots/beijing-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "0244896b-2a5e-4269-bdaa-cfe47d843130",
+    "sourceKey": "beijing-2025-q4-cases",
+    "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.810Z",
+    "finishedAt": "2026-11-24T12:57:33.816Z",
+    "httpStatus": null,
+    "contentHash": "5b7df268a26ef8e510bd9c339a8cc0046212d2e7eb811a30ea3efba61d21f61e",
+    "snapshotPath": "data/snapshots/beijing-2025-q4-cases.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "北京华龙联合建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91110115766293599E",
+        "province": "北京市",
+        "city": "大兴区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，北京华龙联合建设工程有限公司在大兴区安定垃圾填埋场周边综合治理村民自主楼（东片区）B组团施工期间，拖欠马某、刘某等5名劳动者2024年2月至11月工资共计110130元",
+            "workerCount": 5,
+            "amountYuan": 110130,
+            "authority": "大兴区人力资源和社会保障局",
+            "legalRep": "王广飞",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-10-28"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+          "sourceTitle": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.816Z",
+          "snapshotFile": "data/snapshots/beijing-2025-q4-cases.html",
+          "ingestRunId": "0244896b-2a5e-4269-bdaa-cfe47d843130",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "海南通通智能科技有限公司北京分公司",
+        "aliases": [],
+        "creditCode": "91110112MAD7FBT891",
+        "province": "北京市",
+        "city": "朝阳区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，海南通通智能科技有限公司北京分公司在北京市朝阳区鹏润大厦B座30层经营，拖欠480名劳动者2025年5月、6月的工资共计9940563.3元",
+            "workerCount": 480,
+            "amountYuan": 9940563,
+            "authority": "朝阳区人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+          "sourceTitle": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.816Z",
+          "snapshotFile": "data/snapshots/beijing-2025-q4-cases.html",
+          "ingestRunId": "0244896b-2a5e-4269-bdaa-cfe47d843130",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京济意康科技发展有限公司",
+        "aliases": [],
+        "creditCode": "91110116633053719P",
+        "province": "北京市",
+        "city": "怀柔区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "三、北京济意康科技发展有限公司拖欠工资案 单位名称：北京济意康科技发展有限公司，法定代表人：平永团，统一社会信用代码：91110116633053719P，住所：北京市怀柔区雁栖工业开发区东二路2号",
+            "workerCount": 13,
+            "authority": "怀柔区人力资源和社会保障局",
+            "legalRep": "平永团",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+          "sourceTitle": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.816Z",
+          "snapshotFile": "data/snapshots/beijing-2025-q4-cases.html",
+          "ingestRunId": "0244896b-2a5e-4269-bdaa-cfe47d843130",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "乐活派（北京）科技有限公司",
+        "aliases": [],
+        "creditCode": "91110107MA020BP75R",
+        "province": "北京市",
+        "city": "朝阳区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，乐活派（北京）科技有限公司拖欠陈某等55名劳动者2025年4月至2025年6月工资共计1139750.28元",
+            "workerCount": 55,
+            "amountYuan": 1139750,
+            "authority": "朝阳区人力资源和社会保障局",
+            "legalRep": "关玉斌",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+          "sourceTitle": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.816Z",
+          "snapshotFile": "data/snapshots/beijing-2025-q4-cases.html",
+          "ingestRunId": "0244896b-2a5e-4269-bdaa-cfe47d843130",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京御福龙泉农庄有限责任公司",
+        "aliases": [],
+        "creditCode": "911101167877842073",
+        "province": "北京市",
+        "city": "怀柔区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，北京御福龙泉农庄有限责任公司拖欠常某、朱某等44名劳动者2022年12月至2024年12月期间工资，共计1387740.43元",
+            "workerCount": 44,
+            "amountYuan": 1387740,
+            "authority": "怀柔区人力资源和社会保障局",
+            "legalRep": "王继福",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202512/t20251230_4377965.html",
+          "sourceTitle": "北京市2025年第四批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2025-12-30",
+          "fetchedAt": "2026-11-24T12:57:33.816Z",
+          "snapshotFile": "data/snapshots/beijing-2025-q4-cases.html",
+          "ingestRunId": "0244896b-2a5e-4269-bdaa-cfe47d843130",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

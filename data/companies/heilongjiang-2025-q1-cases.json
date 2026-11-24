@@ -1,0 +1,107 @@
+{
+  "source": {
+    "key": "heilongjiang-2025-q1-cases",
+    "name": "黑龙江省2025年第一批重大劳动保障违法行为社会公布",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "黑龙江省",
+    "baseUrl": "https://hrss.hlj.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "黑龙江省2025年第一批重大劳动保障违法行为社会公布",
+    "url": "https://hrss.hlj.gov.cn/hrss/c111741/202504/c00_31835229.shtml",
+    "publishedAt": "2025-03-31",
+    "fetchedAt": "2026-11-24T12:57:33.870Z",
+    "snapshotFile": "data/snapshots/heilongjiang-2025-q1-cases.html"
+  },
+  "ingestRun": {
+    "id": "4dbac30b-22df-43cd-9fb9-d42bbbf6e3c7",
+    "sourceKey": "heilongjiang-2025-q1-cases",
+    "sourceUrl": "https://hrss.hlj.gov.cn/hrss/c111741/202504/c00_31835229.shtml",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.866Z",
+    "finishedAt": "2026-11-24T12:57:33.870Z",
+    "httpStatus": null,
+    "contentHash": "d8f5d5a31ba0bc64abcc64dfe1fe1c3882fe7768cefb1c5b4b7ca8f8958887d4",
+    "snapshotPath": "data/snapshots/heilongjiang-2025-q1-cases.html",
+    "warnings": 6,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "永兴建设有限责任公司",
+        "aliases": [],
+        "creditCode": "91230104578697553P",
+        "province": "黑龙江省",
+        "city": "齐齐哈尔市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "齐齐哈尔市龙沙区人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.hlj.gov.cn/hrss/c111741/202504/c00_31835229.shtml",
+          "sourceTitle": "黑龙江省2025年第一批重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2025-03-31",
+          "fetchedAt": "2026-11-24T12:57:33.870Z",
+          "snapshotFile": "data/snapshots/heilongjiang-2025-q1-cases.html",
+          "ingestRunId": "4dbac30b-22df-43cd-9fb9-d42bbbf6e3c7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江苏嘉硕建工集团有限公司",
+        "aliases": [],
+        "creditCode": "91321091055189314F",
+        "province": "黑龙江省",
+        "city": "伊春市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91321091055189314F 陈明 扬州市扬子江中路 287 号（财富广场）商务办公楼 -1825 、 1826 、 1827 、 1828 拖欠 2 名农民工工资 4.14 万元",
+            "workerCount": 2,
+            "amountYuan": 41400,
+            "authority": "伊春市金林区人力资源和社会保障局",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://hrss.hlj.gov.cn/hrss/c111741/202504/c00_31835229.shtml",
+          "sourceTitle": "黑龙江省2025年第一批重大劳动保障违法行为社会公布",
+          "sourcePublishedAt": "2025-03-31",
+          "fetchedAt": "2026-11-24T12:57:33.870Z",
+          "snapshotFile": "data/snapshots/heilongjiang-2025-q1-cases.html",
+          "ingestRunId": "4dbac30b-22df-43cd-9fb9-d42bbbf6e3c7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

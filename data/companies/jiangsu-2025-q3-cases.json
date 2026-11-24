@@ -1,0 +1,435 @@
+{
+  "source": {
+    "key": "jiangsu-2025-q3-cases",
+    "name": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "江苏省",
+    "baseUrl": "https://jshrss.jiangsu.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+    "url": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+    "publishedAt": "2025-09-25",
+    "fetchedAt": "2026-11-24T12:57:33.892Z",
+    "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx"
+  },
+  "ingestRun": {
+    "id": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+    "sourceKey": "jiangsu-2025-q3-cases",
+    "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.889Z",
+    "finishedAt": "2026-11-24T12:57:33.893Z",
+    "httpStatus": null,
+    "contentHash": "c68487b1b2ff39a82fb0e8fd109d1adb627bbd1685e990e7fad77da806e5ab70",
+    "snapshotPath": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "南京品生医学检验实验室有限公司",
+        "aliases": [],
+        "creditCode": "91320191MA1UY15C4J",
+        "province": "江苏省",
+        "city": "南京江北新区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠7名劳动者工资总计19.88万元，经综合行政执法部门责令改正拒不改正，拒不履行综合行政执法部门行政处理决定。",
+            "workerCount": 7,
+            "amountYuan": 198800,
+            "authority": "南京江北新区管理委员会综合行政执法局",
+            "legalRep": "郑可嘉",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "南京品生医疗科技有限公司",
+        "aliases": [],
+        "creditCode": "91320191MA1Y1J2R0L",
+        "province": "江苏省",
+        "city": "南京江北新区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠4名劳动者工资总计10.02万元，经综合行政执法部门责令改正拒不改正，拒不履行综合行政执法部门行政处理决定。",
+            "workerCount": 4,
+            "amountYuan": 100200,
+            "authority": "南京江北新区管理委员会综合行政执法局",
+            "legalRep": "郑可嘉",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "徐州派旺瑞机电设备安装有限公司",
+        "aliases": [],
+        "creditCode": "91320302MADHXT4Y9R",
+        "province": "江苏省",
+        "city": "徐州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠31名劳动者工资总计43.36万元，经人社部门责令改正仅部分改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 31,
+            "amountYuan": 433600,
+            "authority": "徐州市贾汪区人力资源和社会保障局",
+            "legalRep": "王雪晨",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "常州市南岗鞋业有限公司",
+        "aliases": [],
+        "creditCode": "913204137746572764",
+        "province": "江苏省",
+        "city": "常州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠138名劳动者工资总计97.34万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 138,
+            "amountYuan": 973400,
+            "authority": "常州市金坛区人力资源和社会保障局",
+            "legalRep": "王龙海",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "常熟市莫城街道周文皓服装加工厂",
+        "aliases": [],
+        "creditCode": "92320581MACBDEYC2H",
+        "province": "江苏省",
+        "city": "苏州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠7名劳动者工资总计15.85万元，经综合行政执法部门责令改正拒不改正，法定代表人涉嫌逃匿。",
+            "workerCount": 7,
+            "amountYuan": 158500,
+            "authority": "苏州市常熟市人力资源和社会保障局",
+            "legalRep": "周建",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江创本建设有限公司",
+        "aliases": [],
+        "creditCode": "91330105MA2GMUQTXW",
+        "province": "江苏省",
+        "city": "南通市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠2名劳动者工资总计6.52万元，拒不履行人社部门行政处理决定。",
+            "workerCount": 2,
+            "amountYuan": 65200,
+            "authority": "南通市如皋市人力资源和社会保障局",
+            "legalRep": "程灶发",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "维航建设（上海）股份有限公司",
+        "aliases": [],
+        "creditCode": "91310000350787608M",
+        "province": "江苏省",
+        "city": "连云港经济技术开发区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠42名劳动者工资总计129.56万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 42,
+            "amountYuan": 1295600,
+            "authority": "连云港经济技术开发区人力资源和社会保障局",
+            "legalRep": "李秀风",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "建湖翼动体育文化发展有限公司",
+        "aliases": [],
+        "creditCode": "91320925MADLBJ6Q25",
+        "province": "江苏省",
+        "city": "盐城市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠11名劳动者工资总计3.2万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 11,
+            "amountYuan": 32000,
+            "authority": "盐城市建湖县人力资源和社会保障局",
+            "legalRep": "任礼",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "丹阳市开发区安迪眼镜厂",
+        "aliases": [],
+        "creditCode": "92321181MA1TACL9XX",
+        "province": "江苏省",
+        "city": "镇江市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠17名劳动者工资总计30.27万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 17,
+            "amountYuan": 302700,
+            "authority": "镇江市丹阳市人力资源和社会保障局",
+            "legalRep": "黄友领",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "阜阳鑫铭硕建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91341204MAD6A1A15R",
+        "province": "江苏省",
+        "city": "泰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠86名劳动者工资总计34.41万元，经人社部门责令改正拒不改正，法定代表人、实际负责人涉嫌逃匿。",
+            "workerCount": 86,
+            "amountYuan": 344100,
+            "authority": "泰州市泰兴市人力资源和社会保障局",
+            "legalRep": "李兴启",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "苏州通莱恒建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91320508MAE042QR69",
+        "province": "江苏省",
+        "city": "宿迁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠45名劳动者工资总计51.45万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 45,
+            "amountYuan": 514500,
+            "authority": "宿迁市宿豫区人力资源和社会保障局",
+            "legalRep": "解原凯",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省人社厅公布2025年三季度重大劳动保障违法行为（案件表）",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.892Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-cases.xlsx",
+          "ingestRunId": "b8eb4b6f-29b8-4b98-95f3-4c2125acc1b7",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

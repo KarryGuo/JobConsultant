@@ -1,0 +1,318 @@
+{
+  "source": {
+    "key": "shanxi-2025-q4-cases",
+    "name": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山西省",
+    "baseUrl": "https://rst.shanxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+    "url": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+    "publishedAt": "2025-12-17",
+    "fetchedAt": "2026-11-24T12:57:33.832Z",
+    "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "640942de-5107-496f-80c8-6bc6aab54aac",
+    "sourceKey": "shanxi-2025-q4-cases",
+    "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.828Z",
+    "finishedAt": "2026-11-24T12:57:33.833Z",
+    "httpStatus": null,
+    "contentHash": "b2f370c1bae9ae28a69204ffb6fab2cf57f77f101110b33204b58975e57b3005",
+    "snapshotPath": "data/snapshots/shanxi-2025-q4-cases.html",
+    "warnings": 20,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "北京银燕涵海智慧科技有限公司",
+        "aliases": [],
+        "creditCode": "91110114MA01X2TG9H",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "襄汾县泰源煤焦有限公司",
+        "aliases": [],
+        "creditCode": "911410237982948878",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "911410237982948878 王金喜 临汾市襄汾县 拖欠 41人工资37.98万元 3 山西御铭泰建筑工程有限公司",
+            "amountYuan": 379800
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西御铭泰建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91140100MA0LYTJNXH",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140100MA0LYTJNXH 王鸣 山西御铭泰建筑工程有限公司融创中心承建的 6#地块、9#地块精装修工程项目 拖欠 27人工资18.76万元 4 上海甲舟建筑装饰工程有限公司",
+            "amountYuan": 187600
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "上海甲舟建筑装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91310120MA1HT4CR09",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91310120MA1HT4CR09 沈坤峰 太原市尖草坪区旭辉江山云悦项目 拖欠 10人工资25.68万元 5 山西星勇平市政工程有限公司",
+            "amountYuan": 256800
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西星勇平市政工程有限公司",
+        "aliases": [],
+        "creditCode": "91140108MA0KBL5UXF",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140108MA0KBL5UXF 贺凌智 太原市尖草坪区 拖欠 9人工资13.94万元 6 陕西建工第一建设集团有限公司",
+            "amountYuan": 139400
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "陕西建工第一建设集团有限公司",
+        "aliases": [],
+        "creditCode": "916100002205244122",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "916100002205244122 高雄 太原市晋源区龙城海尚府项目 拖欠 30人工资50万元 7 山西宝缘通达建材有限公司",
+            "amountYuan": 500000
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西宝缘通达建材有限公司",
+        "aliases": [],
+        "creditCode": "91140100MA0M2P890M",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91140100MA0M2P890M 刘升 太原市小店区 拖欠 2人工资1.64万元 8 阳城县鸿利祥食用菌种植农民专业合作社",
+            "amountYuan": 16400
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "阳城县鸿利祥食用菌种植农民专业合作社",
+        "aliases": [],
+        "creditCode": "93140522MA7XU1W500",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "93140522MA7XU1W500 王小蒲 晋城市阳城县 拖欠 10人工资11.21万元 9 山西欧莱特农业科技有限公司",
+            "amountYuan": 112100
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西欧莱特农业科技有限公司",
+        "aliases": [],
+        "creditCode": "91141124395484942B",
+        "province": "山西省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91141124395484942B 王彬 吕梁市临县 拖欠 51人工资167.07万元 山西省人力资源和社会保障厅 2025年12月17日 返回根治欠薪专栏 返回网站首页 主办单位：山西省人力资源和社会保障厅 晋ICP07000928号 |版权所有：山西省人力资源和社会保障厅 地址：太原市万柏林区滨河西路南段129号山西焦煤双创基地B座14-18层 网站标识码1400000038",
+            "amountYuan": 1670700,
+            "stageDate": "2025-12-17"
+          },
+          "sourceUrl": "https://rst.shanxi.gov.cn/gzqxjxs/pgt/202512/t20251217_10015194.html",
+          "sourceTitle": "山西省人力资源和社会保障厅发布2025年度第四批重大劳动保障违法行为典型案件",
+          "sourcePublishedAt": "2025-12-17",
+          "fetchedAt": "2026-11-24T12:57:33.832Z",
+          "snapshotFile": "data/snapshots/shanxi-2025-q4-cases.html",
+          "ingestRunId": "640942de-5107-496f-80c8-6bc6aab54aac",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

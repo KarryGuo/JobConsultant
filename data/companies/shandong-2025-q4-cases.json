@@ -1,0 +1,367 @@
+{
+  "source": {
+    "key": "shandong-2025-q4-cases",
+    "name": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "山东省",
+    "baseUrl": "http://hrss.shandong.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+    "url": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+    "publishedAt": "2026-01-09",
+    "fetchedAt": "2026-11-24T12:57:33.919Z",
+    "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "50be7aaf-b587-4625-a376-c58cde73b632",
+    "sourceKey": "shandong-2025-q4-cases",
+    "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.915Z",
+    "finishedAt": "2026-11-24T12:57:33.919Z",
+    "httpStatus": null,
+    "contentHash": "4869c1d858ec2118e8ddefde3f0603be268cf458b8436568c4dc5d8b3eb2dc4b",
+    "snapshotPath": "data/snapshots/shandong-2025-q4-cases.html",
+    "warnings": 30,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "济南市雪野建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "913712005965502135",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "一、济南市雪野建筑工程有限公司拖欠劳动报酬案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 济南市雪野建筑工程有限公司，统一社会信用代码： 913712005965502135 ， 地址：山东省济南市莱芜区雪野街道办事处邢家峪村村东 ， 法人：韩秀平",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "北京万昌建筑装饰工程有限责任公司济宁分公司",
+        "aliases": [],
+        "creditCode": "91370800MA3CGYPB2B",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "三、北京万昌建筑装饰工程有限责任公司济宁分公司拖欠劳动报酬案 （一 ） 违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 北京万昌建筑装饰工程有限责任公司济宁分公司，统一社会信用代码： 91370800MA3CGYPB2B，注册地址：济宁高新区丰泰路红星家居旗舰中心405室，法定代表人： 王宾",
+            "legalRep": "王宾",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东创惠电子科技有限责任公司",
+        "aliases": [],
+        "creditCode": "91370600494395662C",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "四、 山东创惠电子科技有限责任公司 拖欠 劳动报酬案 （一 ） 违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 山东创惠电子科技有限责任公司，统一社会信用代码（或注册号）： 91370600494395662C，注册地址：山东省烟台市高新区马山街道经八路17号，法定代表人：孙淑华",
+            "legalRep": "孙淑华",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东一山建工集团有限公司",
+        "aliases": [],
+        "creditCode": "913709001665200577",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "五、山东一山建工集团有限公司拖欠劳动报酬案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 山东一山建工集团有限公司，统一社会信用代码（或注册号）： 913709001665200577，注册地址：泰安市岱岳区满庄镇石膏工业园，法定代表人：赵玉峰",
+            "legalRep": "赵玉峰",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "荣成市荣达汽车检测有限公司",
+        "aliases": [],
+        "creditCode": "91371082MA3DA27K2E",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "六、荣成市荣达汽车检测有限公司拖欠劳动报酬案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 荣成市荣达汽车检测有限公司 ，统一社会信用代码（或注册号）： 91371082MA3DA27K2E，注册地址：荣成市凭海西路399号，法定代表人： 郭惠勇",
+            "legalRep": "郭惠勇",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "日照新都建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91371100550943994X",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "七、日照新都建设工程有限公司拖欠劳动报酬、未落实保障农民工工资支付制度案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 日照新都建设工程有限公司 ， 统一社会信用代码： 91371100550943994X ，注册 地址：日照市经济开发区大韩家村（刘石路中段） ， 法定代表人姓名：孟令盘",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山东银线河农业科技有限公司",
+        "aliases": [],
+        "creditCode": "91371326MA3ULUWA1U",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "八 、山东银线河农业科技有限公司拖欠劳动报酬案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 山东银线河农业科技有限公司，统一社会信用代码（或注册号）： 91371326MA3ULUWA1U，注册地址：山东省临沂市平邑县卞桥镇八顶庄村村南1000米路西，法定代表人：刘修广，实际控制人：刘修福",
+            "legalRep": "刘修广",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "厦门市深港建筑装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91350200612252890A",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "九、厦门市深港建筑装饰工程有限公司拖欠劳动报酬案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 厦门市深港建筑装饰工程有限公司，统一社会信用代码（或注册号）： 91350200612252890A，注册地址：中国（福建）自由贸易试验区厦门片区（保税区）象兴一路19号5AB单元5楼501，法定代表人：陈健彬",
+            "legalRep": "陈健彬",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "山西国都建设有限公司",
+        "aliases": [],
+        "creditCode": "91149900MA0LBAN85H",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十、山西国都建设有限公司拖欠劳动报酬案 （一）违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 山西国都建设有限公司，统一社会信用代码（或注册号）： 91149900MA0LBAN85H，注册地址：山西省太原市小店区晋阳街84号宏安国际大厦A座6层（山西双创企业孵化器服务有限公司2025-264号）集群登记，法定代表人：陈锦东",
+            "legalRep": "陈锦东",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "戎威远保安服务（北京）有限公司菏泽分公司",
+        "aliases": [],
+        "creditCode": "91371700MA3TYMPM3F",
+        "province": "山东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "十一、 戎威远保安服务（北京）有限公司菏泽分公司 拖欠劳动报酬案 （一 ） 违法主体统一社会信用代码 (或者注册号)、地址及法定代表人或者负责人姓名信息 戎威远保安服务（北京）有限公司菏泽分公司，统一社会信用代码（或注册号）： 91371700MA3TYMPM3F，注册地址：山东省菏泽市高新区兰州路金光彩新材料孵化器B-305室，法定代表人：吕志强，实际控制人：吕志国",
+            "legalRep": "吕志强",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "http://hrss.shandong.gov.cn/articles/ch07673/202601/83d41410-de81-4f73-898f-0db2f9194d4a.shtml",
+          "sourceTitle": "山东省人力资源和社会保障厅关于公布全省2025年第四批重大劳动保障违法行为的公告",
+          "sourcePublishedAt": "2026-01-09",
+          "fetchedAt": "2026-11-24T12:57:33.919Z",
+          "snapshotFile": "data/snapshots/shandong-2025-q4-cases.html",
+          "ingestRunId": "50be7aaf-b587-4625-a376-c58cde73b632",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

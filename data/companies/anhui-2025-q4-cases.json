@@ -1,0 +1,182 @@
+{
+  "source": {
+    "key": "anhui-2025-q4-cases",
+    "name": "省人社厅公布2025年第四批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "安徽省",
+    "baseUrl": "https://hrss.ah.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "省人社厅公布2025年第四批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://hrss.ah.gov.cn/public/6595721/80782260.html",
+    "publishedAt": "2025-12-31",
+    "fetchedAt": "2026-11-24T12:57:33.903Z",
+    "snapshotFile": "data/snapshots/anhui-2025-q4-cases.html"
+  },
+  "ingestRun": {
+    "id": "eef7b879-fd01-4ce3-b00a-13dfd2b69ea6",
+    "sourceKey": "anhui-2025-q4-cases",
+    "sourceUrl": "https://hrss.ah.gov.cn/public/6595721/80782260.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.899Z",
+    "finishedAt": "2026-11-24T12:57:33.903Z",
+    "httpStatus": null,
+    "contentHash": "efa17886f142d5305a5ff9ab9767510906cf81dd98d27b1ea6cfe836d98924ba",
+    "snapshotPath": "data/snapshots/anhui-2025-q4-cases.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "怀远县华旭建筑劳务分包有限公司",
+        "aliases": [],
+        "creditCode": "91340321MA2PU6X46P",
+        "province": "安徽省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该项目分包单位怀远县华旭建筑劳务分包有限公司拖欠50名劳动者劳动报酬共计47.46万元",
+            "workerCount": 50,
+            "amountYuan": 474600,
+            "legalRep": "李连亮",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-01-06"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/public/6595721/80782260.html",
+          "sourceTitle": "省人社厅公布2025年第四批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-31",
+          "fetchedAt": "2026-11-24T12:57:33.903Z",
+          "snapshotFile": "data/snapshots/anhui-2025-q4-cases.html",
+          "ingestRunId": "eef7b879-fd01-4ce3-b00a-13dfd2b69ea6",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "芜湖晟榕装修有限公司",
+        "aliases": [],
+        "creditCode": "91340225MADTAR451H",
+        "province": "安徽省",
+        "city": "鸠江区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，芜湖晟榕装修有限公司在承包鸠江区二坝镇鸿运广场旅途酒店装修工程期间，拖欠 18名劳动者劳动报酬共计26.06万元",
+            "workerCount": 18,
+            "amountYuan": 260600,
+            "authority": "鸠江区人社局",
+            "legalRep": "平志龙",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/public/6595721/80782260.html",
+          "sourceTitle": "省人社厅公布2025年第四批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-31",
+          "fetchedAt": "2026-11-24T12:57:33.903Z",
+          "snapshotFile": "data/snapshots/anhui-2025-q4-cases.html",
+          "ingestRunId": "eef7b879-fd01-4ce3-b00a-13dfd2b69ea6",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "池州市秀晴服饰有限公司",
+        "aliases": [],
+        "creditCode": "91341700MA8PBEF24N",
+        "province": "安徽省",
+        "city": "贵池区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该公司共拖欠 18名劳动者劳动报酬合计24.4万元",
+            "workerCount": 18,
+            "amountYuan": 244000,
+            "authority": "贵池区人社局",
+            "legalRep": "桂美娟",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安",
+            "stageDate": "2025-08-08"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/public/6595721/80782260.html",
+          "sourceTitle": "省人社厅公布2025年第四批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-31",
+          "fetchedAt": "2026-11-24T12:57:33.903Z",
+          "snapshotFile": "data/snapshots/anhui-2025-q4-cases.html",
+          "ingestRunId": "eef7b879-fd01-4ce3-b00a-13dfd2b69ea6",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安徽百益鞋业有限公司",
+        "aliases": [],
+        "creditCode": "91341225MA2UDH6E84",
+        "province": "安徽省",
+        "city": "阜南县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2028",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91341225MA2UDH6E84 代洪彦 342127********3511 拖欠69名劳动者劳动报酬108.79万元 阜南县人社局 南人社监列决〔2025〕2号 2025/11/24 2028/11/23 文件下载 文件下载",
+            "workerCount": 69,
+            "amountYuan": 1087900,
+            "authority": "阜南县人社局",
+            "stageDate": "2028-11-23"
+          },
+          "sourceUrl": "https://hrss.ah.gov.cn/public/6595721/80782260.html",
+          "sourceTitle": "省人社厅公布2025年第四批重大劳动保障违法典型案件和拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-31",
+          "fetchedAt": "2026-11-24T12:57:33.903Z",
+          "snapshotFile": "data/snapshots/anhui-2025-q4-cases.html",
+          "ingestRunId": "eef7b879-fd01-4ce3-b00a-13dfd2b69ea6",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

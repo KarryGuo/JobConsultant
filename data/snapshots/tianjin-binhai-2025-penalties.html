@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="SiteName" content="天津市滨海新区" />
+<meta name="SiteDomain" content="rsj.tjbh.gov.cn" />
+<meta name="SiteIDCode" content="1201160017" />
+<meta name="ColumnDescripyion" content="天津市滨海新区人力社保局网站由天津市滨海新区人力社保局主办，权威发布区人力社保局领导同志重要会议、活动等政务信息。" />
+<meta name="ColumnKeywords" content="滨海新区人力社保局，滨海新区人力社保局网站，人力社保局，信息公开，要闻，领导信箱" />
+<meta name="ColumnType" content="首页" />
+<meta name="keywords" content="滨海新区人力社保局，滨海新区人力社保局网站，人力社保局，信息公开，要闻，领导信箱" />
+<meta name="description" content="天津市滨海新区人力社保局网站由天津市滨海新区人力社保局主办，权威发布区人力社保局领导同志重要会议、活动等政务信息。" />
+<title>天津市滨海新区人力社保局</title>
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link href="../../css/layui.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.tjbh.gov.cn/css/zfxxgk.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.tjbh.gov.cn/css/third.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.tjbh.gov.cn/css/bottom.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.tjbh.gov.cn/css/common.css" rel="stylesheet" type="text/css">
+    <link href="http://www.tjbh.gov.cn/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/common_js/jquery-1.11.0.min.js"></script>
+    <script src="/layui.js"></script>
+    <script src="http://www.tjbh.gov.cn/js/third.js"></script>
+<script src="http://www.tjbh.gov.cn/js/share_new.js"></script>
+<script>var $pageInfo = { publishmentSystemID : 101, channelID : 9764, contentID : 296723, siteUrl : "https://rsj.tjbh.gov.cn", homeUrl : "https://rsj.tjbh.gov.cn/center", currentUrl : "https://rsj.tjbh.gov.cn/contents/9764/296723.html", rootUrl : "", apiUrl : "/api" }</script>
+</head>
+<script>
+    $(document).ready(function() {
+        var a = "政策文件"
+        if (a == '政策解读') {
+            $('.gkxx-list').css('display', 'none');
+        }
+    })
+</script>
+
+<body class="zfxxgk_third">
+    
+    <link href="https://rsj.tjbh.gov.cn/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://rsj.tjbh.gov.cn/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+<div class="top">
+    <div class="index-top-line layui-hide-xs">
+        <div class="layui-container">
+            <a class="index_top_link" target="_blank" href="http://www.tjbh.gov.cn/"><img
+                    src="http://www.tjbh.gov.cn/images/first/guohui.png">天津市滨海新区人民政府门户网站</a>
+            <a href="javascript:void(0)" id="wuzhangai" class="layui-hide-xs"><i class="fa fa-wheelchair"></i>&nbsp;无障碍</a>
+        </div>
+    </div>
+    <div class="layui-container">
+        <div class="top_con top_con_dept">
+            <a href="http://rsj.tjbh.gov.cn/" target="_blank"><span>天津市滨海新区人力资源和社会保障局</span></a >
+            <h2>
+                
+                    <a href="http://www.tjbh.gov.cn/government/channels/11809.html" target="_blank"><img src="http://www.tjbh.gov.cn/images/first/zfxxgk_title.jpg"></img></a>
+                
+            </h2>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.sidebar').on('load', function () {
+                ('/sitefiles/services/data/newsreleasetotal.aspx');
+            })
+            $('a').each(function () {
+                $(this).focus(function () {
+                    var aaa = $(this).attr('href') || '';
+                    $(document).find('body').append('<div class="leave" id="leave_box"><div class="leave-con"><div class="layui-row" style="padding:10px"><div class="layui-col-md12 leave-close" onClick="closebutton2()"><i class="fa fa-window-close"></i></div><div class="layui-col-md10 layui-col-md-offset1" style="text-align:center"><h1>您访问的链接即将离开“天津市滨海新区人民政府”门户网站&nbsp;是否继续？</h1><hr></div><div class="layui-col-md12" style="text-align:center"><a href="#" target="_blank" class="layui-btn layui-btn-primary" id="keep_to">继续访问</a>&nbsp;<a onClick="closebutton2()" class="layui-btn layui-btn-primary">放弃</a></div></div></div></div>');
+                    $("#leave_box").click(function (e) {
+                        if ($("#leave_box").css("display") == 'block') {
+                            var dragel = $(".leave-con")[0],
+                                target = e.target;
+                            if (dragel !== target && !$.contains(dragel, target)) {
+                                $("#leave_box").remove();
+                            }
+                        }
+                    });
+                    if (aaa.indexOf('http') > 0 || aaa.indexOf('http') == 0) {
+                        if (aaa.indexOf('tjbh.gov.cn') < 0) {
+                            var list_link = $(this);
+                            list_link.removeAttr('href');
+                            $("#leave_box").css("display", "block");
+                            $("#keep_to").attr("href", aaa);
+                            $('#keep_to').on('click', function () {
+                                $("#leave_box").remove();
+                                list_link.attr('href', aaa);
+                            });
+                            list_link.attr('href', aaa)
+                        }
+                    }
+                });
+            });
+        })
+        function closebutton2() {
+            $("#leave_box").remove();
+        }
+    </script>
+</div>
+    <div class="zfxxgk_box" id="datetime">
+        <div class="zfxxgk_third">
+            <div class="third-out">
+                <div class="sec-dh">
+                    <div class="location">当前位置：
+                        <a href="https://rsj.tjbh.gov.cn">人社局</a>&gt;
+                        <a href="https://rsj.tjbh.gov.cn/channels/9758.html">政务公开</a>&gt;
+                        <a href="https://rsj.tjbh.gov.cn/channels/9752.html">最新文件</a>
+                    </div>
+                    <hr>
+                </div>
+
+                
+                    <div class="third-title">
+                        <div class="left">
+                            <h1>
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td align="left" valign="top">
+                                                
+                                                <span id="MainTitle">
+                                                            滨海新区人力资源和社会保障局劳动保障违法行为行政处罚社会公示
+                                                        </span>
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div style="position:static" class="datetime">
+                                    
+                                    发布日期：
+                                    
+                                            <font id="date">
+                                                2025-12-08 14:08
+                                            </font>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                                    
+                                            <span id="source">
+                                            来源：<font>
+                                                区人社局
+                                            </font>
+                                        </span>
+
+                                
+                                </div>
+                                <div style="position:static" class="datetime layui-hide-xs">
+                                    <div class="font-size" id="normal-dh">
+                                        <span>字号：</span>
+                                        <li id="large"><a>大</a></li>
+                                        <li id="middle"><a style="color: #000;">中</a></li>
+                                        <li id="small"><a>小</a></li>
+                                    </div>
+                                    <div class="print">
+                                        <div class="bshare-custom share-box" id="share-box">
+                                        <span>分享：</span>
+                                        <li><a title="分享到新浪微博" data-w="gwds_tsina" class="share-btn gwds_tsina bshare-sinaminiblog"><i class="iconfont icon-weibo bshare-sinaminiblog"></i></a></li>
+                                        <li><a title="分享到微信" data-w="gwds_weixin" class="share-btn gwds_weixin bshare-weixin"><i class="iconfont icon-weixin bshare-weixin"></i></a></li>
+                                    </div>
+                                    </div>
+                                </div>
+                            </h1>
+                        </div>
+                        <div class="right">
+                            <div id="qrcode"></div>
+                            <span>扫一扫在手机打开当前页</span>
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md12">
+                            <hr class="third_split">
+                        </hr></div>
+                    </div>
+                    
+
+                    <div class="title-fix" style="display:none">
+                        <div class="layui-container">
+                            <div class="layui-row">
+                                <div class="layui-col-md12 layui-col-xs12">
+                                    <h1>
+                                        滨海新区人力资源和社会保障局劳动保障违法行为行政处罚社会公示
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third-con" id="zoomcon">
+                        
+                        
+                                
+                                        <p style="text-indent:2em;"><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">为加强对重大劳动保障违法行为的惩戒力度，强化社会监督，促进用人单位自觉遵守劳动保障法律法规规章，保障劳动者合法权益，维护社会公平正义，依据</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">《劳动保障监察条例》</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">规定</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">公布</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">202</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">5</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">年</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">11月份</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">滨海新</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">区</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">劳动保障违法行为的行政处罚信息</span><span style="color:#333333;letter-spacing:0px;background:#ffffff;font-family:仿宋_gb2312;font-size:16px;">。</span></p><p style="text-indent:2em;"><span style="font-family:仿宋_gb2312;color:#333333;letter-spacing:0;font-size:21px;background:#ffffff"> </span></p><table border="0" cellspacing="0" style="width:1047px;border:none"><tbody><tr style="height:69px"><td width="46" valign="center" style="width:46px;padding:0 7px 0 7px ;border-left:1px solid #000;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">序号</span></strong></p></td><td width="104" valign="center" style="width:104px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">违法主体</span></strong></p></td><td width="153" valign="center" style="width:153px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">统一社会信用代码</span></strong></p></td><td width="106" valign="center" style="width:107px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">地址</span></strong></p></td><td width="93" valign="center" style="width:93px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">法定代表人</span></strong></p></td><td width="137" valign="center" style="width:138px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">行政处罚决定书文号</span></strong></p></td><td width="213" valign="center" style="width:213px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">主要违法事实</span></strong></p></td><td width="192" valign="center" style="width:192px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:1px solid #000;border-bottom:1px solid #000"><p style="text-indent:2em;"><strong><span style="font-family:宋体;font-size:14px">查处情况</span></strong></p></td></tr><tr style="height:159px"><td width="46" valign="center" style="width:46px;padding:0 7px 0 7px ;border-left:1px solid #000;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:calibri;font-size:14px">1</span></p></td><td width="104" valign="center" style="width:104px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><span style="font-family:calibri;font-size:14px;font-family:宋体;">天津市聚和建设工程有限公司</span></td><td width="153" valign="center" style="width:153px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:宋体;font-size:14px;font-family:calibri;">91120116MA06GLGQ1K</span></p></td><td width="106" valign="center" style="width:107px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:calibri;font-size:14px"><span style="font-family:宋体;">天津市滨海新区大港街育才路</span>509<span style="font-family:宋体;">号</span></span></p></td><td width="93" valign="center" style="width:93px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:宋体;font-size:14px">张博</span></p></td><td width="137" valign="center" style="width:138px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:宋体;font-size:14px"><span style="font-family:calibri;">[ </span><span style="font-family:宋体;">津滨</span><span style="font-family:calibri;">]</span><span style="font-family:宋体;">劳监罚字</span><span style="font-family:calibri;">[ 2025] </span><span style="font-family:宋体;">第</span><span style="font-family:calibri;">5</span><span style="font-family:宋体;">号</span></span></p></td><td width="213" valign="center" style="width:213px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:宋体;font-size:14px">违反了《劳动保障监察条例》第六条、第十五条第（二）（三）项规定，拒不按照《天津市劳动保障监察限期整改指令书》进行改正</span></p></td><td width="192" valign="center" style="width:192px;padding:0 7px 0 7px ;border-left:none;border-right:1px solid #000;border-top:none;border-bottom:1px solid #000"><p style="text-indent:2em;"><span style="font-family:宋体;font-size:14px">依据《劳动保障监察条例》第十八条第一款第（一）项、第三十条第一款第（三）项规定，给予该单位处以罚款壹万捌仟元整的行政处罚</span></p></td></tr></tbody></table><p style="text-indent:2em;"><span style="font-family:仿宋_gb2312;font-size:21px"> </span></p><p style="text-indent:2em;"><span style="font-family:仿宋_gb2312;font-size:21px"> </span></p><p style="text-indent:2em;text-align:right;"><span style="font-family:仿宋_gb2312;font-size:16px;">滨海新区人社局</span></p><p style="text-indent:2em;text-align:right;"><span style="font-family:仿宋_gb2312;font-size:16px;">2025年12月8日</span></p>
+                                    
+                                
+                                        
+                                
+                            
+
+                    </div>
+                    <script src="http://www.tjbh.gov.cn/js/fly-zomm-img.min.js"></script>
+            </div>
+        </div>
+    </div>
+    <script src="http://www.tjbh.gov.cn/js/jquery.qrcode.js"></script>
+    <script>
+        jQuery('#qrcode').qrcode({
+            render: "canvas",
+            width: 120,
+            height: 120,
+            text: window.location.href
+        });
+        jQuery('#qrcode2').qrcode({
+            render: "canvas",
+            width: 120,
+            height: 120,
+            text: window.location.href
+        });
+    </script>
+    <link href="https://rsj.tjbh.gov.cn/css/top_bottom.css" rel="stylesheet" type="text/css">
+<script src="https://rsj.tjbh.gov.cn/js/bottom.js"></script>
+
+<div class="bottom-dh-box layui-hide-xs">
+    <div class="layui-container">
+        <div class="layui-row bottom-dh-title">
+            <div class="hasCon">
+                <span>
+                    <font>全国各省市政府网站<i class="fas fa-sort-down"></i></font>
+                </span>
+            </div>
+            <div class="hasCon">
+                <span>
+                    <font>天津市各区政府网站<i class="fas fa-sort-down"></i></font>
+                </span>
+            </div>
+            <div class="hasCon hover">
+                <span>
+                    <font>滨海新区政府系统网站<i class="fas fa-sort-up"></i></font>
+                </span>
+            </div>
+
+            <div class="hasCon hover_after">
+                <span>
+                    <font>重点链接<i class="fas fa-sort-down"></i></font>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bottom-dh-content layui-hide-xs">
+    <div class="layui-container" id="bottom-dh-content">
+        <div id="bottom-dh-con1" class="bottom-dh-con"></div>
+        <div id="bottom-dh-con2" class="bottom-dh-con"></div>
+        <div id="bottom-dh-con3" class="bottom-dh-con" style="height: 170px;"></div>
+        <div id="bottom-dh-con4" class="bottom-dh-con"></div>
+    </div>
+</div>
+<div class="bottom-con-box">
+    <div class="layui-container">
+        <ul>
+            <li class="bottom-con">
+                <p>
+                    主办单位：天津市滨海新区人社局
+                </p>
+                <p>
+                    推荐使用IE8及以上版本浏览器浏览
+                </p>
+            </li>
+            <li class="bottom-con">
+                <p>
+                    <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">备案序号：津ICP备18007535号-1</a>
+                </p>
+                <p>
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011602000429" target="_blank">津公网安备 12011602000429号</a>
+                </p>
+                <p>
+                    网站标识码：1201160017
+                </p>
+                <p>
+                    联系方式：022-65306671
+                </p>
+            </li>
+
+            <li class="bottom-link layui-hide-xs">
+                <span id="a1">
+                    <script type="text/javascript">
+                        $('.bottom-link #a1').append(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/03/044/0000/40664345/CA030440000406643450002.js' type='text/javascript'%3E%3C/script%3E"));
+                    </script>
+                </span>
+                <span><script id="_jiucuo_" sitecode='1201160017' src='https://www.tjbh.gov.cn/js/jiucuo.js'></script></span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>
+<script src="/sitefiles/services/cms/PageService.aspx?type=AddCountHits&publishmentSystemID=101&channelID=9764&contentID=296723" type="text/javascript"></script>
+​

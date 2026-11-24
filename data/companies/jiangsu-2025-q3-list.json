@@ -1,0 +1,239 @@
+{
+  "source": {
+    "key": "jiangsu-2025-q3-list",
+    "name": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "江苏省",
+    "baseUrl": "https://jshrss.jiangsu.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+    "publishedAt": "2025-09-25",
+    "fetchedAt": "2026-11-24T12:57:33.897Z",
+    "snapshotFile": "data/snapshots/jiangsu-2025-q3-list.xlsx"
+  },
+  "ingestRun": {
+    "id": "d47a95d0-d3c3-43de-ab19-b1eeafec297f",
+    "sourceKey": "jiangsu-2025-q3-list",
+    "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.895Z",
+    "finishedAt": "2026-11-24T12:57:33.898Z",
+    "httpStatus": null,
+    "contentHash": "a9d63070b1c5d769ce0ea70165684da013d181bc19ec74cb687511e5218d41be",
+    "snapshotPath": "data/snapshots/jiangsu-2025-q3-list.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "徐州派旺瑞机电设备安装有限公司",
+        "aliases": [],
+        "creditCode": "91320302MADHXT4Y9R",
+        "province": "江苏省",
+        "city": "徐州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠31名劳动者工资总计43.36万元，经人社部门责令改正仅部分改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 31,
+            "amountYuan": 433600,
+            "authority": "徐州市贾汪区人力资源和社会保障局",
+            "decisionNo": "贾人社监列决字〔2025〕002号",
+            "legalRep": "王雪晨",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-06-23",
+            "listedAt": "2025-06-23",
+            "expiresAt": "2028-06-22"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.897Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-list.xlsx",
+          "ingestRunId": "d47a95d0-d3c3-43de-ab19-b1eeafec297f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "常州市南岗鞋业有限公司",
+        "aliases": [],
+        "creditCode": "913204137746572764",
+        "province": "江苏省",
+        "city": "常州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠138名劳动者工资总计97.34万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 138,
+            "amountYuan": 973400,
+            "authority": "常州市金坛区人力资源和社会保障局",
+            "decisionNo": "金人社监列决字〔2025〕01号",
+            "legalRep": "王龙海",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-08-04",
+            "listedAt": "2025-08-04",
+            "expiresAt": "2028-08-03"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.897Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-list.xlsx",
+          "ingestRunId": "d47a95d0-d3c3-43de-ab19-b1eeafec297f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江创本建设有限公司",
+        "aliases": [],
+        "creditCode": "91330105MA2GMUQTXW",
+        "province": "江苏省",
+        "city": "南通市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠2名劳动者工资总计6.52万元，拒不履行人社部门行政处理决定。",
+            "workerCount": 2,
+            "amountYuan": 65200,
+            "authority": "南通市如皋市人力资源和社会保障局",
+            "decisionNo": "皋人社察列决字〔2025〕第06-19号",
+            "legalRep": "程灶发",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-08-13",
+            "listedAt": "2025-08-13",
+            "expiresAt": "2028-08-12"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.897Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-list.xlsx",
+          "ingestRunId": "d47a95d0-d3c3-43de-ab19-b1eeafec297f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "阜阳鑫铭硕建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91341204MAD6A1A15R",
+        "province": "江苏省",
+        "city": "泰州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠86名劳动者工资总计34.41万元，经人社部门责令改正拒不改正，法定代表人、实际负责人涉嫌逃匿。",
+            "workerCount": 86,
+            "amountYuan": 344100,
+            "authority": "泰州市泰兴市人力资源和社会保障局",
+            "decisionNo": "泰人社监列决字〔2025〕第2001号",
+            "legalRep": "李兴启",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-07-28",
+            "listedAt": "2025-07-28",
+            "expiresAt": "2028-07-27"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.897Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-list.xlsx",
+          "ingestRunId": "d47a95d0-d3c3-43de-ab19-b1eeafec297f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "苏州通莱恒建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91320508MAE042QR69",
+        "province": "江苏省",
+        "city": "宿迁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠45名劳动者工资总计51.45万元，经人社部门责令改正拒不改正，拒不履行人社部门行政处理决定。",
+            "workerCount": 45,
+            "amountYuan": 514500,
+            "authority": "宿迁市宿豫区人力资源和社会保障局",
+            "decisionNo": "宿豫人社察列决字〔2025〕第7号",
+            "legalRep": "解原凯",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-09-02",
+            "listedAt": "2025-09-02",
+            "expiresAt": "2028-09-01"
+          },
+          "sourceUrl": "https://jshrss.jiangsu.gov.cn/art/2025/9/25/art_78504_11647041.html",
+          "sourceTitle": "江苏省2025年第三批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-09-25",
+          "fetchedAt": "2026-11-24T12:57:33.897Z",
+          "snapshotFile": "data/snapshots/jiangsu-2025-q3-list.xlsx",
+          "ingestRunId": "d47a95d0-d3c3-43de-ab19-b1eeafec297f",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

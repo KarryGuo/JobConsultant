@@ -1,0 +1,73 @@
+{
+  "source": {
+    "key": "tianjin-binhai-2025-penalties",
+    "name": "天津市滨海新区人力资源和社会保障局劳动保障违法行为行政处罚社会公示（2025年12月）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "天津市",
+    "baseUrl": "https://rsj.tjbh.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "天津市滨海新区人力资源和社会保障局劳动保障违法行为行政处罚社会公示（2025年12月）",
+    "url": "https://rsj.tjbh.gov.cn/contents/9764/296723.html",
+    "publishedAt": "2025-12-08",
+    "fetchedAt": "2026-11-24T12:57:33.820Z",
+    "snapshotFile": "data/snapshots/tianjin-binhai-2025-penalties.html"
+  },
+  "ingestRun": {
+    "id": "42608fa2-17a4-44f2-a80c-d0838a603b56",
+    "sourceKey": "tianjin-binhai-2025-penalties",
+    "sourceUrl": "https://rsj.tjbh.gov.cn/contents/9764/296723.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.818Z",
+    "finishedAt": "2026-11-24T12:57:33.821Z",
+    "httpStatus": null,
+    "contentHash": "da997628701299b7efc4651116cb4cd23583b45116ebf2d402426bc01e88223b",
+    "snapshotPath": "data/snapshots/tianjin-binhai-2025-penalties.html",
+    "warnings": 3,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "天津市聚和建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91120116MA06GLGQ1K",
+        "province": "天津市",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者劳动报酬",
+            "authority": "违反了《劳动保障监察条例》第六条、第十五条第（二）（三）项规定，拒不按照《天津市劳动保障监察限期整改指令书》进行改正",
+            "legalRep": "天津市滨海新区大港街育才路509号",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单"
+          },
+          "sourceUrl": "https://rsj.tjbh.gov.cn/contents/9764/296723.html",
+          "sourceTitle": "天津市滨海新区人力资源和社会保障局劳动保障违法行为行政处罚社会公示（2025年12月）",
+          "sourcePublishedAt": "2025-12-08",
+          "fetchedAt": "2026-11-24T12:57:33.820Z",
+          "snapshotFile": "data/snapshots/tianjin-binhai-2025-penalties.html",
+          "ingestRunId": "42608fa2-17a4-44f2-a80c-d0838a603b56",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

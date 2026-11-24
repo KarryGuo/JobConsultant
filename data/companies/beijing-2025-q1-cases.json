@@ -1,0 +1,75 @@
+{
+  "source": {
+    "key": "beijing-2025-q1-cases",
+    "name": "北京市2025年第一批重大劳动保障违法行为社会公布案例",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "北京市",
+    "baseUrl": "https://rsj.beijing.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "北京市2025年第一批重大劳动保障违法行为社会公布案例",
+    "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202503/t20250327_4046091.html",
+    "publishedAt": "2025-03-27",
+    "fetchedAt": "2026-11-24T12:57:33.806Z",
+    "snapshotFile": "data/snapshots/beijing-2025-q1-cases.html"
+  },
+  "ingestRun": {
+    "id": "40ad6487-e6ef-4688-9e0f-2dfd6fdc3510",
+    "sourceKey": "beijing-2025-q1-cases",
+    "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202503/t20250327_4046091.html",
+    "parserVersion": "2026-11-24.6",
+    "status": "success",
+    "startedAt": "2026-11-24T12:57:33.796Z",
+    "finishedAt": "2026-11-24T12:57:33.807Z",
+    "httpStatus": null,
+    "contentHash": "e7de7921b805f45a1f7e20c3f70fa56e56425b65551f4008bd11cd36dd7e9a66",
+    "snapshotPath": "data/snapshots/beijing-2025-q1-cases.html",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "天坛云（北京）科技有限公司",
+        "aliases": [],
+        "creditCode": "91110112MACL2GN25J",
+        "province": "北京市",
+        "city": "西城区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查：天坛云（北京）科技有限公司自2024年4月至8月期间拖欠马某春、师某等10名劳动者工资合计232761.1元",
+            "workerCount": 10,
+            "amountYuan": 232761,
+            "authority": "西城区人力资源和社会保障局",
+            "legalRep": "胡世奇",
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/202503/t20250327_4046091.html",
+          "sourceTitle": "北京市2025年第一批重大劳动保障违法行为社会公布案例",
+          "sourcePublishedAt": "2025-03-27",
+          "fetchedAt": "2026-11-24T12:57:33.806Z",
+          "snapshotFile": "data/snapshots/beijing-2025-q1-cases.html",
+          "ingestRunId": "40ad6487-e6ef-4688-9e0f-2dfd6fdc3510",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}

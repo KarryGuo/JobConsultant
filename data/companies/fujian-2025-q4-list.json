@@ -1,0 +1,137 @@
+{
+  "source": {
+    "key": "fujian-2025-q4-list",
+    "name": "福建省人社厅公布2025年第四批拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "福建省",
+    "baseUrl": "https://rst.fj.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "福建省人社厅公布2025年第四批拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://rst.fj.gov.cn/zw/ldjy/202512/t20251229_7062013.htm",
+    "publishedAt": "2025-12-29",
+    "fetchedAt": "2026-11-24T12:57:33.912Z",
+    "snapshotFile": "data/snapshots/fujian-2025-q4-list.html"
+  },
+  "ingestRun": {
+    "id": "4639582b-9eb0-46b8-90ab-2fb7f1b4e84a",
+    "sourceKey": "fujian-2025-q4-list",
+    "sourceUrl": "https://rst.fj.gov.cn/zw/ldjy/202512/t20251229_7062013.htm",
+    "parserVersion": "2026-11-24.6",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:57:33.909Z",
+    "finishedAt": "2026-11-24T12:57:33.913Z",
+    "httpStatus": null,
+    "contentHash": "a6774115023246e679aac198662339ade4eb38dd222bc7b635134a699b007423",
+    "snapshotPath": "data/snapshots/fujian-2025-q4-list.html",
+    "warnings": 1,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "福建诺顺建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91350304MA31Q7F69H",
+        "province": "福建省",
+        "city": "永春县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91350304MA31Q7F69H 王金木 350321********8735 拖欠 332名劳动者工资，情节严重 225.81万元 20250909 永春县人力资源和社会保障局 永人社监列决字〔 2025〕1号 20280908 2",
+            "workerCount": 332,
+            "amountYuan": 2258100,
+            "authority": "永春县人力资源和社会保障局"
+          },
+          "sourceUrl": "https://rst.fj.gov.cn/zw/ldjy/202512/t20251229_7062013.htm",
+          "sourceTitle": "福建省人社厅公布2025年第四批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-29",
+          "fetchedAt": "2026-11-24T12:57:33.912Z",
+          "snapshotFile": "data/snapshots/fujian-2025-q4-list.html",
+          "ingestRunId": "4639582b-9eb0-46b8-90ab-2fb7f1b4e84a",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "福安市硕诚石材有限公司",
+        "aliases": [],
+        "creditCode": "91350981MADM25865M",
+        "province": "福建省",
+        "city": "福安市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91350981MADM25865M 汤超 340826********4817 拖欠 6名劳动者工资，情节严重 11.03万元 20250512 福安市人力资源和社会保障局 安人社监列决字 〔 2025〕5号 20280512 3",
+            "workerCount": 6,
+            "amountYuan": 110300,
+            "authority": "福安市人力资源和社会保障局"
+          },
+          "sourceUrl": "https://rst.fj.gov.cn/zw/ldjy/202512/t20251229_7062013.htm",
+          "sourceTitle": "福建省人社厅公布2025年第四批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-29",
+          "fetchedAt": "2026-11-24T12:57:33.912Z",
+          "snapshotFile": "data/snapshots/fujian-2025-q4-list.html",
+          "ingestRunId": "4639582b-9eb0-46b8-90ab-2fb7f1b4e84a",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "福建君玖食品有限公司霞浦分公司",
+        "aliases": [],
+        "creditCode": "91350921MA8T30MD0U",
+        "province": "福建省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91350921MA8T30MD0U 陈宜 350128********0516 拖欠 21名劳动者工资，情节严重 25.99万元 20250714 霞浦县人力资源 和社会保障局 霞人社监列决字 〔 2025〕3号 20280714 附件下载：",
+            "workerCount": 21,
+            "amountYuan": 259900
+          },
+          "sourceUrl": "https://rst.fj.gov.cn/zw/ldjy/202512/t20251229_7062013.htm",
+          "sourceTitle": "福建省人社厅公布2025年第四批拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-12-29",
+          "fetchedAt": "2026-11-24T12:57:33.912Z",
+          "snapshotFile": "data/snapshots/fujian-2025-q4-list.html",
+          "ingestRunId": "4639582b-9eb0-46b8-90ab-2fb7f1b4e84a",
+          "parserVersion": "2026-11-24.6"
+        }
+      ]
+    }
+  ]
+}
