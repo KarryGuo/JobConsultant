@@ -1,0 +1,572 @@
+{
+  "source": {
+    "key": "jiangxi-2025-q2-cases",
+    "name": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "江西省",
+    "baseUrl": "https://rst.jiangxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+    "url": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+    "publishedAt": "2025-11-13",
+    "fetchedAt": "2026-11-24T12:32:45.070Z",
+    "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls"
+  },
+  "ingestRun": {
+    "id": "56500532-8eeb-4888-ae4d-b698aab8102e",
+    "sourceKey": "jiangxi-2025-q2-cases",
+    "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+    "parserVersion": "2026-11-24.5",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:41:57.123Z",
+    "finishedAt": "2026-11-24T12:41:57.144Z",
+    "httpStatus": null,
+    "contentHash": "da44677d7bb366642b491bab2db21cb4de93546689da1fb8ad323d0ae4e4e280",
+    "snapshotPath": "data/snapshots/jiangxi-2025-q2-cases.xls",
+    "warnings": 7,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "浮梁恩源颐养护理院",
+        "aliases": [],
+        "creditCode": "52360222MJC8400789",
+        "province": "江西省",
+        "city": "景德镇市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠23人20.2748万元工资。",
+            "amountYuan": 202748,
+            "authority": "景德镇市人力资源和社会保障局",
+            "legalRep": "叶银存",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "景德镇市神启陶瓷有限公司",
+        "aliases": [],
+        "creditCode": "91360207MA3AE4Q04D",
+        "province": "江西省",
+        "city": "景德镇市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠21人53.154万元工资。",
+            "amountYuan": 531540,
+            "authority": "景德镇市人力资源和社会保障局",
+            "legalRep": "管丽贞",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖南锦汇安建筑有限公司庐山市分公司",
+        "aliases": [],
+        "creditCode": "91360427MAD9M12F7E",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠孙志斌等15名农民工工资共计119295元；2.拖欠左艳林等29名农民工工资共计685025元；3.不按劳动保障部门要求接受应询。且上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 15,
+            "amountYuan": 119295,
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "范思哲",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西驰奔建设工程有限公司庐山市分公司",
+        "aliases": [],
+        "creditCode": "91360427MAD9A42L9A",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠陈金明等30名农民工工资共计342420元；2.拖欠王安全等90名农民工工资共计1542422元；3.不按劳动保障部门要求接受应询。且上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 30,
+            "amountYuan": 342420,
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "祝平湘",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖南臻美绿建装饰有限公司庐山市分公司",
+        "aliases": [],
+        "creditCode": "91360427MADDMMUR48",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠付金等98名农民工工资共计526725元；2.拖欠方宁等218名农民工工资共计3049199.82元；3.不按劳动保障部门要求接受应询。且上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 98,
+            "amountYuan": 526725,
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "王慧",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "瑞昌纪凡希娱乐有限公司",
+        "aliases": [],
+        "creditCode": "91360481MAD455C44W",
+        "province": "江西省",
+        "city": "瑞昌市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "违反劳动保障法律法规经责令改正拒不改正。",
+            "authority": "瑞昌市人力资源和社会保障局",
+            "legalRep": "丰文钰",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "抚州万福梦湖酒店管理有限公司",
+        "aliases": [],
+        "creditCode": "91361002MACQ60945A",
+        "province": "江西省",
+        "city": "抚州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠劳动者周燕芳、章建模等19人工资549407.2元。",
+            "amountYuan": 549407,
+            "authority": "抚州市人力资源和社会保障局",
+            "legalRep": "周建国",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "会昌县领域制衣有限公司",
+        "aliases": [],
+        "creditCode": "91360733MADWR2L57N",
+        "province": "江西省",
+        "city": "会昌县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "会昌县领域制衣有限公司拖欠曾某等41名员工2025年5月至2025年7月工资共计31.2327万元。",
+            "workerCount": 41,
+            "amountYuan": 312327,
+            "authority": "会昌县人力资源和社会保障局",
+            "legalRep": "蔡绍磊",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "赣州电子工业技术学校",
+        "aliases": [],
+        "creditCode": "523607003092026207",
+        "province": "江西省",
+        "city": "赣州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "赣州电子工业技术学校拖欠2025年2月至2025年5月份118名教职工工资共计230.113544万元。",
+            "workerCount": 118,
+            "amountYuan": 2301135,
+            "authority": "赣州市人力资源和社会保障局",
+            "legalRep": "钟文勇",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "宜丰贝乐多新材料有限公司（法人叶利平)",
+        "aliases": [],
+        "creditCode": "91360924MAC5YCN67R",
+        "province": "江西省",
+        "city": "宜丰县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "因经营不善，拖欠谢某等7名劳动者劳动报酬共计20余万元，人社局向其下达《劳动保障监察限期整改指令书》，该公司逾期未履行，且法人叶某存在转移资产的嫌疑。",
+            "workerCount": 7,
+            "authority": "宜丰县人力资源和社会保障局",
+            "legalRep": "叶利平",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西晟洋建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91360104MA387QHK0H",
+        "province": "江西省",
+        "city": "吉州区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2024年12月，吉州区人社局接到劳动者投诉，反映江西晟洋建设工程有限公司承建的红星九颂时代城精装修项目存在拖欠农民工工资问题。经查，该公司欠薪属实，拖欠35名农民工10.31万元。",
+            "workerCount": 35,
+            "amountYuan": 103100,
+            "authority": "吉州区人社局",
+            "legalRep": "胡文华",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西楷福源家居有限公司",
+        "aliases": [],
+        "creditCode": "91360823MA388AKAXL",
+        "province": "江西省",
+        "city": "峡江县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年2月，峡江县人社局接到劳动者投诉，反映江西楷福源家居有限公司拖欠员工工资。经查，该公司欠薪属实，拖欠宋某等39名员工2024年12月至2025年1月期间工资25.82万元。",
+            "workerCount": 39,
+            "amountYuan": 258200,
+            "authority": "峡江县人力资源和社会保障局",
+            "legalRep": "傅文武",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "宁波市无远装饰工程设计有限公司",
+        "aliases": [],
+        "creditCode": "91330212MA290PT1X6",
+        "province": "江西省",
+        "city": "峡江县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年2月，峡江县人社局接到刘勇珍等民工投诉，反映宁波市无远装饰工程设计有限公司承建的江西沐弘堂中药科技有限公司厂房项目拖欠农民工工资。经查，该公司欠薪属实，拖欠刘勇珍等26名民工2024年11月至2025年1月期间工资20.52万元。",
+            "workerCount": 26,
+            "amountYuan": 205200,
+            "authority": "峡江县人力资源和社会保障局",
+            "legalRep": "楼旭峰",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西方远建工集团有限公司",
+        "aliases": [],
+        "creditCode": "9136010066202516XU",
+        "province": "江西省",
+        "city": "吉安县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年1月，吉安县人社局接到周贵广、吴樟古等人投诉，反映江西方远建工集团有限公司承建的吉安县第二中学附属初中建设项目拖欠农民工工资。经查，该公司欠薪属实，拖欠周贵广班组11人、吴樟古班组7人工资共计29.73万元。",
+            "amountYuan": 297300,
+            "authority": "吉安县人力资源和社会保障局",
+            "legalRep": "刘玉良",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "九江诚新实业有限公司",
+        "aliases": [],
+        "creditCode": "91360403309201580B",
+        "province": "江西省",
+        "city": "永新县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年2月，永新县人社局接到农民工投诉，反映九江诚新实业有限公司承建的永新县工业园区第六期标准厂房及工业园生活配套设施建设项目拖欠农民工工资。经查，该公司欠薪属实，拖欠23名农民工工资41.84万元。",
+            "workerCount": 23,
+            "amountYuan": 418400,
+            "authority": "永新县人力资源和社会保障局",
+            "legalRep": "张杰",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.070Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-cases.xls",
+          "ingestRunId": "56500532-8eeb-4888-ae4d-b698aab8102e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "source": {
+    "key": "guangdong-2025-violations",
+    "name": "2025年用人单位重大劳动保障违法行为社会公布情况",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "广东省",
+    "baseUrl": "https://hrss.gd.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "2025年用人单位重大劳动保障违法行为社会公布情况",
+    "url": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+    "publishedAt": "2026-01-04",
+    "fetchedAt": "2026-11-24T12:32:45.050Z",
+    "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx"
+  },
+  "ingestRun": {
+    "id": "53076a86-a52f-4986-acbc-15365c639060",
+    "sourceKey": "guangdong-2025-violations",
+    "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+    "parserVersion": "2026-11-24.4",
+    "status": "success",
+    "startedAt": "2026-11-24T12:32:45.046Z",
+    "finishedAt": "2026-11-24T12:32:45.051Z",
+    "httpStatus": null,
+    "contentHash": "93f5385eff838f7ee58202ed2db14d07f8aa478a8dcdbe514b714f64b9948b6c",
+    "snapshotPath": "data/snapshots/guangdong-2025-violations.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "广州市顺易达服饰有限公司",
+        "aliases": [],
+        "creditCode": "91440113MACLFTC72H",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠20名劳动者2025年6月至8月劳动报酬33.37万元，涉嫌拒不支付劳动报酬罪。",
+            "workerCount": 20,
+            "amountYuan": 333700,
+            "legalRep": "陈烈纯",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "广州市起梦体育发展有限公司",
+        "aliases": [],
+        "creditCode": "91440114MABURN67XX",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠14名劳动者2025年7月至2025年8月劳动报酬13.65万元，涉嫌拒不支付劳动报酬罪。",
+            "workerCount": 14,
+            "amountYuan": 136500,
+            "legalRep": "龚小芳、管章河（实际经营者）",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "账多多（深圳）科技有限公司",
+        "aliases": [],
+        "creditCode": "91440300MAE8MGGN3X",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠27名劳动者2025年5月至7月工资57.80万元。",
+            "workerCount": 27,
+            "amountYuan": 578000,
+            "legalRep": "邓志乔",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "炫丰餐具消毒（江门新会）有限公司",
+        "aliases": [],
+        "creditCode": "91440705MACXLP861B",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠26名劳动者2025年1月至5月劳动报酬30.19万元。",
+            "workerCount": 26,
+            "amountYuan": 301900,
+            "legalRep": "黄佑林",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "南雄市联合新能源开发有限公司",
+        "aliases": [],
+        "creditCode": "91440282MAE63N699Q",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠27名劳动者2025年2月至2025年6月劳动报酬16.14万元。",
+            "workerCount": 27,
+            "amountYuan": 161400,
+            "legalRep": "陈尚美",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "汕头市潮南区鹏壮制衣厂",
+        "aliases": [],
+        "creditCode": "91440514MA51LRRT4B",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠35名劳动者2024年5月至2025年8月劳动报酬16.54万元。",
+            "workerCount": 35,
+            "amountYuan": 165400,
+            "legalRep": "翁奇鹏",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "茂名市茂南区嘉丽家木器加工厂",
+        "aliases": [],
+        "creditCode": "92440902MA52DTXAXP",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠9名劳动者2022年11月至2025年1月劳动报酬48.19万元，涉嫌拒不支付劳动报酬罪。",
+            "workerCount": 9,
+            "amountYuan": 481900,
+            "legalRep": "黄英文",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "珠海铭展物业管理有限公司",
+        "aliases": [],
+        "creditCode": "91440404MAE3WAJ16R",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠14名劳动者2025年4月至8月劳动报酬10.60万元，涉嫌拒不支付劳动报酬罪。",
+            "workerCount": 14,
+            "amountYuan": 106000,
+            "legalRep": "姜大礼",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "德森数字信息技术（广东）有限公司",
+        "aliases": [],
+        "creditCode": "91442000MADTK3R308",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠76名劳动者2025年7月至8月劳动报酬35.32万元。",
+            "workerCount": 76,
+            "amountYuan": 353200,
+            "legalRep": "张豪",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "东莞市谢岗鑫宏表业厂",
+        "aliases": [],
+        "creditCode": "92441900MAE3DDLB57",
+        "province": "广东省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠51名劳动者2025年7月至8月劳动报酬79.65万元，涉嫌拒不支付劳动报酬罪。",
+            "workerCount": 51,
+            "amountYuan": 796500,
+            "legalRep": "欧朝阳",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+          "sourceTitle": "2025年用人单位重大劳动保障违法行为社会公布情况",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.050Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-violations.xlsx",
+          "ingestRunId": "53076a86-a52f-4986-acbc-15365c639060",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    }
+  ]
+}

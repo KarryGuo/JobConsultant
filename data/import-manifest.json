@@ -69,6 +69,17 @@
     "companies/gansu-tianshui-2026-q3-cases.json",
     "companies/gansu-jiuquan-2026-q2-cases.json",
     "companies/gansu-lanzhou-chengguan-2026-q2-cases.json",
-    "companies/gansu-lanzhou-yuzhong-2026-q3-cases.json"
+    "companies/gansu-lanzhou-yuzhong-2026-q3-cases.json",
+    "companies/zhejiang-2025-q1-cases.json",
+    "companies/zhejiang-2025-q2-cases.json",
+    "companies/zhejiang-2025-q3-cases.json",
+    "companies/zhejiang-2025-q4-cases.json",
+    "companies/zhejiang-2026-q3-cases.json",
+    "companies/guangdong-2025-violations.json",
+    "companies/guangdong-2025-blacklist.json",
+    "companies/jiangxi-2025-q2-cases.json",
+    "companies/jiangxi-2025-q2-list.json",
+    "companies/jiangxi-2026-q1-cases.json",
+    "companies/jiangxi-2026-q1-list.json"
   ]
 }

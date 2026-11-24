@@ -68,7 +68,7 @@ export type SourceConfig = {
  * 解析器版本。每次修改解析规则都递增，
  * 这样数据库里可以追溯一条信号是由哪个版本产生的。
  */
-export const PARSER_VERSION = "2026-11-24.3";
+export const PARSER_VERSION = "2026-11-24.5";
 
 type IngestRunMeta = {
   id: string;
@@ -855,9 +855,174 @@ export const SOURCES: SourceConfig[] = [
     outputFile: "data/companies/gansu-lanzhou-yuzhong-2026-q3-cases.json",
     parser: parseWageParagraphCases,
   },
+  {
+    key: "zhejiang-2025-q1-cases",
+    name: "2025年第一批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+    region: "浙江省",
+    url: "https://rlsbt.zj.gov.cn/art/2025/3/18/art_1229116948_58940913.html",
+    publishedAt: "2025-03-18",
+    snapshotFile: "data/snapshots/zhejiang-2025-q1-cases.html",
+    outputFile: "data/companies/zhejiang-2025-q1-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "zhejiang-2025-q2-cases",
+    name: "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+    region: "浙江省",
+    url: "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+    publishedAt: "2025-06-19",
+    snapshotFile: "data/snapshots/zhejiang-2025-q2-cases.html",
+    outputFile: "data/companies/zhejiang-2025-q2-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "zhejiang-2025-q3-cases",
+    name: "2025年第三批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+    region: "浙江省",
+    url: "https://rlsbt.zj.gov.cn/art/2025/9/22/art_1229116948_58942698.html",
+    publishedAt: "2025-09-22",
+    snapshotFile: "data/snapshots/zhejiang-2025-q3-cases.html",
+    outputFile: "data/companies/zhejiang-2025-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "zhejiang-2025-q4-cases",
+    name: "2025年第四批重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+    region: "浙江省",
+    url: "https://rlsbt.zj.gov.cn/col/col1229116948/art/2025/art_6201ccce6f3f48b78aa211ce4a0cfacb.html",
+    publishedAt: "2025-12-19",
+    snapshotFile: "data/snapshots/zhejiang-2025-q4-cases.html",
+    outputFile: "data/companies/zhejiang-2025-q4-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "zhejiang-2026-q3-cases",
+    name: "公布2026年第三批重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单",
+    region: "浙江省",
+    url: "https://rlsbt.zj.gov.cn/col/col1229116948/art/2026/art_63703a86683346d68c6790791320c7d7.html",
+    publishedAt: "2026-09-24",
+    snapshotFile: "data/snapshots/zhejiang-2026-q3-cases.html",
+    outputFile: "data/companies/zhejiang-2026-q3-cases.json",
+    parser: parseWageParagraphCases,
+  },
+  {
+    key: "guangdong-2025-violations",
+    name: "2025年用人单位重大劳动保障违法行为社会公布情况",
+    region: "广东省",
+    url: "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838490.html",
+    publishedAt: "2026-01-04",
+    snapshotFile: "data/snapshots/guangdong-2025-violations.xlsx",
+    documentFile: "data/snapshots/guangdong-2025-violations.xlsx",
+    documentType: "xlsx",
+    stage: "重大劳动保障违法行为社会公布",
+    stageLabel: "社会公布",
+    documentUrl:
+      "https://hrss.gd.gov.cn/attachment/0/602/602949/4838490.xlsx",
+    outputFile: "data/companies/guangdong-2025-violations.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "guangdong-2025-blacklist",
+    name: "2025年拖欠农民工工资失信联合惩戒对象名单",
+    region: "广东省",
+    url: "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+    publishedAt: "2026-01-04",
+    snapshotFile: "data/snapshots/guangdong-2025-blacklist.xlsx",
+    documentFile: "data/snapshots/guangdong-2025-blacklist.xlsx",
+    documentType: "xlsx",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://hrss.gd.gov.cn/attachment/0/602/602950/4838491.xlsx",
+    outputFile: "data/companies/guangdong-2025-blacklist.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "jiangxi-2025-q2-cases",
+    name: "江西省2025年度第二批次重大劳动保障违法行为社会公布案件（案件表）",
+    region: "江西省",
+    url: "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+    publishedAt: "2025-11-13",
+    snapshotFile: "data/snapshots/jiangxi-2025-q2-cases.xls",
+    documentFile: "data/snapshots/jiangxi-2025-q2-cases.xls",
+    documentType: "xls",
+    stage: "重大劳动保障违法行为社会公布",
+    stageLabel: "社会公布",
+    documentUrl:
+      "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col47990/1988864625839443968/3OELE5cq.xls",
+    outputFile: "data/companies/jiangxi-2025-q2-cases.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "jiangxi-2025-q2-list",
+    name: "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+    region: "江西省",
+    url: "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+    publishedAt: "2025-11-13",
+    snapshotFile: "data/snapshots/jiangxi-2025-q2-list.xls",
+    documentFile: "data/snapshots/jiangxi-2025-q2-list.xls",
+    documentType: "xls",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col47990/1988864625839443968/TOYtsX6P.xls",
+    outputFile: "data/companies/jiangxi-2025-q2-list.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "jiangxi-2026-q1-cases",
+    name: "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+    region: "江西省",
+    url: "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+    publishedAt: "2026-07-03",
+    snapshotFile: "data/snapshots/jiangxi-2026-q1-cases.xls",
+    documentFile: "data/snapshots/jiangxi-2026-q1-cases.xls",
+    documentType: "xls",
+    stage: "重大劳动保障违法行为社会公布",
+    stageLabel: "社会公布",
+    documentUrl:
+      "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col47990/2072866923363344384/Z7S4VAKY.xls",
+    outputFile: "data/companies/jiangxi-2026-q1-cases.json",
+    parser: parseTextTableCases,
+  },
+  {
+    key: "jiangxi-2026-q1-list",
+    name: "江西省2026年度第一批次拖欠农民工工资失信联合惩戒对象名单",
+    region: "江西省",
+    url: "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col47990/content/content_2072866923363344384.html",
+    publishedAt: "2026-07-03",
+    snapshotFile: "data/snapshots/jiangxi-2026-q1-list.xls",
+    documentFile: "data/snapshots/jiangxi-2026-q1-list.xls",
+    documentType: "xls",
+    stage: "列入拖欠农民工工资失信联合惩戒对象名单",
+    stageLabel: "列入失信名单",
+    documentUrl:
+      "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col47990/2072866923363344384/Bg7rgNqt.xls",
+    outputFile: "data/companies/jiangxi-2026-q1-list.json",
+    parser: parseTextTableCases,
+  },
 ];
 
 const CODE_RE = /[0-9A-Z]{18}/;
+
+/**
+ * 少数公告会把法定代表人身份证号填进信用代码列。
+ * 身份证号也是 18 位，需要按出生日期结构识别并拒绝。
+ */
+function isIdCardNumber(code: string): boolean {
+  if (!/^\d{17}[\dX]$/.test(code)) return false;
+  const year = Number(code.slice(6, 10));
+  const month = Number(code.slice(10, 12));
+  const day = Number(code.slice(12, 14));
+  return (
+    year >= 1900 &&
+    year <= 2015 &&
+    month >= 1 &&
+    month <= 12 &&
+    day >= 1 &&
+    day <= 31
+  );
+}
 const DATE_RE = /(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})/g;
 const AUTHORITY_RE =
   /[\u4e00-\u9fa5]{2,24}(?:人力资源和社会保障局|人社局|劳动保障监察大队|综合行政执法局)/g;
@@ -1167,7 +1332,7 @@ function normalizeCompanyName(raw: string): string {
     )
     .replace(/^\d{1,3}\s*[、.．]?\s+/, "")
     .split(/[，,]\s*(?:法定代表人|负责人|地址|住所)/)[0]
-    .split(/统一(?:社会)?信用代码?/)[0]
+    .split(/统一\s*(?:社会)?\s*信用代码?/)[0]
     .replace(/[（(](?:分包|建设单位|施工总承包单位|用人单位)[）)]\s*$/, "")
     // 部分公告把“基本情况”混进标题，不能带进企业主体名称。
     .replace(/基本情况$/, "")
@@ -1260,7 +1425,7 @@ export function parseTextTableCases(text: string): ParseResult {
   for (let index = 0; index < tokens.length; index += 1) {
     if (!CODE_RE.test(tokens[index])) continue;
     const creditCode = CODE_RE.exec(tokens[index])?.[0];
-    if (!creditCode) continue;
+    if (!creditCode || isIdCardNumber(creditCode)) continue;
 
     let name = "";
     for (let offset = 1; offset <= 4; offset += 1) {
@@ -1345,7 +1510,9 @@ export function parseLegacyDocCases(
 
   for (let index = 0; index < tokens.length; index += 1) {
     const creditCode = CODE_RE.exec(tokens[index])?.[0];
-    if (!creditCode || seen.has(creditCode)) continue;
+    if (!creditCode || isIdCardNumber(creditCode) || seen.has(creditCode)) {
+      continue;
+    }
 
     let name = "";
     for (let offset = 1; offset <= 6; offset += 1) {
@@ -1442,7 +1609,8 @@ export function parseTableCases(html: string): ParseResult {
     if (codeIndex < 1) continue;
 
     const codeMatch = CODE_RE.exec(cells[codeIndex]);
-    const creditCode = codeMatch?.[0];
+    const creditCode =
+      codeMatch && !isIdCardNumber(codeMatch[0]) ? codeMatch[0] : undefined;
     let name = normalizeCompanyName((cells[codeIndex - 1] ?? "").trim());
 
     // 有些表格把“注册地址”排在信用代码前一格（如河北区县公告），
@@ -1554,12 +1722,17 @@ export function parseParagraphCases(html: string): ParseResult {
     const nextLineIndex = codeLineIndexes[index + 1] ?? lines.length;
     const line = lines[lineIndex] ?? "";
     const codeMatch = CODE_RE.exec(line);
-    const creditCode = codeMatch?.[0];
-    if (!creditCode) continue;
+    if (!codeMatch) continue;
+    // 部分省份会公开脱敏信用代码（如 913101XXXX1HWL8H60），
+    // 保留主体名称但不写入不可用的代码。
+    const creditCode =
+      /X{2,}|\*{2,}/.test(codeMatch[0]) || isIdCardNumber(codeMatch[0])
+        ? undefined
+        : codeMatch[0];
 
     const beforeCode = line
       .slice(0, codeMatch.index)
-      .split("统一社会信用代码")[0]
+      .split(/统一\s*(?:社会)?\s*信用代码?/)[0]
       .replace(/[，,；;：:\s]+$/, "")
       .trim();
 
@@ -2252,7 +2425,9 @@ export function parseXlsxCases(
     // 名单里可能混有“自然人”欠薪记录，本平台只登记用人单位主体。
     if (row.some((cell) => cell.trim() === "自然人")) continue;
 
-    const creditCode = CODE_RE.exec(row[codeIndex] ?? "")?.[0];
+    const rawCode = CODE_RE.exec(row[codeIndex] ?? "")?.[0];
+    const creditCode =
+      rawCode && !isIdCardNumber(rawCode) ? rawCode : undefined;
     const name = normalizeCompanyName(row[nameIndex] ?? "");
 
     if (!creditCode || name.length < 4) continue;

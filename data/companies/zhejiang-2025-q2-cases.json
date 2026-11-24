@@ -1,0 +1,442 @@
+{
+  "source": {
+    "key": "zhejiang-2025-q2-cases",
+    "name": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "浙江省",
+    "baseUrl": "https://rlsbt.zj.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+    "url": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+    "publishedAt": "2025-06-19",
+    "fetchedAt": "2026-11-24T12:32:45.020Z",
+    "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html"
+  },
+  "ingestRun": {
+    "id": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+    "sourceKey": "zhejiang-2025-q2-cases",
+    "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+    "parserVersion": "2026-11-24.4",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:32:45.017Z",
+    "finishedAt": "2026-11-24T12:32:45.021Z",
+    "httpStatus": null,
+    "contentHash": "78d4956e3e70f05487bc9897553e416476a51347235210aaa4dea64e3564a0ec",
+    "snapshotPath": "data/snapshots/zhejiang-2025-q2-cases.html",
+    "warnings": 9,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "杭州仲意服饰有限公司",
+        "aliases": [],
+        "creditCode": "91330108MABUEFN756",
+        "province": "浙江省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，杭州仲意服饰有限公司拖欠王 某某 等 19 名劳动者 2023 年 6 月至 2024 年 8 月期间劳动报酬共计 278050 元",
+            "workerCount": 19,
+            "amountYuan": 278050,
+            "legalRep": "管某某",
+            "stage": "移送公安机关",
+            "stageLabel": "移送公安"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "衢州市凯摩服饰有限公司",
+        "aliases": [],
+        "creditCode": "91330881MA2DKQLL88",
+        "province": "浙江省",
+        "city": null,
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经查，该单位拖欠周 某某 等 12 名劳动者 劳动报酬 共计 62407.2 元（其中毛 某某 被拖欠 2024 年 3 月至 2024 年 12 月 的劳动报酬 共计 20000 元，拖欠数额已达到认定拒不支付劳动报酬罪数额标准）",
+            "workerCount": 12,
+            "amountYuan": 62407,
+            "stage": "行政处罚",
+            "stageLabel": "行政处罚"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "苏州鲲腾建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91320507301866262D",
+        "province": "浙江省",
+        "city": "宁波市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91320507301866262D 许 某某 342823 ****** 4037 拖欠13名劳动者51.2万元工资",
+            "workerCount": 13,
+            "amountYuan": 512000,
+            "authority": "宁波市海曙区人力资源和社会保障局",
+            "stageDate": "2025-04-27"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "杭州爱上这礼家庭服务有限公司",
+        "aliases": [],
+        "creditCode": "91330103MA2CDQH87K",
+        "province": "浙江省",
+        "city": "杭州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91330103MA2CDQH87K 叶 某某 332525 ****** 0917 拖欠12名劳动者7 . 93 万 元工资",
+            "workerCount": 12,
+            "authority": "杭州市滨江区人力资源和社会保障局",
+            "stageDate": "2025-03-17"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "浙江楠辰轩工贸有限公司",
+        "aliases": [],
+        "creditCode": "91330723MA2M1CDG27",
+        "province": "浙江省",
+        "city": "金华市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91330723MA2M1CDG27 许 某某 341126 ****** 5319 拖欠57名劳动者36.72 3 万元工资",
+            "workerCount": 57,
+            "amountYuan": 30000,
+            "authority": "金华市武义县人力资源和社会保障局",
+            "stageDate": "2025-05-09"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "诸暨市城北小大制衣厂",
+        "aliases": [],
+        "creditCode": "92330681MA2FBAU53M",
+        "province": "浙江省",
+        "city": "诸暨市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92330681MA2FBAU53M 周 某 342122 ****** 8525 拖欠23名劳动者43 .50万 元工资",
+            "workerCount": 23,
+            "authority": "诸暨市人力资源和社会保障局",
+            "stageDate": "2025-01-08"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安吉酷威家具有限公司",
+        "aliases": [],
+        "creditCode": "91330523MA2B673D8C",
+        "province": "浙江省",
+        "city": "湖州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91330523MA2B673D8C 蒋 某某 330523 ****** 5225 拖欠32 名劳动者 56 . 4 5万 元 工资",
+            "workerCount": 32,
+            "authority": "湖州市安吉县人力资源和社会保障局",
+            "stageDate": "2025-05-06"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "缙云县爱你宝贝儿童摄影店",
+        "aliases": [],
+        "creditCode": "92331122MA2E40515X",
+        "province": "浙江省",
+        "city": "丽水市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92331122MA2E40515X 何 某某 332526 ****** 2112 拖欠17名劳动者12.8 9 万元工资",
+            "workerCount": 17,
+            "amountYuan": 90000,
+            "authority": "丽水市缙云县人力资源和社会保障局",
+            "stageDate": "2025-02-24"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "玉环聿砼室内装饰设计工作室",
+        "aliases": [],
+        "creditCode": "92331021MA2DUR755X",
+        "province": "浙江省",
+        "city": "玉环市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92331021MA2DUR755X 罗 某某 350982 ****** 0011 拖欠8名劳动者25.41万元工资",
+            "workerCount": 8,
+            "amountYuan": 254100,
+            "authority": "玉环市人力资源和社会保障局",
+            "stageDate": "2025-05-08"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "安徽博德建筑装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "913401000597119822",
+        "province": "浙江省",
+        "city": "宁波市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "913401000597119822 程 某某 340122 ****** 3392 拖欠7名劳动者10 . 7 4万 元工资",
+            "workerCount": 7,
+            "authority": "宁波市前湾新区人力资源和社会保障局",
+            "stageDate": "2025-04-16"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "四川博翰盛宏建设有限公司",
+        "aliases": [],
+        "creditCode": "91510105MA6CMMR861",
+        "province": "浙江省",
+        "city": "舟山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "91510105MA6CMMR861 黄 某某 510322 ****** 4914 拖欠 6名劳动者 14 .1万 元工资",
+            "workerCount": 6,
+            "authority": "舟山市岱山县人力资源和社会保障局",
+            "stageDate": "2025-02-21"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "海宁市许村镇裕达服装厂",
+        "aliases": [],
+        "creditCode": "92330481MAE1PCUU96",
+        "province": "浙江省",
+        "city": "海宁市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "92330481MAE1PCUU96 刘 某某 412328 ****** 3419 拖欠17名劳动者12 . 18 万 元工资",
+            "workerCount": 17,
+            "authority": "海宁市人力资源和社会保障局",
+            "stageDate": "2025-05-26"
+          },
+          "sourceUrl": "https://rlsbt.zj.gov.cn/art/2025/6/19/art_1229116948_58941755.html",
+          "sourceTitle": "2025年第二批向社会公布重大劳动保障违法行为典型案例和拖欠农民工工资失信联合惩戒对象名单信息",
+          "sourcePublishedAt": "2025-06-19",
+          "fetchedAt": "2026-11-24T12:32:45.020Z",
+          "snapshotFile": "data/snapshots/zhejiang-2025-q2-cases.html",
+          "ingestRunId": "cabf8956-c9dc-4ac1-9934-79d3faa4fc45",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    }
+  ]
+}

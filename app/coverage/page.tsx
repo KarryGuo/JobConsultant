@@ -46,8 +46,8 @@ export default function CoveragePage() {
           全国覆盖进度
         </h2>
         <p className="mt-3 text-sm leading-7 text-muted">
-          已接入 {COVERED_REGIONS.length} 个省级行政区的人社公告自动采集；
-          其余省份按批次推进，未接入前仍可在企业页使用官方直查入口。
+          已接入 {COVERED_REGIONS.length} 个省级行政区的人社公告自动采集，
+          实现省级行政区全覆盖；未收录企业仍可在企业页使用官方直查入口。
         </p>
 
         <div className="mt-5 space-y-5 text-xs">
@@ -85,21 +85,24 @@ export default function CoveragePage() {
             </div>
           )}
 
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.16em] text-muted">
-              站点限制自动访问，仅提供官方直查 · {DIRECT_LOOKUP_ONLY_REGIONS.length}
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {DIRECT_LOOKUP_ONLY_REGIONS.map((region) => (
-                <span
-                  key={region}
-                  className="border border-line px-2 py-1 text-muted"
-                >
-                  {region}
-                </span>
-              ))}
+          {DIRECT_LOOKUP_ONLY_REGIONS.length > 0 && (
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.16em] text-muted">
+                站点限制自动访问，仅提供官方直查 ·{" "}
+                {DIRECT_LOOKUP_ONLY_REGIONS.length}
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {DIRECT_LOOKUP_ONLY_REGIONS.map((region) => (
+                  <span
+                    key={region}
+                    className="border border-line px-2 py-1 text-muted"
+                  >
+                    {region}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <p className="mt-4 text-xs leading-6 text-muted">

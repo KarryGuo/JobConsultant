@@ -1,0 +1,912 @@
+{
+  "source": {
+    "key": "jiangxi-2026-q1-cases",
+    "name": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "江西省",
+    "baseUrl": "https://rst.jiangxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+    "url": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+    "publishedAt": "2026-07-03",
+    "fetchedAt": "2026-11-24T12:32:45.087Z",
+    "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls"
+  },
+  "ingestRun": {
+    "id": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+    "sourceKey": "jiangxi-2026-q1-cases",
+    "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+    "parserVersion": "2026-11-24.5",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:41:57.155Z",
+    "finishedAt": "2026-11-24T12:41:57.162Z",
+    "httpStatus": null,
+    "contentHash": "78871406b4578d30bb1f8e48c6152b79d059eaf40945f23db0b73edd9cacb892",
+    "snapshotPath": "data/snapshots/jiangxi-2026-q1-cases.xls",
+    "warnings": 27,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "抚州市星博商业管理有限公司",
+        "aliases": [],
+        "creditCode": "91361003MA38BBK66U",
+        "province": "江西省",
+        "city": "抚州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠员工工资，经抚州市人社局责令改正后仍不改正。",
+            "authority": "抚州市人力资源和社会保障局",
+            "legalRep": "张雯",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西青诚装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91361003MA398XMM4X",
+        "province": "江西省",
+        "city": "抚州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工工资，经抚州市人社局责令改正后仍不改正。",
+            "authority": "抚州市人力资源和社会保障局",
+            "legalRep": "王早杨",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西华索建筑工程有限公司",
+        "aliases": [],
+        "creditCode": "91360825MA3AC9YC6P",
+        "province": "江西省",
+        "city": "吉州区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "吉安市吉州区“星辰湾2#、6#、9#、19#楼”工程施工期间，施工总承包单位江西华索建筑工程有限公司承建该项目，劳务承包人彭跃善承包该项目土建工程相关劳务、机械及辅材。2025年6月，吉州区人社局接到该项目木工班组农民工投诉，反映该项目存在拖欠工资问题。经查，该项目拖欠木工班组12名劳动者工资150699元。彭跃善在项目施工期间通过虚构亲属名单、虚造工资表等方式套取并挪用专项农民工工资13万元；在具备支付能力的情况下消极应对，拒不办理房源过户及变现手续，存在逃避支付劳动报酬行为。",
+            "workerCount": 12,
+            "amountYuan": 150699,
+            "authority": "吉州区人社局",
+            "legalRep": "刘志勤",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "吉安市儒林状元楼餐饮管理有限公司",
+        "aliases": [],
+        "creditCode": "91360802MA3607PG77",
+        "province": "江西省",
+        "city": "吉州区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年3月4日，吉州区人社局劳动保障监察部门接到胡峰华等员工投诉，反映吉安市儒林状元楼餐饮管理有限公司突然闭店停业并拖欠员工工资。经查，该单位拖欠胡峰华等45名员工2026年2月份工资合计214399元。另查明，2026年2月21日至3月4日期间，该单位法定代表人龙敏政、股东郭鑫将单位账户内资金20余万元转入个人账户，存在转移财产、逃避支付劳动报酬行为。",
+            "workerCount": 45,
+            "amountYuan": 214399,
+            "authority": "吉州区人社局",
+            "legalRep": "龙敏政",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西长荣建设集团有限公司",
+        "aliases": [],
+        "creditCode": "913601046960807304",
+        "province": "江西省",
+        "city": "吉安县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年10月8日，吉安县人社局接到劳动者的投诉，反映江西长荣建设集团公司承建的吉安县指阳、天河文旅项目拖欠工资。经查，公司欠薪属实，共拖欠59人工资122.3745万元。",
+            "amountYuan": 1223745,
+            "authority": "吉安县 人社局",
+            "legalRep": "汤江福",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西新能量科技有限公司",
+        "aliases": [],
+        "creditCode": "91360821MADCJR7H29",
+        "province": "江西省",
+        "city": "吉安县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2025年5月12日，吉安县人社局接到劳动者投诉，反映江西新能量科技有限公司拖欠其工资。经查，该公司欠薪属实，拖欠工资20129.46元。",
+            "amountYuan": 20129,
+            "authority": "吉安县 人社局",
+            "legalRep": "胡超雄",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "吉州区卓品装饰设计中心",
+        "aliases": [],
+        "creditCode": "92360802MAC7F11494",
+        "province": "江西省",
+        "city": "峡江县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "吉州区卓品装饰设计中心承接了峡江县仁和镇自建房工程，业主方已按合同将工程款56.9万元全部支付给吉州区卓品装饰设计中心，经查实，吉州区卓品装饰设计中心未支付陈海林、郭健飞等13名民工工资共计88000元。",
+            "authority": "峡江县人力资源和社会保障局",
+            "legalRep": "朱建安",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "景德镇市九观金品陶瓷文化传播有限公司",
+        "aliases": [],
+        "creditCode": "91360281MA35GHB78W",
+        "province": "江西省",
+        "city": "昌江区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠工资",
+            "authority": "昌江区人力资源和社会保障局",
+            "legalRep": "陈志强",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西中锂新能源有限责任公司",
+        "aliases": [],
+        "creditCode": "9136050434333466XY",
+        "province": "江西省",
+        "city": "新余市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠工资及涉嫌拒不支付劳动报酬罪",
+            "authority": "新余市人力资源和社会保障局",
+            "legalRep": "杨忠文",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西福铵动漫科技有限公司",
+        "aliases": [],
+        "creditCode": "91360504MA7B3PLWXL",
+        "province": "江西省",
+        "city": "新余市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠工资",
+            "authority": "新余市人力资源和社会保障局",
+            "legalRep": "李绍福",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "新余水米油贸易有限公司",
+        "aliases": [],
+        "creditCode": "91360504MADEC8WT1F",
+        "province": "江西省",
+        "city": "新余市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠工资",
+            "authority": "新余市人力资源和社会保障局",
+            "legalRep": "章城",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "义乌东联房地产经纪有限公司",
+        "aliases": [],
+        "creditCode": "91330782MA2E8ANC90",
+        "province": "江西省",
+        "city": "宜丰县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠代理销售的天宝上林苑住宅及商业项目销售人员工资属实，我局按照程序下达了行政处理决定书，后期失联，拒不支付员工工资。",
+            "authority": "宜丰县人社局",
+            "legalRep": "潘小文",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "九江市广安建设工程公司",
+        "aliases": [],
+        "creditCode": "91360400159306386H",
+        "province": "江西省",
+        "city": "赣州经开区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "九江市广安建设工程公司拖欠33名民工工资共计833020元",
+            "workerCount": 33,
+            "amountYuan": 833020,
+            "authority": "赣州经开区综合执法大队",
+            "legalRep": "周建钢",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "赣州市润汇装饰工程有限公司",
+        "aliases": [],
+        "creditCode": "91360703MADT66P218",
+        "province": "江西省",
+        "city": "赣州经开区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "赣州市润汇装饰工程有限公司拖欠2名民工工资共计71406元。",
+            "workerCount": 2,
+            "amountYuan": 71406,
+            "authority": "赣州经开区综合执法大队",
+            "legalRep": "叶六秀",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "彭泽县公爵娱乐",
+        "aliases": [],
+        "creditCode": "92360430MAC835X733",
+        "province": "江西省",
+        "city": "彭泽县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "违法招用童工、未成年工",
+            "authority": "彭泽县人社局",
+            "legalRep": "崔建忠",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "九江管阳工程有限公司",
+        "aliases": [],
+        "creditCode": "91360426MAD5URKF2J",
+        "province": "江西省",
+        "city": "德安县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠张可明等60名工人工资676684元，并且未按期执行《劳动保障监察限期改正指令》（德人社监令字〔2025〕17号） ，拒不支付，情节严重造成严重不良社会影响。",
+            "workerCount": 60,
+            "amountYuan": 676684,
+            "authority": "德安县人力资源和社会保障局",
+            "legalRep": "罗润贵",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "腾越建筑科技集团有限公司",
+        "aliases": [],
+        "creditCode": "91440606231927946T",
+        "province": "江西省",
+        "city": "德安县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠彭坤坤等7名工人工资83690元，并且未按期执行《劳动保障监察限期改正指令》（德人社监令字〔2026〕17号），情节严重造成严重不良社会影响。",
+            "workerCount": 7,
+            "amountYuan": 83690,
+            "authority": "德安县人力资源和社会保障局",
+            "legalRep": "杨泽辉",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "九江海峰装饰设计工程有限公司",
+        "aliases": [],
+        "creditCode": "91360425MADYLC9A85",
+        "province": "江西省",
+        "city": "永修县",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "自2025年10月起拖欠员工、装修工人工资共40人合计462277元。",
+            "amountYuan": 462277,
+            "authority": "永修县人力资源和社会保障局",
+            "legalRep": "杨贵庆",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西铭华鞋业有限公司",
+        "aliases": [],
+        "creditCode": "91360421MADTRB8PX9",
+        "province": "江西省",
+        "city": "柴桑区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "2026年4月14日立案，拖欠60人2025年12月至2026年4月工资579477元，经责令整改仅支付239961元，仍拖欠58人339516元",
+            "amountYuan": 579477,
+            "authority": "柴桑区人力资源和社会保障局",
+            "legalRep": "熊冬冬",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西庐山天沐温泉渡假有限公司",
+        "aliases": [],
+        "creditCode": "91360427769755250A",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "经我局立案调查，该单位存在以下违法行为：1.拖欠徐美兰等72名员工工资共计1860864.75元；2.上述行为经我局责令限期改正，该单位逾期未改正。",
+            "workerCount": 72,
+            "amountYuan": 1860865,
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "黄平",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西省新宇建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91360121159741409B",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "违法行为：1.拖欠纪仁信等292名农民工工资共计6448090元；2.不按劳动保障部门要求接受应询。",
+            "workerCount": 292,
+            "amountYuan": 6448090,
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "李超群",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "杭州航向生态园林有限公司",
+        "aliases": [],
+        "creditCode": "91330182MA2J24AX3C",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠邹才金等70名农民工工资共计1723553元；2.不按劳动保障部门要求接受应询。上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 70,
+            "amountYuan": 1723553,
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "齐喜梅",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "庐山市雷阳康桥足浴店",
+        "aliases": [],
+        "creditCode": "92360427MA391BR674",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "使用童工",
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "杨正义",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "庐山市赛迪未来俱乐部",
+        "aliases": [],
+        "creditCode": "92360427MAEP4W1197",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "使用童工",
+            "authority": "庐山市人力资源和社会保障局",
+            "legalRep": "王皓",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "九江甜梦餐饮管理有限公司",
+        "aliases": [],
+        "creditCode": "91360403MADLYGC48L",
+        "province": "江西省",
+        "city": "浔阳区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2026",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠朱海洋、王伟明、叶威等36人工资296485元。",
+            "amountYuan": 296485,
+            "authority": "浔阳区人力资源和社会保障局",
+            "legalRep": "龚海涛",
+            "stage": "重大劳动保障违法行为社会公布",
+            "stageLabel": "社会公布"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_2072866923363344384.html",
+          "sourceTitle": "江西省2026年度第一批次重大劳动保障违法行为社会公布案件（案件表）",
+          "sourcePublishedAt": "2026-07-03",
+          "fetchedAt": "2026-11-24T12:32:45.087Z",
+          "snapshotFile": "data/snapshots/jiangxi-2026-q1-cases.xls",
+          "ingestRunId": "3895892b-b9a5-4ebd-a3ce-b3061700ae97",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    }
+  ]
+}

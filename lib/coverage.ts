@@ -27,17 +27,16 @@ export const COVERED_REGIONS = [
   "上海市",
   "山东省",
   "甘肃省",
+  "浙江省",
+  "广东省",
+  "江西省",
 ] as const;
 
 /**
  * 暂未接入自动采集、但保留官方直查入口的省份。
  * 这些站点目前对自动访问有限制（拒绝或连接异常），只能人工核验后补充。
  */
-export const DIRECT_LOOKUP_ONLY_REGIONS = [
-  "浙江省",
-  "广东省",
-  "江西省",
-] as const;
+export const DIRECT_LOOKUP_ONLY_REGIONS = [] as const;
 
 /** 尚未接入自动采集的其余省级行政区，按批次推进。 */
 export const PENDING_REGIONS = [] as const;

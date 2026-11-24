@@ -1,0 +1,351 @@
+{
+  "source": {
+    "key": "guangdong-2025-blacklist",
+    "name": "2025年拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "广东省",
+    "baseUrl": "https://hrss.gd.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "2025年拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+    "publishedAt": "2026-01-04",
+    "fetchedAt": "2026-11-24T12:32:45.054Z",
+    "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx"
+  },
+  "ingestRun": {
+    "id": "eb03a18b-2399-4c92-b223-d557a1cad475",
+    "sourceKey": "guangdong-2025-blacklist",
+    "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+    "parserVersion": "2026-11-24.4",
+    "status": "success",
+    "startedAt": "2026-11-24T12:32:45.052Z",
+    "finishedAt": "2026-11-24T12:32:45.054Z",
+    "httpStatus": null,
+    "contentHash": "534c39f958256987f7b2d6ebb664b467c97e9d38e9fd914414122a7b24930c37",
+    "snapshotPath": "data/snapshots/guangdong-2025-blacklist.xlsx",
+    "warnings": 0,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "广州徐均永远贸易有限公司",
+        "aliases": [],
+        "creditCode": "91440101MA59QM1029",
+        "province": "广东省",
+        "city": "广州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠11名农民工2025年6月至8月工资22.35万元",
+            "workerCount": 11,
+            "amountYuan": 223500,
+            "authority": "广州市番禺区人力资源和社会保障局",
+            "decisionNo": "穗番人社监列决字〔2025〕128号",
+            "legalRep": "M306***63",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-20",
+            "listedAt": "2025-11-20"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "广州咪乐果服装有限公司",
+        "aliases": [],
+        "creditCode": "91440113MAC9ERXE1T",
+        "province": "广东省",
+        "city": "广州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠29名农民工2025年7月至9月工资13.93万元",
+            "workerCount": 29,
+            "amountYuan": 139300,
+            "authority": "广州市番禺区人力资源和社会保障局",
+            "decisionNo": "穗番人社监列决字〔2025〕133号",
+            "legalRep": "352124********0419",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-20",
+            "listedAt": "2025-11-20"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "东莞市杰昇箱包有限公司",
+        "aliases": [],
+        "creditCode": "91441900MAEFHQL2XQ",
+        "province": "广东省",
+        "city": "东莞市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠25名农民工2025年6月至8月工资21.02万元",
+            "workerCount": 25,
+            "amountYuan": 210200,
+            "authority": "东莞市人力资源和社会保障局",
+            "decisionNo": "东人社监列决字〔2025〕第30-020号",
+            "legalRep": "R101****96",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-09-17",
+            "listedAt": "2025-09-17"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "东莞市联溢祥塑胶五金有限公司",
+        "aliases": [],
+        "creditCode": "91441900303848893U",
+        "province": "广东省",
+        "city": "东莞市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠4名农民工2025年6月至9月工资12.13万元",
+            "workerCount": 4,
+            "amountYuan": 121300,
+            "authority": "东莞市人力资源和社会保障局",
+            "decisionNo": "东人社监列决字〔2025〕第10-036号",
+            "legalRep": "441423********5629",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-18",
+            "listedAt": "2025-11-18"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "东莞市大朗弘旗培训中心有限公司",
+        "aliases": [],
+        "creditCode": "91441900MA51YDXWX0",
+        "province": "广东省",
+        "city": "东莞市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠20名农民工2025年5月至6月工资52.37万元",
+            "workerCount": 20,
+            "amountYuan": 523700,
+            "authority": "东莞市人力资源和社会保障局",
+            "decisionNo": "东人社监列决字〔2025〕第09-116号",
+            "legalRep": "430481********077X",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-03",
+            "listedAt": "2025-11-03"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "中山市圣锦建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "91442000MA7H3CWK1M",
+        "province": "广东省",
+        "city": "中山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠35名农民工2023年12月至2024年12月工资70.74万元",
+            "workerCount": 35,
+            "amountYuan": 707400,
+            "authority": "中山市人力资源和社会保障局",
+            "decisionNo": "中人社监列决字〔2025〕第16号",
+            "legalRep": "360481********5012",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-14",
+            "listedAt": "2025-10-14"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "南雄市音润电子科技有限公司",
+        "aliases": [],
+        "creditCode": "91440282MA7M411R1F",
+        "province": "广东省",
+        "city": "南雄市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠24名农民工2024年11月至2025年8月工资12.58万元",
+            "workerCount": 24,
+            "amountYuan": 125800,
+            "authority": "南雄市人力资源和社会保障局",
+            "decisionNo": "雄人社监列决字〔2025〕 9 号",
+            "legalRep": "440223********0317",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-17",
+            "listedAt": "2025-10-17"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "韶关迷宫娱乐有限公司",
+        "aliases": [],
+        "creditCode": "91440229MAC10RYJ5B",
+        "province": "广东省",
+        "city": "韶关市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠64名农民工2025年7月至10月工资38.91万元",
+            "workerCount": 64,
+            "amountYuan": 389100,
+            "authority": "韶关市翁源县人力资源和社会保障局",
+            "decisionNo": "翁人社监列决字〔2025〕第1号",
+            "legalRep": "440229********4214",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-12-03",
+            "listedAt": "2025-12-03"
+          },
+          "sourceUrl": "https://hrss.gd.gov.cn/zwgk/gsgg/content/mpost_4838491.html",
+          "sourceTitle": "2025年拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2026-01-04",
+          "fetchedAt": "2026-11-24T12:32:45.054Z",
+          "snapshotFile": "data/snapshots/guangdong-2025-blacklist.xlsx",
+          "ingestRunId": "eb03a18b-2399-4c92-b223-d557a1cad475",
+          "parserVersion": "2026-11-24.4"
+        }
+      ]
+    }
+  ]
+}

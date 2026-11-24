@@ -1,0 +1,435 @@
+{
+  "source": {
+    "key": "jiangxi-2025-q2-list",
+    "name": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+    "category": "labor_violation",
+    "level": "A",
+    "region": "江西省",
+    "baseUrl": "https://rst.jiangxi.gov.cn/",
+    "accessType": "public_web",
+    "fetchMode": "script",
+    "reviewCycleDays": 30,
+    "enabled": true,
+    "notes": "官方主动公开公告；脚本仅抓取公告页并保存快照，不绕过登录/验证码，不使用需要 appKey 的接口。"
+  },
+  "announcement": {
+    "title": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+    "url": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+    "publishedAt": "2025-11-13",
+    "fetchedAt": "2026-11-24T12:32:45.080Z",
+    "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls"
+  },
+  "ingestRun": {
+    "id": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+    "sourceKey": "jiangxi-2025-q2-list",
+    "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+    "parserVersion": "2026-11-24.5",
+    "status": "partial",
+    "startedAt": "2026-11-24T12:41:57.146Z",
+    "finishedAt": "2026-11-24T12:41:57.154Z",
+    "httpStatus": null,
+    "contentHash": "6ca3206a02d1ea0cfbab26b846b46b25f22c47b21f0cc21186e624b897ae3f83",
+    "snapshotPath": "data/snapshots/jiangxi-2025-q2-list.xls",
+    "warnings": 4,
+    "errors": 0,
+    "actor": "scripts/ingest-announcements.ts"
+  },
+  "companies": [
+    {
+      "company": {
+        "name": "赣州电子工业技术学校",
+        "aliases": [],
+        "creditCode": "523607003092026207",
+        "province": "江西省",
+        "city": "赣州市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "存在无故拖欠农民工工资行为，涉及63名民工工资共计106.227687万元",
+            "workerCount": 63,
+            "amountYuan": 1062277,
+            "authority": "赣州市人力资源和社会保障局",
+            "decisionNo": "（赣州市）人社监列决字〔2025〕专（1）001号",
+            "legalRep": "钟文勇",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-07-17",
+            "listedAt": "2025-07-17",
+            "expiresAt": "2028-07-17"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "瑞金市汇恩壹号服饰加工厂",
+        "aliases": [],
+        "creditCode": "91360781MACYTUN493",
+        "province": "江西省",
+        "city": "瑞金市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "存在无故拖欠农民工工资行为，涉及101名民工工资共计63.8979万元",
+            "workerCount": 101,
+            "amountYuan": 638979,
+            "authority": "瑞金市人力资源和社会保障局",
+            "decisionNo": "（瑞）人社监列决字〔2025〕2号",
+            "legalRep": "刘祥",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-14",
+            "listedAt": "2025-10-14",
+            "expiresAt": "2028-10-13"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西赫宸科技有限公司",
+        "aliases": [],
+        "creditCode": "91360207MA3ADR1L4F",
+        "province": "江西省",
+        "city": "景德镇市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠33名工人139.315369万元工资",
+            "workerCount": 33,
+            "amountYuan": 1393154,
+            "authority": "景德镇市人力资源和社会保障局",
+            "decisionNo": "景人社监列决字[2025]1号",
+            "legalRep": "田野",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-30",
+            "listedAt": "2025-10-30",
+            "expiresAt": "2028-10-29"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "宁波安通建筑劳务有限公司",
+        "aliases": [],
+        "creditCode": "913302257562739814",
+        "province": "江西省",
+        "city": "景德镇市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠24位农民工33.8555万元工资",
+            "amountYuan": 338555,
+            "authority": "景德镇市人力资源和社会保障局",
+            "decisionNo": "景人社监列决字[2025]2号",
+            "legalRep": "童能斌",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-11-05",
+            "listedAt": "2025-11-05",
+            "expiresAt": "2028-11-04"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖南锦汇安建筑有限公司庐山市分公司",
+        "aliases": [],
+        "creditCode": "91360427MAD9M12F7E",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠孙志斌等15名农民工工资共计119295元；2.拖欠左艳林等29名农民工工资共计685025元；3.不按劳动保障部门要求接受应询。且上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 15,
+            "amountYuan": 119295,
+            "authority": "庐山市人力资源和社会保障局",
+            "decisionNo": "庐人社监罚字〔2025〕11号",
+            "legalRep": "范思哲",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-17",
+            "listedAt": "2025-10-17",
+            "expiresAt": "2028-10-17"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西驰奔建设工程有限公司庐山市分公司",
+        "aliases": [],
+        "creditCode": "91360427MAD9A42L9A",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠陈金明等30名农民工工资共计342420元；2.拖欠王安全等90名农民工工资共计1542422元；3.不按劳动保障部门要求接受应询。且上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 30,
+            "amountYuan": 342420,
+            "authority": "庐山市人力资源和社会保障局",
+            "decisionNo": "庐人社监罚字〔2025〕10号",
+            "legalRep": "祝平湘",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-17",
+            "listedAt": "2025-10-17",
+            "expiresAt": "2028-10-17"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "湖南臻美绿建装饰有限公司庐山市分公司",
+        "aliases": [],
+        "creditCode": "91360427MADDMMUR48",
+        "province": "江西省",
+        "city": "庐山市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "1.拖欠付金等98名农民工工资共计526725元；2.拖欠方宁等218名农民工工资共计3049199.82元；3.不按劳动保障部门要求接受应询。且上述行为经我局责令限期改正，被告知单位逾期拒不改正。",
+            "workerCount": 98,
+            "amountYuan": 526725,
+            "authority": "庐山市人力资源和社会保障局",
+            "decisionNo": "庐人社监罚字〔2025〕9号",
+            "legalRep": "王慧",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-10-17",
+            "listedAt": "2025-10-17",
+            "expiresAt": "2028-10-17"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "瑞昌纪凡希娱乐有限公司",
+        "aliases": [],
+        "creditCode": "91360481MAD455C44W",
+        "province": "江西省",
+        "city": "瑞昌市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "违反劳动保障法规，经责令改正拒不改正",
+            "authority": "瑞昌市人力资源和社会保障局",
+            "decisionNo": "瑞人社监列字 〔2025〕第03号",
+            "legalRep": "丰文钰",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-03-06",
+            "listedAt": "2025-03-06",
+            "expiresAt": "2027-03-06"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "江西中赫建设集团有限公司",
+        "aliases": [],
+        "creditCode": "91361122MA35L175X9",
+        "province": "江西省",
+        "city": "广信区",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠农民工严志旭等94人164.89万元。",
+            "amountYuan": 1648900,
+            "authority": "广信区人力资源和社会保障局",
+            "decisionNo": "饶广信人社列黑决字【2025】001号",
+            "legalRep": "徐堂俊",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-08-25",
+            "listedAt": "2025-08-25",
+            "expiresAt": "2026-08-25"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "抚州市众力建设工程有限公司",
+        "aliases": [],
+        "creditCode": "91361000MA38BFE182",
+        "province": "江西省",
+        "city": "新余市",
+        "industry": null,
+        "depth": 0
+      },
+      "signals": [
+        {
+          "type": "labor_violation",
+          "period": "2025",
+          "severity": "high",
+          "value": {
+            "count": 1,
+            "subtype": "wage_arrears",
+            "violation": "拖欠176名农民工工资1768636元",
+            "workerCount": 176,
+            "amountYuan": 1768636,
+            "authority": "新余市人力资源和社会保障局",
+            "decisionNo": "余人社高监列决字〔2025〕023号",
+            "legalRep": "郑佳行",
+            "stage": "列入拖欠农民工工资失信联合惩戒对象名单",
+            "stageLabel": "列入失信名单",
+            "stageDate": "2025-06-28",
+            "listedAt": "2025-06-28",
+            "expiresAt": "2028-06-27"
+          },
+          "sourceUrl": "https://rst.jiangxi.gov.cn/jxsrlzyhshbzt/col/col47990/content/content_1988864625839443968.html",
+          "sourceTitle": "江西省2025年度第二批次拖欠农民工工资失信联合惩戒对象名单",
+          "sourcePublishedAt": "2025-11-13",
+          "fetchedAt": "2026-11-24T12:32:45.080Z",
+          "snapshotFile": "data/snapshots/jiangxi-2025-q2-list.xls",
+          "ingestRunId": "0dc3a450-9976-4cb8-8da6-7e12255a276e",
+          "parserVersion": "2026-11-24.5"
+        }
+      ]
+    }
+  ]
+}
