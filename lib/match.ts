@@ -94,8 +94,9 @@ export async function matchCompany(raw: string): Promise<MatchResult> {
 
   const creditCode = input.toUpperCase().replace(/\s/g, "");
   if (/^[0-9A-Z]{18}$/.test(creditCode)) {
-    const byCode = await prisma.company.findUnique({
-      where: { creditCode },
+    // 只返回有公开信号的档案：仅登记主体的空档案不参与检索，避免“查过=安全”的误读。
+    const byCode = await prisma.company.findFirst({
+      where: { creditCode, signals: { some: {} } },
       select: SUMMARY_SELECT,
     });
     if (byCode) return { kind: "hit", company: byCode };
@@ -104,7 +105,7 @@ export async function matchCompany(raw: string): Promise<MatchResult> {
   // normalized 不再全局唯一：同名企业可能在不同省市。
   // 唯一命中才自动跳转，多条则让用户确认，避免查错公司。
   const exact = await prisma.company.findMany({
-    where: { normalized },
+    where: { normalized, signals: { some: {} } },
     select: SUMMARY_SELECT,
     take: 5,
   });
@@ -114,7 +115,7 @@ export async function matchCompany(raw: string): Promise<MatchResult> {
   }
 
   const byAlias = await prisma.company.findMany({
-    where: { aliases: { has: normalized } },
+    where: { aliases: { has: normalized }, signals: { some: {} } },
     select: SUMMARY_SELECT,
     take: 5,
   });
@@ -127,6 +128,7 @@ export async function matchCompany(raw: string): Promise<MatchResult> {
   const initials = isAsciiInput ? normalized : toPinyinInitials(normalized);
 
   const all = await prisma.company.findMany({
+    where: { signals: { some: {} } },
     select: {
       ...SUMMARY_SELECT,
       normalized: true,
@@ -229,6 +231,7 @@ export async function suggestCompanies(
   const initials = isAsciiInput ? normalized : toPinyinInitials(normalized);
 
   const all = await prisma.company.findMany({
+    where: { signals: { some: {} } },
     select: {
       ...SUMMARY_SELECT,
       normalized: true,

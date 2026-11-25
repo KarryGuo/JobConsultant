@@ -172,7 +172,7 @@ export function AppealForm({
           maxLength={2000}
           rows={6}
           placeholder="请写明哪条记录、哪个数字或哪个状态有误，以及希望如何更正。"
-          className="mt-2 w-full resize-y border border-line bg-white px-3 py-3 text-sm leading-6 outline-none transition focus:border-ink/50"
+          className="mt-2 w-full resize-y border border-line bg-white px-3 py-3 text-base leading-6 outline-none transition focus:border-ink/50"
         />
         <p className="mt-1 text-[11px] leading-5 text-muted">
           至少 20 字。请尽量给出可核验的时间、文号或链接。

@@ -95,7 +95,14 @@ export default async function CompanyPage({
           },
         }
       : {}),
-    ...(sourceUrls.length > 0 ? { sameAs: sourceUrls } : {}),
+    ...(sourceUrls.length > 0
+      ? {
+          subjectOf: sourceUrls.map((url) => ({
+            "@type": "WebPage",
+            url,
+          })),
+        }
+      : {}),
   };
   const points = report.points as unknown as ReportPoint[];
   const timeline = buildTimeline(company, signals);
@@ -243,7 +250,6 @@ export default async function CompanyPage({
                 <span>数据截止 {formatDateTime(report.dataCutoff)}</span>
                 <span>最后核验 {formatDate(lastVerifiedAt)}</span>
                 <span>下次复核 {formatDate(nextReviewAt)}</span>
-                <span>版本 {report.modelVersion}</span>
               </>
             ) : (
               <>
@@ -269,12 +275,15 @@ export default async function CompanyPage({
         </div>
       </header>
 
-      <section className="mt-6 border border-line bg-white/70 px-4 py-3">
-        <p className="font-mono text-[9px] tracking-[0.18em] text-accent">
+      <details className="mt-6 border border-line bg-white/70 px-4 py-2.5">
+        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 font-mono text-[10px] tracking-[0.18em] text-accent [&::-webkit-details-marker]:hidden">
           覆盖范围 / COVERAGE
+          <span className="text-muted">展开</span>
+        </summary>
+        <p className="mb-2 mt-1 text-xs leading-6 text-muted">
+          {COVERAGE_SUMMARY}
         </p>
-        <p className="mt-1 text-xs leading-6 text-muted">{COVERAGE_SUMMARY}</p>
-      </section>
+      </details>
 
       {stale.length > 0 ? (
         <section className="mt-4 border-l-2 border-accent bg-accent-soft/50 px-4 py-3">
@@ -507,7 +516,7 @@ export default async function CompanyPage({
         {hasSignals ? (
           <>
             报告生成时间 {formatDateTime(report.generatedAt)} · 数据截止{" "}
-            {formatDateTime(report.dataCutoff)} · 版本 {report.modelVersion}
+            {formatDateTime(report.dataCutoff)}
           </>
         ) : (
           <>
@@ -517,7 +526,7 @@ export default async function CompanyPage({
         )}
       </p>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 p-3 backdrop-blur md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur md:hidden">
         <div className="mx-auto flex max-w-4xl gap-2">
           <Link
             href={`/feedback/${company.id}`}

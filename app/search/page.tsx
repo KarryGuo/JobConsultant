@@ -7,6 +7,11 @@ import { matchCompany } from "@/lib/match";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "检索结果",
+  robots: { index: false, follow: false },
+};
+
 export default async function SearchPage({
   searchParams,
 }: {

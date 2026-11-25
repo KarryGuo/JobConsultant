@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { formatDate, formatDateTime, formatHash, formatPeriod } from "@/lib/format";
 
 export type EvidenceItem = {
@@ -51,20 +51,52 @@ export function EvidenceDialog({
   onClose,
   appealHref,
 }: Props) {
+  const panelRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!open) return;
 
+    const previouslyFocused =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab" || !panelRef.current) return;
+
+      // 焦点锁在弹窗内，Tab 不再穿到背景内容。
+      const focusable = Array.from(
+        panelRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((element) => element.offsetParent !== null);
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = previousOverflow;
+      previouslyFocused?.focus();
     };
   }, [open, onClose]);
 
@@ -77,9 +109,11 @@ export function EvidenceDialog({
       role="presentation"
     >
       <div
+        ref={panelRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="evidence-title"
+        tabIndex={-1}
         className="max-h-[86vh] w-full max-w-2xl overflow-y-auto border border-ink bg-paper p-5 shadow-2xl sm:p-7"
         onClick={(event) => event.stopPropagation()}
       >
@@ -93,9 +127,10 @@ export function EvidenceDialog({
             </p>
           </div>
           <button
+            ref={closeRef}
             type="button"
             onClick={onClose}
-            className="border border-line px-2.5 py-1 text-xs text-muted transition hover:border-ink/40 hover:text-ink"
+            className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap border border-line px-4 text-sm text-muted transition hover:border-ink/40 hover:text-ink"
             aria-label="关闭证据弹窗"
           >
             关闭

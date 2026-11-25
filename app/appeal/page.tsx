@@ -3,6 +3,7 @@ import { AppealForm } from "@/components/appeal-form";
 
 export const metadata = {
   title: "企业申诉与更正",
+  alternates: { canonical: "/appeal" },
 };
 
 export default async function AppealPage({

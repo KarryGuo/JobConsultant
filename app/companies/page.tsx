@@ -10,18 +10,12 @@ export const metadata = {
   alternates: { canonical: "/companies" },
 };
 
-type Filters = {
-  province: string;
-  city: string;
-  industry: string;
-};
+const PAGE_SIZE = 30;
 
-function filterHref(current: Filters, next: Partial<Filters>): string {
-  const values = { ...current, ...next };
+function pageHref(province: string, page: number): string {
   const search = new URLSearchParams();
-  if (values.province !== "all") search.set("province", values.province);
-  if (values.city !== "all") search.set("city", values.city);
-  if (values.industry !== "all") search.set("industry", values.industry);
+  if (province !== "all") search.set("province", province);
+  if (page > 1) search.set("page", String(page));
   const query = search.toString();
   return query ? `/companies?${query}` : "/companies";
 }
@@ -29,28 +23,42 @@ function filterHref(current: Filters, next: Partial<Filters>): string {
 export default async function CompaniesPage({
   searchParams,
 }: {
-  searchParams: Promise<{
-    province?: string;
-    city?: string;
-    industry?: string;
-  }>;
+  searchParams: Promise<{ province?: string; page?: string }>;
 }) {
   const params = await searchParams;
-  const filters: Filters = {
-    province: (params.province ?? "all").trim() || "all",
-    city: (params.city ?? "all").trim() || "all",
-    industry: (params.industry ?? "all").trim() || "all",
-  };
+  const province = (params.province ?? "all").trim() || "all";
+  const requestedPage = Number.parseInt(params.page ?? "1", 10);
+  const where = province === "all" ? {} : { province };
 
-  const allCompanies = await prisma.company.findMany({
+  const [totalCompanies, withSignals, filteredTotal, provinceGroups] =
+    await Promise.all([
+      prisma.company.count(),
+      prisma.company.count({ where: { signals: { some: {} } } }),
+      prisma.company.count({ where }),
+      prisma.company.groupBy({
+        by: ["province"],
+        where: { province: { not: null } },
+        _count: { _all: true },
+      }),
+    ]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredTotal / PAGE_SIZE));
+  const page = Math.min(
+    Math.max(1, Number.isFinite(requestedPage) ? requestedPage : 1),
+    totalPages,
+  );
+
+  const companies = await prisma.company.findMany({
+    where,
     orderBy: { updatedAt: "desc" },
+    skip: (page - 1) * PAGE_SIZE,
+    take: PAGE_SIZE,
     select: {
       id: true,
       name: true,
       province: true,
       city: true,
       industry: true,
-      depth: true,
       _count: { select: { signals: true } },
       signals: {
         select: { type: true, value: true, sourcePublishedAt: true },
@@ -60,95 +68,11 @@ export default async function CompaniesPage({
     },
   });
 
-  const withSignals = allCompanies.filter(
-    (company) => company._count.signals > 0,
-  ).length;
-
-  const provinceCounts = new Map<string, number>();
-  const cityCounts = new Map<string, number>();
-  const industryCounts = new Map<string, number>();
-
-  for (const company of allCompanies) {
-    if (company.province) {
-      provinceCounts.set(
-        company.province,
-        (provinceCounts.get(company.province) ?? 0) + 1,
-      );
-    }
-    if (company.city) {
-      cityCounts.set(company.city, (cityCounts.get(company.city) ?? 0) + 1);
-    }
-    if (company.industry) {
-      industryCounts.set(
-        company.industry,
-        (industryCounts.get(company.industry) ?? 0) + 1,
-      );
-    }
-  }
-
-  const provinceOptions = Array.from(provinceCounts.entries()).sort(
-    (left, right) => right[1] - left[1],
-  );
-  const cityOptions = Array.from(cityCounts.entries())
-    .filter(([city]) => {
-      if (filters.province === "all") return true;
-      return allCompanies.some(
-        (company) =>
-          company.city === city && company.province === filters.province,
-      );
-    })
-    .sort((left, right) => right[1] - left[1]);
-  const industryOptions = Array.from(industryCounts.entries()).sort(
-    (left, right) => right[1] - left[1],
-  );
-
-  const companies = allCompanies.filter((company) => {
-    if (filters.province !== "all" && company.province !== filters.province) {
-      return false;
-    }
-    if (filters.city !== "all" && company.city !== filters.city) {
-      return false;
-    }
-    if (filters.industry !== "all" && company.industry !== filters.industry) {
-      return false;
-    }
-    return true;
-  });
-
-  const hasFilter =
-    filters.province !== "all" ||
-    filters.city !== "all" ||
-    filters.industry !== "all";
-
-  const groups = new Map<
-    string,
-    {
-      province: string;
-      total: number;
-      cities: Map<string, typeof companies>;
-    }
-  >();
-
-  for (const company of companies) {
-    const province = company.province ?? "地区待补充";
-    const city = company.city ?? "城市待补充";
-    const group = groups.get(province) ?? {
-      province,
-      total: 0,
-      cities: new Map<string, typeof companies>(),
-    };
-    group.total += 1;
-    const cityRows = group.cities.get(city) ?? [];
-    cityRows.push(company);
-    group.cities.set(city, cityRows);
-    groups.set(province, group);
-  }
-
-  const orderedGroups = Array.from(groups.values()).sort(
-    (left, right) =>
-      right.total - left.total ||
-      left.province.localeCompare(right.province, "zh-CN"),
-  );
+  const provinceOptions = provinceGroups
+    .filter((row): row is typeof row & { province: string } =>
+      Boolean(row.province),
+    )
+    .sort((left, right) => right._count._all - left._count._all);
 
   return (
     <div className="mx-auto max-w-4xl pb-16 pt-12">
@@ -167,116 +91,52 @@ export default async function CompaniesPage({
           本期档案
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-          本期收录 {allCompanies.length} 家企业主体，其中 {withSignals}{" "}
+          本期收录 {totalCompanies} 家企业主体，其中 {withSignals}{" "}
           家已核验到公开风险信号。未命中信号只代表已收录来源里没有相关记录，
           不代表公司有问题，也不代表没有问题；没有记录不等于安全。
         </p>
       </header>
 
-      <div className="mt-6 space-y-2">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="mr-1 font-mono text-[9px] tracking-wide text-muted">
-            地区
+      <form
+        action="/companies"
+        method="get"
+        className="mt-6 flex flex-wrap items-end gap-3"
+      >
+        <label className="flex flex-col gap-1.5">
+          <span className="font-mono text-[10px] tracking-wide text-muted">
+            省份
           </span>
-          <Link
-            href={filterHref(filters, { province: "all", city: "all" })}
-            className={`inline-flex h-8 items-center border px-3 font-mono text-[10px] tracking-wide transition ${
-              filters.province === "all"
-                ? "border-ink bg-ink text-paper"
-                : "border-line bg-white text-muted hover:border-ink/30"
-            }`}
+          <select
+            name="province"
+            defaultValue={province}
+            className="h-11 min-w-[10rem] border border-line bg-white px-3 text-sm text-ink outline-none transition focus:border-accent/60"
           >
-            全部
-          </Link>
-          {provinceOptions.map(([province, count]) => (
-            <Link
-              key={province}
-              href={filterHref(filters, { province, city: "all" })}
-              className={`inline-flex h-8 items-center border px-3 font-mono text-[10px] tracking-wide transition ${
-                filters.province === province
-                  ? "border-ink bg-ink text-paper"
-                  : "border-line bg-white text-muted hover:border-ink/30"
-              }`}
-            >
-              {province}
-              <span className="ml-2 opacity-60">{count}</span>
-            </Link>
-          ))}
-        </div>
-
-        {filters.province !== "all" ? (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="mr-1 font-mono text-[9px] tracking-wide text-muted">
-              城市
-            </span>
-            <Link
-              href={filterHref(filters, { city: "all" })}
-              className={`inline-flex h-8 items-center border px-3 font-mono text-[10px] tracking-wide transition ${
-                filters.city === "all"
-                  ? "border-ink bg-ink text-paper"
-                  : "border-line bg-white text-muted hover:border-ink/30"
-              }`}
-            >
-              全部
-            </Link>
-            {cityOptions.map(([city, count]) => (
-              <Link
-                key={city}
-                href={filterHref(filters, { city })}
-                className={`inline-flex h-8 items-center border px-3 font-mono text-[10px] tracking-wide transition ${
-                  filters.city === city
-                    ? "border-ink bg-ink text-paper"
-                    : "border-line bg-white text-muted hover:border-ink/30"
-                }`}
-              >
-                {city}
-                <span className="ml-2 opacity-60">{count}</span>
-              </Link>
+            <option value="all">全部省份（{totalCompanies}）</option>
+            {provinceOptions.map((row) => (
+              <option key={row.province} value={row.province}>
+                {row.province}（{row._count._all}）
+              </option>
             ))}
-          </div>
-        ) : null}
-
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="mr-1 font-mono text-[9px] tracking-wide text-muted">
-            行业
-          </span>
+          </select>
+        </label>
+        <button
+          type="submit"
+          className="inline-flex h-11 items-center border border-ink bg-ink px-5 font-mono text-[11px] tracking-wide text-paper transition hover:bg-ink/90"
+        >
+          筛选
+        </button>
+        {province !== "all" ? (
           <Link
-            href={filterHref(filters, { industry: "all" })}
-            className={`inline-flex h-8 items-center border px-3 font-mono text-[10px] tracking-wide transition ${
-              filters.industry === "all"
-                ? "border-ink bg-ink text-paper"
-                : "border-line bg-white text-muted hover:border-ink/30"
-            }`}
+            href="/companies"
+            className="inline-flex h-11 items-center text-xs text-accent underline underline-offset-4"
           >
-            全部
+            清除筛选
           </Link>
-          {industryOptions.map(([industry, count]) => (
-            <Link
-              key={industry}
-              href={filterHref(filters, { industry })}
-              className={`inline-flex h-8 items-center border px-3 font-mono text-[10px] tracking-wide transition ${
-                filters.industry === industry
-                  ? "border-ink bg-ink text-paper"
-                  : "border-line bg-white text-muted hover:border-ink/30"
-              }`}
-            >
-              {industry}
-              <span className="ml-2 opacity-60">{count}</span>
-            </Link>
-          ))}
-          {hasFilter ? (
-            <Link
-              href="/companies"
-              className="ml-1 text-[11px] text-accent underline underline-offset-4"
-            >
-              清除筛选
-            </Link>
-          ) : null}
-        </div>
-      </div>
+        ) : null}
+      </form>
 
       <p className="mt-5 font-mono text-[10px] text-muted">
-        当前筛选：{companies.length} 家
+        当前筛选 {filteredTotal} 家 · 第 {page} / {totalPages} 页
       </p>
 
       {companies.length === 0 ? (
@@ -284,56 +144,76 @@ export default async function CompaniesPage({
           这个筛选下还没有收录企业。未收录不代表没有风险。
         </p>
       ) : (
-        orderedGroups.map((group) => (
-          <section key={group.province} className="mt-8 border-t-2 border-ink pt-4">
-            <div className="flex items-baseline justify-between">
-              <h2 className="font-serif text-2xl font-semibold tracking-tight">
-                {group.province}
-              </h2>
-              <span className="font-mono text-[10px] text-muted">
-                {group.total} 家
-              </span>
-            </div>
-
-            {Array.from(group.cities.entries()).map(([city, rows]) => (
-              <div key={city} className="mt-4">
-                <h3 className="font-mono text-[10px] tracking-[0.18em] text-accent">
-                  {city}
-                </h3>
-                <div className="mt-1 grid gap-x-10 sm:grid-cols-2">
-                  {rows.map((company) => (
-                    <Link
-                      key={company.id}
-                      href={`/company/${company.id}`}
-                      className="group block border-t border-line py-4"
-                    >
-                      <div className="flex items-baseline justify-between gap-3">
-                        <span className="font-mono text-[9px] tracking-[0.18em] text-accent">
-                          {recordLabel(company.signals[0])}
-                        </span>
-                        <span className="font-mono text-[9px] text-muted">
-                          {company.signals[0]?.sourcePublishedAt
-                            ? formatDate(company.signals[0].sourcePublishedAt)
-                            : "暂无公开日期"}
-                        </span>
-                      </div>
-                      <h4 className="mt-1.5 font-serif text-lg font-medium leading-snug transition group-hover:text-accent">
-                        {company.name}
-                      </h4>
-                      <p className="mt-1 text-xs text-muted">
-                        {[company.city, company.industry]
-                          .filter(Boolean)
-                          .join(" · ") || "地区与行业待补充"}{" "}
-                        · {company._count.signals} 条信号
-                      </p>
-                    </Link>
-                  ))}
+        <ul className="mt-2 border-t border-line">
+          {companies.map((company) => (
+            <li key={company.id}>
+              <Link
+                href={`/company/${company.id}`}
+                className="group grid grid-cols-1 gap-2 border-b border-line py-4 transition hover:bg-white/70 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-6"
+              >
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span className="font-mono text-[9px] tracking-[0.16em] text-accent">
+                      {recordLabel(company.signals[0])}
+                    </span>
+                    <span className="font-serif text-base font-medium leading-snug transition group-hover:text-accent">
+                      {company.name}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted">
+                    {[company.province, company.city, company.industry]
+                      .filter(Boolean)
+                      .join(" · ") || "地区与行业待补充"}
+                  </p>
                 </div>
-              </div>
-            ))}
-          </section>
-        ))
+                <div className="flex items-center gap-4 font-mono text-[10px] text-muted sm:flex-col sm:items-end sm:gap-1">
+                  <span>
+                    {company.signals[0]?.sourcePublishedAt
+                      ? formatDate(company.signals[0].sourcePublishedAt)
+                      : "暂无公开日期"}
+                  </span>
+                  <span>{company._count.signals} 条信号</span>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
+
+      {totalPages > 1 ? (
+        <nav
+          aria-label="分页"
+          className="mt-8 flex items-center justify-between border-t border-line pt-5"
+        >
+          {page > 1 ? (
+            <Link
+              href={pageHref(province, page - 1)}
+              className="inline-flex h-11 items-center border border-line px-4 text-xs text-ink transition hover:border-ink/40"
+            >
+              ← 上一页
+            </Link>
+          ) : (
+            <span className="inline-flex h-11 items-center border border-line/60 px-4 text-xs text-muted/60">
+              ← 上一页
+            </span>
+          )}
+          <span className="font-mono text-[10px] text-muted">
+            {page} / {totalPages}
+          </span>
+          {page < totalPages ? (
+            <Link
+              href={pageHref(province, page + 1)}
+              className="inline-flex h-11 items-center border border-line px-4 text-xs text-ink transition hover:border-ink/40"
+            >
+              下一页 →
+            </Link>
+          ) : (
+            <span className="inline-flex h-11 items-center border border-line/60 px-4 text-xs text-muted/60">
+              下一页 →
+            </span>
+          )}
+        </nav>
+      ) : null}
     </div>
   );
 }

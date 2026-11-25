@@ -11,7 +11,7 @@ type Props = {
 };
 
 /**
- * 把正文里的数字渲染成可点击的证据入口。
+ * 整段结论都是证据入口：触控目标 ≥44px，数字只做强调，不再拆成小按钮。
  * 没有证据时不显示任何可点击样式。
  */
 export function EvidenceText({
@@ -30,30 +30,28 @@ export function EvidenceText({
 
   return (
     <>
-      <span className={className}>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label="查看这条发现的证据与来源"
+        className={`${className ?? ""} block min-h-11 w-full cursor-pointer text-left`}
+      >
         {parts.map((part, index) =>
           /^\d/.test(part) ? (
-            <button
+            <span
               key={`${part}-${index}`}
-              type="button"
-              onClick={() => setOpen(true)}
-              className="font-mono tabular-nums underline decoration-accent/50 decoration-dotted underline-offset-4 transition hover:decoration-accent"
-              aria-label={`查看数字 ${part} 的来源证据`}
+              className="font-mono tabular-nums underline decoration-accent/60 decoration-dotted underline-offset-4"
             >
               {part}
-            </button>
+            </span>
           ) : (
             <span key={`text-${index}`}>{part}</span>
           ),
         )}
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="ml-2 align-baseline text-xs text-accent underline underline-offset-4 hover:text-ink"
-        >
-          证据
-        </button>
-      </span>
+        <span className="mt-1.5 block font-mono text-[10px] tracking-wide text-accent">
+          查看证据与来源 →
+        </span>
+      </button>
       <EvidenceDialog
         items={evidence}
         open={open}

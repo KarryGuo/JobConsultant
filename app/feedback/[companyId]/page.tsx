@@ -1,10 +1,28 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { InterviewFeedbackForm } from "@/components/interview-feedback-form";
 import { prisma } from "@/lib/db";
 import { FEEDBACK_MIN_SAMPLE } from "@/lib/feedback";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ companyId: string }>;
+}): Promise<Metadata> {
+  const { companyId } = await params;
+  const company = await prisma.company.findUnique({
+    where: { id: companyId },
+    select: { name: true },
+  });
+
+  return {
+    title: company ? `${company.name} · 匿名面试反馈` : "匿名面试反馈",
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function FeedbackPage({
   params,

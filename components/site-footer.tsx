@@ -59,11 +59,6 @@ export function SiteFooter() {
                 收录请求
               </Link>
             </li>
-            <li>
-              <Link href="/?intro=1" className="transition hover:text-ink">
-                重播开场
-              </Link>
-            </li>
           </ul>
         </div>
 

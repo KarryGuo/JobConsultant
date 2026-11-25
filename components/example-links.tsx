@@ -2,9 +2,8 @@ import Link from "next/link";
 
 const EXAMPLES = [
   { label: "知途", query: "知途" },
-  { label: "腾讯", query: "腾讯" },
-  { label: "字节跳动", query: "字节跳动" },
-  { label: "比亚迪", query: "比亚迪" },
+  { label: "中铁十八局", query: "中铁十八局" },
+  { label: "中建七局", query: "中国建筑第七工程局" },
 ];
 
 export function ExampleLinks() {

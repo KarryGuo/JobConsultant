@@ -81,7 +81,7 @@ export function FeaturedReportPreview({
                 {company.name}
               </h2>
             </div>
-            <span className="mt-1 inline-flex shrink-0 items-center gap-1.5 font-mono text-[8px] tracking-[0.16em] text-accent">
+            <span className="mt-1 inline-flex shrink-0 items-center gap-1.5 font-mono text-[11px] tracking-[0.14em] text-accent">
               <span className="h-1 w-1 bg-accent" aria-hidden="true" />
               来源已核实
             </span>
@@ -100,9 +100,9 @@ export function FeaturedReportPreview({
             {events.map((event) => (
               <li
                 key={`${event.date.toISOString()}-${event.label}`}
-                className="grid grid-cols-[72px_1fr] gap-3"
+                className="grid grid-cols-[88px_1fr] gap-3"
               >
-                <span className="font-mono text-[10px] leading-5 text-muted">
+                <span className="whitespace-nowrap font-mono text-[10px] leading-5 text-muted">
                   {event.dateLabel ?? formatCompactDate(event.date)}
                 </span>
                 <div className="min-w-0">

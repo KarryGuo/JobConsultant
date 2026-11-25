@@ -1,6 +1,4 @@
-import { cookies } from "next/headers";
 import Link from "next/link";
-import { CinematicIntro } from "@/components/cinematic-intro";
 import { ExampleLinks } from "@/components/example-links";
 import { FeaturedReportPreview } from "@/components/featured-report-preview";
 import { NewsTicker } from "@/components/news-ticker";
@@ -19,7 +17,7 @@ const METHOD = [
   },
   {
     title: "先判定，再措辞",
-    body: "规则引擎负责命中。模型只把事实写成句子，不提供数字。",
+    body: "规则引擎负责命中与措辞。每个数字都能追溯到原始记录，不编造。",
   },
   {
     title: "每个数字都能点开",
@@ -27,16 +25,7 @@ const METHOD = [
   },
 ];
 
-export default async function HomePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ intro?: string }>;
-}) {
-  const { intro } = await searchParams;
-  const cookieStore = await cookies();
-  const showIntro =
-    cookieStore.get("zgw_intro_seen")?.value !== "1" || intro === "1";
-
+export default async function HomePage() {
   const [
     companies,
     totalCompanies,
@@ -95,10 +84,6 @@ export default async function HomePage({
 
   return (
     <div className="pb-6">
-      <CinematicIntro
-        show={showIntro}
-        stats={{ companies: totalCompanies, signals: totalSignals }}
-      />
       <NewsTicker items={tickerItems} />
 
       <section
@@ -156,7 +141,7 @@ export default async function HomePage({
           </strong>
           个评分
         </span>
-        <span className="text-muted/80">每条记录都带来源与快照</span>
+        <span className="text-muted">每条记录都带来源与快照</span>
       </div>
 
       <p className="mt-3 text-xs leading-6 text-muted">
