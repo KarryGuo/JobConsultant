@@ -1,3 +1,5 @@
+import { isIP } from "node:net";
+
 type Bucket = {
   count: number;
   resetAt: number;
@@ -76,20 +78,79 @@ export function createRateLimiter(options: {
 }
 
 /**
- * 取客户端标识。只有部署在可信反向代理之后时 x-forwarded-for 才可信；
- * 直接暴露时该头可以被伪造，应改为在边缘层限流。
+ * 取客户端标识。
+ *
+ * 实测平台请求头结构（2026-11-26）：
+ *   x-real-ip: 116.162.51.69            ← 平台固定注入的代理出口 IP
+ *   x-forwarded-for: <客户端值...>, 116.128.241.221, 116.162.51.69,10.96.12.117
+ * 即平台在客户端值后面追加「真实客户端 IP、代理 IP、内网 IP」三段。
+ * 客户端自己传的 x-real-ip 会被丢弃，XFF 左侧则是可伪造的。
+ *
+ * 因此不能用 XFF 第一段；从右往左取第一个公网且不等于 x-real-ip 的跳，
+ * 才能拿到真实客户端 IP，同时避免把共享代理出口当成所有用户。
  */
 export function clientKey(request: {
   headers: { get: (name: string) => string | null };
 }): string {
-  const forwarded = request.headers
-    .get("x-forwarded-for")
-    ?.split(",")[0]
-    ?.trim();
-  if (forwarded) return forwarded;
+  const realIp = normalizeIp(request.headers.get("x-real-ip"));
+  const forwarded = request.headers.get("x-forwarded-for") ?? "";
+  const publicHops = forwarded
+    .split(",")
+    .map((hop) => normalizeIp(hop))
+    .filter((hop): hop is string => Boolean(hop) && !isPrivateIp(hop as string));
 
-  const realIp = request.headers.get("x-real-ip")?.trim();
-  return realIp || "local";
+  // 平台代理出口：优先按 x-real-ip 定位，找不到时取最后一个公网跳。
+  let proxyIndex = -1;
+  if (realIp && !isPrivateIp(realIp)) {
+    for (let index = publicHops.length - 1; index >= 0; index -= 1) {
+      if (publicHops[index] === realIp) {
+        proxyIndex = index;
+        break;
+      }
+    }
+  }
+  if (proxyIndex < 0) proxyIndex = publicHops.length - 1;
+
+  // 代理跳左边的一跳才是平台追加的真实客户端 IP。
+  if (proxyIndex > 0) return publicHops[proxyIndex - 1];
+  if (proxyIndex === 0) return publicHops[0];
+
+  return realIp ?? "unknown";
+}
+
+/** 去掉 IPv6 方括号、zone 与 IPv4 映射前缀，非法值返回 null。 */
+function normalizeIp(raw: string | null): string | null {
+  if (!raw) return null;
+  let value = raw.trim();
+  if (value.startsWith("[")) {
+    const end = value.indexOf("]");
+    if (end > 0) value = value.slice(1, end);
+  }
+  const zone = value.indexOf("%");
+  if (zone > 0) value = value.slice(0, zone);
+  if (value.toLowerCase().startsWith("::ffff:")) value = value.slice(7);
+  return isIP(value) ? value : null;
+}
+
+/** 内网、回环、链路本地与 CGNAT 地址不能代表真实客户端。 */
+function isPrivateIp(ip: string): boolean {
+  if (isIP(ip) === 4) {
+    const [a, b] = ip.split(".").map(Number);
+    if (a === 0 || a === 10 || a === 127) return true;
+    if (a === 169 && b === 254) return true;
+    if (a === 172 && b >= 16 && b <= 31) return true;
+    if (a === 192 && b === 168) return true;
+    if (a === 100 && b >= 64 && b <= 127) return true;
+    return false;
+  }
+
+  const lower = ip.toLowerCase();
+  if (lower === "::1" || lower === "::") return true;
+  return (
+    lower.startsWith("fc") ||
+    lower.startsWith("fd") ||
+    lower.startsWith("fe80")
+  );
 }
 
 export function retryAfterSeconds(result: RateLimitResult): string {

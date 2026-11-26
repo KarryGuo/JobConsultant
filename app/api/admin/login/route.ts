@@ -11,6 +11,7 @@ import {
 } from "@/lib/admin-auth";
 import { prisma } from "@/lib/db";
 import { readEnv } from "@/lib/env";
+import { clientKey } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -63,8 +64,8 @@ export async function POST(request: NextRequest) {
   }
 
   const now = Date.now();
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
+  // 与其它接口共用同一套真实客户端 IP 解析，避免伪造 X-Forwarded-For 绕过锁定。
+  const ip = clientKey(request);
   const attempt = attemptFor(ip, now);
 
   if (attempt.count >= MAX_ATTEMPTS) {
