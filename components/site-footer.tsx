@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -13,6 +14,15 @@ export function SiteFooter() {
           </p>
           <p className="mt-3 max-w-xs text-xs leading-6 text-muted">
             公开记录，求职视角。每条结论，都能点回原文。
+          </p>
+          <p className="mt-3 text-xs leading-6 text-muted">
+            联系：
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="underline underline-offset-4 transition hover:text-ink"
+            >
+              {CONTACT_EMAIL}
+            </a>
           </p>
         </div>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "隐私说明",
@@ -38,8 +39,17 @@ const SECTIONS = [
     title: "你的权利",
     items: [
       "凭受理编号和提交时的联系方式，随时查询申诉处理进度。",
-      "可以要求更正或删除你的申诉记录：通过申诉页再次提交，或按申诉页公示的渠道联系运营者。",
+      "可以要求更正或删除你的申诉记录：通过申诉页再次提交，或发邮件到下方公示的联系邮箱。",
       "申诉处理完成后，仅公示与内容更正相关的说明，不展示你的联系方式。",
+    ],
+  },
+  {
+    title: "运营者与数据存储",
+    items: [
+      `运营者：个人开发者，联系邮箱 ${CONTACT_EMAIL}。`,
+      "数据存储：业务数据库托管在新加坡（Neon PostgreSQL）；站点运行在 TRAE（火山引擎）国内节点。",
+      "第三方服务：仅使用云托管与数据库，不接入统计、广告、推送或崩溃上报 SDK。",
+      "删除与更正：发邮件到上述邮箱，或在申诉页提交申请，我们会在核实后处理。",
     ],
   },
 ];

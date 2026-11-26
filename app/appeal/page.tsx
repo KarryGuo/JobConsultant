@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AppealForm } from "@/components/appeal-form";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata = {
   title: "企业申诉与更正",
@@ -71,6 +72,19 @@ export default async function AppealPage({
           <li>联系方式只用于本次核对，不会公开，也不会用于营销。</li>
           <li>当前为人工处理；恶意申诉或批量骚扰会被拒绝。</li>
         </ul>
+      </section>
+
+      <section className="mt-8 border border-line bg-white/70 px-5 py-4">
+        <p className="text-sm leading-7 text-muted">
+          也可以直接邮件联系运营者：
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="text-accent underline underline-offset-4"
+          >
+            {CONTACT_EMAIL}
+          </a>
+          。邮件请附上企业名称、需要更正的内容与可核验材料。
+        </p>
       </section>
     </article>
   );

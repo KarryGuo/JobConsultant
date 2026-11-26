@@ -6,3 +6,6 @@ export const SITE_URL = (
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "职顾问";
+
+/** 公开联系邮箱：页脚、隐私说明与申诉页统一引用。 */
+export const CONTACT_EMAIL = "handsomekarry@foxmail.com";
